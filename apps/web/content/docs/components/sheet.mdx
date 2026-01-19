@@ -1,0 +1,62 @@
+---
+title: Sheet
+description: A common form component for choosing a predefined value in a dropdown menu.
+links:
+  doc: https://base-ui.com/react/components/dialog
+  anatomy: https://base-ui.com/react/components/dialog#anatomy
+  api: https://base-ui.com/react/components/dialog#api-reference
+---
+
+<ComponentPreview name="c-sheet-1" />
+
+## Installation
+
+Copy and paste the following code into your project.
+
+<ComponentSource name="sheet" title="components/ui/sheet.tsx" />
+
+## Usage
+
+```tsx
+import {
+  Sheet,
+  SheetClose,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetPanel,
+  SheetPopup,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+```
+
+```tsx
+<Sheet>
+  <SheetTrigger>Open Sheet</SheetTrigger>
+  <SheetPopup>
+    <Form className="contents">
+      <SheetHeader>
+        <SheetTitle>Edit profile</SheetTitle>
+        <SheetDescription>
+          Make changes to your profile here. Click save when you&apos;re done.
+        </SheetDescription>
+      </SheetHeader>
+      <SheetPanel className="grid gap-4">
+        <Field>
+          <FieldLabel>Name</FieldLabel>
+          <Input defaultValue="ZBM" type="text" />
+        </Field>
+        <Field>
+          <FieldLabel>Username</FieldLabel>
+          <Input defaultValue="@zbm" type="text" />
+        </Field>
+      </SheetPanel>
+      <SheetFooter>
+        <SheetClose render={<Button variant="ghost" />}>Cancel</SheetClose>
+        <Button type="submit">Save</Button>
+      </SheetFooter>
+    </Form>
+  </SheetPopup>
+</Sheet>
+```

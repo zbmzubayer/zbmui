@@ -1,0 +1,52 @@
+---
+title: Input
+description: A native input element that automatically works with Field for labeling and validation.
+links:
+  doc: https://base-ui.com/react/components/input
+  anatomy: https://base-ui.com/react/components/input#anatomy
+  api: https://base-ui.com/react/components/input#api-reference
+---
+
+<ComponentPreview name="c-input-1" />
+
+## Installation
+
+<ComponentSource name="input" title="components/ui/input.tsx" />
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input";
+```
+
+```tsx
+<Input />
+```
+
+## Examples
+
+### Sizes
+
+<ComponentPreview name="c-input-2" />
+
+### File Input
+
+<ComponentPreview name="c-input-3" />
+
+### Disabled
+
+<ComponentPreview name="c-input-4" />
+
+## API Reference
+
+### Input Props
+
+<ApiReferenceAccordion
+  type={{
+    size: {
+      description: "The size of the input component.",
+      type: `'xs' | 'sm' | 'default' | 'lg' | 'xl'`,
+      default: `'default'`,
+    },
+  }}
+/>

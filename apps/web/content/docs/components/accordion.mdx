@@ -1,0 +1,42 @@
+---
+title: Accordion
+description: A set of collapsible panels with headings.
+links:
+  doc: https://base-ui.com/react/components/accordion
+  anatomy: https://base-ui.com/react/components/accordion#anatomy
+  api: https://base-ui.com/react/components/accordion#api-reference
+---
+
+<ComponentPreview name="c-accordion-1" align="start" />
+
+## Installation
+
+<ComponentSource name="accordion" title="components/ui/accordion.tsx" />
+
+## Usage
+
+```tsx
+import {
+  Accordion,
+  AccordionItem,
+  AccordionPanel,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+```
+
+```tsx
+<Accordion>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionPanel>Yes. It adheres to the WAI-ARIA design pattern.</AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+## Examples
+
+### Multiple items
+
+Pass `multiple` prop to `Accordion` to allow multiple items to be expanded at the same time.
+
+<ComponentPreview name="c-accordion-2" align="start" />

@@ -1,0 +1,61 @@
+---
+title: Field
+description: A component that provides labeling and validation for form controls.
+links:
+  doc: https://base-ui.com/react/components/field
+  anatomy: https://base-ui.com/react/components/field#anatomy
+  api: https://base-ui.com/react/components/field#api-reference
+---
+
+<ComponentPreview name="c-field-1" />
+
+## Installation
+
+<ComponentSource name="field" title="components/ui/field.tsx" />
+
+## Usage
+
+## Examples
+
+### Required field with indicator
+
+Pass the `showRequiredIndicator` prop to the `FieldLabel` component to indicate that a field is required.
+
+<ComponentPreview name="c-field-2" />
+
+### Optional field with indicator
+
+Pass the `showOptionalIndicator` prop to the `FieldLabel` component to indicate that a field is optional.
+
+<ComponentPreview name="c-field-3" />
+
+### Disabled
+
+Pass the `disabled` prop to the `Field` component to disable the entire field.
+
+<ComponentPreview name="c-field-4" />
+
+### With error message
+
+Enter an **invalid email** and press `Enter` to see the error.
+
+<ComponentPreview name="c-field-5" />
+
+## API Reference
+
+### Field Props
+
+<ApiReferenceAccordion
+  type={{
+    showRequiredIndicator: {
+      description: "Whether to show the required indicator on the field label.",
+      type: "boolean",
+      default: `false`,
+    },
+    showOptionalIndicator: {
+      description: "Whether to show the optional indicator on the field label.",
+      type: "boolean",
+      default: `false`,
+    },
+  }}
+/>

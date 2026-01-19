@@ -1,0 +1,101 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+  "vcs": {
+    "enabled": true,
+    "defaultBranch": "main",
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "**",
+      "!**/*/dist",
+      "!**/*/build",
+      "!**/*/.next",
+      "!**/*/.source",
+      "!**/*/.turbo",
+      "!**/*/coverage",
+      "!**/node_modules",
+      "!**/*.log",
+      "!**/packages/ui/src/styles/animation.css"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "recommended": true,
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "error",
+          "options": {
+            "attributes": ["className", "classList"],
+            "functions": ["clsx", "cva", "tw", "twMerge", "cn", "twJoin", "tv"]
+          }
+        }
+      },
+      "performance": {
+        "noImgElement": "off"
+      }
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "trailingCommas": "es5"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [
+                ":URL:",
+                ":NODE:",
+                ":PACKAGE:",
+                ":PACKAGE_WITH_PROTOCOL:",
+                "!@*/**",
+                "!../**",
+                "!./**"
+              ],
+              ":BLANK_LINE:",
+              [":PACKAGE:", "!@zbmui/**"],
+              ":BLANK_LINE:",
+              "@zbmui/**",
+              ":BLANK_LINE:",
+              ["@/**", "@/*/**", "!@/components/**", "!@/styles/**"],
+              ":BLANK_LINE:",
+              "@/components/**",
+              "@/styles/**",
+              "./**",
+              "../**"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

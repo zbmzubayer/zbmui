@@ -1,0 +1,89 @@
+---
+title: Next.js - Dark Mode
+description: Adding dark mode to your next app.
+---
+
+## Install next-themes
+
+Start by installing `next-themes`:
+
+```bash
+npm install next-themes
+```
+
+## Create a theme provider
+
+```tsx showLineNumbers title="src/providers/theme-provider.tsx"
+"use client";
+
+import { ThemeProvider as NextThemeProvider } from "next-themes";
+
+export function ThemeProvider({
+  children,
+  ...props
+}: React.ComponentProps<typeof NextThemeProvider>) {
+  return (
+    <NextThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      disableTransitionOnChange
+      enableColorScheme
+      enableSystem
+      {...props}>
+      {children}
+    </NextThemeProvider>
+  );
+}
+```
+
+## Wrap your root layout
+
+Add the `ThemeProvider` to your root layout and add the `suppressHydrationWarning` prop to the `html` tag.
+
+```tsx {1,9, 11} showLineNumbers title="src/app/layout.tsx"
+import { ThemeProvider } from "@/providers/theme-provider";
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+## Add a theme toggle
+
+Place a theme toggle on your site to toggle between light and dark mode.
+
+```tsx showLineNumbers title="src/components/theme-toggle.tsx"
+"use client";
+
+import { useTheme } from "next-themes";
+
+import { IconMoonStars, IconSunHighFilled } from "@tabler/icons-react";
+
+import { Button } from "@/components/ui/button";
+
+export function NextThemeToggle() {
+  const { setTheme, resolvedTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  };
+
+  return (
+    <Button className="relative size-8" onClick={toggleTheme} size="icon" variant="ghost">
+      <IconSunHighFilled className="absolute size-4 transition-opacity dark:opacity-0" />
+      <IconMoonStars className="absolute size-4 opacity-0 transition-opacity dark:opacity-100" />
+      <span className="sr-only">Toggle theme</span>
+    </Button>
+  );
+}
+```

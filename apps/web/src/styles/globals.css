@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@import "@zbmui/ui/styles/globals.css";
+
+:root {
+  --header-height: 4rem;
+}
+
+@layer base {
+  html {
+    @apply overscroll-y-none scroll-smooth;
+  }
+}

@@ -1,0 +1,46 @@
+---
+title: Number Field
+description: A field that allows user input of numeric values.
+links:
+  doc: https://base-ui.com/react/components/number-field
+  anatomy: https://base-ui.com/react/components/number-field#anatomy
+  api: https://base-ui.com/react/components/number-field#api-reference
+---
+
+<ComponentPreview name="c-number-field-1" />
+
+## Installation
+
+<ComponentSource name="number-field" title="components/ui/number-field.tsx" />
+
+## Usage
+
+```tsx
+import { NumberField } from "@/components/ui/number-field";
+```
+
+```tsx
+<NumberField />
+```
+
+## Example
+
+### Sizes
+
+Pass the `size` prop to set the size of the NumberField. Available sizes are `xs`, `sm`, `default`, `lg`, and `xl`.
+
+<ComponentPreview name="c-number-field-2" />
+
+### Controlled
+
+<ComponentPreview name="c-number-field-3" />
+
+### Minimum and maximum value
+
+Pass the `min` prop or `max` prop to set an upper and lower limit for the input. By default, the input will restrict the value to stay within the specified range.
+
+```tsx
+function NumberFieldDemo() {
+  return <NumberField min={0} max={10} />;
+}
+```

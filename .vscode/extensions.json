@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "biomejs.biome", // biome
+    "esbenp.prettier-vscode", // prettier
+    "bradlc.vscode-tailwindcss", // autocompletion for tailwind
+    "streetsidesoftware.code-spell-checker" // code spell checker
+  ]
+}

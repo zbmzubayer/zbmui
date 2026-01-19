@@ -1,0 +1,48 @@
+---
+title: Dialog
+description: A popup that opens on top of the entire page.
+links:
+  doc: https://base-ui.com/react/components/dialog
+  anatomy: https://base-ui.com/react/components/dialog#anatomy
+  api: https://base-ui.com/react/components/dialog#api-reference
+---
+
+<ComponentPreview name="dialog-demo" />
+
+## Installation
+
+<ComponentSource name="dialog" />
+
+## Usage
+
+```tsx
+import {
+  Dialog,
+  DialogClose,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogPanel,
+  DialogPopup,
+  DialogTitle,
+  DialogTrigger,
+} from "@/registry/default/ui/dialog";
+```
+
+```tsx
+<Dialog>
+  <DialogTrigger>Open Dialog</DialogTrigger>
+  <DialogPopup>
+    <DialogHeader>
+      <DialogTitle>Dialog Title</DialogTitle>
+      <DialogDescription>Dialog description text goes here.</DialogDescription>
+    </DialogHeader>
+    <DialogPanel className="grid gap-4">
+      Dialog content goes here. You can put forms, text, or any other elements inside the dialog.
+    </DialogPanel>
+    <DialogFooter>
+      <DialogClose className="btn">Close</DialogClose>
+    </DialogFooter>
+  </DialogPopup>
+</Dialog>
+```

@@ -1,7 +1,15 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+  "extends": "@zbmui/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "composite": true,
+    "incremental": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@zbmui/ui/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

@@ -1,0 +1,105 @@
+---
+title: Scroll Area
+description: A native scroll container with custom scrollbars.
+links:
+  doc: https://base-ui.com/react/components/scroll-area
+  anatomy: https://base-ui.com/react/components/scroll-area#anatomy
+  api: https://base-ui.com/react/components/scroll-area#api-reference
+---
+
+<ComponentPreview name="c-scroll-area-1" />
+
+## Installation
+
+Copy and paste the following code into your project.
+
+<ComponentSource name="scroll-area" title="components/ui/scroll-area.tsx" />
+
+## Usage
+
+```tsx
+import { ScrollArea } from "@/components/ui/scroll-area";
+```
+
+```tsx
+<ScrollArea className="h-64 rounded-md border">
+  <div className="p-4">
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor
+    sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+    qui officia deserunt mollit anim id est laborum.
+  </div>
+</ScrollArea>
+```
+
+## Examples
+
+### Horizontal scroll
+
+<ComponentPreview name="c-scroll-area-2" />
+
+### Both horizontal and vertical scroll
+
+<ComponentPreview name="c-scroll-area-3" />
+
+### Scroll with fade effect
+
+Pass `scrollFade` prop to `ScrollArea` to add fade effect at the edges.
+
+<ComponentPreview name="c-scroll-area-4" />
+
+### Scrollbar gutter
+
+Enable `scrollbarGutter` prop to add space for the scrollbar to avoid layout shift.
+
+<ComponentPreview name="c-scroll-area-5" />
+
+### Scrollbar custom size and margin
+
+Customize the scrollbar size using **CSS** variable `--scrollbar-size`. Default size is `6px`.
+
+You can also customize the scrollbar margin using **CSS** variable `--scrollbar-margin`. Default margin is `4px`.
+
+<ComponentPreview name="c-scroll-area-6" />
+
+## API Reference
+
+### Scroll Area props
+
+<ApiReferenceAccordion
+  type={{
+    scrollFade: {
+      description: "Whether to enable scroll fade effect at the edges.",
+      type: `boolean`,
+      default: `false`,
+    },
+    scrollbarGutter: {
+      description: "Whether to add space for the scrollbar to avoid layout shift.",
+      type: `boolean`,
+      default: `false`,
+    },
+  }}
+/>
+
+### Scroll Area CSS variables
+
+<TypeTable
+  type={{
+    "--scrollbar-size": {
+      description: "Custom size of the scrollbar.",
+      type: `string`,
+      default: `--spacing(1.5) /* 6px */`,
+    },
+    "--scrollbar-margin": {
+      description: "Custom margin of the scrollbar.",
+      type: `string`,
+      default: `--spacing(1) /* 4px */`,
+    },
+  }}
+/>

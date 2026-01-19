@@ -1,0 +1,68 @@
+---
+title: Button
+description: A button component that can be rendered as another tag or focusable when disabled.
+---
+
+<ComponentPreview name="button-1" />
+
+## Anatomy
+
+```tsx showLineNumbers
+import { Button } from "@base-ui/react/button";
+
+<NumberField.Root>
+  <NumberField.ScrubArea>
+    <NumberField.ScrubAreaCursor />
+  </NumberField.ScrubArea>
+  <NumberField.Group>
+    <NumberField.Decrement />
+    <NumberField.Input />
+    <NumberField.Increment />
+  </NumberField.Group>
+</NumberField.Root>;
+```
+
+## Installation
+
+<ComponentSource name="button" title="components/ui/button.tsx" />
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/button";
+```
+
+```tsx
+<Button />
+```
+
+## Examples
+
+### Variants
+
+<ComponentPreview name="button-variants-demo" />
+
+### Sizes
+
+<ComponentPreview name="button-sizes-demo" />
+
+## API Reference
+
+### Button props
+
+The `Button` component is a wrapper around the `button` element that adds a variety of styles and functionality.
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the button.",
+      type: "'primary' | 'outline' | 'ghost' | 'destructive' | 'secondary' | 'link'",
+      default: `'primary'`,
+    },
+    size: {
+      description: "The size of the button.",
+      type: "'xs' | 'sm' | 'default' | 'lg' | 'xl' | 'icon-sm' | 'icon' | 'icon-lg' | 'icon-xl'",
+      default: `'default'`,
+    },
+  }}
+/>

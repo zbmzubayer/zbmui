@@ -1,0 +1,88 @@
+---
+title: Select
+description: A common form component for choosing a predefined value in a dropdown menu.
+links:
+  doc: https://base-ui.com/react/components/select
+  anatomy: https://base-ui.com/react/components/select#anatomy
+  api: https://base-ui.com/react/components/select#api-reference
+---
+
+<ComponentPreview name="c-select-1" />
+
+## Installation
+
+<ComponentSource name="select" title="components/ui/select.tsx" />
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectItem,
+  SelectPopup,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+```
+
+```tsx
+<Select>
+  <SelectTrigger className="w-45">
+    <SelectValue />
+  </SelectTrigger>
+  <SelectPopup>
+    <SelectItem value={null}>Theme</SelectItem>
+    <SelectItem value="light">Light</SelectItem>
+    <SelectItem value="dark">Dark</SelectItem>
+    <SelectItem value="system">System</SelectItem>
+  </SelectPopup>
+</Select>
+```
+
+## Examples
+
+### Sizes
+
+Three sizes are available: `sm`, `md` (default) and `lg`.
+
+<ComponentPreview name="c-select-2" />
+
+### Disabled
+
+<ComponentPreview name="c-select-3" />
+
+### Align item with trigger
+
+<ComponentPreview name="c-select-4" />
+
+### With groups
+
+<ComponentPreview name="c-select-5" />
+
+### Multiple selection
+
+Enable multiple selection by passing the `multiple` prop to the `Select` component.
+
+<ComponentPreview name="c-select-6" />
+
+### With icon
+
+<ComponentPreview name="c-select-7" />
+
+### With options icon
+
+<ComponentPreview name="c-select-8" />
+
+### With object values
+
+<ComponentPreview name="c-select-9" />
+
+### With scrolling
+
+By default, the Select component uses **built-in** scrollbars. You can also enable **native scrolling** by passing `nativeScroll` prop to the `SelectPopup` component.
+
+<ComponentPreview name="c-select-10" />
+
+### Controlled
+
+<ComponentPreview name="c-select-11" />
