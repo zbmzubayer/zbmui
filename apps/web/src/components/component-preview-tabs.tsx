@@ -93,7 +93,11 @@ export function ComponentPreviewTabs({
           </TabsTab>
         </TabsList>
       )}
-      <TabsPanel value="preview" keepMounted className="overflow-hidden rounded-xl border">
+      <TabsPanel
+        value="preview"
+        keepMounted
+        className="overflow-hidden rounded-[calc(var(--radius-xl)+2px)] border"
+      >
         <div
           data-align={align}
           className={cn(
