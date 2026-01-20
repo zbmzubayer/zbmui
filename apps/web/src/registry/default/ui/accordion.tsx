@@ -45,13 +45,11 @@ function AccordionPanel({ className, children, ...props }: AccordionPrimitive.Pa
     <AccordionPrimitive.Panel
       data-slot="accordion-panel"
       className={cn(
-        "h-(--accordion-panel-height) overflow-hidden px-3 text-muted-foreground text-sm transition-[height] duration-200 ease-in-out data-ending-style:h-0 data-starting-style:h-0 data-open:pb-4",
-        className
+        "h-(--accordion-panel-height) overflow-hidden text-muted-foreground text-sm transition-[height] duration-200 ease-in-out data-ending-style:h-0 data-starting-style:h-0"
       )}
       {...props}
     >
-      {/* <div className={cn("pt-0 pb-4", className)}>{children}</div> */}
-      {children}
+      <div className={cn("pt-0 pb-4", className)}>{children}</div>
     </AccordionPrimitive.Panel>
   );
 }
