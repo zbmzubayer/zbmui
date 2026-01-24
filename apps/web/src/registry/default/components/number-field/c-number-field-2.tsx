@@ -7,7 +7,6 @@ export function NumberFieldDemo() {
       <NumberField placeholder="Enter a number" size="sm" />
       <NumberField placeholder="Enter a number" size="default" />
       <NumberField placeholder="Enter a number" size="lg" />
-      <NumberField placeholder="Enter a number" size="xl" />
     </div>
   );
 }
