@@ -1,0 +1,66 @@
+---
+title: Alert
+description: A callout for displaying important information.
+---
+
+<ComponentPreview name="c-alert-1" />
+
+## Installation
+
+<ComponentSource name="alert" title="components/ui/alert.tsx" />
+
+## Anatomy
+
+```tsx
+<Alert>
+  <AlertIndicator />
+  <AlertContent>
+    <AlertTitle />
+    <AlertDescription />
+  </AlertContent>
+  <AlertAction />
+</Alert>
+```
+
+## Usage
+
+```tsx
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+```
+
+```tsx
+<Alert>
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components and dependencies to your app using the cli.
+  </AlertDescription>
+</Alert>
+```
+
+## Examples
+
+### Variants
+
+<ComponentPreview name="c-alert-2" />
+
+### With icon and action
+
+<ComponentPreview name="c-alert-3" />
+
+### Dismissible alert
+
+<ComponentPreview name="c-alert-4" />
+
+## API Reference
+
+### Alert props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the alert.",
+      type: "'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error'",
+      default: `'primary'`,
+    },
+  }}
+/>
