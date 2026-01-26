@@ -27,10 +27,10 @@ function TabsList({
       data-slot="tabs-list"
       className={cn(
         "relative z-0 inline-flex items-center justify-center gap-x-0.5 text-muted-foreground",
-        "data-[orientation=vertical]:flex-col",
+        "text-muted-foreground/70 data-[orientation=vertical]:flex-col",
         variant === "default"
-          ? "rounded-lg bg-muted p-0.5 text-muted-foreground/70"
-          : "data-[orientation=vertical]:px-1 data-[orientation=horizontal]:py-1 *:data-[slot=tabs-tab]:hover:bg-accent",
+          ? "rounded-lg bg-muted p-0.5"
+          : "data-[orientation=vertical]:px-1 data-[orientation=horizontal]:py-1",
         className
       )}
       {...props}
