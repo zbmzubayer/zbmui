@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import type { BundledLanguage } from "shiki";
 
 import { getRegistryItem } from "@/lib/registry";
 
@@ -17,7 +18,7 @@ export async function ComponentSource({
   name?: string;
   src?: string;
   title?: string;
-  language?: string;
+  language?: BundledLanguage;
   collapsible?: boolean;
 }) {
   if (!name && !src) {
@@ -40,7 +41,7 @@ export async function ComponentSource({
     return null;
   }
 
-  const lang = language ?? title?.split(".").pop() ?? "tsx";
+  const lang: BundledLanguage = language ?? (title?.split(".").pop() as BundledLanguage) ?? "tsx";
 
   if (!collapsible) {
     return <CodeBlock code={code} language={lang} title={title} />;

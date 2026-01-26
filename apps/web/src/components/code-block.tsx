@@ -1,3 +1,5 @@
+import type { BundledLanguage } from "shiki";
+
 import { CopyButton } from "@zbmui/ui/shared/copy-button";
 
 import { highlightCode } from "@/lib/highlight-code";
@@ -13,7 +15,7 @@ export async function CodeBlock({
   showLineNumbers = true,
 }: {
   code: string;
-  language: string;
+  language: BundledLanguage;
   title?: string | undefined;
   copyButton?: boolean;
   showLineNumbers?: boolean;
@@ -36,7 +38,7 @@ export async function CodeBlock({
       )}
       {copyButton && <CopyButton value={code} />}
       <ScrollArea className="**:data-[slot=scroll-area-scrollbar]:data-[orientation=horizontal]:mx-2 **:data-[slot=scroll-area-scrollbar]:data-[orientation=vertical]:my-2">
-        {/** biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
+        {/** biome-ignore lint/security/noDangerouslySetInnerHtml: known */}
         <div dangerouslySetInnerHTML={{ __html: highlightedCode }} />
       </ScrollArea>
     </figure>
