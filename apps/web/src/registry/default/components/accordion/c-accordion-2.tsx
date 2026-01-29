@@ -27,7 +27,7 @@ export function AccordionDemo() {
   ];
 
   return (
-    <Accordion defaultValue={["1"]} multiple>
+    <Accordion defaultValue={["1"]} multiple className="max-w-md">
       {items.map((item) => (
         <AccordionItem key={item.id} value={item.id}>
           <AccordionTrigger>{item.title}</AccordionTrigger>
