@@ -26,6 +26,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  alert: {
+    name: "alert",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/alert.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   button: {
     name: "button",
     description: "",
@@ -324,7 +347,7 @@ export const Index: Record<string, any> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: ["button"],
+    categories: ["accordion"],
     meta: undefined,
   },
   "c-accordion-2": {
@@ -347,23 +370,115 @@ export const Index: Record<string, any> = {
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
-    categories: ["button"],
+    categories: ["accordion"],
     meta: undefined,
   },
-  "button-1": {
-    name: "button-1",
-    description: "Default button",
+  "c-alert-1": {
+    name: "c-alert-1",
+    description: "Alert demo",
     type: "registry:component",
-    registryDependencies: ["@zbmui/button"],
+    registryDependencies: ["@zbmui/alert"],
     files: [
       {
-        path: "src/registry/default/components/button/button-1.tsx",
+        path: "src/registry/default/components/alert/c-alert-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/button-1");
+      const mod = await import("@/registry/default/components/alert/c-alert-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["alert"],
+    meta: undefined,
+  },
+  "c-alert-2": {
+    name: "c-alert-2",
+    description: "Alert with icon",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert"],
+    files: [
+      {
+        path: "src/registry/default/components/alert/c-alert-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert/c-alert-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["alert"],
+    meta: undefined,
+  },
+  "c-alert-3": {
+    name: "c-alert-3",
+    description: "Alert with icon",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert"],
+    files: [
+      {
+        path: "src/registry/default/components/alert/c-alert-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert/c-alert-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["alert"],
+    meta: undefined,
+  },
+  "c-alert-4": {
+    name: "c-alert-4",
+    description: "Alert with icon",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert"],
+    files: [
+      {
+        path: "src/registry/default/components/alert/c-alert-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert/c-alert-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["alert"],
+    meta: undefined,
+  },
+  "c-button-1": {
+    name: "c-button-1",
+    description: "Button basic demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/button/c-button-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/button/c-button-1");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -373,20 +488,20 @@ export const Index: Record<string, any> = {
     categories: ["button"],
     meta: undefined,
   },
-  "button-variants-demo": {
-    name: "button-variants-demo",
+  "c-button-2": {
+    name: "c-button-2",
     description: "Button variants demo",
     type: "registry:component",
     registryDependencies: ["@zbmui/button"],
     files: [
       {
-        path: "src/registry/default/components/button/button-variants-demo.tsx",
+        path: "src/registry/default/components/button/c-button-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/button-variants-demo");
+      const mod = await import("@/registry/default/components/button/c-button-2");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -396,20 +511,20 @@ export const Index: Record<string, any> = {
     categories: ["button"],
     meta: undefined,
   },
-  "button-sizes-demo": {
-    name: "button-sizes-demo",
+  "c-button-3": {
+    name: "c-button-3",
     description: "Button sizes demo",
     type: "registry:component",
     registryDependencies: ["@zbmui/button"],
     files: [
       {
-        path: "src/registry/default/components/button/button-sizes-demo.tsx",
+        path: "src/registry/default/components/button/c-button-3.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/button-sizes-demo");
+      const mod = await import("@/registry/default/components/button/c-button-3");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
