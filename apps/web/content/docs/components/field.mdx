@@ -15,6 +15,31 @@ links:
 
 ## Usage
 
+```tsx
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldLabel,
+  FieldValidity,
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+```
+
+```tsx
+<Field>
+  <FieldLabel>Name</FieldLabel>
+  <Input type="text" placeholder="Enter your name" />
+  <FieldDescription>Visible on your profile</FieldDescription>
+  <FieldError>Please enter a valid name</FieldError>
+  <FieldValidity>
+    {(validity) => (
+      {validity.error && <p>{validity.error}</p>}
+    )}
+  </FieldValidity>
+</Field>
+```
+
 ## Examples
 
 ### Required field with indicator
