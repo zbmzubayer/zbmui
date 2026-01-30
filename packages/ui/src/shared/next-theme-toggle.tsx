@@ -15,8 +15,8 @@ export function NextThemeToggle() {
 
   return (
     <Button className="relative size-8" onClick={toggleTheme} size="icon" variant="ghost">
-      <IconSunHighFilled className="absolute size-4 transition-opacity dark:opacity-0" />
-      <IconMoonStars className="absolute size-4 opacity-0 transition-opacity dark:opacity-100" />
+      <IconMoonStars className="absolute size-4 transition-opacity dark:opacity-0" />
+      <IconSunHighFilled className="absolute size-4 opacity-0 transition-opacity dark:opacity-100" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
