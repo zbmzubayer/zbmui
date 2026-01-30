@@ -27,10 +27,7 @@ export function CopyButton({
             data-slot="copy-button"
             size={size}
             variant={variant}
-            className={cn(
-              "absolute top-1.5 right-1.5 z-3 bg-code opacity-70 hover:opacity-100 focus-visible:opacity-100",
-              className
-            )}
+            className={cn("opacity-70 hover:opacity-100 focus-visible:opacity-100", className)}
             onClick={() => copyToClipboard(value)}
             {...props}
           >

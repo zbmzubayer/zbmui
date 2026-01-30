@@ -79,12 +79,17 @@ pre {
     outline: none;
     position: relative;
 
-    &:has([data-rehype-pretty-code-title]) [data-slot="copy-button"] {
+    & [data-slot="copy-button"] {
+      background-color: var(--code);
+      position: absolute;
       top: calc(var(--spacing) * 1.5);
+      right: calc(var(--spacing) * 1.5);
+      z-index: 3;
     }
 
     :where(*[data-tab="code"]) & {
       border-width: 0px;
+      margin-top: 0;
     }
   }
 
