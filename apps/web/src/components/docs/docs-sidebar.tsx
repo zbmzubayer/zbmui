@@ -1,8 +1,3 @@
-"use client";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 import { Badge } from "@zbmui/ui/components/badge";
 import {
   Sidebar,
@@ -11,19 +6,18 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem,
 } from "@zbmui/ui/components/sidebar";
 
 import { siteConfig } from "@/config/site-config";
 import type { source } from "@/lib/source";
 
+import { DocsSidebarItemActive } from "@/components/docs/docs-sidebar-item-active";
+
 export function DocsSidebar({
   tree,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { tree: typeof source.pageTree }) {
-  const pathname = usePathname();
-
   return (
     <Sidebar
       className="sticky top-(--header-height) z-30 hidden h-[calc(100svh-var(--header-height))] bg-transparent lg:flex"
@@ -44,17 +38,13 @@ export function DocsSidebar({
                     return (
                       item.type === "page" && (
                         <SidebarMenuItem key={item.url}>
-                          <SidebarMenuButton
-                            className="ps-3.5 hover:bg-sidebar-accent/50 active:bg-sidebar-accent/50"
-                            isActive={item.url === pathname}
-                            render={<Link href={item.url} />}
-                          >
+                          <DocsSidebarItemActive item={item}>
                             {item.name}
                             {siteConfig.docs.pages_new.length > 0 &&
                               siteConfig.docs.pages_new.includes(item.url as never) && (
                                 <Badge variant="info">New</Badge>
                               )}
-                          </SidebarMenuButton>
+                          </DocsSidebarItemActive>
                         </SidebarMenuItem>
                       )
                     );
