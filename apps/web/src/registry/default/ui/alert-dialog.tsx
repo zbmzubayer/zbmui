@@ -107,7 +107,7 @@ function AlertDialogDescription({
 
 function AlertDialogFooter({
   className,
-  variant = "muted",
+  variant = "default",
   ...props
 }: React.ComponentProps<"div"> & { variant?: "default" | "muted" }) {
   return (
