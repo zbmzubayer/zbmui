@@ -49,6 +49,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  badge: {
+    name: "badge",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/badge.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   button: {
     name: "button",
     description: "",
@@ -463,6 +486,98 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["alert"],
+    meta: undefined,
+  },
+  "c-badge-1": {
+    name: "c-badge-1",
+    description: "Badge demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/badge"],
+    files: [
+      {
+        path: "src/registry/default/components/badge/c-badge-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/badge/c-badge-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["badge"],
+    meta: undefined,
+  },
+  "c-badge-2": {
+    name: "c-badge-2",
+    description: "Badge variants demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/badge"],
+    files: [
+      {
+        path: "src/registry/default/components/badge/c-badge-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/badge/c-badge-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["badge"],
+    meta: undefined,
+  },
+  "c-badge-3": {
+    name: "c-badge-3",
+    description: "Badge sizes demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/badge"],
+    files: [
+      {
+        path: "src/registry/default/components/badge/c-badge-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/badge/c-badge-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["badge"],
+    meta: undefined,
+  },
+  "c-badge-4": {
+    name: "c-badge-4",
+    description: "Badge with icon demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/badge"],
+    files: [
+      {
+        path: "src/registry/default/components/badge/c-badge-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/badge/c-badge-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["badge"],
     meta: undefined,
   },
   "c-button-1": {
