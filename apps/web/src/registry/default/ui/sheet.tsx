@@ -1,3 +1,5 @@
+"use client";
+
 import { Dialog as SheetPrimitive } from "@base-ui/react/dialog";
 import { IconX } from "@tabler/icons-react";
 
@@ -5,9 +7,7 @@ import { cn } from "@/lib/cn";
 import { Button } from "@/registry/default/ui/button";
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
 
-function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
-  return <SheetPrimitive.Root data-slot="sheet" {...props} />;
-}
+const Sheet = SheetPrimitive.Root;
 
 const SheetPortal = SheetPrimitive.Portal;
 
@@ -23,7 +23,7 @@ function SheetBackdrop({ className, ...props }: SheetPrimitive.Backdrop.Props) {
   return (
     <SheetPrimitive.Backdrop
       className={cn(
-        "fixed inset-0 min-h-dvh bg-black opacity-20 transition-all duration-150 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0 supports-[-webkit-touch-callout:none]:absolute dark:opacity-70",
+        "fixed inset-0 z-50 bg-black/32 backdrop-blur-sm transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0",
         className
       )}
       data-slot="sheet-backdrop"
@@ -38,7 +38,7 @@ function SheetViewport({
   inset = false,
   ...props
 }: SheetPrimitive.Viewport.Props & {
-  side?: "top" | "right" | "bottom" | "left";
+  side?: "right" | "left" | "top" | "bottom";
   inset?: boolean;
 }) {
   return (
@@ -70,18 +70,20 @@ function SheetPopup({
   inset?: boolean;
 }) {
   return (
-    <SheetPortal data-slot="sheet-portal">
+    <SheetPortal>
       <SheetBackdrop />
-      <SheetPrimitive.Viewport className="fixed inset-0 z-50 flex h-screen w-screen items-center justify-center">
+      <SheetViewport inset={inset} side={side}>
         <SheetPrimitive.Popup
           className={cn(
-            "fixed right-0 z-50 -mt-8 flex w-96 max-w-[calc(100vw-3rem)] flex-col gap-4 rounded-lg bg-gray-50 p-6 text-gray-900 outline outline-1 outline-gray-200 transition-all duration-150 data-[ending-style]:scale-90 data-[starting-style]:scale-90 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0 dark:outline-gray-300",
-            side === "bottom" && "",
+            "relative flex max-h-full min-h-0 w-full min-w-0 flex-col bg-popover not-dark:bg-clip-padding text-popover-foreground shadow-lg/5 transition-[opacity,translate] duration-200 ease-in-out will-change-transform before:pointer-events-none before:absolute before:inset-0 before:shadow-[0_1px_--theme(--color-black/6%)] data-ending-style:opacity-0 data-starting-style:opacity-0 max-sm:before:hidden dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
+            side === "bottom" &&
+              "row-start-2 border-t data-ending-style:translate-y-8 data-starting-style:translate-y-8",
             side === "top" &&
               "border-b data-ending-style:-translate-y-8 data-starting-style:-translate-y-8",
             side === "left" &&
               "w-[calc(100%-(--spacing(12)))] max-w-md border-e data-ending-style:-translate-x-8 data-starting-style:-translate-x-8",
-            // side === "right" && "right-0",
+            side === "right" &&
+              "col-start-2 w-[calc(100%-(--spacing(12)))] max-w-md border-s data-ending-style:translate-x-8 data-starting-style:translate-x-8",
             inset &&
               "before:hidden sm:rounded-2xl sm:border sm:before:rounded-[calc(var(--radius-2xl)-1px)] sm:**:data-[slot=sheet-footer]:rounded-b-[calc(var(--radius-2xl)-1px)]",
             className
@@ -100,7 +102,7 @@ function SheetPopup({
             </SheetPrimitive.Close>
           )}
         </SheetPrimitive.Popup>
-      </SheetPrimitive.Viewport>
+      </SheetViewport>
     </SheetPortal>
   );
 }
