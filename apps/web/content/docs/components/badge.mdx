@@ -1,0 +1,51 @@
+---
+title: Badge
+description: A badge or a component that looks like a badge.
+---
+
+<ComponentPreview name="c-badge-1" />
+
+## Installation
+
+<ComponentSource name="badge" title="components/ui/badge.tsx" />
+
+## Usage
+
+```tsx
+import { Badge } from "@/components/ui/badge";
+```
+
+```tsx
+<Badge>Badge</Badge>
+```
+
+## Examples
+
+### Variants
+
+<ComponentPreview name="c-badge-2" />
+
+### Sizes
+
+<ComponentPreview name="c-badge-3" />
+
+### With icon
+
+<ComponentPreview name="c-badge-4" />
+
+## API Reference
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the badge.",
+      type: "'primary' | 'secondary' | 'outline' | 'info' | 'success' | 'warning' | 'danger' | 'error'",
+      default: `'primary'`,
+    },
+    size: {
+      description: "The size of the badge.",
+      type: "'sm' | 'default' | 'lg'",
+      default: `'default'`,
+    },
+  }}
+/>
