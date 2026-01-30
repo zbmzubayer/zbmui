@@ -2,7 +2,7 @@ import { Badge } from "@/registry/default/ui/badge";
 
 export function BadgeDemo() {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col items-center gap-2 sm:flex-row sm:flex-wrap">
       <Badge variant="primary">Primary</Badge>
       <Badge variant="secondary">Secondary</Badge>
       <Badge variant="outline">Outline</Badge>
