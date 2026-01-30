@@ -3,9 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { buttonVariants } from "@zbmui/ui/components/button";
-
 import { cn } from "@/lib/cn";
+import { buttonVariants } from "@/registry/default/ui/button";
 
 export function SiteNavItem({ item }: { item: { label: string; href: string } }) {
   const pathname = usePathname();
@@ -14,7 +13,7 @@ export function SiteNavItem({ item }: { item: { label: string; href: string } })
     <Link
       className={cn(
         buttonVariants({ variant: "ghost" }),
-        pathname.includes(item.href) && "text-primary"
+        pathname.includes(item.href) && "bg-accent"
       )}
       href={item.href}
     >
