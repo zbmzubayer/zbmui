@@ -29,7 +29,7 @@ export function CodeCollapsible({
       <div className="absolute top-1.5 right-10 z-10 flex items-center">
         <CollapsibleTrigger
           render={
-            <Button className="text-muted-foreground" variant="ghost" size="sm">
+            <Button className="text-muted-foreground" variant="ghost">
               {isOpened ? "Collapse" : "Expand"}
             </Button>
           }

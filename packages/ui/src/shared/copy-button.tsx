@@ -10,6 +10,7 @@ import { cn } from "@zbmui/ui/lib/cn";
 export function CopyButton({
   value,
   className,
+  size = "icon",
   variant = "ghost",
   ...props
 }: React.ComponentProps<typeof Button> & {
@@ -23,14 +24,14 @@ export function CopyButton({
       <TooltipTrigger
         render={
           <Button
+            data-slot="copy-button"
+            size={size}
+            variant={variant}
             className={cn(
               "absolute top-1.5 right-1.5 z-3 bg-code opacity-70 hover:opacity-100 focus-visible:opacity-100",
               className
             )}
-            data-slot="copy-button"
             onClick={() => copyToClipboard(value)}
-            size="icon"
-            variant={variant}
             {...props}
           >
             <span className="sr-only">Copy</span>
