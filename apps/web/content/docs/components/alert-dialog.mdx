@@ -1,0 +1,84 @@
+---
+title: Alert Dialog
+description: A dialog that requires a user response to proceed.
+links:
+  doc: https://base-ui.com/react/components/alert-dialog
+  anatomy: https://base-ui.com/react/components/alert-dialog#anatomy
+  api: https://base-ui.com/react/components/alert-dialog#api-reference
+---
+
+<ComponentPreview name="c-alert-dialog-1" />
+
+## Installation
+
+<ComponentSource name="alert-dialog" title="components/ui/alert-dialog.tsx" />
+
+## Usage
+
+```tsx
+import {
+  AlertDialog,
+  AlertDialogClose,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogPopup,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+```
+
+```tsx
+<AlertDialog>
+  <AlertDialogTrigger>Delete Account</AlertDialogTrigger>
+  <AlertDialogPopup>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone. This will permanently delete your account and remove your data
+        from our servers.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogClose>Cancel</AlertDialogClose>
+      <AlertDialogClose>Delete Account</AlertDialogClose>
+    </AlertDialogFooter>
+  </AlertDialogPopup>
+</AlertDialog>
+```
+
+## Examples
+
+### With muted footer
+
+Pass `variant="muted"` prop to `AlertDialogFooter` to render a muted footer.
+
+<ComponentPreview name="c-alert-dialog-2" />
+
+### Controlled
+
+Use `open` and `onOpenChange` props to control the open state of the alert dialog.
+
+<ComponentPreview name="c-alert-dialog-3" />
+
+### With close confirmation
+
+Enter some text and try to close the dialog to see a **confirmation alert dialog** before closing.
+
+**Note:** Useful when you want to prevent users from losing unsaved changes.
+
+<ComponentPreview name="c-alert-dialog-4" />
+
+## API Reference
+
+### AlertDialogFooter props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the footer.",
+      type: "'default' | 'muted'",
+      default: `'default'`,
+    },
+  }}
+/>
