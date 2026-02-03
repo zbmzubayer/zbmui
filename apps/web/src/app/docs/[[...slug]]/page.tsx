@@ -47,9 +47,23 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
             <div className="flex min-w-0 flex-1 flex-col gap-8">
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2">
-                  <h1 className="scroll-m-20 font-semibold text-3xl xl:text-4xl">
-                    {page.data.title}
-                  </h1>
+                  <div className="flex items-center justify-between gap-2">
+                    <h1 className="scroll-m-20 font-semibold text-3xl xl:text-4xl">
+                      {page.data.title}
+                    </h1>
+                    <div className="flex items-center gap-2">
+                      <DocsCopyPage content={rawContent} />
+                      <a
+                        href={`${page.url}.md`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+                      >
+                        <IconMarkdown />
+                        View markdown
+                      </a>
+                    </div>
+                  </div>
                   {page.data.description && (
                     <p className="text-muted-foreground sm:text-lg">{page.data.description}</p>
                   )}
@@ -88,18 +102,6 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
                       <IconExternalLink />
                     </Link>
                   )}
-                  <div className="ml-auto flex items-center gap-2">
-                    <DocsCopyPage content={rawContent} />
-                    <a
-                      href={`${page.url}.md`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-                    >
-                      <IconMarkdown />
-                      View markdown
-                    </a>
-                  </div>
                 </div>
               </div>
               <div className="w-full flex-1 *:data-[slot=alert]:first:mt-0">
