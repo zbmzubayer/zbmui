@@ -1155,6 +1155,75 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "c-menu-6": {
+    name: "c-menu-6",
+    description: "Menu popup side and alignment",
+    type: "registry:demo",
+    registryDependencies: ["menu"],
+    files: [
+      {
+        path: "src/registry/default/components/menu/c-menu-6.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/menu/c-menu-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-menu-7": {
+    name: "c-menu-7",
+    description: "Menu checkbox and radio closeOnClick behavior",
+    type: "registry:demo",
+    registryDependencies: ["menu"],
+    files: [
+      {
+        path: "src/registry/default/components/menu/c-menu-7.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/menu/c-menu-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-menu-8": {
+    name: "c-menu-8",
+    description: "Menu with dialog",
+    type: "registry:demo",
+    registryDependencies: ["menu", "dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/menu/c-menu-8.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/menu/c-menu-8");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "c-number-field-1": {
     name: "c-number-field-1",
     description: "Number Field Basic",

@@ -126,3 +126,82 @@ Menu radio items support an `indicatorPosition` prop to position the indicator a
 Default `indicatorPosition` is `end`.
 
 <ComponentPreview name="c-menu-5" />
+
+### Menu popup side and align
+
+To change the side and alignment of the menu popup, use the `positionerProps` prop of `MenuPopup` and pass the desired `side` and `align` values.
+
+<ComponentPreview name="c-menu-6" />
+
+### Menu item close on click
+
+By default, menu items close the menu when clicked because for `MenuItem` the default value of the `closeOnClick` prop is `true`.
+
+But for `MenuCheckboxItem` and `MenuRadioItem`, the default value of the `closeOnClick` prop is `false`.
+You can change this behavior by setting the `closeOnClick` prop to `true`.
+
+<ComponentPreview name="c-menu-7" />
+
+### Menu with dialog
+
+<ComponentPreview name="c-menu-8" />
+
+## API Reference
+
+### Menu popup props
+
+<ApiReferenceAccordion
+  type={{
+    positionerProps: {
+      description: "Props to pass to the underlying Positioner component.",
+      type: `React.ComponentProps<typeof MenuPositioner>`,
+      default: undefined,
+    },
+    size: {
+      description: "The size of the button.",
+      type: "'xs' | 'sm' | 'default' | 'lg' | 'xl' | 'icon-sm' | 'icon' | 'icon-lg' | 'icon-xl'",
+      default: `'default'`,
+    },
+  }}
+/>
+
+### Menu item props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the menu item.",
+      type: "'default' | 'danger'",
+      default: `'default'`,
+    },
+  }}
+/>
+
+### Menu checkbox item props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the checkbox item.",
+      type: "'default' | 'switch'",
+      default: `'default'`,
+    },
+    indicatorPosition: {
+      description: "The position of the indicator.",
+      type: "'start' | 'end'",
+      default: `'end'`,
+    },
+  }}
+/>
+
+### Menu radio item props
+
+<ApiReferenceAccordion
+  type={{
+    indicatorPosition: {
+      description: "The position of the indicator.",
+      type: "'start' | 'end'",
+      default: `'end'`,
+    },
+  }}
+/>
