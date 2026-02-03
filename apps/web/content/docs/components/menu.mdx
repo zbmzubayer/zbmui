@@ -1,0 +1,128 @@
+---
+title: Menu
+description: A list of actions in a dropdown, enhanced with keyboard navigation.
+links:
+  doc: https://base-ui.com/react/components/menu
+  anatomy: https://base-ui.com/react/components/menu#anatomy
+  api: https://base-ui.com/react/components/menu#api-reference
+---
+
+<ComponentPreview name="c-menu-1" />
+
+## Installation
+
+<ComponentSource name="menu" title="components/ui/menu.tsx" />
+
+## Usage
+
+```tsx
+import {
+  Menu,
+  MenuCheckboxItem,
+  MenuGroup,
+  MenuGroupLabel,
+  MenuItem,
+  MenuPopup,
+  MenuRadioGroup,
+  MenuRadioItem,
+  MenuSeparator,
+  MenuShortcut,
+  MenuSub,
+  MenuSubPopup,
+  MenuSubTrigger,
+  MenuTrigger,
+} from "@/registry/default/ui/menu";
+```
+
+```tsx
+<Menu>
+  <MenuTrigger>Menu</MenuTrigger>
+  <MenuPopup>
+    <MenuGroup>
+      <MenuGroupLabel>File</MenuGroupLabel>
+      <MenuItem>
+        New File
+        <MenuShortcut>⌘N</MenuShortcut>
+      </MenuItem>
+      <MenuItem>
+        New Folder
+        <MenuShortcut>⇧⌘N</MenuShortcut>
+      </MenuItem>
+      <MenuSub>
+        <MenuSubTrigger>Open Recent</MenuSubTrigger>
+        <MenuSubPopup>
+          <MenuGroup>
+            <MenuGroupLabel>Recent Projects</MenuGroupLabel>
+            <MenuItem>Project Alpha</MenuItem>
+            <MenuItem>Project Beta</MenuItem>
+          </MenuGroup>
+        </MenuSubPopup>
+      </MenuSub>
+    </MenuGroup>
+    <MenuSeparator />
+    <MenuGroup>
+      <MenuGroupLabel>View</MenuGroupLabel>
+      <MenuSub>
+        <MenuSubTrigger>Theme</MenuSubTrigger>
+        <MenuSubPopup>
+          <MenuGroup>
+            <MenuGroupLabel>Appearance</MenuGroupLabel>
+            <MenuRadioGroup>
+              <MenuRadioItem value="light">Light</MenuRadioItem>
+              <MenuRadioItem value="dark">Dark</MenuRadioItem>
+              <MenuRadioItem value="system">System</MenuRadioItem>
+            </MenuRadioGroup>
+          </MenuGroup>
+        </MenuSubPopup>
+      </MenuSub>
+    </MenuGroup>
+    <MenuSeparator />
+    <MenuGroup>
+      <MenuGroupLabel>Account</MenuGroupLabel>
+      <MenuItem>Profile</MenuItem>
+      <MenuItem>Billing</MenuItem>
+      <MenuSub>
+        <MenuSubTrigger>Settings</MenuSubTrigger>
+        <MenuSeparator />
+        <MenuGroup>
+          <MenuGroupLabel>Notifications</MenuGroupLabel>
+          <MenuCheckboxItem variant="switch">Push Notifications</MenuCheckboxItem>
+          <MenuCheckboxItem variant="switch">Email Notifications</MenuCheckboxItem>
+        </MenuGroup>
+      </MenuSub>
+    </MenuGroup>
+    <MenuSeparator />
+    <MenuGroup>
+      <MenuItem variant="danger">
+        Sign Out
+        <MenuShortcut>⇧⌘Q</MenuShortcut>
+      </MenuItem>
+    </MenuGroup>
+  </MenuPopup>
+</Menu>
+```
+
+## Examples
+
+### Open on hover
+
+Enable opening the menu when hovering over the trigger by setting the `openOnHover` prop on `MenuTrigger`.
+
+<ComponentPreview name="c-menu-2" />
+
+### With Checkbox
+
+<ComponentPreview name="c-menu-3" />
+
+### With Radio group
+
+<ComponentPreview name="c-menu-4" />
+
+### Switch variant & indicator position
+
+Menu checkbox items support a `switch` variant and an `indicatorPosition` prop to position the indicator at the start or end of the item. Default `indicatorPosition` is `end`.
+
+Menu radio items support an `indicatorPosition` prop to position the indicator at the start or end of the item.
+Default `indicatorPosition` is `end`.
+
+<ComponentPreview name="c-menu-5" />
