@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { IconArrowLeft, IconArrowRight, IconExternalLink } from "@tabler/icons-react";
+import { IconArrowLeft, IconArrowRight, IconExternalLink, IconMarkdown } from "@tabler/icons-react";
 
 import { SiteFooter } from "@/layouts/site-footer";
 import { cn } from "@/lib/cn";
@@ -11,6 +11,7 @@ import { source } from "@/lib/source";
 import { mdxComponents } from "@/mdx-components";
 import { Button, buttonVariants } from "@/registry/default/ui/button";
 
+import { DocsCopyPage } from "@/components/docs/docs-copy-page";
 import { DocsToc } from "@/components/docs/docs-toc";
 
 export async function generateStaticParams() {
@@ -53,7 +54,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
                     <p className="text-muted-foreground sm:text-lg">{page.data.description}</p>
                   )}
                 </div>
-                <div className="flex items-center space-x-2 pt-4">
+                <div className="flex items-center gap-2 pt-4">
                   {page.data.links?.doc && (
                     <Link
                       href={page.data.links.doc}
@@ -87,7 +88,18 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
                       <IconExternalLink />
                     </Link>
                   )}
-                  {/* <DocsCopyPage page={rawContent} /> */}
+                  <div className="ml-auto flex items-center gap-2">
+                    <DocsCopyPage content={rawContent} />
+                    <a
+                      href={`${page.url}.md`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+                    >
+                      <IconMarkdown />
+                      View markdown
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="w-full flex-1 *:data-[slot=alert]:first:mt-0">

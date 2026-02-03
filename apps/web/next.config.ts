@@ -5,12 +5,11 @@ const withMDX = createMDX();
 
 const nextConfig: NextConfig = {
   /* config options here */
-  redirects() {
+  async rewrites() {
     return [
       {
-        source: "/api/raw/docs/:path*.mdx",
-        destination: "/docs/:path*.md",
-        permanent: true,
+        source: "/docs/:path*.md",
+        destination: "/api/raw/docs/:path*",
       },
     ];
   },
