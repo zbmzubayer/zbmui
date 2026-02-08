@@ -72,6 +72,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  autocomplete: {
+    name: "autocomplete",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/autocomplete.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/autocomplete.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   badge: {
     name: "badge",
     description: "",
@@ -624,6 +647,236 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["alert-dialog"],
+    meta: undefined,
+  },
+  "c-autocomplete-1": {
+    name: "c-autocomplete-1",
+    description: "Autocomplete demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-2": {
+    name: "c-autocomplete-2",
+    description: "Autocomplete sizes",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-3": {
+    name: "c-autocomplete-3",
+    description: "Autocomplete disabled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-4": {
+    name: "c-autocomplete-4",
+    description: "Autocomplete with label",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-5": {
+    name: "c-autocomplete-5",
+    description: "Autocomplete with inline autocomplete",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-6": {
+    name: "c-autocomplete-6",
+    description: "Autocomplete with autoHighlight item",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-7": {
+    name: "c-autocomplete-7",
+    description: "Autocomplete with clear button",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-8": {
+    name: "c-autocomplete-8",
+    description: "Autocomplete with clear and trigger buttons",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-8.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-8");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-9": {
+    name: "c-autocomplete-9",
+    description: "Autocomplete with start addon",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-9.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-9");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-10": {
+    name: "c-autocomplete-10",
+    description: "Autocomplete with grouped items",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-10.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-10");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
     meta: undefined,
   },
   "c-badge-1": {
