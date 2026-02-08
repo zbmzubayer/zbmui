@@ -15,18 +15,30 @@ export function ComponentPreviewTabs({
   source: React.ReactNode;
 }) {
   return (
-    <Tabs defaultValue="preview" className={cn("mt-4 mb-12", className)} {...props}>
+    <Tabs
+      defaultValue="preview"
+      className={cn("mt-4 mb-12 gap-px rounded-xl border bg-accent", className)}
+      {...props}
+    >
       {!hideCode && (
-        <TabsList className="justify-start bg-transparent p-0 *:data-[slot=tab-indicator]:rounded-lg *:data-[slot=tab-indicator]:bg-accent *:data-[slot=tab-indicator]:shadow-none">
-          <TabsTab value="preview" className="h-8 rounded-lg">
+        <TabsList
+          variant="underline"
+          className="mx-4 justify-start bg-transparent p-0 *:data-[slot=tab-indicator]:rounded-lg *:data-[slot=tab-indicator]:shadow-none"
+        >
+          <TabsTab value="preview" className="h-7">
             Preview
           </TabsTab>
-          <TabsTab value="code" className="h-8 rounded-lg">
+          <TabsTab value="code" className="h-7">
             Code
           </TabsTab>
         </TabsList>
       )}
-      <TabsPanel value="preview" keepMounted className="overflow-hidden rounded-xl border">
+      <TabsPanel
+        value="preview"
+        keepMounted
+        data-tab="preview"
+        className="overflow-hidden rounded-xl bg-background"
+      >
         <div
           data-align={align}
           className={cn(
@@ -45,8 +57,8 @@ export function ComponentPreviewTabs({
       <TabsPanel
         value="code"
         keepMounted
-        data-slot="code"
-        className="overflow-hidden rounded-xl bg-code **:[figure]:m-0! **:[pre]:h-112.5"
+        data-tab="code"
+        className="overflow-hidden rounded-xl bg-code **:[pre]:h-112.5"
       >
         {source}
       </TabsPanel>
