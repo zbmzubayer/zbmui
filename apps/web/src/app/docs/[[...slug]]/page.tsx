@@ -40,34 +40,32 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const neighbours = findNeighbour(source.pageTree, page.url);
 
   return (
-    <div className="flex items-stretch sm:text-[.9375rem] xl:w-full" data-slot="docs">
+    <div className="flex items-stretch sm:text-[0.9375rem] xl:w-full" data-slot="docs">
       <div className="relative flex min-w-0 flex-1 flex-col bg-muted/50 bg-clip-padding shadow-black/5 shadow-sm after:pointer-events-none after:absolute after:-inset-1.25 after:-z-1 after:rounded-[calc(var(--radius-2xl)+4px)] after:border after:border-border/50 after:bg-clip-padding lg:mt-8 lg:mr-4 lg:mb-8 lg:rounded-2xl lg:border dark:after:bg-background/72">
         <div className="-m-px h-full border bg-background/60 px-4 py-6 before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-2xl)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] max-lg:before:hidden sm:px-6 lg:rounded-t-2xl lg:rounded-b-xl lg:p-8 dark:before:shadow-[0_-1px_--theme(--color-white/8%)]">
           <div className="mx-auto flex h-full w-full max-w-3xl flex-col">
             <div className="flex min-w-0 flex-1 flex-col gap-8">
               <div className="flex flex-col gap-2">
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <h1 className="scroll-m-20 font-semibold text-3xl xl:text-4xl">
-                      {page.data.title}
-                    </h1>
-                    <div className="flex items-center gap-2">
-                      <DocsCopyPage content={rawContent} />
-                      <a
-                        href={`${page.url}.md`}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-                      >
-                        <IconMarkdown />
-                        View markdown
-                      </a>
-                    </div>
+                <div className="flex items-start justify-between gap-2">
+                  <h1 className="scroll-m-20 font-semibold text-3xl xl:text-4xl">
+                    {page.data.title}
+                  </h1>
+                  <div className="flex items-center gap-2">
+                    <DocsCopyPage content={rawContent} />
+                    <a
+                      href={`${page.url}.md`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+                    >
+                      <IconMarkdown />
+                      View markdown
+                    </a>
                   </div>
-                  {page.data.description && (
-                    <p className="text-muted-foreground sm:text-lg">{page.data.description}</p>
-                  )}
                 </div>
+                {page.data.description && (
+                  <p className="text-muted-foreground sm:text-lg">{page.data.description}</p>
+                )}
                 <div className="flex items-center gap-2 pt-4">
                   {page.data.links?.doc && (
                     <Link
