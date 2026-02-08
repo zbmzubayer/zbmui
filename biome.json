@@ -46,6 +46,9 @@
       },
       "performance": {
         "noImgElement": "off"
+      },
+      "suspicious": {
+        "noAssignInExpressions": "off"
       }
     },
     "domains": {
