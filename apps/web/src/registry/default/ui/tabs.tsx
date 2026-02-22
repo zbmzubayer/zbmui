@@ -26,7 +26,7 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "relative z-0 inline-flex items-center justify-center gap-x-0.5 text-muted-foreground",
+        "relative z-0 flex w-fit items-center justify-center gap-x-0.5 text-muted-foreground",
         "text-muted-foreground/70 data-[orientation=vertical]:flex-col",
         variant === "default"
           ? "rounded-lg bg-muted p-0.5"
@@ -54,7 +54,7 @@ function TabsTab({ className, ...props }: React.ComponentProps<typeof TabsPrimit
     <TabsPrimitive.Tab
       data-slot="tabs-tab"
       className={cn(
-        "flex h-9 shrink-0 cursor-pointer select-none items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2.5 font-medium text-sm outline-none transition-[color,background-color,box-shadow] hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring data-disabled:pointer-events-none data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start data-active:text-foreground data-disabled:opacity-60 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:-mx-0.5 [&_svg]:shrink-0",
+        "flex h-9 shrink-0 grow cursor-pointer select-none items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-transparent px-2.5 font-medium text-sm outline-none transition-[color,background-color,box-shadow] hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring data-disabled:pointer-events-none data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start data-active:text-foreground data-disabled:opacity-60 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:-mx-0.5 [&_svg]:shrink-0",
         className
       )}
       {...props}
