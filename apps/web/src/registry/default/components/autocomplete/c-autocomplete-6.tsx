@@ -26,7 +26,11 @@ const items = [
 export function AutocompleteDemo() {
   return (
     <Autocomplete items={items} autoHighlight>
-      <AutocompleteInput aria-label="Search items" placeholder="Search items…" />
+      <AutocompleteInput
+        aria-label="Search items"
+        placeholder="Search items…"
+        className="max-w-64"
+      />
       <AutocompletePopup>
         <AutocompleteEmpty>No items found.</AutocompleteEmpty>
         <AutocompleteList>

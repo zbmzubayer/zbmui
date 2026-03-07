@@ -39,7 +39,11 @@ const items = [
 export function AutocompleteDemo() {
   return (
     <Autocomplete items={items}>
-      <AutocompleteInput aria-label="Search items" placeholder="Search items…" className="" />
+      <AutocompleteInput
+        aria-label="Search items"
+        placeholder="Search items…"
+        className="max-w-64"
+      />
       <AutocompletePopup>
         <AutocompleteEmpty>No items found.</AutocompleteEmpty>
         <AutocompleteList>

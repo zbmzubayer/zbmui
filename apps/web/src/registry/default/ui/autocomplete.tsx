@@ -12,37 +12,68 @@ function AutocompleteTrigger(props: React.ComponentProps<typeof AutocompletePrim
   return <AutocompletePrimitive.Trigger data-slot="autocomplete-trigger" {...props} />;
 }
 
+function AutocompleteClear({
+  className,
+  ...props
+}: React.ComponentProps<typeof AutocompletePrimitive.Clear>) {
+  return (
+    <AutocompletePrimitive.Clear
+      data-slot="autocomplete-clear"
+      className={cn(
+        "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md border border-transparent opacity-80 outline-none transition-[color,background-color,box-shadow,opacity] hover:opacity-100 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        className
+      )}
+      {...props}
+    >
+      <IconX />
+    </AutocompletePrimitive.Clear>
+  );
+}
+
+function AutocompleteValue(props: React.ComponentProps<typeof AutocompletePrimitive.Value>) {
+  return <AutocompletePrimitive.Value data-slot="autocomplete-value" {...props} />;
+}
+
 function AutocompleteInput({
   className,
   showTrigger = false,
   showClear = false,
   startAddon,
   size = "default",
+  triggerProps: { className: triggerClassName, ...triggerRestProps } = {},
+  clearProps: { className: clearClassName, ...clearRestProps } = {},
   ...props
 }: Omit<React.ComponentProps<typeof AutocompletePrimitive.Input>, "size"> & {
   showTrigger?: boolean;
   showClear?: boolean;
   startAddon?: React.ReactNode;
   size?: "xs" | "sm" | "default" | "lg" | "xl" | number;
+  triggerProps?: React.ComponentProps<typeof AutocompleteTrigger>;
+  clearProps?: React.ComponentProps<typeof AutocompleteClear>;
 }) {
   return (
-    <div
-      data-slot="autocomplete-input-wrapper"
-      className="relative w-full not-has-[class*='w-']:max-w-fit"
-    >
+    <>
       {startAddon && (
         <div
           aria-hidden="true"
           data-slot="autocomplete-start-addon"
-          className="pointer-events-none absolute inset-y-px start-px z-10 flex items-center ps-[calc(--spacing(3)-1px)] opacity-80 has-[+[data-size=sm]]:ps-[calc(--spacing(2.5)-1px)] [&_svg:not([class*='size-'])]:size-4 [&_svg]:-mx-0.5"
+          className={cn(
+            "pointer-events-none absolute inset-y-px start-px z-10 flex items-center ps-2.25 [&_svg:not([class*='size-'])]:size-4 [&_svg]:opacity-80",
+            size === "xs" && "ps-1.75 [&_svg:not([class*='size-'])]:size-3.25",
+            size === "sm" && "ps-2 [&_svg:not([class*='size-'])]:size-3.5",
+            size === "lg" && "ps-2.5",
+            size === "xl" && "ps-2.75 [&_svg:not([class*='size-'])]:size-4.5"
+          )}
         >
           {startAddon}
         </div>
       )}
       <AutocompletePrimitive.Input
         data-slot="autocomplete-input"
+        data-size={typeof size === "string" ? size : undefined}
+        size={typeof size === "number" ? size : undefined}
         className={cn(
-          "h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30",
+          "h-8 w-full rounded-lg border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed dark:bg-input/30",
           "focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
           "aria-invalid:border-danger aria-invalid:ring-danger/30",
           size === "xs" && "h-6 rounded-sm px-2 text-xs focus-visible:ring-2",
@@ -50,7 +81,7 @@ function AutocompleteInput({
           size === "lg" && "h-9",
           size === "xl" && "h-10 text-base",
           startAddon &&
-            "ps-[calc(--spacing(8.5)-1px)] data-[size=sm]:*:data-[slot=autocomplete-input]:ps-[calc(--spacing(7.5)-1px)] sm:data-[size=sm]:*:data-[slot=autocomplete-input]:ps-[calc(--spacing(7)-1px)] sm:*:data-[slot=autocomplete-input]:ps-[calc(--spacing(8)-1px)]",
+            "ps-7.25 data-[size=lg]:ps-8 data-[size=sm]:ps-6.5 data-[size=xl]:ps-8.5 data-[size=xs]:ps-6.25",
           size === "xs" &&
             "has-[~[data-slot=autocomplete-trigger],~[data-slot=autocomplete-clear]]:pe-6",
           size === "sm" &&
@@ -63,18 +94,19 @@ function AutocompleteInput({
             "has-[~[data-slot=autocomplete-trigger],~[data-slot=autocomplete-clear]]:pe-9.5",
           className
         )}
-        size={typeof size === "number" ? size : undefined}
         {...props}
       />
       {showTrigger && (
         <AutocompleteTrigger
           className={cn(
-            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md opacity-80 outline-none transition-colors hover:opacity-100 has-[+[data-slot=autocomplete-clear]]:hidden [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-            size === "xs" && "end-0.5 size-5 rounded [&_svg:not([class*='size-'])]:size-3.5",
-            size === "sm" && "end-0.5 size-6 rounded-sm [&_svg:not([class*='size-'])]:size-3.5",
+            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md opacity-80 outline-none transition-[color,opacity] hover:opacity-100 has-[+[data-slot=autocomplete-clear]]:hidden [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+            size === "xs" && "size-5 rounded [&_svg:not([class*='size-'])]:size-3.5",
+            size === "sm" && "size-6 rounded-sm [&_svg:not([class*='size-'])]:size-3.5",
             size === "lg" && "end-1 size-7",
-            size === "xl" && "end-1 size-8 [&_svg:not([class*='size-'])]:size-4.5"
+            size === "xl" && "end-1 size-8 [&_svg:not([class*='size-'])]:size-4.5",
+            triggerClassName
           )}
+          {...triggerRestProps}
         >
           <IconSelector />
         </AutocompleteTrigger>
@@ -82,17 +114,29 @@ function AutocompleteInput({
       {showClear && (
         <AutocompleteClear
           className={cn(
-            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full opacity-80 outline-none transition-colors hover:bg-accent hover:opacity-100 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-            size === "xs" && "end-0.5 size-5 [&_svg:not([class*='size-'])]:size-3.5",
-            size === "sm" && "end-0.5 size-6 [&_svg:not([class*='size-'])]:size-3.5",
+            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full opacity-80 outline-none transition-[color,opacity] hover:bg-accent hover:opacity-100 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+            size === "xs" && "size-5 [&_svg:not([class*='size-'])]:size-3.5",
+            size === "sm" && "size-6 [&_svg:not([class*='size-'])]:size-3.5",
             size === "lg" && "end-1 size-7",
-            size === "xl" && "end-1 size-8 [&_svg:not([class*='size-'])]:size-4.5"
+            size === "xl" && "end-1 size-8 [&_svg:not([class*='size-'])]:size-4.5",
+            clearClassName
           )}
+          {...clearRestProps}
         >
           <IconX />
         </AutocompleteClear>
       )}
-    </div>
+    </>
+  );
+}
+
+function AutocompleteInputGroup({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="autocomplete-input-group"
+      className={cn("relative w-full has-disabled:opacity-50", className)}
+      {...props}
+    />
   );
 }
 
@@ -104,8 +148,8 @@ function AutocompletePositioner({
   return (
     <AutocompletePrimitive.Positioner
       data-slot="autocomplete-positioner"
-      className={cn("z-50 flex select-none", className)}
       sideOffset={sideOffset}
+      className={cn("z-50 flex select-none", className)}
       {...props}
     />
   );
@@ -123,7 +167,10 @@ function AutocompletePopup({
       <AutocompletePositioner {...positionerProps}>
         <AutocompletePrimitive.Popup
           data-slot="autocomplete-popup"
-          className="flex max-h-[min(var(--available-height),23rem)] w-(--anchor-width) max-w-(--available-width) origin-(--transform-origin) flex-col overflow-hidden rounded-lg border bg-popover shadow-lg/5 transition-[scale,opacity]"
+          className={cn(
+            "flex not-has-data-[slot=scroll-area]:max-h-[min(var(--available-height),23rem)] w-(--anchor-width) max-w-(--available-width) origin-(--transform-origin) flex-col overflow-hidden rounded-lg border bg-popover shadow-lg/5 transition-[transform,scale,opacity] data-ending-style:scale-90 data-starting-style:scale-90 data-ending-style:opacity-0 data-starting-style:opacity-0",
+            className
+          )}
           {...props}
         />
       </AutocompletePositioner>
@@ -137,10 +184,10 @@ function AutocompleteList({
   ...props
 }: React.ComponentProps<typeof AutocompletePrimitive.List> & { scrollArea?: boolean }) {
   return scrollArea ? (
-    <ScrollArea scrollbarGutter scrollFade>
+    <ScrollArea scrollbarGutter scrollFade className="max-h-[min(var(--available-height),23rem)]">
       <AutocompletePrimitive.List
         data-slot="autocomplete-list"
-        className={cn("not-empty:scroll-py-100 not-empty:p-1", className)}
+        className={cn("not-empty:scroll-py-1 not-empty:p-1", className)}
         {...props}
       />
     </ScrollArea>
@@ -148,7 +195,7 @@ function AutocompleteList({
     <AutocompletePrimitive.List
       data-slot="autocomplete-list"
       className={cn(
-        "not-empty:scroll-py-100 overflow-y-auto not-empty:p-1 [scrollbar-width:thin]",
+        "not-empty:scroll-py-1 overflow-y-auto not-empty:p-1 [scrollbar-width:thin]",
         className
       )}
       {...props}
@@ -228,28 +275,6 @@ function AutocompleteRow(props: React.ComponentProps<typeof AutocompletePrimitiv
   return <AutocompletePrimitive.Row data-slot="autocomplete-row" {...props} />;
 }
 
-function AutocompleteValue(props: React.ComponentProps<typeof AutocompletePrimitive.Value>) {
-  return <AutocompletePrimitive.Value data-slot="autocomplete-value" {...props} />;
-}
-
-function AutocompleteClear({
-  className,
-  ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Clear>) {
-  return (
-    <AutocompletePrimitive.Clear
-      data-slot="autocomplete-clear"
-      className={cn(
-        "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md border border-transparent opacity-80 outline-none transition-[color,background-color,box-shadow,opacity] hover:opacity-100 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-        className
-      )}
-      {...props}
-    >
-      <IconX />
-    </AutocompletePrimitive.Clear>
-  );
-}
-
 function AutocompleteStatus({
   className,
   ...props
@@ -292,6 +317,7 @@ function groupAutocompleteItems<T extends { group: string }>(
 export {
   Autocomplete,
   AutocompleteInput,
+  AutocompleteInputGroup,
   AutocompleteTrigger,
   AutocompletePositioner,
   AutocompletePopup,

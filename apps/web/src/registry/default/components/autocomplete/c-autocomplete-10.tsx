@@ -7,6 +7,7 @@ import {
   AutocompleteGroup,
   AutocompleteGroupLabel,
   AutocompleteInput,
+  AutocompleteInputGroup,
   AutocompleteItem,
   AutocompleteList,
   AutocompletePopup,
@@ -46,12 +47,14 @@ type GroupItem = (typeof groupedItems)[number];
 export function AutocompleteDemo() {
   return (
     <Autocomplete items={groupedItems}>
-      <AutocompleteInput
-        aria-label="Search items"
-        placeholder="Search frameworks..."
-        showTrigger
-        showClear
-      />
+      <AutocompleteInputGroup className="max-w-64">
+        <AutocompleteInput
+          aria-label="Search items"
+          placeholder="Search frameworks..."
+          showTrigger
+          showClear
+        />
+      </AutocompleteInputGroup>
       <AutocompletePopup>
         <AutocompleteEmpty>No items found.</AutocompleteEmpty>
         <AutocompleteList>

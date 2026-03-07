@@ -23,74 +23,26 @@ const items = [
   { label: "Watermelon", value: "watermelon" },
 ];
 
+const sizes = ["xs", "sm", "default", "lg", "xl"] as const;
+
 export function AutocompleteDemo() {
   return (
     <div className="flex flex-col gap-4">
-      <Autocomplete items={items}>
-        <AutocompleteInput aria-label="Search items" placeholder="Search items…" size="xs" />
-        <AutocompletePopup>
-          <AutocompleteEmpty>No items found.</AutocompleteEmpty>
-          <AutocompleteList>
-            {(item) => (
-              <AutocompleteItem key={item.value} value={item}>
-                {item.label}
-              </AutocompleteItem>
-            )}
-          </AutocompleteList>
-        </AutocompletePopup>
-      </Autocomplete>
-      <Autocomplete items={items}>
-        <AutocompleteInput aria-label="Search items" placeholder="Search items…" size="sm" />
-        <AutocompletePopup>
-          <AutocompleteEmpty>No items found.</AutocompleteEmpty>
-          <AutocompleteList>
-            {(item) => (
-              <AutocompleteItem key={item.value} value={item}>
-                {item.label}
-              </AutocompleteItem>
-            )}
-          </AutocompleteList>
-        </AutocompletePopup>
-      </Autocomplete>
-      <Autocomplete items={items}>
-        <AutocompleteInput aria-label="Search items" placeholder="Search items…" size="default" />
-        <AutocompletePopup>
-          <AutocompleteEmpty>No items found.</AutocompleteEmpty>
-          <AutocompleteList>
-            {(item) => (
-              <AutocompleteItem key={item.value} value={item}>
-                {item.label}
-              </AutocompleteItem>
-            )}
-          </AutocompleteList>
-        </AutocompletePopup>
-      </Autocomplete>
-      <Autocomplete items={items}>
-        <AutocompleteInput aria-label="Search items" placeholder="Search items…" size="lg" />
-        <AutocompletePopup>
-          <AutocompleteEmpty>No items found.</AutocompleteEmpty>
-          <AutocompleteList>
-            {(item) => (
-              <AutocompleteItem key={item.value} value={item}>
-                {item.label}
-              </AutocompleteItem>
-            )}
-          </AutocompleteList>
-        </AutocompletePopup>
-      </Autocomplete>
-      <Autocomplete items={items}>
-        <AutocompleteInput aria-label="Search items" placeholder="Search items…" size="xl" />
-        <AutocompletePopup>
-          <AutocompleteEmpty>No items found.</AutocompleteEmpty>
-          <AutocompleteList>
-            {(item) => (
-              <AutocompleteItem key={item.value} value={item}>
-                {item.label}
-              </AutocompleteItem>
-            )}
-          </AutocompleteList>
-        </AutocompletePopup>
-      </Autocomplete>
+      {sizes.map((size) => (
+        <Autocomplete key={size} items={items}>
+          <AutocompleteInput aria-label="Search items" placeholder="Search items…" size={size} />
+          <AutocompletePopup>
+            <AutocompleteEmpty>No items found.</AutocompleteEmpty>
+            <AutocompleteList>
+              {(item) => (
+                <AutocompleteItem key={item.value} value={item}>
+                  {item.label}
+                </AutocompleteItem>
+              )}
+            </AutocompleteList>
+          </AutocompletePopup>
+        </Autocomplete>
+      ))}
     </div>
   );
 }

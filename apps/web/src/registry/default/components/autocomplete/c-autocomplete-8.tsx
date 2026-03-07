@@ -4,6 +4,7 @@ import {
   Autocomplete,
   AutocompleteEmpty,
   AutocompleteInput,
+  AutocompleteInputGroup,
   AutocompleteItem,
   AutocompleteList,
   AutocompletePopup,
@@ -26,12 +27,14 @@ const items = [
 export function AutocompleteDemo() {
   return (
     <Autocomplete items={items}>
-      <AutocompleteInput
-        aria-label="Search items"
-        placeholder="Search items…"
-        showClear
-        showTrigger
-      />
+      <AutocompleteInputGroup className="w-64">
+        <AutocompleteInput
+          aria-label="Search items"
+          placeholder="Search items…"
+          showClear
+          showTrigger
+        />
+      </AutocompleteInputGroup>
       <AutocompletePopup>
         <AutocompleteEmpty>No items found.</AutocompleteEmpty>
         <AutocompleteList>
