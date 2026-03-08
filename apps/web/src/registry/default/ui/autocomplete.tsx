@@ -76,6 +76,7 @@ function AutocompleteInput({
           "h-8 w-full rounded-lg border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed dark:bg-input/30",
           "focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
           "aria-invalid:border-danger aria-invalid:ring-danger/30",
+          !startAddon && !showClear && !showTrigger && "disabled:opacity-50",
           size === "xs" && "h-6 rounded-sm px-2 text-xs focus-visible:ring-2",
           size === "sm" && "h-7 rounded-md px-2.5 text-[0.8125rem] focus-visible:ring-2",
           size === "lg" && "h-9",
