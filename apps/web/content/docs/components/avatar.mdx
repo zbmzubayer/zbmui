@@ -1,0 +1,67 @@
+---
+title: Avatar
+description: An image representing a user, group, or organization.
+links:
+  doc: https://base-ui.com/react/components/avatar
+  anatomy: https://base-ui.com/react/components/avatar#anatomy
+  api: https://base-ui.com/react/components/avatar#api-reference
+---
+
+<ComponentPreview name="c-avatar-1" />
+
+## Installation
+
+<ComponentSource name="avatar" title="components/ui/avatar.tsx" />
+
+## Usage
+
+```tsx
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+```
+
+```tsx
+<Avatar>
+  <AvatarImage src="https://github.com/zbmzubayer.png" alt="ZBM Zubayer" />
+  <AvatarFallback>ZM</AvatarFallback>
+</Avatar>
+```
+
+## Examples
+
+### Sizes
+
+<ComponentPreview name="c-avatar-2" />
+
+### With badge
+
+<ComponentPreview name="c-avatar-3" />
+
+### With badge icon
+
+<ComponentPreview name="c-avatar-4" />
+
+### With group
+
+<ComponentPreview name="c-avatar-5" />
+
+### With group and count
+
+<ComponentPreview name="c-avatar-6" />
+
+### With Next.js Image
+
+<ComponentPreview name="c-avatar-7" />
+
+## API Reference
+
+### Avatar props
+
+<ApiReferenceAccordion
+  type={{
+    size: {
+      description: "The size of the avatar.",
+      type: "'sm' | 'default' | 'lg'",
+      default: `'default'`,
+    },
+  }}
+/>

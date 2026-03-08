@@ -95,6 +95,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  avatar: {
+    name: "avatar",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/avatar.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/avatar.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   badge: {
     name: "badge",
     description: "",
@@ -969,6 +992,167 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-avatar-1": {
+    name: "c-avatar-1",
+    description: "Avatar demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar"],
+    files: [
+      {
+        path: "src/registry/default/components/avatar/c-avatar-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/avatar/c-avatar-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["avatar"],
+    meta: undefined,
+  },
+  "c-avatar-2": {
+    name: "c-avatar-2",
+    description: "Avatar sizes",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar"],
+    files: [
+      {
+        path: "src/registry/default/components/avatar/c-avatar-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/avatar/c-avatar-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["avatar"],
+    meta: undefined,
+  },
+  "c-avatar-3": {
+    name: "c-avatar-3",
+    description: "Avatar with badge",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar"],
+    files: [
+      {
+        path: "src/registry/default/components/avatar/c-avatar-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/avatar/c-avatar-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["avatar"],
+    meta: undefined,
+  },
+  "c-avatar-4": {
+    name: "c-avatar-4",
+    description: "Avatar with badge icon",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar"],
+    files: [
+      {
+        path: "src/registry/default/components/avatar/c-avatar-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/avatar/c-avatar-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["avatar"],
+    meta: undefined,
+  },
+  "c-avatar-5": {
+    name: "c-avatar-5",
+    description: "Avatar with group",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar"],
+    files: [
+      {
+        path: "src/registry/default/components/avatar/c-avatar-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/avatar/c-avatar-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["avatar"],
+    meta: undefined,
+  },
+  "c-avatar-6": {
+    name: "c-avatar-6",
+    description: "Avatar with group and count",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar"],
+    files: [
+      {
+        path: "src/registry/default/components/avatar/c-avatar-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/avatar/c-avatar-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["avatar"],
+    meta: undefined,
+  },
+  "c-avatar-7": {
+    name: "c-avatar-7",
+    description: "Avatar with Next.js Image",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar"],
+    files: [
+      {
+        path: "src/registry/default/components/avatar/c-avatar-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/avatar/c-avatar-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["avatar"],
     meta: undefined,
   },
   "c-badge-1": {
