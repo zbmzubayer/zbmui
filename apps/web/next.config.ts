@@ -4,6 +4,9 @@ import type { NextConfig } from "next";
 const withMDX = createMDX();
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [{ hostname: "github.com" }],
+  },
   /* config options here */
   async rewrites() {
     return [
