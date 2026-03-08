@@ -187,6 +187,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  combobox: {
+    name: "combobox",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/combobox.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/combobox.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   dialog: {
     name: "dialog",
     description: "",
@@ -879,6 +902,52 @@ export const Index: Record<string, any> = {
     categories: ["autocomplete"],
     meta: undefined,
   },
+  "c-autocomplete-11": {
+    name: "c-autocomplete-11",
+    description: "Autocomplete with limit results",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-11.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-11");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-12": {
+    name: "c-autocomplete-12",
+    description: "Autocomplete with async search",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-12.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-12");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
   "c-badge-1": {
     name: "c-badge-1",
     description: "Badge demo",
@@ -1061,6 +1130,52 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["button"],
+    meta: undefined,
+  },
+  "c-combobox-1": {
+    name: "c-combobox-1",
+    description: "Combobox demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-2": {
+    name: "c-combobox-2",
+    description: "Combobox sizes",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
     meta: undefined,
   },
   "dialog-demo": {
