@@ -2,6 +2,7 @@ import { Menu as MenuPrimitive } from "@base-ui/react/menu";
 import { IconChevronRight } from "@tabler/icons-react";
 
 import { cn } from "@/lib/cn";
+import { ScrollArea } from "@/registry/default/ui/scroll-area";
 
 const menuCreateHandle = MenuPrimitive.createHandle;
 
@@ -30,7 +31,7 @@ function MenuPositioner({
       align={align}
       side={side}
       sideOffset={sideOffset}
-      className={cn("z-50", className)}
+      className={cn("z-50 flex", className)}
       {...props}
     />
   );
@@ -39,9 +40,11 @@ function MenuPositioner({
 function MenuPopup({
   children,
   className,
+  scrollArea = false,
   positionerProps,
   ...props
 }: React.ComponentProps<typeof MenuPrimitive.Popup> & {
+  scrollArea?: boolean;
   positionerProps?: React.ComponentProps<typeof MenuPositioner>;
 }) {
   return (
@@ -55,7 +58,15 @@ function MenuPopup({
           )}
           {...props}
         >
-          <div className="max-h-(--available-height) w-full overflow-y-auto p-1">{children}</div>
+          {scrollArea ? (
+            <ScrollArea scrollbarGutter scrollFade className="max-h-(--available-height) p-1">
+              {children}
+            </ScrollArea>
+          ) : (
+            <div className="max-h-(--available-height) w-full overflow-y-auto p-1 [scrollbar-width:thin]">
+              {children}
+            </div>
+          )}
         </MenuPrimitive.Popup>
       </MenuPositioner>
     </MenuPrimitive.Portal>

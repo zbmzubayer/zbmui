@@ -152,15 +152,15 @@ You can change this behavior by setting the `closeOnClick` prop to `true`.
 
 <ApiReferenceAccordion
   type={{
+    scrollArea: {
+      description:
+        "Whether to wrap the list in a scroll area. If false, native scrollbar will be shown if the list exceeds the max height.",
+      type: "boolean",
+      default: `false`,
+    },
     positionerProps: {
       description: "Props to pass to the underlying Positioner component.",
       type: `React.ComponentProps<typeof MenuPositioner>`,
-      default: undefined,
-    },
-    size: {
-      description: "The size of the button.",
-      type: "'xs' | 'sm' | 'default' | 'lg' | 'xl' | 'icon-sm' | 'icon' | 'icon-lg' | 'icon-xl'",
-      default: `'default'`,
     },
   }}
 />
