@@ -1385,20 +1385,158 @@ export const Index: Record<string, any> = {
     categories: ["combobox"],
     meta: undefined,
   },
-  "dialog-demo": {
-    name: "dialog-demo",
+  "c-dialog-1": {
+    name: "c-dialog-1",
     description: "Dialog demo",
     type: "registry:component",
     registryDependencies: ["@zbmui/dialog"],
     files: [
       {
-        path: "src/registry/default/components/dialog/dialog-demo.tsx",
+        path: "src/registry/default/components/dialog/c-dialog-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/dialog-demo");
+      const mod = await import("@/registry/default/components/dialog/c-dialog-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-dialog-2": {
+    name: "c-dialog-2",
+    description: "Dialog with muted footer",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/dialog/c-dialog-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/dialog/c-dialog-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-dialog-3": {
+    name: "c-dialog-3",
+    description: "Dialog with popup position",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/dialog/c-dialog-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/dialog/c-dialog-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-dialog-4": {
+    name: "c-dialog-4",
+    description: "Dialog with no close button",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/dialog/c-dialog-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/dialog/c-dialog-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-dialog-5": {
+    name: "c-dialog-5",
+    description: "Dialog with scrollable content",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/dialog/c-dialog-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/dialog/c-dialog-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-dialog-6": {
+    name: "c-dialog-6",
+    description: "Dialog with nested dialogs",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/dialog/c-dialog-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/dialog/c-dialog-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-dialog-7": {
+    name: "c-dialog-7",
+    description: "Dialog with showing parent dialog of nested dialog",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/dialog/c-dialog-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/dialog/c-dialog-7");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

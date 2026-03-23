@@ -7,7 +7,7 @@ links:
   api: https://base-ui.com/react/components/dialog#api-reference
 ---
 
-<ComponentPreview name="dialog-demo" />
+<ComponentPreview name="c-dialog-1" />
 
 ## Installation
 
@@ -37,12 +37,42 @@ import {
       <DialogTitle>Dialog Title</DialogTitle>
       <DialogDescription>Dialog description text goes here.</DialogDescription>
     </DialogHeader>
-    <DialogPanel className="grid gap-4">
+    <DialogPanel>
       Dialog content goes here. You can put forms, text, or any other elements inside the dialog.
     </DialogPanel>
     <DialogFooter>
-      <DialogClose className="btn">Close</DialogClose>
+      <DialogClose>Close</DialogClose>
     </DialogFooter>
   </DialogPopup>
 </Dialog>
 ```
+
+## Examples
+
+### With muted footer
+
+<ComponentPreview name="c-dialog-2" />
+
+### Popup position
+
+Change the position of the popup by passing a `position` prop to `DialogPopup`. The default position is `center`. Other options include `top`, `bottom`, `top-center`, and `bottom-center`.
+
+<ComponentPreview name="c-dialog-3" />
+
+### No close button
+
+<ComponentPreview name="c-dialog-4" />
+
+### Scrollable content
+
+<ComponentPreview name="c-dialog-5" />
+
+### Nested dialogs
+
+<ComponentPreview name="c-dialog-6" />
+
+### Show parent dialog of nested dialog
+
+To show the parent dialog when a nested dialog is open, pass the `showNestedParent` prop to `DialogPopup`. This will keep the parent dialog visible while the nested dialog is open.
+
+<ComponentPreview name="c-dialog-7" />
