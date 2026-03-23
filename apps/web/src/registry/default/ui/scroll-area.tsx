@@ -16,7 +16,7 @@ function ScrollArea({
     <ScrollAreaPrimitive.Root
       data-slot="scroll-area"
       className={cn(
-        "size-full [--scrollbar-margin:--spacing(1)] [--scrollbar-size:--spacing(1.5)]",
+        "size-full min-h-0 [--scrollbar-margin:--spacing(1)] [--scrollbar-size:--spacing(1.5)]",
         className
       )}
       {...props}
@@ -24,7 +24,7 @@ function ScrollArea({
       <ScrollAreaPrimitive.Viewport
         data-slot="scroll-area-viewport"
         className={cn(
-          "h-full rounded-[inherit] outline-none transition-shadows data-has-overflow-x:overscroll-x-contain",
+          "h-full rounded-[inherit] outline-none transition-shadows data-has-overflow-y:overscroll-y-contain data-has-overflow-x:overscroll-x-contain",
           scrollFade &&
             "mask-t-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-y-start)))] mask-b-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-y-end)))] mask-l-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-x-start)))] mask-r-from-[calc(100%-min(var(--fade-size),var(--scroll-area-overflow-x-end)))] [--fade-size:1.5rem]",
           scrollbarGutter &&
