@@ -1,6 +1,5 @@
-import { buttonVariants } from "@zbmui/ui/components/button";
-
 import { cn } from "@/lib/cn";
+import { buttonVariants } from "@/registry/default/ui/button";
 
 export function ButtonDemo() {
   return (
