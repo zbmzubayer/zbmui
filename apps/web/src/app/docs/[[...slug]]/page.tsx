@@ -9,7 +9,7 @@ import { SiteFooter } from "@/layouts/site-footer";
 import { cn } from "@/lib/cn";
 import { source } from "@/lib/source";
 import { mdxComponents } from "@/mdx-components";
-import { Button, buttonVariants } from "@/registry/default/ui/button";
+import { buttonVariants } from "@/registry/default/ui/button";
 
 import { DocsCopyPage } from "@/components/docs/docs-copy-page";
 import { DocsToc } from "@/components/docs/docs-toc";
@@ -108,26 +108,20 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
             </div>
             <div className="hidden items-center gap-2 pt-8 sm:flex">
               {neighbours.previous && (
-                <Button
-                  className="shadow-none"
-                  render={
-                    <Link href={neighbours.previous.url}>
-                      <IconArrowLeft strokeWidth={2} /> {neighbours.previous.name}
-                    </Link>
-                  }
-                  variant="outline"
-                />
+                <Link
+                  href={neighbours.previous.url}
+                  className={cn(buttonVariants({ variant: "outline" }), "shadow-none")}
+                >
+                  <IconArrowLeft strokeWidth={2} /> {neighbours.previous.name}
+                </Link>
               )}
               {neighbours.next && (
-                <Button
-                  className="ms-auto shadow-none"
-                  render={
-                    <Link href={neighbours.next.url}>
-                      {neighbours.next.name} <IconArrowRight strokeWidth={2} />
-                    </Link>
-                  }
-                  variant="outline"
-                />
+                <Link
+                  href={neighbours.next.url}
+                  className={cn(buttonVariants({ variant: "outline" }), "shadow-none")}
+                >
+                  {neighbours.next.name} <IconArrowRight strokeWidth={2} />
+                </Link>
               )}
             </div>
           </div>
