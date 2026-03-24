@@ -1,7 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { mergeProps } from "@base-ui/react/merge-props";
-import { useRender } from "@base-ui/react/use-render";
+import { Button as ButtonPrimitive } from "@base-ui/react/button";
 
 import { cn } from "@/lib/cn";
 
@@ -9,7 +8,7 @@ const buttonVariants = cva(
   [
     "inline-flex shrink-0 cursor-pointer select-none items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium text-sm outline-none transition-all duration-200",
     "focus-visible:ring-3 focus-visible:ring-ring",
-    "disabled:pointer-events-none disabled:opacity-50",
+    "disabled:pointer-events-none disabled:opacity-50 data-disabled:pointer-events-none data-disabled:opacity-50",
     "[&_svg:not([class*='opacity-'])]:opacity-80 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   ],
   {
@@ -55,20 +54,16 @@ const buttonVariants = cva(
 );
 
 type ButtonVariantProps = VariantProps<typeof buttonVariants>;
-type ButtonProps = useRender.ComponentProps<"button"> & ButtonVariantProps;
+type ButtonProps = React.ComponentProps<typeof ButtonPrimitive> & ButtonVariantProps;
 
-function Button({ className, variant, size, render, ...props }: ButtonProps) {
-  const defaultProps = {
-    className: cn(buttonVariants({ variant, size, className })),
-    "data-slot": "button",
-    type: (render ? undefined : "button") as React.ButtonHTMLAttributes<HTMLButtonElement>["type"],
-  };
-
-  return useRender({
-    defaultTagName: "button",
-    props: mergeProps<"button">(defaultProps, props),
-    render,
-  });
+function Button({ className, variant, size, ...props }: ButtonProps) {
+  return (
+    <ButtonPrimitive
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  );
 }
 
 export { Button, buttonVariants };
