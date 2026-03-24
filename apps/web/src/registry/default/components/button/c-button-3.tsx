@@ -4,8 +4,8 @@ import { Button } from "@/registry/default/ui/button";
 
 export function ButtonDemo() {
   return (
-    <div className="space-y-3">
-      <div className="flex items-center gap-3">
+    <div className="space-y-3 *:grid *:grid-cols-[1fr_auto_1fr] *:justify-items-start *:gap-3">
+      <div>
         <Button size="xs">Extra small</Button>
         <Button size="icon-xs">
           <IconTrash />
@@ -15,7 +15,7 @@ export function ButtonDemo() {
           Extra small
         </Button>
       </div>
-      <div className="flex items-center gap-3">
+      <div>
         <Button size="sm">Small</Button>
         <Button size="icon-sm">
           <IconTrash />
@@ -25,7 +25,7 @@ export function ButtonDemo() {
           Small
         </Button>
       </div>
-      <div className="flex items-center gap-3">
+      <div>
         <Button size="default">Default</Button>
         <Button size="icon">
           <IconTrash />
@@ -35,7 +35,7 @@ export function ButtonDemo() {
           Default
         </Button>
       </div>
-      <div className="flex items-center gap-3">
+      <div>
         <Button size="lg">Large</Button>
         <Button size="icon-lg">
           <IconTrash />
@@ -45,7 +45,7 @@ export function ButtonDemo() {
           Large
         </Button>
       </div>
-      <div className="flex items-center gap-3">
+      <div>
         <Button size="xl">Extra large</Button>
         <Button size="icon-xl">
           <IconTrash />

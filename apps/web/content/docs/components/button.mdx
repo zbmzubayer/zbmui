@@ -1,26 +1,13 @@
 ---
 title: Button
 description: A button component that can be rendered as another tag or focusable when disabled.
+links:
+  doc: https://base-ui.com/react/components/button
+  anatomy: https://base-ui.com/react/components/button#anatomy
+  api: https://base-ui.com/react/components/button#api-reference
 ---
 
 <ComponentPreview name="c-button-1" />
-
-## Anatomy
-
-```tsx showLineNumbers
-import { Button } from "@base-ui/react/button";
-
-<NumberField.Root>
-  <NumberField.ScrubArea>
-    <NumberField.ScrubAreaCursor />
-  </NumberField.ScrubArea>
-  <NumberField.Group>
-    <NumberField.Decrement />
-    <NumberField.Input />
-    <NumberField.Increment />
-  </NumberField.Group>
-</NumberField.Root>;
-```
 
 ## Installation
 
@@ -33,7 +20,22 @@ import { Button } from "@/components/ui/button";
 ```
 
 ```tsx
-<Button />
+<Button>Button</Button>
+```
+
+## Cursor
+
+**Tailwind v4** switched from `cursor: pointer` to `cursor: default` for the button component. [See reference](https://tailwindcss.com/docs/upgrade-guide#buttons-use-the-default-cursor)
+
+If you'd like to continue using `cursor: pointer` by default, add these base styles to your CSS:
+
+```css title="globals.css"
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 ```
 
 ## Examples
@@ -45,11 +47,30 @@ import { Button } from "@/components/ui/button";
 ### Sizes
 
 <ComponentPreview name="c-button-3" />
+
+### Render as another tag
+
+The button can remain keyboard accessible while being rendered as another tag, such as a `<div>`, by specifying `nativeButton={false}`
+
+The Button component enforces button semantics. `nativeButton={false}` signals that the rendered tag is not a `<button>`, but it must still be a tag that can receive button semantics (`role="button"`, keyboard interaction handlers).
+
+<ComponentPreview name="c-button-4" />
+
+### Rendering link as button
+
+The Base UI Button component always applies `role="button"`, which overrides the semantic link role on `<a>` elements. Use `buttonVariants` with a plain `<a>` tag instead.
+
+<ComponentPreview name="c-button-5" />
+
+### Loading state
+
+For buttons that enter a loading state after being clicked, specify the `focusableWhenDisabled` prop to ensure focus remains on the button when it becomes disabled. This prevents focus from being lost and maintains the tab order.
+
+<ComponentPreview name="c-button-6" />
+
 ## API Reference
 
 ### Button props
-
-The `Button` component is a wrapper around the `button` element that adds a variety of styles and functionality.
 
 <ApiReferenceAccordion
   type={{

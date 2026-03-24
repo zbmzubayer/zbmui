@@ -1316,6 +1316,75 @@ export const Index: Record<string, any> = {
     categories: ["button"],
     meta: undefined,
   },
+  "c-button-4": {
+    name: "c-button-4",
+    description: "Button render as another tag",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/button/c-button-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/button/c-button-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-button-5": {
+    name: "c-button-5",
+    description: "Button as a link",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/button/c-button-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/button/c-button-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-button-6": {
+    name: "c-button-6",
+    description: "Button with loading state",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/button/c-button-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/button/c-button-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
   "c-collapsible-1": {
     name: "c-collapsible-1",
     description: "Collapsible demo",
