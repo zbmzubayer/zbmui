@@ -1615,6 +1615,29 @@ export const Index: Record<string, any> = {
     categories: ["button"],
     meta: undefined,
   },
+  "c-dialog-8": {
+    name: "c-dialog-8",
+    description: "Dialog with different backdrop variants",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/dialog/c-dialog-8.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/dialog/c-dialog-8");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
   "c-field-1": {
     name: "c-field-1",
     description: "Field Basic",
