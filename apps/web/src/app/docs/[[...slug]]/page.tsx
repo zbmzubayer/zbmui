@@ -118,7 +118,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
               {neighbours.next && (
                 <Link
                   href={neighbours.next.url}
-                  className={cn(buttonVariants({ variant: "outline" }), "shadow-none")}
+                  className={cn(buttonVariants({ variant: "outline" }), "ms-auto shadow-none")}
                 >
                   {neighbours.next.name} <IconArrowRight strokeWidth={2} />
                 </Link>
