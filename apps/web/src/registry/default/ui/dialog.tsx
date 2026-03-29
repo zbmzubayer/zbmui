@@ -53,8 +53,6 @@ type DialogPopupPosition =
   | "bottom"
   | "top-left"
   | "top-right"
-  | "center-left"
-  | "center-right"
   | "bottom-left"
   | "bottom-right"
   | "top-center"
@@ -77,8 +75,6 @@ function DialogViewport({
         position === "bottom" && "items-center justify-end",
         position === "top-left" && "items-start justify-start",
         position === "top-right" && "items-end justify-start",
-        position === "center-left" && "items-start justify-center",
-        position === "center-right" && "items-end justify-center",
         position === "bottom-left" && "items-start justify-end",
         position === "bottom-right" && "items-end justify-end",
         position === "top-center" &&
@@ -95,6 +91,7 @@ function DialogViewport({
 function DialogPopup({
   className,
   children,
+  bottomStickyOnMobile = false,
   showCloseButton = true,
   showNestedParent = false,
   backdropVariant,
@@ -102,6 +99,7 @@ function DialogPopup({
   closeProps: { className: closeClassName, ...closeProps } = {},
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Popup> & {
+  bottomStickyOnMobile?: boolean;
   showCloseButton?: boolean;
   showNestedParent?: boolean;
   backdropVariant?: DialogBackdropVariant;
@@ -111,7 +109,12 @@ function DialogPopup({
   return (
     <DialogPortal>
       <DialogBackdrop variant={backdropVariant} />
-      <DialogViewport position={position}>
+      <DialogViewport
+        position={position}
+        className={cn(
+          bottomStickyOnMobile && "max-sm:items-center max-sm:justify-end max-sm:p-0 max-sm:pt-12"
+        )}
+      >
         <DialogPrimitive.Popup
           data-slot="dialog-popup"
           className={cn(
@@ -119,6 +122,8 @@ function DialogPopup({
             showNestedParent
               ? "-translate-y-[calc(2rem*var(--nested-dialogs))] opacity-[calc(1-0.1*var(--nested-dialogs))]"
               : "opacity-[calc(1-var(--nested-dialogs))]",
+            bottomStickyOnMobile &&
+              "max-sm:max-w-none max-sm:origin-bottom max-sm:rounded-b-none max-sm:border-x-0 max-sm:border-t max-sm:border-b-0 max-sm:data-ending-style:translate-y-4 max-sm:data-starting-style:translate-y-4",
             className
           )}
           {...props}
@@ -149,7 +154,7 @@ function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="dialog-header"
       className={cn(
-        "flex flex-col gap-2 p-6 in-[[data-slot=dialog-popup]:has([data-slot=dialog-panel])]:pb-3 max-sm:px-4",
+        "flex flex-col gap-2 p-6 in-[[data-slot=dialog-popup]:has([data-slot=dialog-panel])]:pb-2 max-sm:px-4",
         className
       )}
       {...props}
@@ -161,7 +166,7 @@ function DialogTitle({ className, ...props }: React.ComponentProps<typeof Dialog
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
-      className={cn("font-heading text-xl leading-none", className)}
+      className={cn("font-heading font-medium text-xl leading-none", className)}
       {...props}
     />
   );
@@ -174,7 +179,7 @@ function DialogDescription({
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"
-      className={cn("text-muted-foreground text-sm", className)}
+      className={cn("text-pretty text-muted-foreground text-sm", className)}
       {...props}
     />
   );
@@ -190,8 +195,7 @@ function DialogFooter({
       data-slot="dialog-footer"
       className={cn(
         "flex flex-col-reverse gap-2 p-4 sm:flex-row sm:justify-end sm:px-6",
-        variant === "default" &&
-          "in-[[data-slot=dialog-popup]:has([data-slot=dialog-panel])]:pt-3 pb-6",
+        variant === "default" && "pt-2 pb-6",
         variant === "muted" && "border-t bg-muted/50",
         className
       )}
@@ -200,7 +204,7 @@ function DialogFooter({
   );
 }
 
-function DialogPanel({
+function DialogBody({
   className,
   scrollArea = true,
   scrollFade = true,
@@ -216,7 +220,7 @@ function DialogPanel({
       <div
         data-slot="dialog-panel"
         className={cn(
-          "p-6 in-[[data-slot=dialog-popup]:has([data-slot=dialog-header])]:pt-1 in-[[data-slot=dialog-popup]:has([data-slot=dialog-footer]:not(.border-t))]:pb-1",
+          "p-6 in-[[data-slot=dialog-popup]:has([data-slot=dialog-header])]:pt-1 in-[[data-slot=dialog-popup]:has([data-slot=dialog-footer])]:pb-1 max-sm:px-4",
           className
         )}
         {...props}
@@ -241,6 +245,6 @@ export {
   DialogFooter,
   DialogTitle,
   DialogDescription,
-  DialogPanel,
+  DialogBody,
   DialogViewport,
 };

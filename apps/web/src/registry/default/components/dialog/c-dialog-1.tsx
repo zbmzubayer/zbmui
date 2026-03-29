@@ -1,11 +1,11 @@
 import { Button } from "@/registry/default/ui/button";
 import {
   Dialog,
+  DialogBody,
   DialogClose,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogPanel,
   DialogPopup,
   DialogTitle,
   DialogTrigger,
@@ -20,13 +20,13 @@ export function DialogDemo() {
       <DialogTrigger render={<Button variant="outline" />}>Open Dialog</DialogTrigger>
       <DialogPopup>
         <Form>
-          <DialogHeader className="border-b">
+          <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>
               Make changes to your profile here. Click save when you&apos;re done.
             </DialogDescription>
           </DialogHeader>
-          <DialogPanel className="grid gap-4">
+          <DialogBody className="grid gap-4">
             <Field>
               <FieldLabel>Name</FieldLabel>
               <Input defaultValue="ZBM Zubayer" type="text" />
@@ -35,8 +35,8 @@ export function DialogDemo() {
               <FieldLabel>Username</FieldLabel>
               <Input defaultValue="zbmzubayer@example.com" type="text" />
             </Field>
-          </DialogPanel>
-          <DialogFooter className="border-t">
+          </DialogBody>
+          <DialogFooter>
             <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
             <Button type="submit">Save</Button>
           </DialogFooter>

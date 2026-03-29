@@ -11,18 +11,18 @@ links:
 
 ## Installation
 
-<ComponentSource name="dialog" />
+<ComponentSource name="dialog" title="components/ui/dialog.tsx" />
 
 ## Usage
 
 ```tsx
 import {
   Dialog,
+  DialogBody,
   DialogClose,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogPanel,
   DialogPopup,
   DialogTitle,
   DialogTrigger,
@@ -37,9 +37,9 @@ import {
       <DialogTitle>Dialog Title</DialogTitle>
       <DialogDescription>Dialog description text goes here.</DialogDescription>
     </DialogHeader>
-    <DialogPanel>
+    <DialogBody>
       Dialog content goes here. You can put forms, text, or any other elements inside the dialog.
-    </DialogPanel>
+    </DialogBody>
     <DialogFooter>
       <DialogClose>Close</DialogClose>
     </DialogFooter>
@@ -82,3 +82,98 @@ Change the position of the popup by passing a `position` prop to `DialogPopup`. 
 To show the parent dialog when a nested dialog is open, pass the `showNestedParent` prop to `DialogPopup`. This will keep the parent dialog visible while the nested dialog is open.
 
 <ComponentPreview name="c-dialog-7" />
+
+## Api Reference
+
+### Dialog Backdrop props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the backdrop.",
+      type: "'blur' | 'opaque' | 'transparent'",
+      default: `'blur'`,
+    },
+  }}
+/>
+
+### Dialog Viewport props
+
+<ApiReferenceAccordion
+  type={{
+    position: {
+      description: "The position of the popup.",
+      type: "'center' | 'top' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center'",
+      default: `'center'`,
+    },
+  }}
+/>
+
+### Dialog Popup props
+
+<ApiReferenceAccordion
+  type={{
+    bottomStickyOnMobile: {
+      description:
+        "Whether to make the popup bottom sticky on mobile devices. This is useful for dialogs that have important actions in the footer that should be easily accessible on mobile.",
+      type: "boolean",
+      default: `false`,
+    },
+    showCloseButton: {
+      description: "Whether to show the close button in the header.",
+      type: "boolean",
+      default: `true`,
+    },
+    showNestedParent: {
+      description:
+        "Whether to show the parent dialog when a nested dialog is open. Useful for keeping the context of the parent dialog visible while interacting with the nested dialog.",
+      type: "boolean",
+      default: `false`,
+    },
+    backdropVariant: {
+      description: "The variant of the backdrop.",
+      type: "'blur' | 'opaque' | 'transparent'",
+      default: `'blur'`,
+    },
+    position: {
+      description: "The position of the popup.",
+      type: "'center' | 'top' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center'",
+      default: `'center'`,
+    },
+  }}
+/>
+
+### Dialog Body props
+
+<ApiReferenceAccordion
+  type={{
+    scrollArea: {
+      description:
+        "Whether to wrap the body in a scroll area. If false, native scrollbar will be shown if the content overflows.",
+      type: "boolean",
+      default: `true`,
+    },
+    scrollFade: {
+      description: "Whether to show a fade effect at the top and bottom of the scroll area.",
+      type: "boolean",
+      default: `true`,
+    },
+    scrollbarGutter: {
+      description: "Whether to show the scrollbar gutter when `scrollArea` is true.",
+      type: "boolean",
+      default: `false`,
+    },
+  }}
+/>
+
+### Dialog Footer props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the footer.",
+      type: "'default' | 'muted'",
+      default: `'default'`,
+    },
+  }}
+/>

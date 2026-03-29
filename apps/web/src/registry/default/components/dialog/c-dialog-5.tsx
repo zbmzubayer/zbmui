@@ -1,10 +1,10 @@
 import { Button } from "@/registry/default/ui/button";
 import {
   Dialog,
+  DialogBody,
   DialogClose,
   DialogFooter,
   DialogHeader,
-  DialogPanel,
   DialogPopup,
   DialogTitle,
   DialogTrigger,
@@ -22,9 +22,9 @@ export function DialogDemo() {
           <DialogHeader>
             <DialogTitle>Terms & Conditions</DialogTitle>
           </DialogHeader>
-          <DialogPanel>
+          <DialogBody>
             <ScrollContent />
-          </DialogPanel>
+          </DialogBody>
           <DialogFooter>
             <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
             <Button type="button">I agree</Button>
@@ -40,9 +40,9 @@ export function DialogDemo() {
           <DialogHeader>
             <DialogTitle>Terms & Conditions</DialogTitle>
           </DialogHeader>
-          <DialogPanel scrollArea={false} className="border-y py-4 [scrollbar-width:thin]">
+          <DialogBody scrollArea={false} className="border-y py-4 [scrollbar-width:thin]">
             <ScrollContent />
-          </DialogPanel>
+          </DialogBody>
           <DialogFooter>
             <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
             <Button type="button">I agree</Button>
@@ -58,9 +58,9 @@ export function DialogDemo() {
           <DialogHeader>
             <DialogTitle>Terms & Conditions</DialogTitle>
           </DialogHeader>
-          <DialogPanel scrollArea={false} className="no-scrollbar">
+          <DialogBody scrollArea={false} className="no-scrollbar">
             <ScrollContent />
-          </DialogPanel>
+          </DialogBody>
           <DialogFooter>
             <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
             <Button type="button">I agree</Button>

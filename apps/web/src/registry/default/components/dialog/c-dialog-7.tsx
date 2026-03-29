@@ -5,11 +5,11 @@ import { useState } from "react";
 import { Button } from "@/registry/default/ui/button";
 import {
   Dialog,
+  DialogBody,
   DialogClose,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogPanel,
   DialogPopup,
   DialogTitle,
   DialogTrigger,
@@ -28,7 +28,7 @@ export function DialogDemo() {
           <DialogTitle>Manage team member</DialogTitle>
           <DialogDescription>View and manage a user in your team.</DialogDescription>
         </DialogHeader>
-        <DialogPanel className="grid gap-4">
+        <DialogBody className="grid gap-4">
           <div className="grid gap-1">
             <p className="text-muted-foreground text-sm">Name</p>
             <p className="font-medium text-sm">ZBM Zubayer</p>
@@ -37,7 +37,7 @@ export function DialogDemo() {
             <p className="text-muted-foreground text-sm">Email</p>
             <p className="font-medium text-sm">zbm@example.com</p>
           </div>
-        </DialogPanel>
+        </DialogBody>
         <DialogFooter>
           <Dialog>
             <DialogTrigger render={<Button variant="outline" />}>Edit details</DialogTrigger>
@@ -48,7 +48,7 @@ export function DialogDemo() {
                   Make changes to the member&apos;s information.
                 </DialogDescription>
               </DialogHeader>
-              <DialogPanel className="grid gap-4">
+              <DialogBody className="grid gap-4">
                 <Field>
                   <FieldLabel>Name</FieldLabel>
                   <Input defaultValue="ZBM Zubayer" type="text" />
@@ -57,7 +57,7 @@ export function DialogDemo() {
                   <FieldLabel>Email</FieldLabel>
                   <Input defaultValue="zbm@example.com" type="text" />
                 </Field>
-              </DialogPanel>
+              </DialogBody>
               <DialogFooter>
                 <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
                 <DialogClose render={<Button onClick={() => setParentOpen(false)} />}>

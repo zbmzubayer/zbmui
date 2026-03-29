@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-
 import { Button } from "@/registry/default/ui/button";
 import {
   Dialog,
@@ -12,39 +8,34 @@ import {
   DialogTrigger,
 } from "@/registry/default/ui/dialog";
 
-export function DialogDemo() {
-  const [position, setPosition] =
-    useState<React.ComponentProps<typeof DialogPopup>["position"]>("center");
+export const positions: React.ComponentProps<typeof DialogPopup>["position"][] = [
+  "top-left",
+  "top",
+  "top-right",
+  "top-center",
+  "center",
+  "bottom-center",
+  "bottom-left",
+  "bottom",
+  "bottom-right",
+];
 
+export function DialogDemo() {
   return (
-    <Dialog>
-      <div className="flex flex-wrap items-center gap-3">
-        <DialogTrigger render={<Button variant="outline" onClick={() => setPosition("top")} />}>
-          Top
-        </DialogTrigger>
-        <DialogTrigger render={<Button variant="outline" onClick={() => setPosition("center")} />}>
-          Center
-        </DialogTrigger>
-        <DialogTrigger render={<Button variant="outline" onClick={() => setPosition("bottom")} />}>
-          Bottom
-        </DialogTrigger>
-        <DialogTrigger
-          render={<Button variant="outline" onClick={() => setPosition("top-center")} />}
-        >
-          Top center
-        </DialogTrigger>
-        <DialogTrigger
-          render={<Button variant="outline" onClick={() => setPosition("bottom-center")} />}
-        >
-          Bottom center
-        </DialogTrigger>
-      </div>
-      <DialogPopup position={position}>
-        <DialogHeader>
-          <DialogTitle>Title</DialogTitle>
-          <DialogDescription>Description</DialogDescription>
-        </DialogHeader>
-      </DialogPopup>
-    </Dialog>
+    <div className="grid grid-cols-2 items-center gap-5 sm:grid-cols-3">
+      {positions.map((position) => (
+        <Dialog key={position}>
+          <DialogTrigger render={<Button variant="outline" className="capitalize" />}>
+            {position}
+          </DialogTrigger>
+          <DialogPopup position={position}>
+            <DialogHeader>
+              <DialogTitle>Title</DialogTitle>
+              <DialogDescription>Description</DialogDescription>
+            </DialogHeader>
+          </DialogPopup>
+        </Dialog>
+      ))}
+    </div>
   );
 }
