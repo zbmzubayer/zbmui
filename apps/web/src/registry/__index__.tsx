@@ -463,6 +463,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  textarea: {
+    name: "textarea",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/textarea.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/textarea.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   tooltip: {
     name: "tooltip",
     description: "",
@@ -2625,6 +2648,144 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["button"],
+    meta: undefined,
+  },
+  "c-textarea-1": {
+    name: "c-textarea-1",
+    description: "textarea basic",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/textarea"],
+    files: [
+      {
+        path: "src/registry/default/components/textarea/c-textarea-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/textarea/c-textarea-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: [""],
+    meta: undefined,
+  },
+  "c-textarea-2": {
+    name: "c-textarea-2",
+    description: "textarea sizes",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/textarea"],
+    files: [
+      {
+        path: "src/registry/default/components/textarea/c-textarea-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/textarea/c-textarea-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: [""],
+    meta: undefined,
+  },
+  "c-textarea-3": {
+    name: "c-textarea-3",
+    description: "textarea disabled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/textarea"],
+    files: [
+      {
+        path: "src/registry/default/components/textarea/c-textarea-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/textarea/c-textarea-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: [""],
+    meta: undefined,
+  },
+  "c-textarea-4": {
+    name: "c-textarea-4",
+    description: "textarea invalid",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/textarea"],
+    files: [
+      {
+        path: "src/registry/default/components/textarea/c-textarea-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/textarea/c-textarea-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: [""],
+    meta: undefined,
+  },
+  "c-textarea-5": {
+    name: "c-textarea-5",
+    description: "textarea resize",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/textarea"],
+    files: [
+      {
+        path: "src/registry/default/components/textarea/c-textarea-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/textarea/c-textarea-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: [""],
+    meta: undefined,
+  },
+  "c-textarea-6": {
+    name: "c-textarea-6",
+    description: "textarea with field",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/textarea"],
+    files: [
+      {
+        path: "src/registry/default/components/textarea/c-textarea-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/textarea/c-textarea-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: [""],
     meta: undefined,
   },
   "tooltip-demo": {
