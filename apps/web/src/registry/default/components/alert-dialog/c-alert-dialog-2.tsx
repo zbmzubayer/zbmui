@@ -26,7 +26,7 @@ export function AlertDialogDemo() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter variant="muted">
-          <AlertDialogClose className={buttonVariants({ variant: "ghost" })}>
+          <AlertDialogClose className={buttonVariants({ variant: "outline" })}>
             Cancel
           </AlertDialogClose>
           <AlertDialogClose className={buttonVariants({ variant: "danger" })}>

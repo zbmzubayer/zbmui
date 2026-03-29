@@ -14,11 +14,11 @@ import {
 import { Button } from "@/registry/default/ui/button";
 import {
   Dialog,
+  DialogBody,
   DialogClose,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogPanel,
   DialogPopup,
   DialogTitle,
   DialogTrigger,
@@ -57,11 +57,11 @@ export function AlertDialogDemo() {
             setDialogOpen(false);
           }}
         >
-          <DialogPanel>
+          <DialogBody>
             <Field>
               <Textarea onChange={(e) => setValue(e.target.value)} value={value} />
             </Field>
-          </DialogPanel>
+          </DialogBody>
           <DialogFooter>
             <DialogClose render={<Button variant="ghost" />}>Cancel</DialogClose>
             <Button

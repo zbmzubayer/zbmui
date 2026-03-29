@@ -69,9 +69,74 @@ Enter some text and try to close the dialog to see a **confirmation alert dialog
 
 <ComponentPreview name="c-alert-dialog-4" />
 
+### Backdrop variants
+
+The backdrop of the alert dialog can be customized using the `backdropVariant` prop on `AlertDialogPopup`. The available variants are `blur` (default), `opaque`, and `transparent`.
+
+<ComponentPreview name="c-alert-dialog-5" />
+
+### Popup position
+
+Change the position of the popup by passing a `position` prop to `AlertDialogPopup`. The default position is `center`. Other options include `top`, `bottom`, `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-center`, and `bottom-center`.
+
+<ComponentPreview name="c-alert-dialog-6" />
+
 ## API Reference
 
-### AlertDialogFooter props
+### Alert Dialog Backdrop props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description: "The variant of the backdrop.",
+      type: "'blur' | 'opaque' | 'transparent'",
+      default: `'blur'`,
+    },
+  }}
+/>
+
+### Alert Dialog Viewport props
+
+<ApiReferenceAccordion
+  type={{
+    position: {
+      description: "The position of the popup.",
+      type: "'center' | 'top' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center'",
+      default: `'center'`,
+    },
+  }}
+/>
+
+### Alert Dialog Popup props
+
+<ApiReferenceAccordion
+  type={{
+    bottomStickyOnMobile: {
+      description:
+        "Whether to make the popup bottom sticky on mobile devices. This is useful for dialogs that have important actions in the footer that should be easily accessible on mobile.",
+      type: "boolean",
+      default: `false`,
+    },
+    showNestedParent: {
+      description:
+        "Whether to show the parent dialog when a nested dialog is open. Useful for keeping the context of the parent dialog visible while interacting with the nested dialog.",
+      type: "boolean",
+      default: `false`,
+    },
+    backdropVariant: {
+      description: "The variant of the backdrop.",
+      type: "'blur' | 'opaque' | 'transparent'",
+      default: `'blur'`,
+    },
+    position: {
+      description: "The position of the popup.",
+      type: "'center' | 'top' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center'",
+      default: `'center'`,
+    },
+  }}
+/>
+
+### Alert Dialog Footer props
 
 <ApiReferenceAccordion
   type={{

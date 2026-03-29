@@ -718,6 +718,52 @@ export const Index: Record<string, any> = {
     categories: ["alert-dialog"],
     meta: undefined,
   },
+  "c-alert-dialog-5": {
+    name: "c-alert-dialog-5",
+    description: "Alert dialog with backdrop variants",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert"],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
+  "c-alert-dialog-6": {
+    name: "c-alert-dialog-6",
+    description: "Alert dialog with popup positions",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert"],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
   "c-autocomplete-1": {
     name: "c-autocomplete-1",
     description: "Autocomplete demo",
