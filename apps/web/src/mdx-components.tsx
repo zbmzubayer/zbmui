@@ -31,14 +31,12 @@ import { CodeCollapsible } from "@/components/code-collapsible";
 import { ComponentPreview } from "@/components/component-preview";
 import { ComponentSource } from "@/components/component-source";
 import { getIconForLanguageExtension } from "@/components/icons";
-import { TypeTable } from "@/components/type-table";
 
 export const mdxComponents = {
   Accordion,
   AccordionTrigger,
   AccordionPanel,
   ApiReferenceAccordion,
-  TypeTable,
   h1: ({ className, ...props }: React.ComponentProps<"h1">) => (
     <h1
       className={cn("mt-2 scroll-m-28 font-bold text-3xl tracking-tight", className)}
@@ -177,7 +175,7 @@ export const mdxComponents = {
       return (
         <code
           className={cn(
-            "relative rounded-md bg-muted px-[0.3rem] py-[0.2rem] font-mono text-[0.8rem] outline-none",
+            "relative whitespace-nowrap rounded-md bg-muted px-[0.3rem] py-[0.2rem] font-mono text-[0.8rem] outline-none",
             className
           )}
           {...props}
@@ -206,7 +204,7 @@ export const mdxComponents = {
       </>
     );
   },
-  pre: ({ className, children, ...props }: React.ComponentProps<"pre">) => {
+  pre: ({ className, ...props }: React.ComponentProps<"pre">) => {
     return (
       <ScrollArea className="static! **:data-[slot=scroll-area-scrollbar]:data-[orientation=horizontal]:mx-2 **:data-[slot=scroll-area-scrollbar]:data-[orientation=vertical]:my-2">
         <pre
@@ -215,9 +213,7 @@ export const mdxComponents = {
             className
           )}
           {...props}
-        >
-          {children}
-        </pre>
+        />
       </ScrollArea>
     );
   },
