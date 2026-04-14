@@ -325,6 +325,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  kbd: {
+    name: "kbd",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/kbd.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/kbd.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   menu: {
     name: "menu",
     description: "",
@@ -1974,6 +1997,121 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/input-group/c-input-group-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-kbd-1": {
+    name: "c-kbd-1",
+    description: "Kbd Basic",
+    type: "registry:demo",
+    registryDependencies: ["kbd"],
+    files: [
+      {
+        path: "src/registry/default/components/kbd/c-kbd-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/kbd/c-kbd-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-kbd-2": {
+    name: "c-kbd-2",
+    description: "Kbd Group",
+    type: "registry:demo",
+    registryDependencies: ["kbd"],
+    files: [
+      {
+        path: "src/registry/default/components/kbd/c-kbd-2.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/kbd/c-kbd-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-kbd-3": {
+    name: "c-kbd-3",
+    description: "Kbd with button",
+    type: "registry:demo",
+    registryDependencies: ["kbd"],
+    files: [
+      {
+        path: "src/registry/default/components/kbd/c-kbd-3.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/kbd/c-kbd-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-kbd-4": {
+    name: "c-kbd-4",
+    description: "Kbd with tooltip",
+    type: "registry:demo",
+    registryDependencies: ["kbd"],
+    files: [
+      {
+        path: "src/registry/default/components/kbd/c-kbd-4.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/kbd/c-kbd-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-kbd-5": {
+    name: "c-kbd-5",
+    description: "Kbd with input group",
+    type: "registry:demo",
+    registryDependencies: ["kbd"],
+    files: [
+      {
+        path: "src/registry/default/components/kbd/c-kbd-5.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/kbd/c-kbd-5");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
