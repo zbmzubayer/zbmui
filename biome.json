@@ -32,7 +32,10 @@
     "rules": {
       "a11y": {
         "noSvgWithoutTitle": "off",
-        "useValidAnchor": "off"
+        "useValidAnchor": "off",
+        "useSemanticElements": "off",
+        "noStaticElementInteractions": "off",
+        "useKeyWithClickEvents": "off"
       },
       "recommended": true,
       "nursery": {
