@@ -302,6 +302,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "input-group": {
+    name: "input-group",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/input-group.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   menu: {
     name: "menu",
     description: "",
@@ -339,6 +362,29 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/number-field.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  popover: {
+    name: "popover",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/popover.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/popover.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1914,6 +1960,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "c-input-group-1": {
+    name: "c-input-group-1",
+    description: "Input Group Basic",
+    type: "registry:demo",
+    registryDependencies: ["input-group"],
+    files: [
+      {
+        path: "src/registry/default/components/input-group/c-input-group-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input-group/c-input-group-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "c-menu-1": {
     name: "c-menu-1",
     description: "Menu Basic",
@@ -2158,6 +2227,167 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/number-field/c-number-field-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-popover-1": {
+    name: "c-popover-1",
+    description: "Popover basic",
+    type: "registry:demo",
+    registryDependencies: ["popover"],
+    files: [
+      {
+        path: "src/registry/default/components/popover/c-popover-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/popover/c-popover-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-popover-2": {
+    name: "c-popover-2",
+    description: "Popover with different aligns",
+    type: "registry:demo",
+    registryDependencies: ["popover"],
+    files: [
+      {
+        path: "src/registry/default/components/popover/c-popover-2.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/popover/c-popover-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-popover-3": {
+    name: "c-popover-3",
+    description: "Popover with different sides",
+    type: "registry:demo",
+    registryDependencies: ["popover"],
+    files: [
+      {
+        path: "src/registry/default/components/popover/c-popover-3.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/popover/c-popover-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-popover-4": {
+    name: "c-popover-4",
+    description: "Popover with close button",
+    type: "registry:demo",
+    registryDependencies: ["popover"],
+    files: [
+      {
+        path: "src/registry/default/components/popover/c-popover-4.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/popover/c-popover-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-popover-5": {
+    name: "c-popover-5",
+    description: "Popover with arrow",
+    type: "registry:demo",
+    registryDependencies: ["popover"],
+    files: [
+      {
+        path: "src/registry/default/components/popover/c-popover-5.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/popover/c-popover-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-popover-6": {
+    name: "c-popover-6",
+    description: "Popover with tooltip style",
+    type: "registry:demo",
+    registryDependencies: ["popover"],
+    files: [
+      {
+        path: "src/registry/default/components/popover/c-popover-6.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/popover/c-popover-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-popover-7": {
+    name: "c-popover-7",
+    description: "Popover with animation",
+    type: "registry:demo",
+    registryDependencies: ["popover"],
+    files: [
+      {
+        path: "src/registry/default/components/popover/c-popover-7.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/popover/c-popover-7");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

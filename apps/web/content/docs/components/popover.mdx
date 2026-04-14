@@ -1,0 +1,79 @@
+---
+title: Popover
+description: An accessible popup anchored to a button.
+links:
+  doc: https://base-ui.com/react/components/popover
+  anatomy: https://base-ui.com/react/components/popover#anatomy
+  api: https://base-ui.com/react/components/popover#api-reference
+---
+
+<ComponentPreview name="c-popover-1" />
+
+## Installation
+
+<ComponentSource name="popover" title="components/ui/popover.tsx" />
+
+## Usage
+
+```tsx
+import {
+  Popover,
+  PopoverDescription,
+  PopoverPopup,
+  PopoverTitle,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+```
+
+```tsx
+<Popover>
+  <PopoverTrigger render={<Button variant="outline" />}>Open popover</PopoverTrigger>
+  <PopoverPopup>
+    <PopoverTitle>Title</PopoverTitle>
+    <PopoverDescription>Description goes here.</PopoverDescription>
+  </PopoverPopup>
+</Popover>
+```
+
+## Examples
+
+### Align
+
+Change the alignment by setting the `positionerProps` align property to `start`, `center`, or `end`.
+
+<ComponentPreview name="c-popover-2" />
+
+### Side
+
+Change the side by setting the `positionerProps` side property to `top`, `right`, `bottom`, `left`, `inline-start` or `inline-end`.
+
+<ComponentPreview name="c-popover-3" />
+
+### With close button
+
+<ComponentPreview name="c-popover-4" />
+
+### With arrow
+
+To add an arrow pointing to the trigger, set `showArrow` to `true` on the `PopoverPopup`.
+
+<ComponentPreview name="c-popover-5" />
+
+### Tooltip style
+
+Pass `tooltipStyle` to the `PopoverPopup` to make the popover look like a tooltip. Pass `openOnHover` to the `PopoverTrigger` to open the popover on hover instead of click.
+
+<ComponentPreview name="c-popover-6" />
+
+### Animated
+
+You can create animated popovers that smoothly transition between different triggers using detached triggers. This pattern allows multiple triggers to share a single popover popup, with automatic animations for position, size, and content changes.
+
+To create detached triggers:
+
+1. Create a handle using `popoverCreateHandle`
+2. Attach the same handle to multiple `PopoverTrigger` components
+3. Each trigger provides a `payload` prop containing the content component
+4. Use a single `Popover` component with the handle to render the popup
+
+<ComponentPreview name="c-popover-7" />
