@@ -1,24 +1,40 @@
+import { cva, type VariantProps } from "class-variance-authority";
+
 import { Input as InputPrimitive } from "@base-ui/react/input";
 
 import { cn } from "@/lib/cn";
 
+const inputSizeVariants = cva("", {
+  variants: {
+    size: {
+      xs: "h-6 rounded-sm px-2 text-xs focus-visible:ring-2",
+      sm: "h-7 rounded-md text-[0.8125rem] focus-visible:ring-2",
+      default: "h-8 rounded-lg px-2.5 py-1",
+      lg: "h-9",
+      xl: "h-10 text-base",
+    },
+  },
+  defaultVariants: {
+    size: "default",
+  },
+});
+
+type InputSize = VariantProps<typeof inputSizeVariants>["size"] | number;
+
 type InputProps = Omit<React.ComponentProps<typeof InputPrimitive>, "size"> & {
-  size?: "xs" | "sm" | "default" | "lg" | "xl" | number;
+  size?: InputSize;
 };
 
-function Input({ className, size = "default", ...props }: InputProps) {
+function Input({ className, size, ...props }: InputProps) {
   return (
     <InputPrimitive
       data-slot="input"
       size={typeof size === "number" ? size : undefined}
       className={cn(
-        "h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30",
+        "h-8 w-full rounded-lg border border-input bg-transparent px-2.5 py-1 text-sm shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30",
         "focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
         "aria-invalid:border-danger aria-invalid:ring-danger/30",
-        size === "xs" && "h-6 rounded-sm px-2 text-xs focus-visible:ring-2",
-        size === "sm" && "h-7 rounded-md px-2.5 text-[0.8125rem] focus-visible:ring-2",
-        size === "lg" && "h-9",
-        size === "xl" && "h-10 text-base",
+        typeof size === "string" && inputSizeVariants({ size }),
         props.type === "search" &&
           "[&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none",
         props.type === "file" &&
