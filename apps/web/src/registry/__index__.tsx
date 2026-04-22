@@ -2006,6 +2006,121 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "c-input-group-2": {
+    name: "c-input-group-2",
+    description: "Input Group with inline-start align",
+    type: "registry:demo",
+    registryDependencies: ["input-group"],
+    files: [
+      {
+        path: "src/registry/default/components/input-group/c-input-group-2.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input-group/c-input-group-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-input-group-3": {
+    name: "c-input-group-3",
+    description: "Input Group with inline-end align",
+    type: "registry:demo",
+    registryDependencies: ["input-group"],
+    files: [
+      {
+        path: "src/registry/default/components/input-group/c-input-group-3.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input-group/c-input-group-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-input-group-4": {
+    name: "c-input-group-4",
+    description: "Input Group with block-start align",
+    type: "registry:demo",
+    registryDependencies: ["input-group"],
+    files: [
+      {
+        path: "src/registry/default/components/input-group/c-input-group-4.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input-group/c-input-group-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-input-group-5": {
+    name: "c-input-group-5",
+    description: "Input Group with block-end align",
+    type: "registry:demo",
+    registryDependencies: ["input-group"],
+    files: [
+      {
+        path: "src/registry/default/components/input-group/c-input-group-5.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input-group/c-input-group-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-input-group-6": {
+    name: "c-input-group-6",
+    description: "Input Group with block-end align",
+    type: "registry:demo",
+    registryDependencies: ["input-group"],
+    files: [
+      {
+        path: "src/registry/default/components/input-group/c-input-group-6.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input-group/c-input-group-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "c-kbd-1": {
     name: "c-kbd-1",
     description: "Kbd Basic",

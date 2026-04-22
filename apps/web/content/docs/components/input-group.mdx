@@ -1,0 +1,51 @@
+---
+title: Input Group
+description: A component for grouping input elements with addons, buttons, and helper content.
+---
+
+<ComponentPreview name="c-input-group-1" />
+
+## Installation
+
+<ComponentSource name="input-group" title="components/ui/input-group.tsx" />
+
+## Usage
+
+```tsx
+import { IconSearch } from "@tabler/icons-react";
+
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/default/ui/input-group";
+```
+
+```tsx
+<InputGroup>
+  <InputGroupInput placeholder="Search..." />
+  <InputGroupAddon>
+    <IconSearch />
+  </InputGroupAddon>
+</InputGroup>
+```
+
+## Examples
+
+### Align
+
+#### Inline Start
+
+<ComponentPreview name="c-input-group-2" />
+
+#### Inline End
+
+<ComponentPreview name="c-input-group-3" />
+
+#### Block Start
+
+<ComponentPreview name="c-input-group-4" />
+
+#### Block End
+
+<ComponentPreview name="c-input-group-5" />
+
+### Sizes
+
+<ComponentPreview name="c-input-group-6" />
