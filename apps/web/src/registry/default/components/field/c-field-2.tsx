@@ -3,7 +3,7 @@ import { Input } from "@/registry/default/ui/input";
 
 export function FieldDemo() {
   return (
-    <Field>
+    <Field className="max-w-xs">
       <FieldLabel showRequiredIndicator>Name</FieldLabel>
       <Input placeholder="Enter your name" type="text" required />
       <FieldError>Please fill out this field.</FieldError>

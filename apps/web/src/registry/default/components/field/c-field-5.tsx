@@ -3,7 +3,7 @@ import { Input } from "@/registry/default/ui/input";
 
 export function FieldDemo() {
   return (
-    <Field>
+    <Field className="max-w-xs">
       <FieldLabel>Email</FieldLabel>
       <Input placeholder="Enter your email" type="email" />
       <FieldError>Please enter a valid email address.</FieldError>
