@@ -4,9 +4,7 @@ import { IconSelector, IconX } from "@tabler/icons-react";
 import { cn } from "@/lib/cn";
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
 
-function Autocomplete(props: React.ComponentProps<typeof AutocompletePrimitive.Root>) {
-  return <AutocompletePrimitive.Root data-slot="autocomplete" {...props} />;
-}
+const Autocomplete = AutocompletePrimitive.Root;
 
 function AutocompleteTrigger(props: React.ComponentProps<typeof AutocompletePrimitive.Trigger>) {
   return <AutocompletePrimitive.Trigger data-slot="autocomplete-trigger" {...props} />;
@@ -58,11 +56,10 @@ function AutocompleteInput({
           aria-hidden="true"
           data-slot="autocomplete-start-addon"
           className={cn(
-            "pointer-events-none absolute inset-y-px start-px z-10 flex items-center ps-2.25 [&_svg:not([class*='size-'])]:size-4 [&_svg]:opacity-80",
-            size === "xs" && "ps-1.75 [&_svg:not([class*='size-'])]:size-3.25",
-            size === "sm" && "ps-2 [&_svg:not([class*='size-'])]:size-3.5",
-            size === "lg" && "ps-2.5",
-            size === "xl" && "ps-2.75 [&_svg:not([class*='size-'])]:size-4.5"
+            "absolute inset-y-px start-px z-10 flex items-center ps-2 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none",
+            size === "xs" && "ps-1.5 [&_svg:not([class*='size-'])]:size-3",
+            size === "sm" && "ps-1.75 [&_svg:not([class*='size-'])]:size-3.5",
+            size === "xl" && "ps-2.5 [&_svg:not([class*='size-'])]:size-4.5"
           )}
         >
           {startAddon}
@@ -73,16 +70,18 @@ function AutocompleteInput({
         data-size={typeof size === "string" ? size : undefined}
         size={typeof size === "number" ? size : undefined}
         className={cn(
-          "h-8 w-full rounded-lg border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed dark:bg-input/30",
+          "h-8 w-full rounded-lg border border-input bg-transparent px-2.5 text-sm shadow-xs outline-none transition-[color,box-shadow] selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground dark:bg-input/30",
           "focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50",
           "aria-invalid:border-danger aria-invalid:ring-danger/30",
-          !startAddon && !showClear && !showTrigger && "disabled:opacity-50",
+          !startAddon &&
+            !showClear &&
+            !showTrigger &&
+            "disabled:pointer-events-none disabled:opacity-50",
           size === "xs" && "h-6 rounded-sm px-2 text-xs focus-visible:ring-2",
-          size === "sm" && "h-7 rounded-md px-2.5 text-[0.8125rem] focus-visible:ring-2",
+          size === "sm" && "h-7 rounded-md px-2 text-[0.8125rem] focus-visible:ring-2",
           size === "lg" && "h-9",
-          size === "xl" && "h-10 text-base",
-          startAddon &&
-            "ps-7.25 data-[size=lg]:ps-8 data-[size=sm]:ps-6.5 data-[size=xl]:ps-8.5 data-[size=xs]:ps-6.25",
+          size === "xl" && "h-10 px-3 text-base",
+          startAddon && "ps-7.5 data-[size=sm]:ps-6 data-[size=xl]:ps-8.5 data-[size=xs]:ps-5.5",
           size === "xs" &&
             "has-[~[data-slot=autocomplete-trigger],~[data-slot=autocomplete-clear]]:pe-6",
           size === "sm" &&
@@ -100,8 +99,8 @@ function AutocompleteInput({
       {showTrigger && (
         <AutocompleteTrigger
           className={cn(
-            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md opacity-80 outline-none transition-[color,opacity] hover:opacity-100 has-[+[data-slot=autocomplete-clear]]:hidden [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-            size === "xs" && "size-5 rounded [&_svg:not([class*='size-'])]:size-3.5",
+            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md outline-none transition-[color,opacity] hover:opacity-100 has-[+[data-slot=autocomplete-clear]]:hidden [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+            size === "xs" && "size-5 rounded [&_svg:not([class*='size-'])]:size-3",
             size === "sm" && "size-6 rounded-sm [&_svg:not([class*='size-'])]:size-3.5",
             size === "lg" && "end-1 size-7",
             size === "xl" && "end-1 size-8 [&_svg:not([class*='size-'])]:size-4.5",
@@ -115,8 +114,8 @@ function AutocompleteInput({
       {showClear && (
         <AutocompleteClear
           className={cn(
-            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full opacity-80 outline-none transition-[color,opacity] hover:bg-accent hover:opacity-100 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
-            size === "xs" && "size-5 [&_svg:not([class*='size-'])]:size-3.5",
+            "absolute end-0.5 top-1/2 inline-flex size-7 shrink-0 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full outline-none transition-[color,opacity] hover:bg-accent hover:opacity-100 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+            size === "xs" && "size-5 [&_svg:not([class*='size-'])]:size-3",
             size === "sm" && "size-6 [&_svg:not([class*='size-'])]:size-3.5",
             size === "lg" && "end-1 size-7",
             size === "xl" && "end-1 size-8 [&_svg:not([class*='size-'])]:size-4.5",
@@ -135,7 +134,10 @@ function AutocompleteInputGroup({ className, ...props }: React.ComponentProps<"d
   return (
     <div
       data-slot="autocomplete-input-group"
-      className={cn("relative w-full has-disabled:opacity-50", className)}
+      className={cn(
+        "relative w-full has-disabled:pointer-events-none has-disabled:opacity-50 not-has-disabled:[&_svg:not([class*='opacity-'])]:opacity-80",
+        className
+      )}
       {...props}
     />
   );
