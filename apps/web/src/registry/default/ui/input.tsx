@@ -8,10 +8,10 @@ const inputSizeVariants = cva("", {
   variants: {
     size: {
       xs: "h-6 rounded-sm px-2 text-xs focus-visible:ring-2",
-      sm: "h-7 rounded-md text-[0.8125rem] focus-visible:ring-2",
+      sm: "h-7 rounded-md px-2 text-[0.8125rem] focus-visible:ring-2",
       default: "h-8 rounded-lg px-2.5 py-1",
       lg: "h-9",
-      xl: "h-10 text-base",
+      xl: "h-10 px-3 text-base",
     },
   },
   defaultVariants: {
