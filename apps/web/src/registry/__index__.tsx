@@ -187,6 +187,52 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  checkbox: {
+    name: "checkbox",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/checkbox.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/checkbox.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "checkbox-group": {
+    name: "checkbox-group",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/checkbox-group.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/checkbox-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   collapsible: {
     name: "collapsible",
     description: "",
@@ -339,6 +385,29 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/kbd.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  label: {
+    name: "label",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/label.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/label.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -1523,6 +1592,328 @@ export const Index: Record<string, any> = {
     categories: ["button"],
     meta: undefined,
   },
+  "c-checkbox-1": {
+    name: "c-checkbox-1",
+    description: "Checkbox demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-2": {
+    name: "c-checkbox-2",
+    description: "Checkbox sizes",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-3": {
+    name: "c-checkbox-3",
+    description: "Checkbox disabled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-4": {
+    name: "c-checkbox-4",
+    description: "Checkbox indeterminate",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-5": {
+    name: "c-checkbox-5",
+    description: "Checkbox controlled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-6": {
+    name: "c-checkbox-6",
+    description: "Checkbox with description",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-7": {
+    name: "c-checkbox-7",
+    description: "Checkbox with card style",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-group-1": {
+    name: "c-checkbox-group-1",
+    description: "Checkbox group demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox-group"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox-group/c-checkbox-group-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-group-2": {
+    name: "c-checkbox-group-2",
+    description: "Checkbox group labeling",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox-group"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox-group/c-checkbox-group-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-group-3": {
+    name: "c-checkbox-group-3",
+    description: "Checkbox group disabled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox-group"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox-group/c-checkbox-group-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-group-4": {
+    name: "c-checkbox-group-4",
+    description: "Checkbox group with disabled option",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox-group"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox-group/c-checkbox-group-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-group-5": {
+    name: "c-checkbox-group-5",
+    description: "Checkbox group controlled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox-group"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox-group/c-checkbox-group-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-group-6": {
+    name: "c-checkbox-group-6",
+    description: "Checkbox group with parent checkbox",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox-group"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox-group/c-checkbox-group-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-group-7": {
+    name: "c-checkbox-group-7",
+    description: "Checkbox group with nested parent checkbox",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox-group"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox-group/c-checkbox-group-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
   "c-collapsible-1": {
     name: "c-collapsible-1",
     description: "Collapsible demo",
@@ -2227,6 +2618,29 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/kbd/c-kbd-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-label-1": {
+    name: "c-label-1",
+    description: "Label Basic",
+    type: "registry:demo",
+    registryDependencies: ["label"],
+    files: [
+      {
+        path: "src/registry/default/components/label/c-label-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/label/c-label-1");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

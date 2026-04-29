@@ -1,0 +1,67 @@
+---
+title: Checkbox Group
+description: Provides shared state to a series of checkboxes.
+links:
+  doc: https://base-ui.com/react/components/checkbox-group
+  anatomy: https://base-ui.com/react/components/checkbox-group#anatomy
+  api: https://base-ui.com/react/components/checkbox-group#api-reference
+---
+
+<ComponentPreview name="c-checkbox-group-1" />
+
+## Installation
+
+<ComponentSource name="checkbox-group" title="components/ui/checkbox-group.tsx" />
+
+## Usage
+
+```tsx
+import { Checkbox } from "@/components/ui/checkbox";
+import { CheckboxGroup } from "@/components/ui/checkbox-group";
+import { Label } from "@/components/ui/label";
+```
+
+```tsx
+<CheckboxGroup>
+  <Label>
+    <Checkbox defaultChecked />
+    Next.js
+  </Label>
+  <Label>
+    <Checkbox />
+    Vite
+  </Label>
+  <Label>
+    <Checkbox />
+    Astro
+  </Label>
+</CheckboxGroup>
+```
+
+## Examples
+
+### Labeling checkbox group
+
+Label the group with `aria-labelledby` and a sibling label element:
+
+<ComponentPreview name="c-checkbox-group-2" />
+
+### Disabled
+
+<ComponentPreview name="c-checkbox-group-3" />
+
+### With disabled item
+
+<ComponentPreview name="c-checkbox-group-4" />
+
+### Controlled
+
+<ComponentPreview name="c-checkbox-group-5" />
+
+### Parent checkbox
+
+<ComponentPreview name="c-checkbox-group-6" />
+
+### Nested parent checkbox
+
+<ComponentPreview name="c-checkbox-group-7" />
