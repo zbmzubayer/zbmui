@@ -3,13 +3,13 @@ title: Installation
 description: A new, modern UI component library built on top of Base UI. Built for developers and AI.
 ---
 
-### Install dependencies
+## Install dependencies
 
 ```bash
-npm install clsx class-variance-authority tailwind-merge tw-animate-css @tabler/icons-react
+npm install @base-ui/react clsx class-variance-authority tailwind-merge @tabler/icons-react
 ```
 
-### Configure path aliases
+## Configure path aliases
 
 Configure the path aliases in your `tsconfig.json` file.
 
@@ -26,17 +26,19 @@ Configure the path aliases in your `tsconfig.json` file.
 
 The `@` alias is a preference. You can use other aliases if you want.
 
-### Configure styles
+## Configure styles
 
 <CodeCollapsible>
 
 ```css showLineNumbers title="src/styles/globals.css"
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -214,7 +216,7 @@ The `@` alias is a preference. You can use other aliases if you want.
 
 </CodeCollapsible>
 
-### Add a cn helper
+## Add a cn helper
 
 ```ts showLineNumbers title="src/lib/cn.ts"
 import { clsx, type ClassValue } from "clsx";
@@ -223,4 +225,26 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+```
+
+## Base UI setup
+
+### Portals
+
+Base UI uses portals for components that render popups, such as Dialog and Popover. To make portaled components always appear on top of the entire page, add the following style to your application layout root:
+
+```tsx
+<body>
+  <div className="isolate">{children}</div>
+</body>
+```
+
+### iOS 26+ Safari
+
+Starting with iOS 26, Safari allows content beneath the UI chrome to be visible. Backdrops such as those used by dialogs must use `position: absolute` instead of `position: fixed` to cover the entire visual viewport. For this to work after the page is scrolled, the following style must be added to your global styles:
+
+```tsx
+<body className="relative">
+  <div className="isolate">{children}</div>
+</body>
 ```
