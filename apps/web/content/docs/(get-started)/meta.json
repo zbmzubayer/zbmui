@@ -1,4 +1,8 @@
 {
   "title": "Get Started",
-  "pages": ["[Installation](/docs/installation)", "[Dark Mode](/docs/dark-mode)"]
+  "pages": [
+    "[Installation](/docs/installation)",
+    "[Dark Mode](/docs/dark-mode)",
+    "[Forms](/docs/forms)"
+  ]
 }

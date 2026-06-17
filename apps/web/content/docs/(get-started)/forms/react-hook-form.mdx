@@ -1,0 +1,171 @@
+---
+title: React Hook Form
+description: Build forms in React using React Hook Form and Zod.
+---
+
+## Demo
+
+<ComponentPreview name="c-react-hook-form-1" />
+
+## Approach
+
+- **Step -1**: Define a Zod schema for form validation.
+- **Step -2**: Use `useForm` hook from React Hook Form for form management.
+- **Step -3**: Integrate the Zod schema with React Hook Form with `zodResolver`.
+- **Step -4**: `<Controller />` component for controlled inputs.
+- **Step -5**: `<Form />` and `<Field />` components for form handling and field management.
+
+## Form
+
+### Define a form schema
+
+```ts title="form.tsx"
+import { z } from "zod";
+
+const formSchema = z.object({
+  title: z
+    .string()
+    .min(5, "Bug title must be at least 5 characters.")
+    .max(32, "Bug title must be at most 32 characters."),
+  description: z
+    .string()
+    .min(10, "Description must be at least 10 characters.")
+    .max(100, "Description must be at most 100 characters."),
+});
+
+type FormValue = z.infer<typeof formSchema>;
+```
+
+### Initialize the form
+
+```tsx title="form.tsx"
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { Form } from "@/components/ui/form";
+
+const formSchema = z.object({
+  title: z
+    .string()
+    .min(5, "Bug title must be at least 5 characters.")
+    .max(32, "Bug title must be at most 32 characters."),
+  description: z
+    .string()
+    .min(10, "Description must be at least 10 characters.")
+    .max(100, "Description must be at most 100 characters."),
+});
+
+type FormValue = z.infer<typeof formSchema>;
+
+export function BugReportForm() {
+  const form = useForm<FormValue>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      title: "",
+      description: "",
+    },
+  });
+
+  function onSubmit(data: FormValue) {
+    // Do something with the form values.
+    console.log(data);
+  }
+
+  return (
+    <Form onSubmit={form.handleSubmit(onSubmit)}>
+      {/* ... */}
+      {/* Build the form here */}
+      {/* ... */}
+    </Form>
+  );
+}
+```
+
+### Integrate components
+
+```tsx title="form.tsx"
+"use client";
+
+import { Controller, useForm } from "react-hook-form";
+import { z } from "zod";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { Button } from "@/registry/default/ui/button";
+import { Field, FieldError, FieldLabel } from "@/registry/default/ui/field";
+import { Input } from "@/registry/default/ui/input";
+import { Spinner } from "@/registry/default/ui/spinner";
+import { Textarea } from "@/registry/default/ui/textarea";
+
+const formSchema = z.object({
+  title: z
+    .string()
+    .min(5, "Bug title must be at least 5 characters.")
+    .max(32, "Bug title must be at most 32 characters."),
+  description: z
+    .string()
+    .min(10, "Description must be at least 10 characters.")
+    .max(100, "Description must be at most 100 characters."),
+});
+
+type FormValue = z.infer<typeof formSchema>;
+
+export function BugReportForm() {
+  const form = useForm<FormValue>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      title: "",
+      description: "",
+    },
+  });
+
+  function onSubmit(data: FormValue) {
+    // Do something with the form values.
+    console.log(data);
+    alert(`Bug Title: ${data.title}\nDescription: ${data.description}`);
+  }
+
+  return (
+    <form onSubmit={form.handleSubmit(onSubmit)} className="w-full max-w-sm space-y-3">
+      <Controller
+        name="title"
+        control={form.control}
+        render={({
+          field: { name, ...fieldProps },
+          fieldState: { invalid, isTouched, isDirty, error },
+        }) => (
+          <Field name={name} invalid={invalid} touched={isTouched} dirty={isDirty}>
+            <FieldLabel>Title</FieldLabel>
+            <Input {...fieldProps} placeholder="Enter the bug title" />
+            <FieldError match={!!error}>{error?.message}</FieldError>
+          </Field>
+        )}
+      />
+      <Controller
+        name="description"
+        control={form.control}
+        render={({
+          field: { name, ...fieldProps },
+          fieldState: { invalid, isTouched, isDirty, error },
+        }) => (
+          <Field name={name} invalid={invalid} touched={isTouched} dirty={isDirty}>
+            <FieldLabel>Description</FieldLabel>
+            <Textarea {...fieldProps} placeholder="Enter the bug description" />
+            <FieldError match={!!error}>{error?.message}</FieldError>
+          </Field>
+        )}
+      />
+      <div className="flex items-center gap-2">
+        <Button type="button" onClick={() => form.reset()}>
+          Reset
+        </Button>
+        <Button type="submit" disabled={form.formState.isSubmitting} focusableWhenDisabled>
+          {form.formState.isSubmitting ? <Spinner /> : "Submit"}
+        </Button>
+      </div>
+    </form>
+  );
+}
+```
