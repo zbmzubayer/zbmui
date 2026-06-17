@@ -1,0 +1,64 @@
+---
+title: Form
+description: A native form element with consolidated error handling.
+links:
+  doc: https://base-ui.com/react/components/form
+  anatomy: https://base-ui.com/react/components/form#anatomy
+  api: https://base-ui.com/react/components/form#api-reference
+---
+
+<ComponentPreview name="c-form-1" />
+
+## Installation
+
+<ComponentSource name="form" title="components/ui/form.tsx" />
+
+## Usage
+
+```tsx
+import { Field, FieldError, FieldLabel } from "@/components/ui/field";
+import { Form } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+```
+
+```tsx
+<Form
+  className="flex w-full flex-col gap-4"
+  onSubmit={(e) => {
+    /* handle submit */
+  }}>
+  <Field>
+    <FieldLabel>Email</FieldLabel>
+    <Input name="email" type="email" required />
+    <FieldError>Please enter a valid email.</FieldError>
+  </Field>
+</Form>
+```
+
+## Examples
+
+### Submit with server function
+
+<ComponentPreview name="c-form-2" />
+
+### Submit form values as JavaScript object
+
+```tsx title="form-demo.tsx"
+<Form
+  onFormSubmit={async (formValues: { id: string; quantity: number }) => {
+    const payload = {
+      product_id: formValues.id,
+      order_quantity: formValues.quantity,
+    };
+
+    const response = await fetch("https://api.example.com", {
+      method: "POST",
+      body: payload,
+    });
+  }}
+/>
+```
+
+### Using with zod
+
+<ComponentPreview name="c-form-3" />

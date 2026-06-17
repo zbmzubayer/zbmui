@@ -325,6 +325,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  form: {
+    name: "form",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/form.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/form.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   input: {
     name: "input",
     description: "",
@@ -2282,6 +2305,75 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "c-form-1": {
+    name: "c-form-1",
+    description: "Form Basic",
+    type: "registry:demo",
+    registryDependencies: ["form"],
+    files: [
+      {
+        path: "src/registry/default/components/form/c-form-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/form/c-form-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-form-2": {
+    name: "c-form-2",
+    description: "Form with submitting server function",
+    type: "registry:demo",
+    registryDependencies: ["form"],
+    files: [
+      {
+        path: "src/registry/default/components/form/c-form-2.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/form/c-form-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-form-3": {
+    name: "c-form-3",
+    description: "Form with zod validation",
+    type: "registry:demo",
+    registryDependencies: ["form"],
+    files: [
+      {
+        path: "src/registry/default/components/form/c-form-3.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/form/c-form-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "c-input-1": {
     name: "c-input-1",
     description: "Input Basic",
@@ -3729,6 +3821,29 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["button"],
+    meta: undefined,
+  },
+  "c-react-hook-form-1": {
+    name: "c-react-hook-form-1",
+    description: "React Hook Form example",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/react-hook-form"],
+    files: [
+      {
+        path: "src/registry/default/forms/react-hook-form/c-react-hook-form-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/forms/react-hook-form/c-react-hook-form-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: [""],
     meta: undefined,
   },
 };
