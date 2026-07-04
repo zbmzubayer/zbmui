@@ -463,6 +463,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "navigation-menu": {
+    name: "navigation-menu",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/navigation-menu.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/navigation-menu.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "number-field": {
     name: "number-field",
     description: "",
@@ -2733,6 +2756,98 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/label/c-label-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-navigation-menu-1": {
+    name: "c-navigation-menu-1",
+    description: "Navigation Menu Basic",
+    type: "registry:demo",
+    registryDependencies: ["navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-navigation-menu-2": {
+    name: "c-navigation-menu-2",
+    description: "Navigation Menu with submenus",
+    type: "registry:demo",
+    registryDependencies: ["navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-2.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-navigation-menu-3": {
+    name: "c-navigation-menu-3",
+    description: "Navigation Menu with nested inline submenus",
+    type: "registry:demo",
+    registryDependencies: ["navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-3.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-navigation-menu-4": {
+    name: "c-navigation-menu-4",
+    description: "Navigation Menu with large menus",
+    type: "registry:demo",
+    registryDependencies: ["navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-4.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-4");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
