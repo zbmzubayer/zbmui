@@ -509,6 +509,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "otp-field": {
+    name: "otp-field",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/otp-field.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/otp-field.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   popover: {
     name: "popover",
     description: "",
@@ -3101,6 +3124,190 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/number-field/c-number-field-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-1": {
+    name: "c-otp-field-1",
+    description: "OTP Field basic",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-2": {
+    name: "c-otp-field-2",
+    description: "OTP Field with different sizes",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-2.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-3": {
+    name: "c-otp-field-3",
+    description: "OTP Field with label",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-3.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-4": {
+    name: "c-otp-field-4",
+    description: "OTP Field with group separator",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-4.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-5": {
+    name: "c-otp-field-5",
+    description: "OTP Field with alphanumeric values",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-5.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-6": {
+    name: "c-otp-field-6",
+    description: "OTP Field with custom normalization",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-6.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-7": {
+    name: "c-otp-field-7",
+    description: "OTP Field with placeholder",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-7.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-otp-field-8": {
+    name: "c-otp-field-8",
+    description: "OTP Field with mask entry",
+    type: "registry:demo",
+    registryDependencies: ["otp-field"],
+    files: [
+      {
+        path: "src/registry/default/components/otp-field/c-otp-field-8.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-8");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

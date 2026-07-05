@@ -1,0 +1,74 @@
+---
+title: OTP Field
+description: A one-time password input composed of individual character slots.
+links:
+  doc: https://base-ui.com/react/components/otp-field
+  anatomy: https://base-ui.com/react/components/otp-field#anatomy
+  api: https://base-ui.com/react/components/otp-field#api-reference
+---
+
+<ComponentPreview name="c-otp-field-1" />
+
+## Installation
+
+<ComponentSource name="otp-field" title="components/ui/otp-field.tsx" />
+
+## Usage
+
+```tsx
+import { OTPField, OTPFieldInput, OTPFieldSeparator } from "@/components/ui/otp-field";
+```
+
+```tsx
+<OTPField aria-label="Verification code" length={6}>
+  <OTPFieldInput aria-label="Character 1 of 6" />
+  <OTPFieldInput aria-label="Character 2 of 6" />
+  <OTPFieldInput aria-label="Character 3 of 6" />
+  <OTPFieldSeparator />
+  <OTPFieldInput aria-label="Character 4 of 6" />
+  <OTPFieldInput aria-label="Character 5 of 6" />
+  <OTPFieldInput aria-label="Character 6 of 6" />
+</OTPField>
+```
+
+## Examples
+
+### Sizes
+
+Pass `size="lg"` to increase the size of the OTP field. The default size is `default`.
+
+<ComponentPreview name="c-otp-field-2" />
+
+### With label
+
+<ComponentPreview name="c-otp-field-3" />
+
+### Grouped separator
+
+<ComponentPreview name="c-otp-field-4" />
+
+### Alphanumeric
+
+Use `validationType="alphanumeric"` for recovery, backup, or invite codes that mix letters and numbers.
+
+<ComponentPreview name="c-otp-field-5" />
+
+### Custom normalization
+
+Use `normalizeValue` to normalize accepted values before state updates, such as converting alphanumeric codes to uppercase. It runs after `validationType` filtering, and the result is filtered against `validationType` again. Use `validationType="none"` when the normalizer should provide the full validation rule.
+
+Pair custom rules with `inputMode` for keyboard hints and `onValueInvalid` for rejected characters.
+
+<ComponentPreview name="c-otp-field-6" />
+
+### Placeholder
+
+`<OTPFieldInput>` is a real input, so native `placeholder` props and **CSS** work as usual.
+
+<ComponentPreview name="c-otp-field-7" />
+
+### Mask entry
+
+Use `mask` when the code should be obscured while it is being typed.
+
+<ComponentPreview name="c-otp-field-8" />
