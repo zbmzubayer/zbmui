@@ -152,7 +152,9 @@ export function BugReportForm() {
         }) => (
           <Field name={name} invalid={invalid} touched={isTouched} dirty={isDirty}>
             <FieldLabel>Description</FieldLabel>
-            <Textarea {...fieldProps} placeholder="Enter the bug description" />
+            <FieldControl
+              render={<Textarea {...fieldProps} placeholder="Enter the bug description" />}
+            />
             <FieldError match={!!error}>{error?.message}</FieldError>
           </Field>
         )}
@@ -169,3 +171,5 @@ export function BugReportForm() {
   );
 }
 ```
+
+> Use `<FieldControl />` with the `render` prop to wrap the components (Components that don't comes from **BaseUI** e.g. `<Textarea />`) for proper integration with the `<Field />` component. This is required for proper validation and error handling.

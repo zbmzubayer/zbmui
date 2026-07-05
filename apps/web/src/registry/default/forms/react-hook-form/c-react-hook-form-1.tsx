@@ -6,7 +6,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { Button } from "@/registry/default/ui/button";
-import { Field, FieldError, FieldLabel } from "@/registry/default/ui/field";
+import { Field, FieldControl, FieldError, FieldLabel } from "@/registry/default/ui/field";
 import { Input } from "@/registry/default/ui/input";
 import { Spinner } from "@/registry/default/ui/spinner";
 import { Textarea } from "@/registry/default/ui/textarea";
@@ -64,7 +64,9 @@ export function BugReportForm() {
         }) => (
           <Field name={name} invalid={invalid} touched={isTouched} dirty={isDirty}>
             <FieldLabel>Description</FieldLabel>
-            <Textarea {...fieldProps} placeholder="Enter the bug description" />
+            <FieldControl
+              render={<Textarea {...fieldProps} placeholder="Enter the bug description" />}
+            />
             <FieldError match={!!error}>{error?.message}</FieldError>
           </Field>
         )}
