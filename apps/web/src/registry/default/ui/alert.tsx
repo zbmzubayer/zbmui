@@ -90,7 +90,7 @@ function AlertAction({ className, ...props }: React.ComponentProps<"div">) {
 function AlertClose({ className, ...props }: React.ComponentProps<"button">) {
   return (
     <button
-      data-slot="alert-action"
+      data-slot="alert-close"
       className={cn(
         "col-start-2 sm:[[data-slot=alert-indicator]~[data-slot=alert-content]~&]:col-start-3",
         className
@@ -100,4 +100,12 @@ function AlertClose({ className, ...props }: React.ComponentProps<"button">) {
   );
 }
 
-export { Alert, AlertIndicator, AlertContent, AlertTitle, AlertDescription, AlertAction };
+export {
+  Alert,
+  AlertIndicator,
+  AlertContent,
+  AlertTitle,
+  AlertDescription,
+  AlertAction,
+  AlertClose,
+};
