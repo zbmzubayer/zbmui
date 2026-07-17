@@ -647,6 +647,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  switch: {
+    name: "switch",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/switch.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/switch.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   tabs: {
     name: "tabs",
     description: "",
@@ -3906,6 +3929,190 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/spinner/c-spinner-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-1": {
+    name: "c-switch-1",
+    description: "Switch basic",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-2": {
+    name: "c-switch-2",
+    description: "Switch sizes",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-3": {
+    name: "c-switch-3",
+    description: "Switch disabled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-4": {
+    name: "c-switch-4",
+    description: "Switch aria invalid",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-5": {
+    name: "c-switch-5",
+    description: "Switch with description",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-6": {
+    name: "c-switch-6",
+    description: "Switch with card style",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-7": {
+    name: "c-switch-7",
+    description: "Switch controlled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-switch-8": {
+    name: "c-switch-8",
+    description: "Switch with form integration",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/switch"],
+    files: [
+      {
+        path: "src/registry/default/components/switch/c-switch-8.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/switch/c-switch-8");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

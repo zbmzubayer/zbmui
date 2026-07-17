@@ -1,0 +1,64 @@
+---
+title: Switch
+description: A control that indicates whether a setting is on or off.
+links:
+  doc: https://base-ui.com/react/components/switch
+  anatomy: https://base-ui.com/react/components/switch#anatomy
+  api: https://base-ui.com/react/components/switch#api-reference
+---
+
+<ComponentPreview name="c-switch-1" />
+
+## Installation
+
+<ComponentSource name="switch" title="components/ui/switch.tsx" />
+
+## Usage
+
+```tsx
+import { Switch } from "@/components/ui/switch";
+```
+
+```tsx
+<Switch />
+```
+
+## Examples
+
+### Sizes
+
+Three sizes are available.
+
+- **sm**: Small size switch. (`--spacing(3)` / 12px)
+- **default**: Default size switch. (`--spacing(4)` / 16px)
+- **lg**: Large size switch. (`--spacing(5)` / 20px)
+
+You can customize the size more by overriding the `--thumb-size` **CSS** variable. For example, you can set `--thumb-size: 1.5rem` to make the thumb size 24px.
+
+<ComponentPreview name="c-switch-2" />
+
+### Disabled
+
+<ComponentPreview name="c-switch-3" />
+
+### Invalid
+
+<ComponentPreview name="c-switch-4" />
+
+### With description
+
+<ComponentPreview name="c-switch-5" />
+
+### Card style
+
+<ComponentPreview name="c-switch-6" />
+
+### Controlled
+
+<ComponentPreview name="c-switch-7" />
+
+### Form integration
+
+For demonstrating invalid state, the default value is set to `undefined`. Without toggling the switch, the switch will be in an invalid state when the form is submitted.
+
+<ComponentPreview name="c-switch-8" />
