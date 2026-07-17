@@ -1,6 +1,6 @@
 "use client";
 
-import { IconAlertCircle, IconHelpCircle, IconInfoCircle } from "@tabler/icons-react";
+import { IconClock, IconHeadphones, IconTrash } from "@tabler/icons-react";
 
 import { Button } from "@/registry/default/ui/button";
 import { ButtonGroup } from "@/registry/default/ui/button-group";
@@ -12,44 +12,44 @@ import {
   tooltipCreateHandle,
 } from "@/registry/default/ui/tooltip";
 
-function InfoContent() {
-  return <span>This is information about the feature</span>;
+function HeadphoneContent() {
+  return <span>Listen to audio preview</span>;
 }
 
-function HelpContent() {
-  return <span>Need help?</span>;
+function ClockContent() {
+  return <span>Set a timer</span>;
 }
 
-function AlertContent() {
-  return <span>Warning: This action cannot be undone</span>;
+function TrashContent() {
+  return <span>Delete: This action cannot be undone</span>;
 }
 
 const demoTooltip = tooltipCreateHandle<React.ComponentType>();
 
-export function TooltipAnimationDemo() {
+export function TooltipDemo() {
   return (
     <TooltipProvider>
       <ButtonGroup className="flex *:not-last:rounded-r-none *:not-first:rounded-l-none">
         <TooltipTrigger
           render={<Button variant="outline" />}
           handle={demoTooltip}
-          payload={InfoContent}
+          payload={HeadphoneContent}
         >
-          <IconInfoCircle />
+          <IconHeadphones />
         </TooltipTrigger>
         <TooltipTrigger
           render={<Button variant="outline" />}
           handle={demoTooltip}
-          payload={HelpContent}
+          payload={ClockContent}
         >
-          <IconHelpCircle />
+          <IconClock />
         </TooltipTrigger>
         <TooltipTrigger
           render={<Button variant="outline" />}
           handle={demoTooltip}
-          payload={AlertContent}
+          payload={TrashContent}
         >
-          <IconAlertCircle />
+          <IconTrash />
         </TooltipTrigger>
         <Tooltip handle={demoTooltip}>
           {({ payload: Payload }) => (

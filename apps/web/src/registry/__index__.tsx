@@ -4306,20 +4306,20 @@ export const Index: Record<string, any> = {
     categories: [""],
     meta: undefined,
   },
-  "tooltip-demo": {
-    name: "tooltip-demo",
+  "c-tooltip-1": {
+    name: "c-tooltip-1",
     description: "Tooltip Basic",
     type: "registry:component",
     registryDependencies: ["@zbmui/tooltip"],
     files: [
       {
-        path: "src/registry/default/components/tooltip/tooltip-demo.tsx",
+        path: "src/registry/default/components/tooltip/c-tooltip-1.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tooltip/tooltip-demo");
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-1");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -4329,20 +4329,66 @@ export const Index: Record<string, any> = {
     categories: ["button"],
     meta: undefined,
   },
-  "tooltip-animation-demo": {
-    name: "tooltip-animation-demo",
-    description: "Tooltip Animation Demo",
+  "c-tooltip-2": {
+    name: "c-tooltip-2",
+    description: "Tooltip with hidden arrow",
     type: "registry:component",
-    registryDependencies: ["@zbmui/tooltip"],
+    registryDependencies: ["@zbmui/tooltip", "@zbmui/toggle-group"],
     files: [
       {
-        path: "src/registry/default/components/tooltip/tooltip-animation-demo.tsx",
+        path: "src/registry/default/components/tooltip/c-tooltip-2.tsx",
         type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tooltip/tooltip-animation-demo");
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-tooltip-3": {
+    name: "c-tooltip-3",
+    description: "Tooltip with grouped trigger",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/tooltip"],
+    files: [
+      {
+        path: "src/registry/default/components/tooltip/c-tooltip-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-tooltip-4": {
+    name: "c-tooltip-4",
+    description: "Tooltip with animation",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/tooltip"],
+    files: [
+      {
+        path: "src/registry/default/components/tooltip/c-tooltip-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-4");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"

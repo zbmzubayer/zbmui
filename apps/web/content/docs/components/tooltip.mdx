@@ -1,33 +1,42 @@
 ---
 title: Tooltip
-description: A tooltip component that displays informative text when users hover over, focus on, or tap an element.
+description: A popup that appears when an element is hovered or focused, showing a hint for sighted users.
 ---
 
-<ComponentPreview name="tooltip-demo" />
-
-## Anatomy
-
-```tsx
-<Tooltip.Provider>
-  <Tooltip.Root>
-    <Tooltip.Trigger />
-    <Tooltip.Portal>
-      <Tooltip.Positioner>
-        <Tooltip.Popup>
-          <Tooltip.Arrow />
-        </Tooltip.Popup>
-      </Tooltip.Positioner>
-    </Tooltip.Portal>
-  </Tooltip.Root>
-</Tooltip.Provider>
-```
+<ComponentPreview name="c-tooltip-1" />
 
 ## Installation
 
 <ComponentSource name="tooltip" title="components/ui/tooltip.tsx" />
 
+## Usage
+
+```tsx
+import { Tooltip, TooltipPopup, TooltipTrigger } from "@/components/ui/tooltip";
+```
+
+```tsx
+<Tooltip>
+  <TooltipTrigger render={<Button variant="outline" />}>Hover me</TooltipTrigger>
+  <TooltipPopup>Helpful hint</TooltipPopup>
+</Tooltip>
+```
+
 ## Examples
 
-### Tooltip with Animation
+### Hidden arrow
 
-<ComponentPreview name="tooltip-animation-demo" />
+Pass `arrow={false}` to `TooltipPopup` to hide the arrow. Default is `true`.
+
+<ComponentPreview name="c-tooltip-2" />
+
+### Grouped tooltip
+
+The grouping logic ensures that once a tooltip becomes visible, the adjacent tooltips will be shown instantly. `TooltipProvider` provides a shared delay for multiple tooltips.
+
+<ComponentPreview name="c-tooltip-3" />
+
+### Animated tooltip
+
+<ComponentPreview name="c-tooltip-4" />
+````
