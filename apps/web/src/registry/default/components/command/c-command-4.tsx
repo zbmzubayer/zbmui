@@ -50,7 +50,7 @@ export const groupedItems: Group[] = [
   { items: commands, value: "Commands" },
 ];
 
-export function CommandDemo4() {
+export function CommandDemo() {
   const [open, setOpen] = useState(false);
 
   function handleItemClick(_item: Item) {
