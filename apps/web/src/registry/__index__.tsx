@@ -279,6 +279,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  command: {
+    name: "command",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/command.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/command.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   dialog: {
     name: "dialog",
     description: "",
@@ -615,6 +638,29 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  sidebar: {
+    name: "sidebar",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/sidebar.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/sidebar.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -2073,6 +2119,98 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-command-1": {
+    name: "c-command-1",
+    description: "Command demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/command"],
+    files: [
+      {
+        path: "src/registry/default/components/command/c-command-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/command/c-command-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["command"],
+    meta: undefined,
+  },
+  "c-command-2": {
+    name: "c-command-2",
+    description: "Command with group",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/command"],
+    files: [
+      {
+        path: "src/registry/default/components/command/c-command-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/command/c-command-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["command"],
+    meta: undefined,
+  },
+  "c-command-3": {
+    name: "c-command-3",
+    description: "Command with dialog",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/command"],
+    files: [
+      {
+        path: "src/registry/default/components/command/c-command-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/command/c-command-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["command"],
+    meta: undefined,
+  },
+  "c-command-4": {
+    name: "c-command-4",
+    description: "Command with popover",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/command"],
+    files: [
+      {
+        path: "src/registry/default/components/command/c-command-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/command/c-command-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["command"],
     meta: undefined,
   },
   "c-dialog-1": {

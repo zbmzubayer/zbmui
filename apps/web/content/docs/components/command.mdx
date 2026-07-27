@@ -1,0 +1,79 @@
+---
+title: Command
+description: A command palette component built with Dialog and Autocomplete for searching and executing commands.
+links:
+  doc: https://base-ui.com/react/components/autocomplete
+  anatomy: https://base-ui.com/react/components/autocomplete#anatomy
+  api: https://base-ui.com/react/components/autocomplete#api-reference
+---
+
+<ComponentPreview name="c-command-1" />
+
+## Installation
+
+<ComponentSource name="command" title="components/ui/command.tsx" />
+
+## Usage
+
+```tsx
+import {
+  Command,
+  CommandCollection,
+  CommandDialog,
+  CommandDialogPopup,
+  CommandDialogTrigger,
+  CommandEmpty,
+  CommandFooter,
+  CommandGroup,
+  CommandGroupLabel,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandPanel,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command";
+import { Button } from "@/components/ui/button";
+```
+
+```tsx
+const items = [
+  { value: "linear", label: "Linear" },
+  { value: "figma", label: "Figma" },
+  { value: "slack", label: "Slack" },
+]
+
+<CommandDialog>
+  <CommandDialogTrigger render={<Button variant="outline" />}>
+    Open Command Palette
+  </CommandDialogTrigger>
+
+  <CommandDialogPopup>
+    <Command items={items}>
+      <CommandInput placeholder="Search..." />
+      <CommandEmpty>No results found.</CommandEmpty>
+      <CommandList>
+        {(item) => (
+          <CommandItem key={item.value} value={item.value}>
+            {item.label}
+          </CommandItem>
+        )}
+      </CommandList>
+    </Command>
+  </CommandDialogPopup>
+</CommandDialog>
+```
+
+## Examples
+
+### Command with group
+
+<ComponentPreview name="c-command-2" />
+
+### Command with dialog
+
+<ComponentPreview name="c-command-3" />
+
+### Command with popover
+
+<ComponentPreview name="c-command-4" />
