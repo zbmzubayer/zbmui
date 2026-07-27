@@ -2,7 +2,7 @@ import { ScrollArea as ScrollAreaPrimitive } from "@base-ui/react/scroll-area";
 
 import { cn } from "@/lib/cn";
 
-function ScrollArea({
+export function ScrollArea({
   className,
   children,
   scrollFade = false,
@@ -31,7 +31,7 @@ function ScrollArea({
             "data-has-overflow-y:pe-[calc(var(--scrollbar-size)+var(--scrollbar-margin))] data-has-overflow-x:pb-[calc(var(--scrollbar-size)+var(--scrollbar-margin))]"
         )}
       >
-        {children}
+        <ScrollAreaPrimitive.Content className="size-full">{children}</ScrollAreaPrimitive.Content>
       </ScrollAreaPrimitive.Viewport>
       <ScrollBar orientation="vertical" />
       <ScrollBar orientation="horizontal" />
@@ -40,7 +40,7 @@ function ScrollArea({
   );
 }
 
-function ScrollBar({
+export function ScrollBar({
   className,
   orientation = "vertical",
   ...props
@@ -63,4 +63,4 @@ function ScrollBar({
   );
 }
 
-export { ScrollArea, ScrollBar };
+export { ScrollAreaPrimitive };

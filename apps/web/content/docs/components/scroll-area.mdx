@@ -68,6 +68,52 @@ You can also customize the scrollbar margin using **CSS** variable `--scrollbar-
 
 <ComponentPreview name="c-scroll-area-6" />
 
+### Scroll area with max-height
+
+If you want to use `max-height` instead of `height` for the `ScrollArea` component, you have to follow one of the following approaches:
+
+1. Set `display: flex` and `flex-direction: column` to the `ScrollArea` component. This will make the `ScrollArea` component take the full height of its parent container and allow it to scroll when the content exceeds the max-height.
+
+```tsx
+<ScrollArea className="flex max-h-40 max-w-sm flex-col rounded-md border">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur laborum sequi laudantium
+  aliquid laboriosam corporis, reiciendis maxime sunt qui recusandae ducimus dolores libero
+  quibusdam nemo, voluptas, odio ea repudiandae provident. Ut, in praesentium. Error iste excepturi
+  dicta fuga sequi sit! Possimus aliquam ab sapiente explicabo! Modi sunt, quam ratione asperiores
+  aut officia cupiditate nesciunt adipisci optio nemo voluptatibus. Qui, impedit! Eligendi, ducimus
+  obcaecati! Libero dolor illum magni dolorem. Alias iste sunt veniam incidunt assumenda a aliquid
+  fuga, esse reiciendis perspiciatis, laboriosam maxime itaque? Dicta placeat tempore optio beatae
+  numquam aut? Consequatur laborum doloribus praesentium laudantium delectus illum, libero ullam
+  pariatur molestias suscipit modi. Accusantium vel officia quae perspiciatis, eius sapiente
+  pariatur quia incidunt beatae saepe blanditiis culpa? Voluptas, dolor rerum! Tenetur autem facere
+  molestiae velit ipsa aliquid officiis repudiandae quia dolorem tempora excepturi, culpa provident
+  harum? Modi quam consequatur asperiores qui quo? Qui mollitia molestias hic esse natus praesentium
+  error?
+</ScrollArea>
+```
+
+2. Wrap the `ScrollArea` component inside a parent container and set the `display: grid` to the parent container. This will make the `ScrollArea` component take the full height of its parent container and allow it to scroll when the content exceeds the max-height.
+
+```tsx
+<div className="grid max-w-sm rounded-md border">
+  <ScrollArea className="max-h-40">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur laborum sequi laudantium
+    aliquid laboriosam corporis, reiciendis maxime sunt qui recusandae ducimus dolores libero
+    quibusdam nemo, voluptas, odio ea repudiandae provident. Ut, in praesentium. Error iste
+    excepturi dicta fuga sequi sit! Possimus aliquam ab sapiente explicabo! Modi sunt, quam ratione
+    asperiores aut officia cupiditate nesciunt adipisci optio nemo voluptatibus. Qui, impedit!
+    Eligendi, ducimus obcaecati! Libero dolor illum magni dolorem. Alias iste sunt veniam incidunt
+    assumenda a aliquid fuga, esse reiciendis perspiciatis, laboriosam maxime itaque? Dicta placeat
+    tempore optio beatae numquam aut? Consequatur laborum doloribus praesentium laudantium delectus
+    illum, libero ullam pariatur molestias suscipit modi. Accusantium vel officia quae perspiciatis,
+    eius sapiente pariatur quia incidunt beatae saepe blanditiis culpa? Voluptas, dolor rerum!
+    Tenetur autem facere molestiae velit ipsa aliquid officiis repudiandae quia dolorem tempora
+    excepturi, culpa provident harum? Modi quam consequatur asperiores qui quo? Qui mollitia
+    molestias hic esse natus praesentium error?
+  </ScrollArea>
+</div>
+```
+
 ## API Reference
 
 ### Scroll Area props
@@ -103,3 +149,4 @@ You can also customize the scrollbar margin using **CSS** variable `--scrollbar-
     },
   }}
 />
+```
