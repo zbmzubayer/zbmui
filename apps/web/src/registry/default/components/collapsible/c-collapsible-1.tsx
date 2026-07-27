@@ -15,11 +15,11 @@ export function CollapsibleDemo() {
       <CollapsibleTrigger
         className={cn(
           buttonVariants({ variant: "secondary", size: "sm" }),
-          "data-panel-open:[&_svg]:rotate-180"
+          "data-panel-open:[&_svg]:rotate-90"
         )}
       >
         Show recovery keys
-        <IconChevronDown className="size-4" />
+        <IconChevronDown className="size-4 transition-transform" />
       </CollapsibleTrigger>
       <CollapsiblePanel>
         <ul className="flex flex-col gap-1 py-2 text-muted-foreground text-sm">
