@@ -23,7 +23,7 @@ function DialogClose(props: React.ComponentProps<typeof DialogPrimitive.Close>) 
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />;
 }
 
-type DialogBackdropVariant = "opaque" | "blur" | "transparent";
+type DialogBackdropVariant = "blur" | "opaque" | "transparent";
 
 function DialogBackdrop({
   className,
@@ -37,8 +37,8 @@ function DialogBackdrop({
       data-slot="dialog-backdrop"
       className={cn(
         "fixed inset-0 z-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0",
-        variant === "opaque" && "bg-black/50",
         variant === "blur" && "bg-black/30 backdrop-blur-sm",
+        variant === "opaque" && "bg-black/50",
         variant === "transparent" && "bg-transparent",
         className
       )}
@@ -97,6 +97,7 @@ function DialogPopup({
   backdropVariant,
   position,
   closeProps: { className: closeClassName, ...closeProps } = {},
+  portalProps,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Popup> & {
   bottomStickyOnMobile?: boolean;
@@ -105,9 +106,10 @@ function DialogPopup({
   backdropVariant?: DialogBackdropVariant;
   position?: DialogPopupPosition;
   closeProps?: React.ComponentProps<typeof DialogPrimitive.Close>;
+  portalProps?: React.ComponentProps<typeof DialogPrimitive.Portal>;
 }) {
   return (
-    <DialogPortal>
+    <DialogPortal {...portalProps}>
       <DialogBackdrop variant={backdropVariant} />
       <DialogViewport
         position={position}
