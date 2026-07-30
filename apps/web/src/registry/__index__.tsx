@@ -187,6 +187,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  calendar: {
+    name: "calendar",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/calendar.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/calendar.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   checkbox: {
     name: "checkbox",
     description: "",
@@ -785,7 +808,6 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-
   /* Components */
   "c-accordion-1": {
     name: "c-accordion-1",
@@ -1728,6 +1750,29 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] };
     }),
     categories: ["button"],
+    meta: undefined,
+  },
+  "c-calendar-1": {
+    name: "c-calendar-1",
+    description: "Calendar demo",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/calendar"],
+    files: [
+      {
+        path: "src/registry/default/components/calendar/c-calendar-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/calendar/c-calendar-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["checkbox"],
     meta: undefined,
   },
   "c-checkbox-1": {
