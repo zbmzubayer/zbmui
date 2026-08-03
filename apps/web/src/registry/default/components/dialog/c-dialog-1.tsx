@@ -19,7 +19,7 @@ export function DialogDemo() {
     <Dialog>
       <DialogTrigger render={<Button variant="outline" />}>Open Dialog</DialogTrigger>
       <DialogPopup>
-        <Form>
+        <Form className="grid">
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>
