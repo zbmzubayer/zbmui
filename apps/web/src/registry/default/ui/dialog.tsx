@@ -5,27 +5,25 @@ import { cn } from "@/lib/cn";
 import { buttonVariants } from "@/registry/default/ui/button";
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
 
-const dialogCreateHandle = DialogPrimitive.createHandle;
+export const dialogCreateHandle = DialogPrimitive.createHandle;
 
-function Dialog({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) {
-  return <DialogPrimitive.Root data-slot="dialog" {...props} />;
-}
+export const Dialog = DialogPrimitive.Root;
 
-function DialogPortal({ ...props }: React.ComponentProps<typeof DialogPrimitive.Portal>) {
+export function DialogPortal({ ...props }: React.ComponentProps<typeof DialogPrimitive.Portal>) {
   return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />;
 }
 
-function DialogTrigger(props: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
+export function DialogTrigger(props: React.ComponentProps<typeof DialogPrimitive.Trigger>) {
   return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />;
 }
 
-function DialogClose(props: React.ComponentProps<typeof DialogPrimitive.Close>) {
+export function DialogClose(props: React.ComponentProps<typeof DialogPrimitive.Close>) {
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />;
 }
 
 type DialogBackdropVariant = "blur" | "opaque" | "transparent";
 
-function DialogBackdrop({
+export function DialogBackdrop({
   className,
   variant = "blur",
   ...props
@@ -36,7 +34,7 @@ function DialogBackdrop({
     <DialogPrimitive.Backdrop
       data-slot="dialog-backdrop"
       className={cn(
-        "fixed inset-0 z-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0",
+        "fixed inset-0 z-50 transition-opacity duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0",
         variant === "blur" && "bg-black/30 backdrop-blur-sm",
         variant === "opaque" && "bg-black/50",
         variant === "transparent" && "bg-transparent",
@@ -88,7 +86,7 @@ function DialogViewport({
   );
 }
 
-function DialogPopup({
+export function DialogPopup({
   className,
   children,
   bottomStickyOnMobile = false,
@@ -151,7 +149,7 @@ function DialogPopup({
   );
 }
 
-function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
+export function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="dialog-header"
@@ -164,7 +162,10 @@ function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function DialogTitle({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Title>) {
+export function DialogTitle({
+  className,
+  ...props
+}: React.ComponentProps<typeof DialogPrimitive.Title>) {
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
@@ -174,7 +175,7 @@ function DialogTitle({ className, ...props }: React.ComponentProps<typeof Dialog
   );
 }
 
-function DialogDescription({
+export function DialogDescription({
   className,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Description>) {
@@ -187,7 +188,7 @@ function DialogDescription({
   );
 }
 
-function DialogFooter({
+export function DialogFooter({
   className,
   variant = "default",
   ...props
@@ -206,7 +207,7 @@ function DialogFooter({
   );
 }
 
-function DialogBody({
+export function DialogBody({
   className,
   scrollArea = true,
   scrollFade = true,
@@ -220,33 +221,17 @@ function DialogBody({
   return scrollArea ? (
     <ScrollArea scrollFade={scrollFade} scrollbarGutter={scrollbarGutter}>
       <div
-        data-slot="dialog-panel"
+        data-slot="dialog-body"
         className={cn(
-          "p-6 in-[[data-slot=dialog-popup]:has([data-slot=dialog-header])]:pt-1 in-[[data-slot=dialog-popup]:has([data-slot=dialog-footer])]:pb-1 max-sm:px-4",
+          "p-6 in-[[data-slot=dialog-popup]:has([data-slot=dialog-header])]:pt-1 max-sm:px-4",
           className
         )}
         {...props}
       />
     </ScrollArea>
   ) : (
-    <div data-slot="dialog-panel" className={cn("overflow-auto p-6", className)} {...props} />
+    <div data-slot="dialog-body" className={cn("overflow-auto p-6", className)} {...props} />
   );
 }
 
-export {
-  dialogCreateHandle,
-  Dialog,
-  DialogTrigger,
-  DialogPortal,
-  DialogClose,
-  DialogBackdrop,
-  DialogBackdrop as DialogOverlay,
-  DialogPopup,
-  DialogPopup as DialogContent,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription,
-  DialogBody,
-  DialogViewport,
-};
+export { DialogPrimitive };
