@@ -39,11 +39,15 @@ const items = [
 export function ComboboxDemo() {
   return (
     <Combobox items={items}>
-      <ComboboxInput
-        aria-label="Select a item"
-        placeholder="Select a item…"
-        inputGroupProps={{ className: "w-fit" }}
-      />
+      <div className="flex flex-col gap-2">
+        <label htmlFor="fruit-combobox">Select a fruit</label>
+        <ComboboxInput
+          id="fruit-combobox"
+          aria-label="Select a item"
+          placeholder="Select a item…"
+          inputGroupProps={{ className: "w-fit" }}
+        />
+      </div>
       <ComboboxPopup>
         <ComboboxEmpty>No items found.</ComboboxEmpty>
         <ComboboxList>

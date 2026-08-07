@@ -2166,6 +2166,236 @@ export const Index: Record<string, any> = {
     categories: ["combobox"],
     meta: undefined,
   },
+  "c-combobox-3": {
+    name: "c-combobox-3",
+    description: "Combobox disabled",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-4": {
+    name: "c-combobox-4",
+    description: "Combobox auto highlight",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-4");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-5": {
+    name: "c-combobox-5",
+    description: "Combobox with clear button",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-5");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-6": {
+    name: "c-combobox-6",
+    description: "Combobox with indicator position",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-6");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-7": {
+    name: "c-combobox-7",
+    description: "Combobox grouped",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-7");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-8": {
+    name: "c-combobox-8",
+    description: "Combobox multiple",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-8.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-8");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-9": {
+    name: "c-combobox-9",
+    description: "Combobox with start addon",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-9.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-9");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-10": {
+    name: "c-combobox-10",
+    description: "Combobox with multiple start addon",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-10.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-10");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-11": {
+    name: "c-combobox-11",
+    description: "Combobox with multiple limiting visible chips",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-11.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-11");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-12": {
+    name: "c-combobox-12",
+    description: "Combobox with input inside popup",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-12.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-12");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
   "c-command-1": {
     name: "c-command-1",
     description: "Command demo",

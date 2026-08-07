@@ -13,8 +13,133 @@ links:
 
 <ComponentSource name="combobox" title="components/ui/combobox.tsx" />
 
+## Usage
+
+### Single selection
+
+```tsx
+import {
+  Combobox,
+  ComboboxEmpty,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxList,
+  ComboboxPopup,
+} from "@/components/ui/combobox";
+```
+
+```tsx
+const items = [
+  { value: "apple", label: "Apple" },
+  { value: "banana", label: "Banana" },
+  { value: "orange", label: "Orange" },
+  { value: "grape", label: "Grape" },
+]
+
+<Combobox items={items}>
+  <ComboboxInput placeholder="Select an item..." />
+  <ComboboxPopup>
+    <ComboboxEmpty>No results found.</ComboboxEmpty>
+    <ComboboxList>
+      {(item) => <ComboboxItem key={item.value} value={item}>{item.label}</ComboboxItem>}
+    </ComboboxList>
+  </ComboboxPopup>
+</Combobox>
+```
+
+### Multiple selection
+
+```tsx
+import {
+  Combobox,
+  ComboboxChip,
+  ComboboxChips,
+  ComboboxChipsInput,
+  ComboboxEmpty,
+  ComboboxItem,
+  ComboboxList,
+  ComboboxPopup,
+  ComboboxValue,
+} from "@/components/ui/combobox";
+```
+
+```tsx
+const items = [
+  { value: "apple", label: "Apple" },
+  { value: "banana", label: "Banana" },
+  { value: "orange", label: "Orange" },
+  { value: "grape", label: "Grape" },
+]
+<Combobox items={items} defaultValue={[items[0], items[1]]} multiple>
+  <ComboboxChips className="w-64">
+    <ComboboxValue>
+      {(value: { label: string; value: string }[]) => (
+        <>
+          {value.map((item) => (
+            <ComboboxChip aria-label={item.label} key={item.value}>
+              {item.label}
+            </ComboboxChip>
+          ))}
+          <ComboboxChipsInput placeholder={value.length > 0 ? undefined : "Select items..."} />
+        </>
+      )}
+    </ComboboxValue>
+  </ComboboxChips>
+  <ComboboxPopup>
+    <ComboboxEmpty>No items found.</ComboboxEmpty>
+    <ComboboxList>
+      {(item) => (
+        <ComboboxItem key={item.value} value={item}>
+          {item.label}
+        </ComboboxItem>
+      )}
+    </ComboboxList>
+  </ComboboxPopup>
+</Combobox>
+```
+
 ## Examples
 
 ### Sizes
 
 <ComponentPreview name="c-combobox-2" />
+
+### Disabled
+
+<ComponentPreview name="c-combobox-3" />
+
+### Auto highlight
+
+<ComponentPreview name="c-combobox-4" />
+
+### With clear button
+
+<ComponentPreview name="c-combobox-5" />
+
+### Indicator position
+
+<ComponentPreview name="c-combobox-6" />
+
+### Grouped
+
+<ComponentPreview name="c-combobox-7" />
+
+### Multiple
+
+<ComponentPreview name="c-combobox-8" />
+
+### Start addon
+
+<ComponentPreview name="c-combobox-9" />
+
+### Multiple with start addon
+
+<ComponentPreview name="c-combobox-10" />
+
+### Multiple with limiting visible chips
+
+<ComponentPreview name="c-combobox-11" />
+
+### Input inside popup
+
+<ComponentPreview name="c-combobox-12" />

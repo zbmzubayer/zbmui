@@ -1,5 +1,7 @@
 "use client";
 
+import { IconSearch } from "@tabler/icons-react";
+
 import {
   Combobox,
   ComboboxEmpty,
@@ -43,7 +45,14 @@ export function ComboboxDemo() {
     <div className="flex flex-col gap-5">
       {sizes.map((size) => (
         <Combobox items={items} key={size}>
-          <ComboboxInput aria-label="Select a item" placeholder="Select a item…" size={size} />
+          <ComboboxInput
+            aria-label="Select a item"
+            placeholder="Select a item…"
+            size={size}
+            startAddon={<IconSearch />}
+            showClear
+            showTrigger
+          />
           <ComboboxPopup>
             <ComboboxEmpty>No items found.</ComboboxEmpty>
             <ComboboxList>
