@@ -8,7 +8,6 @@ import {
   Autocomplete,
   AutocompleteEmpty,
   AutocompleteInput,
-  AutocompleteInputGroup,
   AutocompleteItem,
   AutocompleteList,
   AutocompletePopup,
@@ -49,13 +48,12 @@ export function AutocompleteDemo() {
 
   return (
     <Autocomplete items={items} limit={limit} value={value} onValueChange={setValue}>
-      <AutocompleteInputGroup className="w-64">
-        <AutocompleteInput
-          aria-label="Search items"
-          placeholder="Search items…"
-          startAddon={<IconSearch />}
-        />
-      </AutocompleteInputGroup>
+      <AutocompleteInput
+        aria-label="Search items"
+        placeholder="Search items…"
+        startAddon={<IconSearch />}
+        inputGroupProps={{ className: "w-64" }}
+      />
       <AutocompletePopup>
         <AutocompleteEmpty>No items found.</AutocompleteEmpty>
         <AutocompleteList>

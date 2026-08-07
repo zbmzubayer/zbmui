@@ -13,6 +13,38 @@ links:
 
 <ComponentSource name="autocomplete" title="components/ui/autocomplete.tsx" />
 
+## Usage
+
+```tsx
+import {
+  Autocomplete,
+  AutocompleteEmpty,
+  AutocompleteInput,
+  AutocompleteItem,
+  AutocompleteList,
+  AutocompletePopup,
+} from "@/components/ui/autocomplete";
+```
+
+```tsx
+const items = [
+  { value: "apple", label: "Apple" },
+  { value: "banana", label: "Banana" },
+  { value: "orange", label: "Orange" },
+  { value: "grape", label: "Grape" },
+]
+
+<Autocomplete items={items}>
+  <AutocompleteInput placeholder="Search..." />
+  <AutocompletePopup>
+    <AutocompleteEmpty>No results found.</AutocompleteEmpty>
+    <AutocompleteList>
+      {(item) => <AutocompleteItem key={item.value} value={item}>{item.label}</AutocompleteItem>}
+    </AutocompleteList>
+  </AutocompletePopup>
+</Autocomplete>
+```
+
 ## Examples
 
 ### Sizes
@@ -29,27 +61,39 @@ links:
 
 ### Inline autocomplete
 
+Controls how the autocomplete behaves with respect to list filtering and inline autocompletion.
+
+- `list` (default): items are dynamically filtered based on the input value. The input value does not change based on the active item.
+- `both`: items are dynamically filtered based on the input value, which will temporarily change based on the active item (inline autocompletion).
+- `inline`: items are static (not filtered), and the input value will temporarily change based on the active item (inline autocompletion).
+- `none`: items are static (not filtered), and the input value will not change based on the active item.
+
 <ComponentPreview name="c-autocomplete-5" />
 
 ### Auto highlight
+
+Whether the first matching item is highlighted automatically.
+
+- `true` - Highlight after the user types and keep the highlight while the query changes.
+- `always` - Always highlight the first item.
 
 <ComponentPreview name="c-autocomplete-6" />
 
 ### With clear button
 
-Wrap the input with `AutocompleteInputGroup` to show the clear button.
+Pass `showClear` prop to the `AutocompleteInput` component to show a clear button.
 
 <ComponentPreview name="c-autocomplete-7" />
 
 ### With clear & trigger button
 
-Wrap the input with `AutocompleteInputGroup` to show the clear and trigger buttons.
+Pass `showClear` and `showTrigger` props to the `AutocompleteInput` component to show both buttons.
 
 <ComponentPreview name="c-autocomplete-8" />
 
 ### With start addon
 
-Wrap the input with `AutocompleteInputGroup` to add an addon before the input.
+Use the `startAddon` prop to add an icon or any other element before the input.
 
 <ComponentPreview name="c-autocomplete-9" />
 
@@ -117,6 +161,10 @@ Wrap the input with `AutocompleteInputGroup` to add an addon before the input.
 
 <ApiReferenceAccordion
   type={{
+    portalProps: {
+      description: "Props to pass to the portal.",
+      type: "React.ComponentProps<typeof AutocompletePortal>",
+    },
     positionerProps: {
       description: "Props to pass to the positioner.",
       type: "React.ComponentProps<typeof AutocompletePositioner>",

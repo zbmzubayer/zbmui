@@ -25,12 +25,11 @@ const items = [
 
 export function AutocompleteDemo() {
   return (
-    <Autocomplete items={items}>
+    <Autocomplete items={items} disabled>
       <AutocompleteInput
         aria-label="Search items"
-        disabled
         placeholder="Search items…"
-        className="max-w-64"
+        inputGroupProps={{ className: "w-fit" }}
       />
       <AutocompletePopup>
         <AutocompleteEmpty>No items found.</AutocompleteEmpty>

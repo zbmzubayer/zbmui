@@ -1,5 +1,7 @@
 "use client";
 
+import { IconSearch } from "@tabler/icons-react";
+
 import {
   Autocomplete,
   AutocompleteEmpty,
@@ -30,7 +32,14 @@ export function AutocompleteDemo() {
     <div className="flex flex-col gap-4">
       {sizes.map((size) => (
         <Autocomplete key={size} items={items}>
-          <AutocompleteInput aria-label="Search items" placeholder="Search items…" size={size} />
+          <AutocompleteInput
+            aria-label="Search items"
+            placeholder="Search items…"
+            size={size}
+            startAddon={<IconSearch />}
+            showClear
+            showTrigger
+          />
           <AutocompletePopup>
             <AutocompleteEmpty>No items found.</AutocompleteEmpty>
             <AutocompleteList>

@@ -98,7 +98,11 @@ export function AutocompleteDemo() {
       value={searchValue}
       onValueChange={setSearchValue}
     >
-      <AutocompleteInput aria-label="Search items" placeholder="Search items…" className="w-64" />
+      <AutocompleteInput
+        aria-label="Search items"
+        placeholder="Search items…"
+        inputGroupProps={{ className: "w-64" }}
+      />
       <AutocompletePopup>
         {isLoading || (
           <AutocompleteEmpty>

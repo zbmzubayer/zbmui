@@ -7,7 +7,6 @@ import {
   AutocompleteGroup,
   AutocompleteGroupLabel,
   AutocompleteInput,
-  AutocompleteInputGroup,
   AutocompleteItem,
   AutocompleteList,
   AutocompletePopup,
@@ -47,14 +46,13 @@ type GroupItem = (typeof groupedItems)[number];
 export function AutocompleteDemo() {
   return (
     <Autocomplete items={groupedItems}>
-      <AutocompleteInputGroup className="max-w-64">
-        <AutocompleteInput
-          aria-label="Search items"
-          placeholder="Search frameworks..."
-          showTrigger
-          showClear
-        />
-      </AutocompleteInputGroup>
+      <AutocompleteInput
+        aria-label="Search items"
+        placeholder="Search frameworks..."
+        inputGroupProps={{ className: "w-fit" }}
+        showTrigger
+        showClear
+      />
       <AutocompletePopup>
         <AutocompleteEmpty>No items found.</AutocompleteEmpty>
         <AutocompleteList>
@@ -63,7 +61,7 @@ export function AutocompleteDemo() {
               <AutocompleteGroupLabel>{group.value}</AutocompleteGroupLabel>
               <AutocompleteCollection>
                 {(item: Item) => (
-                  <AutocompleteItem key={item.value} value={item.value}>
+                  <AutocompleteItem key={item.value} value={item}>
                     {item.label}
                   </AutocompleteItem>
                 )}
