@@ -177,7 +177,7 @@ export function AutocompletePopup({
         <AutocompletePrimitive.Popup
           data-slot="autocomplete-popup"
           className={cn(
-            "flex not-has-data-[slot=scroll-area]:max-h-[min(var(--available-height),23rem)] w-(--anchor-width) max-w-(--available-width) origin-(--transform-origin) flex-col overflow-hidden rounded-lg border bg-popover shadow-lg/5 transition-[transform,scale,opacity] data-ending-style:scale-95 data-starting-style:scale-95 data-ending-style:opacity-0 data-starting-style:opacity-0",
+            "flex max-h-[min(var(--available-height),23rem)] w-(--anchor-width) max-w-(--available-width) origin-(--transform-origin) flex-col overflow-hidden rounded-lg border bg-popover shadow-lg/5 transition-[transform,scale,opacity] data-ending-style:scale-95 data-starting-style:scale-95 data-ending-style:opacity-0 data-starting-style:opacity-0",
             className
           )}
           {...props}
@@ -193,7 +193,7 @@ export function AutocompleteList({
   ...props
 }: React.ComponentProps<typeof AutocompletePrimitive.List> & { scrollArea?: boolean }) {
   return scrollArea ? (
-    <ScrollArea scrollbarGutter scrollFade className="max-h-[min(var(--available-height),23rem)]">
+    <ScrollArea scrollbarGutter scrollFade>
       <AutocompletePrimitive.List
         data-slot="autocomplete-list"
         className={cn("not-empty:scroll-py-1 not-empty:p-1", className)}
