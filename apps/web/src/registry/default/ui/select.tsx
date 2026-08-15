@@ -3,27 +3,28 @@ import { IconCheck, IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 
 import { cn } from "@/lib/cn";
 
-function Select(props: React.ComponentProps<typeof SelectPrimitive.Root>) {
-  return <SelectPrimitive.Root data-slot="select" {...props} />;
-}
+export const Select = SelectPrimitive.Root;
 
-function SelectTrigger({
+export function SelectTrigger({
   className,
   size = "default",
   children,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Trigger> & {
-  size?: "sm" | "default" | "lg";
+  size?: "xs" | "sm" | "default" | "lg" | "xl";
 }) {
   return (
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "inline-flex h-9 w-full select-none items-center justify-between gap-2 rounded-lg border border-input px-3 text-left text-sm shadow-xs outline-none transition-[color,shadow] hover:bg-input/30 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 data-disabled:pointer-events-none data-disabled:opacity-60 [&_svg]:pointer-events-none [&_svg]:shrink-0 [[data-disabled],:focus-visible,[aria-invalid],[data-pressed]]:shadow-none",
-        "aria-invalid:border-danger aria-invalid:ring-danger/30",
-        "[&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
-        size === "sm" && "h-8 gap-1.5 px-2.5",
-        size === "lg" && "h-10",
+        "inline-flex h-8 w-full select-none items-center justify-between gap-2 rounded-lg border border-input px-2.5 text-left text-sm shadow-xs outline-none transition-[color,shadow] hover:bg-input/30 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 data-disabled:pointer-events-none data-disabled:opacity-60 [&_svg]:pointer-events-none [&_svg]:shrink-0 [[data-disabled],:focus-visible,[aria-invalid],[data-pressed]]:shadow-none",
+        "aria-invalid:border-danger aria-invalid:ring-danger/30 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
+        size === "xs" &&
+          "h-6 gap-1.5 rounded px-2 text-xs focus-visible:ring-2 [&_svg:not([class*='size-'])]:size-3.5",
+        size === "sm" &&
+          "h-7 gap-1.5 rounded-sm px-2 text-[0.8125rem] focus-visible:ring-2 [&_svg:not([class*='size-'])]:size-3.5",
+        size === "lg" && "h-9",
+        size === "xl" && "h-10 px-3 text-base [&_svg:not([class*='size-'])]:size-4.5",
         className
       )}
       {...props}
@@ -36,7 +37,10 @@ function SelectTrigger({
   );
 }
 
-function SelectValue({ className, ...props }: React.ComponentProps<typeof SelectPrimitive.Value>) {
+export function SelectValue({
+  className,
+  ...props
+}: React.ComponentProps<typeof SelectPrimitive.Value>) {
   return (
     <SelectPrimitive.Value
       data-slot="select-value"
@@ -49,7 +53,7 @@ function SelectValue({ className, ...props }: React.ComponentProps<typeof Select
   );
 }
 
-function SelectPositioner({
+export function SelectPositioner({
   className,
   align = "start",
   side = "bottom",
@@ -64,58 +68,53 @@ function SelectPositioner({
       side={side}
       sideOffset={sideOffset}
       alignItemWithTrigger={alignItemWithTrigger}
-      className={cn("z-50 min-w-(--anchor-width) select-none", className)}
+      className={cn("z-50 min-w-(--anchor-width) select-none outline-hidden", className)}
       {...props}
     />
   );
 }
 
-function SelectPopup({
+export function SelectPopup({
   className,
   children,
   nativeScroll = false,
-  showArrow = false,
+  portalProps,
   positionerProps,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Popup> & {
   nativeScroll?: boolean;
-  showArrow?: boolean;
+  portalProps?: React.ComponentProps<typeof SelectPrimitive.Portal>;
   positionerProps?: React.ComponentProps<typeof SelectPositioner>;
 }) {
   return (
-    <SelectPrimitive.Portal>
+    <SelectPrimitive.Portal data-slot="select-portal" {...portalProps}>
       <SelectPositioner {...positionerProps}>
         <SelectPrimitive.Popup
           data-slot="select-popup"
-          className="origin-(--transform-origin) overflow-hidden rounded-lg border bg-popover text-popover-foreground shadow-md transition-[scale,opacity] has-data-[side=none]:scale-100 has-data-starting-style:scale-98 has-data-starting-style:opacity-0 has-data-[side=none]:transition-none"
+          className="origin-(--transform-origin) overflow-hidden rounded-lg border bg-popover text-popover-foreground shadow-md transition-[scale,opacity] data-[side=none]:data-starting-style:scale-100 data-[side=none]:data-starting-style:opacity-100 data-[side=none]:data-ending-style:transition-none data-[side=none]:data-starting-style:transition-none data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0"
           {...props}
         >
-          {showArrow && (
-            <SelectPrimitive.Arrow
-              data-slot="tooltip-arrow"
-              className="flex transition duration-[0.35s] ease-[cubic-bezier(0.22,1,0.36,1)] data-[side=bottom]:-top-2 data-[side=left]:-right-3.25 data-[side=top]:-bottom-2 data-[side=right]:-left-3.25 data-[side=bottom]:rotate-0 data-[side=left]:rotate-90 data-[side=right]:-rotate-90 data-[side=top]:rotate-180 data-instant:transition-none"
-            >
-              <ArrowSvg />
-            </SelectPrimitive.Arrow>
-          )}
           {!nativeScroll && (
             <SelectPrimitive.ScrollUpArrow
               data-slot="select-scroll-up-arrow"
               className="top-0 z-50 flex h-6 w-full cursor-default items-center justify-center before:pointer-events-none before:absolute before:inset-x-px before:top-px before:h-[200%] before:rounded-t-[calc(var(--radius-lg)-1px)] before:bg-linear-to-b before:from-50% before:from-popover"
             >
-              <IconChevronUp className="relative size-4.5 sm:size-4" />
+              <IconChevronUp className="relative size-4" />
             </SelectPrimitive.ScrollUpArrow>
           )}
           <SelectPrimitive.List
-            className={cn("max-h-(--available-height) overflow-y-auto p-1", className)}
             data-slot="select-list"
+            className={cn(
+              "max-h-(--available-height) overflow-y-auto p-1 [scrollbar-width:thin]",
+              className
+            )}
           >
             {children}
           </SelectPrimitive.List>
           {!nativeScroll && (
             <SelectPrimitive.ScrollDownArrow
-              className="bottom-0 z-50 flex h-6 w-full cursor-default items-center justify-center before:pointer-events-none before:absolute before:inset-x-px before:bottom-px before:h-[200%] before:rounded-b-[calc(var(--radius-lg)-1px)] before:bg-linear-to-t before:from-50% before:from-popover"
               data-slot="select-scroll-down-arrow"
+              className="bottom-0 z-50 flex h-6 w-full cursor-default items-center justify-center before:pointer-events-none before:absolute before:inset-x-px before:bottom-px before:h-[200%] before:rounded-b-[calc(var(--radius-lg)-1px)] before:bg-linear-to-t before:from-50% before:from-popover"
             >
               <IconChevronDown className="relative size-4" />
             </SelectPrimitive.ScrollDownArrow>
@@ -126,7 +125,7 @@ function SelectPopup({
   );
 }
 
-function SelectItem({
+export function SelectItem({
   className,
   children,
   ...props
@@ -135,22 +134,22 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "grid min-h-8 cursor-pointer select-none grid-cols-[1rem_1fr] items-center gap-2 rounded-sm py-1 ps-2 pe-4 text-sm outline-none data-disabled:pointer-events-none data-highlighted:bg-accent data-highlighted:text-accent-foreground data-disabled:opacity-60 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "grid min-h-7 cursor-pointer select-none grid-cols-[1fr_1rem] items-center gap-2 rounded-sm px-2 py-1 text-sm outline-none data-disabled:pointer-events-none data-highlighted:bg-accent data-highlighted:text-accent-foreground data-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       {...props}
     >
-      <SelectPrimitive.ItemIndicator data-slot="select-item-indicator" className="col-start-1">
-        <IconCheck />
-      </SelectPrimitive.ItemIndicator>
-      <SelectPrimitive.ItemText className="col-start-2 min-w-0">
+      <SelectPrimitive.ItemText className="col-start-1 min-w-0">
         {children}
       </SelectPrimitive.ItemText>
+      <SelectPrimitive.ItemIndicator data-slot="select-item-indicator" className="col-start-2">
+        <IconCheck />
+      </SelectPrimitive.ItemIndicator>
     </SelectPrimitive.Item>
   );
 }
 
-function SelectSeparator({
+export function SelectSeparator({
   className,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Separator>) {
@@ -163,11 +162,11 @@ function SelectSeparator({
   );
 }
 
-function SelectGroup(props: React.ComponentProps<typeof SelectPrimitive.Group>) {
+export function SelectGroup(props: React.ComponentProps<typeof SelectPrimitive.Group>) {
   return <SelectPrimitive.Group data-slot="select-group" {...props} />;
 }
 
-function SelectGroupLabel({
+export function SelectGroupLabel({
   className,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.GroupLabel>) {
@@ -180,33 +179,4 @@ function SelectGroupLabel({
   );
 }
 
-export function ArrowSvg(props: React.ComponentProps<"svg">) {
-  return (
-    <svg width="20" height="10" viewBox="0 0 20 10" fill="none" {...props}>
-      <path
-        d="M9.66437 2.60207L4.80758 6.97318C4.07308 7.63423 3.11989 8 2.13172 8H0V10H20V8H18.5349C17.5468 8 16.5936 7.63423 15.8591 6.97318L11.0023 2.60207C10.622 2.2598 10.0447 2.25979 9.66437 2.60207Z"
-        className="fill-popover"
-      />
-      {/* <path
-        d="M8.99542 1.85876C9.75604 1.17425 10.9106 1.17422 11.6713 1.85878L16.5281 6.22989C17.0789 6.72568 17.7938 7.00001 18.5349 7.00001L15.89 7L11.0023 2.60207C10.622 2.2598 10.0447 2.2598 9.66436 2.60207L4.77734 7L2.13171 7.00001C2.87284 7.00001 3.58774 6.72568 4.13861 6.22989L8.99542 1.85876Z"
-        className="fill-border"
-      /> */}
-      <path
-        d="M10.3333 3.34539L5.47654 7.71648C4.55842 8.54279 3.36693 9 2.13172 9H0V8H2.13172C3.11989 8 4.07308 7.63423 4.80758 6.97318L9.66437 2.60207C10.0447 2.25979 10.622 2.2598 11.0023 2.60207L15.8591 6.97318C16.5936 7.63423 17.5468 8 18.5349 8H20V9H18.5349C17.2998 9 16.1083 8.54278 15.1901 7.71648L10.3333 3.34539Z"
-        className="fill-border"
-      />
-    </svg>
-  );
-}
-
-export {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectPositioner,
-  SelectPopup,
-  SelectItem,
-  SelectSeparator,
-  SelectGroup,
-  SelectGroupLabel,
-};
+export { SelectPrimitive };

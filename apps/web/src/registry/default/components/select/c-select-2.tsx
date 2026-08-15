@@ -17,6 +17,18 @@ export function SelectDemo() {
   return (
     <div className="flex flex-col gap-5">
       <Select items={items}>
+        <SelectTrigger size="xs" className="w-64">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectPopup>
+          {items.map(({ label, value }) => (
+            <SelectItem key={value} value={value}>
+              {label}
+            </SelectItem>
+          ))}
+        </SelectPopup>
+      </Select>
+      <Select items={items}>
         <SelectTrigger size="sm" className="w-64">
           <SelectValue />
         </SelectTrigger>
@@ -42,6 +54,18 @@ export function SelectDemo() {
       </Select>
       <Select items={items}>
         <SelectTrigger size="lg" className="w-64">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectPopup>
+          {items.map(({ label, value }) => (
+            <SelectItem key={value} value={value}>
+              {label}
+            </SelectItem>
+          ))}
+        </SelectPopup>
+      </Select>
+      <Select items={items}>
+        <SelectTrigger size="xl" className="w-64">
           <SelectValue />
         </SelectTrigger>
         <SelectPopup>
