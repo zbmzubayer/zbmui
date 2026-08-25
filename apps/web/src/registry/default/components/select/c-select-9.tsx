@@ -14,7 +14,7 @@ const items = [
   { description: "Medium size projects", label: "Medium", value: "medium" },
   { description: "Large size projects", label: "Large", value: "large" },
   { description: "Enterprise size projects", label: "Enterprise", value: "enterprise" },
-];
+] as const;
 
 type Item = (typeof items)[number];
 
