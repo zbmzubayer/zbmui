@@ -22,7 +22,7 @@ const items = [
   { icon: IconBrandAngular, label: "Angular", value: "angular" },
   { icon: IconBrandSolidjs, label: "SolidJS", value: "solidjs" },
   { icon: IconBrandVue, label: "Vue", value: "vue" },
-];
+] as const;
 
 type Item = (typeof items)[number];
 
@@ -31,7 +31,7 @@ export function SelectDemo() {
     <Select
       aria-label="Select category"
       defaultValue={items[0]}
-      itemToStringValue={(item) => (item as Item).value ?? ""}
+      itemToStringValue={(item) => item.value ?? ""}
     >
       <SelectTrigger className="w-64">
         <SelectValue>
