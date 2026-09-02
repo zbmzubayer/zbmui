@@ -1,0 +1,50 @@
+# ZBM UI
+
+> ZBM UI is a modern, accessible, and customizable UI component library built with React, TypeScript, Next.js, Tailwind CSS, and Base UI. This site is its documentation, covering installation, theming (including dark mode), forms integration, and a full component reference.
+
+## Docs
+
+- [Introduction](https://ui.zubayer.dev/docs.md): What ZBM UI is, its key features, and how to get started.
+- [Installation](https://ui.zubayer.dev/docs/installation.md): Set up ZBM UI in your project, including Tailwind CSS and required dependencies.
+- [Dark Mode](https://ui.zubayer.dev/docs/dark-mode.md): Add dark mode with `next-themes` in Next.js or Vite apps.
+- [Forms](https://ui.zubayer.dev/docs/forms.md): Build accessible forms, including integration with React Hook Form and Zod.
+
+## Components
+
+- [Accordion](https://ui.zubayer.dev/docs/components/accordion.md)
+- [Alert](https://ui.zubayer.dev/docs/components/alert.md)
+- [Alert Dialog](https://ui.zubayer.dev/docs/components/alert-dialog.md)
+- [Autocomplete](https://ui.zubayer.dev/docs/components/autocomplete.md)
+- [Avatar](https://ui.zubayer.dev/docs/components/avatar.md)
+- [Badge](https://ui.zubayer.dev/docs/components/badge.md)
+- [Button](https://ui.zubayer.dev/docs/components/button.md)
+- [Button Group](https://ui.zubayer.dev/docs/components/button-group.md)
+- [Calendar](https://ui.zubayer.dev/docs/components/calendar.md)
+- [Checkbox](https://ui.zubayer.dev/docs/components/checkbox.md)
+- [Checkbox Group](https://ui.zubayer.dev/docs/components/checkbox-group.md)
+- [Collapsible](https://ui.zubayer.dev/docs/components/collapsible.md)
+- [Combobox](https://ui.zubayer.dev/docs/components/combobox.md)
+- [Command](https://ui.zubayer.dev/docs/components/command.md)
+- [Dialog](https://ui.zubayer.dev/docs/components/dialog.md)
+- [Field](https://ui.zubayer.dev/docs/components/field.md)
+- [Form](https://ui.zubayer.dev/docs/components/form.md)
+- [Input](https://ui.zubayer.dev/docs/components/input.md)
+- [Input Group](https://ui.zubayer.dev/docs/components/input-group.md)
+- [Kbd](https://ui.zubayer.dev/docs/components/kbd.md)
+- [Label](https://ui.zubayer.dev/docs/components/label.md)
+- [Menu](https://ui.zubayer.dev/docs/components/menu.md)
+- [Meter](https://ui.zubayer.dev/docs/components/meter.md)
+- [Navigation Menu](https://ui.zubayer.dev/docs/components/navigation-menu.md)
+- [Number Field](https://ui.zubayer.dev/docs/components/number-field.md)
+- [OTP Field](https://ui.zubayer.dev/docs/components/otp-field.md)
+- [Popover](https://ui.zubayer.dev/docs/components/popover.md)
+- [Scroll Area](https://ui.zubayer.dev/docs/components/scroll-area.md)
+- [Select](https://ui.zubayer.dev/docs/components/select.md)
+- [Sheet](https://ui.zubayer.dev/docs/components/sheet.md)
+- [Sidebar](https://ui.zubayer.dev/docs/components/sidebar.md)
+- [Slider](https://ui.zubayer.dev/docs/components/slider.md)
+- [Spinner](https://ui.zubayer.dev/docs/components/spinner.md)
+- [Switch](https://ui.zubayer.dev/docs/components/switch.md)
+- [Tabs](https://ui.zubayer.dev/docs/components/tabs.md)
+- [Textarea](https://ui.zubayer.dev/docs/components/textarea.md)
+- [Tooltip](https://ui.zubayer.dev/docs/components/tooltip.md)
