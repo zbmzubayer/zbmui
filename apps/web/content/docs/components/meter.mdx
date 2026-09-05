@@ -1,0 +1,37 @@
+---
+title: Meter
+description: A graphical display of a numeric value within a range.
+links:
+  doc: https://base-ui.com/react/components/meter
+  anatomy: https://base-ui.com/react/components/meter#anatomy
+  api: https://base-ui.com/react/components/meter#api-reference
+---
+
+<ComponentPreview name="c-meter-1" />
+
+## Installation
+
+<ComponentSource name="meter" title="components/ui/meter.tsx" />
+
+## Usage
+
+```tsx
+import { Meter, MeterLabel, MeterValue } from "@/components/ui/meter";
+```
+
+```tsx
+<Meter value={40}>
+  <MeterLabel>Progress</MeterLabel>
+  <MeterValue />
+</Meter>
+```
+
+## Examples
+
+### Without label
+
+<ComponentPreview name="c-meter-2" />
+
+### Formatted value
+
+<ComponentPreview name="c-meter-3" />

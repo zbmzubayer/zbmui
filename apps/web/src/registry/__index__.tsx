@@ -509,6 +509,29 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  meter: {
+    name: "meter",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/meter.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/meter.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "navigation-menu": {
     name: "navigation-menu",
     description: "",
@@ -684,6 +707,29 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/sidebar.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  slider: {
+    name: "slider",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "src/registry/default/ui/slider.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/slider.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
@@ -3500,6 +3546,75 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "c-meter-1": {
+    name: "c-menu-1",
+    description: "Meter basic",
+    type: "registry:demo",
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/registry/default/components/meter/c-meter-1.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/meter/c-meter-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-meter-2": {
+    name: "c-meter-2",
+    description: "Meter without label",
+    type: "registry:demo",
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/registry/default/components/meter/c-meter-2.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/meter/c-meter-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "c-meter-3": {
+    name: "c-meter-3",
+    description: "Meter with formatted value",
+    type: "registry:demo",
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/registry/default/components/meter/c-meter-3.tsx",
+        type: "registry:demo",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/meter/c-meter-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "c-number-field-1": {
     name: "c-number-field-1",
     description: "Number Field Basic",
@@ -4319,6 +4434,98 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/sheet/c-sheet-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-slider-1": {
+    name: "c-slider-1",
+    description: "Slider basic",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/slider"],
+    files: [
+      {
+        path: "src/registry/default/components/slider/c-slider-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/slider/c-slider-1");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-slider-2": {
+    name: "c-slider-2",
+    description: "Slider with label",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/slider"],
+    files: [
+      {
+        path: "src/registry/default/components/slider/c-slider-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/slider/c-slider-2");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-slider-3": {
+    name: "c-slider-3",
+    description: "Slider with range",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/slider"],
+    files: [
+      {
+        path: "src/registry/default/components/slider/c-slider-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/slider/c-slider-3");
+      const exportName =
+        Object.keys(mod).find(
+          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: ["button"],
+    meta: undefined,
+  },
+  "c-slider-4": {
+    name: "c-slider-4",
+    description: "Slider with vertical orientation",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/slider"],
+    files: [
+      {
+        path: "src/registry/default/components/slider/c-slider-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/slider/c-slider-4");
       const exportName =
         Object.keys(mod).find(
           (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
