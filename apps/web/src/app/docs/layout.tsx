@@ -4,7 +4,7 @@ import { source } from "@/lib/source";
 
 import { DocsSidebar } from "@/components/docs/docs-sidebar";
 
-export default function DocsLayout({ children }: { children: React.ReactNode }) {
+export default function DocsLayout({ children }: LayoutProps<"/docs">) {
   return (
     <main className="flex flex-1 flex-col overflow-clip">
       <SidebarProvider className="container min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]">

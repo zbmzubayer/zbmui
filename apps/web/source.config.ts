@@ -1,4 +1,5 @@
-import { defineConfig, defineDocs, frontmatterSchema } from "fumadocs-mdx/config";
+import { metaSchema, pageSchema } from "fumadocs-core/source/schema";
+import { defineConfig, defineDocs } from "fumadocs-mdx/config";
 import rehypePrettyCode from "rehype-pretty-code";
 import { z } from "zod";
 
@@ -27,7 +28,7 @@ export default defineConfig({
 export const docs = defineDocs({
   dir: "content/docs",
   docs: {
-    schema: frontmatterSchema.extend({
+    schema: pageSchema.extend({
       links: z
         .object({
           doc: z.string().optional(),
@@ -36,5 +37,8 @@ export const docs = defineDocs({
         })
         .optional(),
     }),
+  },
+  meta: {
+    schema: metaSchema,
   },
 });

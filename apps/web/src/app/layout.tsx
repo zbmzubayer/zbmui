@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: "A UI component library built with React, Next.js and Tailwind CSS.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
