@@ -1,0 +1,1137 @@
+{
+  "$schema": "https://ui.zubayer.dev/schema/registry-source.json",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "description": "A vertically stacked set of interactive headings that each reveal a section of content."
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "description": "Displays a callout for user attention."
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "description": "A modal dialog that interrupts the user with important content and expects a response."
+    },
+    {
+      "name": "autocomplete",
+      "type": "registry:ui",
+      "description": "An input that suggests options as the user types."
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "description": "An image element with a fallback for representing the user."
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "description": "Displays a badge or a component that looks like a badge."
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "description": "Displays a button or a component that looks like a button."
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "description": "Groups related buttons together with shared borders."
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "description": "A date field component for entering and editing dates."
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "description": "A control that allows the user to toggle between checked and not checked."
+    },
+    {
+      "name": "checkbox-group",
+      "type": "registry:ui",
+      "description": "A group of checkboxes with shared state and labeling."
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "description": "An interactive component which expands and collapses a panel."
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "description": "An autocomplete input combined with a list of predefined options."
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "description": "A fast, composable command menu for quick search and actions."
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "description": "A window overlaid on the primary window, rendering the content underneath inert."
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "description": "A building block for form fields with label, description, and error message."
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "description": "Form primitives wired for validation libraries."
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "description": "Displays a form input field."
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "description": "An input with addons, icons, and buttons attached."
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "description": "Displays a keyboard key or shortcut."
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "description": "Renders an accessible label associated with controls."
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "description": "A menu of actions or links, triggered by a button."
+    },
+    {
+      "name": "meter",
+      "type": "registry:ui",
+      "description": "A graphical display of a numeric value within a known range."
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "description": "A collection of links for navigating websites."
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "description": "A number input with increment and decrement controls."
+    },
+    {
+      "name": "otp-field",
+      "type": "registry:ui",
+      "description": "A one-time-password input with individual character slots."
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "description": "Displays rich content in a portal, triggered by a button."
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "description": "Augments native scroll functionality for custom, cross-browser styling."
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "description": "Displays a list of options for the user to pick from, triggered by a button."
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "description": "Visually or semantically separates content."
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "description": "Extends the dialog component to display content that complements the main screen."
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "description": "A composable, themeable application sidebar."
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "description": "Used to show a placeholder while content is loading."
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "description": "An input where the user selects a value from within a given range."
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "description": "Indicates a loading state."
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "description": "A control that allows the user to toggle between on and off."
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "description": "A set of layered sections of content, known as tab panels, displayed one at a time."
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "description": "Displays a form textarea or a component that looks like a textarea."
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "description": "A two-state button that can be either on or off."
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "description": "A set of two-state buttons that can be toggled on or off."
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "description": "A popup that displays information related to an element when focused or hovered."
+    },
+    {
+      "name": "use-copy-to-clipboard",
+      "type": "registry:hook",
+      "description": "Copies text to the clipboard and tracks the copied state."
+    },
+    {
+      "name": "use-mobile",
+      "type": "registry:hook",
+      "description": "Returns whether the viewport is below the mobile breakpoint."
+    },
+    {
+      "name": "c-accordion-1",
+      "type": "registry:component",
+      "description": "Accordion with three items and one expanded by default."
+    },
+    {
+      "name": "c-accordion-2",
+      "type": "registry:component",
+      "description": "Accordion with multiple items expanded at once."
+    },
+    {
+      "name": "c-alert-1",
+      "type": "registry:component",
+      "description": "A simple alert with title and description."
+    },
+    {
+      "name": "c-alert-2",
+      "type": "registry:component",
+      "description": "Alert variants with status icons."
+    },
+    {
+      "name": "c-alert-3",
+      "type": "registry:component",
+      "description": "Alert with icon and action buttons."
+    },
+    {
+      "name": "c-alert-4",
+      "type": "registry:component",
+      "description": "Dismissible alert with a close button."
+    },
+    {
+      "name": "c-alert-dialog-1",
+      "type": "registry:component",
+      "description": "Delete account confirmation dialog."
+    },
+    {
+      "name": "c-alert-dialog-2",
+      "type": "registry:component",
+      "description": "Alert dialog with a muted footer."
+    },
+    {
+      "name": "c-alert-dialog-3",
+      "type": "registry:component",
+      "description": "Controlled alert dialog with open state."
+    },
+    {
+      "name": "c-alert-dialog-4",
+      "type": "registry:component",
+      "description": "Confirmation alert before closing an unsaved dialog."
+    },
+    {
+      "name": "c-alert-dialog-5",
+      "type": "registry:component",
+      "description": "Backdrop blur, opaque, and transparent variants."
+    },
+    {
+      "name": "c-alert-dialog-6",
+      "type": "registry:component",
+      "description": "Alert dialog popup position variants."
+    },
+    {
+      "name": "c-autocomplete-1",
+      "type": "registry:component",
+      "description": "Autocomplete with filtering and an empty state."
+    },
+    {
+      "name": "c-autocomplete-10",
+      "type": "registry:component",
+      "description": "Autocomplete with grouped items and labels."
+    },
+    {
+      "name": "c-autocomplete-11",
+      "type": "registry:component",
+      "description": "Autocomplete with limited results and a more-status count."
+    },
+    {
+      "name": "c-autocomplete-12",
+      "type": "registry:component",
+      "description": "Autocomplete with simulated async search, loading, and error states."
+    },
+    {
+      "name": "c-autocomplete-2",
+      "type": "registry:component",
+      "description": "Autocomplete in all input sizes."
+    },
+    {
+      "name": "c-autocomplete-3",
+      "type": "registry:component",
+      "description": "Disabled autocomplete."
+    },
+    {
+      "name": "c-autocomplete-4",
+      "type": "registry:component",
+      "description": "Autocomplete with a form label."
+    },
+    {
+      "name": "c-autocomplete-5",
+      "type": "registry:component",
+      "description": "Autocomplete with inline autocompletion in both mode."
+    },
+    {
+      "name": "c-autocomplete-6",
+      "type": "registry:component",
+      "description": "Autocomplete with automatic first-item highlight."
+    },
+    {
+      "name": "c-autocomplete-7",
+      "type": "registry:component",
+      "description": "Autocomplete with a clear button."
+    },
+    {
+      "name": "c-autocomplete-8",
+      "type": "registry:component",
+      "description": "Autocomplete with clear and trigger buttons."
+    },
+    {
+      "name": "c-autocomplete-9",
+      "type": "registry:component",
+      "description": "Autocomplete with a search icon start addon."
+    },
+    {
+      "name": "c-avatar-1",
+      "type": "registry:component",
+      "description": "Avatar with image and initials fallback."
+    },
+    {
+      "name": "c-avatar-2",
+      "type": "registry:component",
+      "description": "Avatar in three sizes."
+    },
+    {
+      "name": "c-avatar-3",
+      "type": "registry:component",
+      "description": "Avatar with a status badge."
+    },
+    {
+      "name": "c-avatar-4",
+      "type": "registry:component",
+      "description": "Avatar with an icon badge."
+    },
+    {
+      "name": "c-avatar-5",
+      "type": "registry:component",
+      "description": "Avatar group with stacked avatars."
+    },
+    {
+      "name": "c-avatar-6",
+      "type": "registry:component",
+      "description": "Avatar group with a +3 count."
+    },
+    {
+      "name": "c-avatar-7",
+      "type": "registry:component",
+      "description": "Avatar using the Next.js Image component."
+    },
+    {
+      "name": "c-badge-1",
+      "type": "registry:component",
+      "description": "Basic badge demo.",
+      "publish": true
+    },
+    {
+      "name": "c-badge-2",
+      "type": "registry:component",
+      "description": "Badge color and style variants."
+    },
+    {
+      "name": "c-badge-3",
+      "type": "registry:component",
+      "description": "Badge sizes small, default, and large."
+    },
+    {
+      "name": "c-badge-4",
+      "type": "registry:component",
+      "description": "Badges with leading and trailing icons."
+    },
+    {
+      "name": "c-button-1",
+      "type": "registry:component",
+      "description": "Basic button demo.",
+      "publish": true
+    },
+    {
+      "name": "c-button-2",
+      "type": "registry:component",
+      "description": "Button variants in all styles."
+    },
+    {
+      "name": "c-button-3",
+      "type": "registry:component",
+      "description": "Button sizes including icon-only buttons."
+    },
+    {
+      "name": "c-button-4",
+      "type": "registry:component",
+      "description": "Button rendered as a div element."
+    },
+    {
+      "name": "c-button-5",
+      "type": "registry:component",
+      "description": "Link styled as a button using buttonVariants."
+    },
+    {
+      "name": "c-button-6",
+      "type": "registry:component",
+      "description": "Button with loading state and spinner."
+    },
+    {
+      "name": "c-calendar-1",
+      "type": "registry:component",
+      "description": "Calendar in single-date selection mode."
+    },
+    {
+      "name": "c-checkbox-1",
+      "type": "registry:component",
+      "description": "Checkbox with a label."
+    },
+    {
+      "name": "c-checkbox-2",
+      "type": "registry:component",
+      "description": "Checkbox in five sizes."
+    },
+    {
+      "name": "c-checkbox-3",
+      "type": "registry:component",
+      "description": "Disabled checkbox with a label."
+    },
+    {
+      "name": "c-checkbox-4",
+      "type": "registry:component",
+      "description": "Indeterminate checkbox with a label."
+    },
+    {
+      "name": "c-checkbox-5",
+      "type": "registry:component",
+      "description": "Controlled checkbox showing its checked state."
+    },
+    {
+      "name": "c-checkbox-6",
+      "type": "registry:component",
+      "description": "Checkbox with title and description."
+    },
+    {
+      "name": "c-checkbox-7",
+      "type": "registry:component",
+      "description": "Checkbox styled as a card."
+    },
+    {
+      "name": "c-checkbox-group-1",
+      "type": "registry:component",
+      "description": "Checkbox group with a default value."
+    },
+    {
+      "name": "c-checkbox-group-2",
+      "type": "registry:component",
+      "description": "Group labeled via aria-labelledby and a label element."
+    },
+    {
+      "name": "c-checkbox-group-3",
+      "type": "registry:component",
+      "description": "Disabled checkbox group."
+    },
+    {
+      "name": "c-checkbox-group-4",
+      "type": "registry:component",
+      "description": "Group with a single disabled item."
+    },
+    {
+      "name": "c-checkbox-group-5",
+      "type": "registry:component",
+      "description": "Controlled checkbox group showing the value."
+    },
+    {
+      "name": "c-checkbox-group-6",
+      "type": "registry:component",
+      "description": "Group with a parent select-all checkbox."
+    },
+    {
+      "name": "c-checkbox-group-7",
+      "type": "registry:component",
+      "description": "Nested groups with an indeterminate parent checkbox."
+    },
+    {
+      "name": "c-collapsible-1",
+      "type": "registry:component",
+      "description": "Collapsible panel revealing recovery keys."
+    },
+    {
+      "name": "c-combobox-1",
+      "type": "registry:component",
+      "description": "Basic single-selection combobox with a label."
+    },
+    {
+      "name": "c-combobox-10",
+      "type": "registry:component",
+      "description": "Multiple selection combobox with a start addon."
+    },
+    {
+      "name": "c-combobox-11",
+      "type": "registry:component",
+      "description": "Multiple selection combobox limiting visible chips."
+    },
+    {
+      "name": "c-combobox-12",
+      "type": "registry:component",
+      "description": "Combobox with its input rendered inside the popup."
+    },
+    {
+      "name": "c-combobox-2",
+      "type": "registry:component",
+      "description": "Combobox sizes from xs to xl."
+    },
+    {
+      "name": "c-combobox-3",
+      "type": "registry:component",
+      "description": "Combobox in a disabled state."
+    },
+    {
+      "name": "c-combobox-4",
+      "type": "registry:component",
+      "description": "Combobox with auto highlight enabled."
+    },
+    {
+      "name": "c-combobox-5",
+      "type": "registry:component",
+      "description": "Combobox with a clear button."
+    },
+    {
+      "name": "c-combobox-6",
+      "type": "registry:component",
+      "description": "Combobox with the item indicator at the start."
+    },
+    {
+      "name": "c-combobox-7",
+      "type": "registry:component",
+      "description": "Combobox with grouped framework items."
+    },
+    {
+      "name": "c-combobox-8",
+      "type": "registry:component",
+      "description": "Multiple selection combobox with removable chips."
+    },
+    {
+      "name": "c-combobox-9",
+      "type": "registry:component",
+      "description": "Combobox with a search icon start addon."
+    },
+    {
+      "name": "c-command-1",
+      "type": "registry:component",
+      "description": "Command list with keyboard shortcuts."
+    },
+    {
+      "name": "c-command-2",
+      "type": "registry:component",
+      "description": "Command list grouped with labels and separators."
+    },
+    {
+      "name": "c-command-3",
+      "type": "registry:component",
+      "description": "Command palette in a dialog with grouped items."
+    },
+    {
+      "name": "c-command-4",
+      "type": "registry:component",
+      "description": "Command list inside a popover."
+    },
+    {
+      "name": "c-dialog-1",
+      "type": "registry:component",
+      "description": "Dialog with an edit profile form."
+    },
+    {
+      "name": "c-dialog-2",
+      "type": "registry:component",
+      "description": "Dialog with a muted footer."
+    },
+    {
+      "name": "c-dialog-3",
+      "type": "registry:component",
+      "description": "Dialog popup position variants."
+    },
+    {
+      "name": "c-dialog-4",
+      "type": "registry:component",
+      "description": "Dialog without a close button."
+    },
+    {
+      "name": "c-dialog-5",
+      "type": "registry:component",
+      "description": "Dialog with scrollable body content variants."
+    },
+    {
+      "name": "c-dialog-6",
+      "type": "registry:component",
+      "description": "Dialog nested inside another dialog."
+    },
+    {
+      "name": "c-dialog-7",
+      "type": "registry:component",
+      "description": "Nested dialog with the parent kept visible."
+    },
+    {
+      "name": "c-dialog-8",
+      "type": "registry:component",
+      "description": "Backdrop blur, opaque, and transparent variants."
+    },
+    {
+      "name": "c-field-1",
+      "type": "registry:component",
+      "description": "Field with label, input, and description."
+    },
+    {
+      "name": "c-field-2",
+      "type": "registry:component",
+      "description": "Required field with an indicator."
+    },
+    {
+      "name": "c-field-3",
+      "type": "registry:component",
+      "description": "Optional field with an indicator."
+    },
+    {
+      "name": "c-field-4",
+      "type": "registry:component",
+      "description": "Disabled field."
+    },
+    {
+      "name": "c-field-5",
+      "type": "registry:component",
+      "description": "Field with an error message."
+    },
+    {
+      "name": "c-form-1",
+      "type": "registry:component",
+      "description": "Email form with a submit loading state."
+    },
+    {
+      "name": "c-form-2",
+      "type": "registry:component",
+      "description": "Form submitting to a server function with errors."
+    },
+    {
+      "name": "c-form-3",
+      "type": "registry:component",
+      "description": "Form validated with Zod."
+    },
+    {
+      "name": "c-input-1",
+      "type": "registry:component",
+      "description": "Simple email input with placeholder."
+    },
+    {
+      "name": "c-input-2",
+      "type": "registry:component",
+      "description": "Input in five sizes."
+    },
+    {
+      "name": "c-input-3",
+      "type": "registry:component",
+      "description": "File input with label."
+    },
+    {
+      "name": "c-input-4",
+      "type": "registry:component",
+      "description": "Input in disabled state."
+    },
+    {
+      "name": "c-input-group-1",
+      "type": "registry:component",
+      "description": "Search input group with icon and result count."
+    },
+    {
+      "name": "c-input-group-2",
+      "type": "registry:component",
+      "description": "Input group with icon at the start."
+    },
+    {
+      "name": "c-input-group-3",
+      "type": "registry:component",
+      "description": "Input group with icon at the end."
+    },
+    {
+      "name": "c-input-group-4",
+      "type": "registry:component",
+      "description": "Header addons above input and textarea."
+    },
+    {
+      "name": "c-input-group-5",
+      "type": "registry:component",
+      "description": "Footer addons below input and textarea."
+    },
+    {
+      "name": "c-input-group-6",
+      "type": "registry:component",
+      "description": "Input group in five sizes."
+    },
+    {
+      "name": "c-kbd-1",
+      "type": "registry:component",
+      "description": "Groups of keyboard keys and shortcuts."
+    },
+    {
+      "name": "c-kbd-2",
+      "type": "registry:component",
+      "description": "Shortcut keys inline in a sentence."
+    },
+    {
+      "name": "c-kbd-3",
+      "type": "registry:component",
+      "description": "Keyboard key inside a button."
+    },
+    {
+      "name": "c-kbd-4",
+      "type": "registry:component",
+      "description": "Keyboard shortcuts inside tooltips."
+    },
+    {
+      "name": "c-kbd-5",
+      "type": "registry:component",
+      "description": "Keyboard shortcut inside an input group."
+    },
+    {
+      "name": "c-label-1",
+      "type": "registry:component",
+      "description": "Label associated with an email input."
+    },
+    {
+      "name": "c-menu-1",
+      "type": "registry:component",
+      "description": "Menu with icons, submenus, shortcuts, and checkboxes."
+    },
+    {
+      "name": "c-menu-2",
+      "type": "registry:component",
+      "description": "Menu that opens on hover."
+    },
+    {
+      "name": "c-menu-3",
+      "type": "registry:component",
+      "description": "Menu with checkbox items."
+    },
+    {
+      "name": "c-menu-4",
+      "type": "registry:component",
+      "description": "Menu with radio group items."
+    },
+    {
+      "name": "c-menu-5",
+      "type": "registry:component",
+      "description": "Checkbox and radio items with switch variant and start indicators."
+    },
+    {
+      "name": "c-menu-6",
+      "type": "registry:component",
+      "description": "Menus with different popup sides and alignments."
+    },
+    {
+      "name": "c-menu-7",
+      "type": "registry:component",
+      "description": "Menu items that close the menu on click."
+    },
+    {
+      "name": "c-menu-8",
+      "type": "registry:component",
+      "description": "Dialog opened from a menu."
+    },
+    {
+      "name": "c-meter-1",
+      "type": "registry:component",
+      "description": "Meter with label and value."
+    },
+    {
+      "name": "c-meter-2",
+      "type": "registry:component",
+      "description": "Meter without a label."
+    },
+    {
+      "name": "c-meter-3",
+      "type": "registry:component",
+      "description": "Meter with a formatted value."
+    },
+    {
+      "name": "c-navigation-menu-1",
+      "type": "registry:component",
+      "description": "Navigation menu with link dropdowns."
+    },
+    {
+      "name": "c-navigation-menu-2",
+      "type": "registry:component",
+      "description": "Navigation menu with nested submenus."
+    },
+    {
+      "name": "c-navigation-menu-3",
+      "type": "registry:component",
+      "description": "Navigation menu with nested inline submenus."
+    },
+    {
+      "name": "c-navigation-menu-4",
+      "type": "registry:component",
+      "description": "Navigation menu with a large scrollable menu."
+    },
+    {
+      "name": "c-number-field-1",
+      "type": "registry:component",
+      "description": "Number field with label and placeholder."
+    },
+    {
+      "name": "c-number-field-2",
+      "type": "registry:component",
+      "description": "Number field sizes."
+    },
+    {
+      "name": "c-number-field-3",
+      "type": "registry:component",
+      "description": "Controlled number field with min and max."
+    },
+    {
+      "name": "c-otp-field-1",
+      "type": "registry:component",
+      "description": "Basic six-digit OTP field."
+    },
+    {
+      "name": "c-otp-field-2",
+      "type": "registry:component",
+      "description": "Large OTP field size."
+    },
+    {
+      "name": "c-otp-field-3",
+      "type": "registry:component",
+      "description": "OTP field with a label."
+    },
+    {
+      "name": "c-otp-field-4",
+      "type": "registry:component",
+      "description": "OTP field with grouped separator."
+    },
+    {
+      "name": "c-otp-field-5",
+      "type": "registry:component",
+      "description": "Alphanumeric OTP field for recovery codes."
+    },
+    {
+      "name": "c-otp-field-6",
+      "type": "registry:component",
+      "description": "OTP field with custom normalization and validation."
+    },
+    {
+      "name": "c-otp-field-7",
+      "type": "registry:component",
+      "description": "OTP field with placeholder characters."
+    },
+    {
+      "name": "c-otp-field-8",
+      "type": "registry:component",
+      "description": "Masked OTP field obscuring typed characters."
+    },
+    {
+      "name": "c-popover-1",
+      "type": "registry:component",
+      "description": "Popover with a feedback form."
+    },
+    {
+      "name": "c-popover-2",
+      "type": "registry:component",
+      "description": "Popovers with different alignments."
+    },
+    {
+      "name": "c-popover-3",
+      "type": "registry:component",
+      "description": "Popovers opening on different sides."
+    },
+    {
+      "name": "c-popover-4",
+      "type": "registry:component",
+      "description": "Popover with close buttons."
+    },
+    {
+      "name": "c-popover-5",
+      "type": "registry:component",
+      "description": "Popover with an arrow pointing to the trigger."
+    },
+    {
+      "name": "c-popover-6",
+      "type": "registry:component",
+      "description": "Tooltip-style popover opened on hover."
+    },
+    {
+      "name": "c-popover-7",
+      "type": "registry:component",
+      "description": "Animated popover shared between multiple triggers."
+    },
+    {
+      "name": "c-react-hook-form-1",
+      "type": "registry:component",
+      "description": "Bug report form using React Hook Form and Zod."
+    },
+    {
+      "name": "c-scroll-area-1",
+      "type": "registry:component",
+      "description": "Scroll area with vertical scrolling."
+    },
+    {
+      "name": "c-scroll-area-2",
+      "type": "registry:component",
+      "description": "Scroll area with horizontal scrolling."
+    },
+    {
+      "name": "c-scroll-area-3",
+      "type": "registry:component",
+      "description": "Scroll area scrolling both horizontally and vertically."
+    },
+    {
+      "name": "c-scroll-area-4",
+      "type": "registry:component",
+      "description": "Scroll area with edge fade effect."
+    },
+    {
+      "name": "c-scroll-area-5",
+      "type": "registry:component",
+      "description": "Scroll area with scrollbar gutter."
+    },
+    {
+      "name": "c-scroll-area-6",
+      "type": "registry:component",
+      "description": "Scroll area with custom scrollbar size and margin."
+    },
+    {
+      "name": "c-select-1",
+      "type": "registry:component",
+      "description": "Simple select with a disabled option."
+    },
+    {
+      "name": "c-select-10",
+      "type": "registry:component",
+      "description": "Built-in and native popup scrolling."
+    },
+    {
+      "name": "c-select-11",
+      "type": "registry:component",
+      "description": "Select controlled with React state."
+    },
+    {
+      "name": "c-select-2",
+      "type": "registry:component",
+      "description": "Select trigger sizes."
+    },
+    {
+      "name": "c-select-3",
+      "type": "registry:component",
+      "description": "A disabled select."
+    },
+    {
+      "name": "c-select-4",
+      "type": "registry:component",
+      "description": "Select popup aligned with the trigger item."
+    },
+    {
+      "name": "c-select-5",
+      "type": "registry:component",
+      "description": "Select with grouped options."
+    },
+    {
+      "name": "c-select-6",
+      "type": "registry:component",
+      "description": "Select with multiple selection."
+    },
+    {
+      "name": "c-select-7",
+      "type": "registry:component",
+      "description": "Select with an icon in the trigger."
+    },
+    {
+      "name": "c-select-8",
+      "type": "registry:component",
+      "description": "Select with icons in the options."
+    },
+    {
+      "name": "c-select-9",
+      "type": "registry:component",
+      "description": "Select with object values and descriptions."
+    },
+    {
+      "name": "c-sheet-1",
+      "type": "registry:component",
+      "description": "Sheet with an edit profile form."
+    },
+    {
+      "name": "c-sidebar-1",
+      "type": "registry:component",
+      "description": "Application shell with a sidebar provider, groups, and trigger."
+    },
+    {
+      "name": "c-slider-1",
+      "type": "registry:component",
+      "description": "Default slider."
+    },
+    {
+      "name": "c-slider-2",
+      "type": "registry:component",
+      "description": "Slider with label and current value."
+    },
+    {
+      "name": "c-slider-3",
+      "type": "registry:component",
+      "description": "Range slider with label and values."
+    },
+    {
+      "name": "c-slider-4",
+      "type": "registry:component",
+      "description": "Vertical slider."
+    },
+    {
+      "name": "c-spinner-1",
+      "type": "registry:component",
+      "description": "Default spinner."
+    },
+    {
+      "name": "c-switch-1",
+      "type": "registry:component",
+      "description": "Switch with a descriptive label."
+    },
+    {
+      "name": "c-switch-2",
+      "type": "registry:component",
+      "description": "Switch sizes, including a custom thumb size."
+    },
+    {
+      "name": "c-switch-3",
+      "type": "registry:component",
+      "description": "Disabled switch."
+    },
+    {
+      "name": "c-switch-4",
+      "type": "registry:component",
+      "description": "Switch in an invalid state."
+    },
+    {
+      "name": "c-switch-5",
+      "type": "registry:component",
+      "description": "Switch with a label and description."
+    },
+    {
+      "name": "c-switch-6",
+      "type": "registry:component",
+      "description": "Switch styled as a selectable card."
+    },
+    {
+      "name": "c-switch-7",
+      "type": "registry:component",
+      "description": "Controlled switch showing its checked state."
+    },
+    {
+      "name": "c-switch-8",
+      "type": "registry:component",
+      "description": "Switch integrated with a react-hook-form form."
+    },
+    {
+      "name": "c-tabs-1",
+      "type": "registry:component",
+      "description": "Tabs with three panels."
+    },
+    {
+      "name": "c-tabs-2",
+      "type": "registry:component",
+      "description": "Tabs with an underline list variant."
+    },
+    {
+      "name": "c-textarea-1",
+      "type": "registry:component",
+      "description": "Simple textarea with placeholder."
+    },
+    {
+      "name": "c-textarea-2",
+      "type": "registry:component",
+      "description": "Textarea in five sizes."
+    },
+    {
+      "name": "c-textarea-3",
+      "type": "registry:component",
+      "description": "Textarea in disabled state."
+    },
+    {
+      "name": "c-textarea-4",
+      "type": "registry:component",
+      "description": "Textarea in invalid state."
+    },
+    {
+      "name": "c-textarea-5",
+      "type": "registry:component",
+      "description": "Textareas with different resize options."
+    },
+    {
+      "name": "c-textarea-6",
+      "type": "registry:component",
+      "description": "Textarea integrated with Field components."
+    },
+    {
+      "name": "c-tooltip-1",
+      "type": "registry:component",
+      "description": "Tooltip on a button hover."
+    },
+    {
+      "name": "c-tooltip-2",
+      "type": "registry:component",
+      "description": "Tooltip with a hidden arrow."
+    },
+    {
+      "name": "c-tooltip-3",
+      "type": "registry:component",
+      "description": "Grouped tooltips on a toggle group."
+    },
+    {
+      "name": "c-tooltip-4",
+      "type": "registry:component",
+      "description": "Tooltip with content switching across button triggers."
+    }
+  ]
+}

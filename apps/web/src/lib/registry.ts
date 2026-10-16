@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
-import { tmpdir } from "node:os";
 import path from "node:path";
 
+import { fixImport } from "@/lib/registry-shared";
 import { Index } from "@/registry/__index__";
 
 export function getRegistryComponent(name: string) {
@@ -82,11 +82,6 @@ function getFileTarget(file: { path: string; type?: string; target?: string }) {
   return target ?? "";
 }
 
-async function createTempSourceFile(filename: string) {
-  const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"));
-  return path.join(dir, filename);
-}
-
 function fixFilePaths(
   files: Array<{
     path: string;
@@ -113,29 +108,6 @@ function fixFilePaths(
       target: getFileTarget(file),
     };
   });
-}
-
-export function fixImport(content: string) {
-  const regex = /@\/(.+?)\/((?:.*?\/)?(?:components|ui|hooks|lib))\/([\w-]+)/g;
-
-  const replacement = (match: string, _path: string, type: string, component: string) => {
-    if (type.endsWith("components")) {
-      return `@/components/${component}`;
-    }
-    if (type.endsWith("ui")) {
-      return `@/components/ui/${component}`;
-    }
-    if (type.endsWith("hooks")) {
-      return `@/hooks/${component}`;
-    }
-    if (type.endsWith("lib")) {
-      return `@/lib/${component}`;
-    }
-
-    return match;
-  };
-
-  return content.replace(regex, replacement);
 }
 
 export type FileTree = {

@@ -42,3 +42,8 @@ next-env.d.ts
 
 # fumadocs
 .source
+
+# generated registry artifacts
+/public/r/
+/public/schema.json
+/public/schema/

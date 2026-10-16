@@ -2,9 +2,11 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:registry": "node scripts/build-registry.mts",
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write"
@@ -36,6 +38,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@zbmui/registry": "workspace:*",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,863 +1,812 @@
 // @ts-nocheck
 
+/**
+ * GENERATED FILE — DO NOT EDIT.
+ * Regenerate with `pnpm --filter web build:registry`.
+ */
+
 import React from "react";
 
 export const Index: Record<string, any> = {
   accordion: {
     name: "accordion",
-    description: "",
+    description:
+      "A vertically stacked set of interactive headings that each reveal a section of content.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/accordion.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/accordion.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/accordion.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  alert: {
-    name: "alert",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/alert.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/ui/alert.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "alert-dialog": {
     name: "alert-dialog",
-    description: "",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/alert-dialog.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/alert-dialog.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/alert-dialog.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  alert: {
+    name: "alert",
+    description: "Displays a callout for user attention.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/alert.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/alert.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   autocomplete: {
     name: "autocomplete",
-    description: "",
+    description: "An input that suggests options as the user types.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/autocomplete.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn", "@zbmui/scroll-area"],
+    files: [{ path: "src/registry/default/ui/autocomplete.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/autocomplete.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   avatar: {
     name: "avatar",
-    description: "",
+    description: "An image element with a fallback for representing the user.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/avatar.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/avatar.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/avatar.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   badge: {
     name: "badge",
-    description: "",
+    description: "Displays a badge or a component that looks like a badge.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/badge.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/badge.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/badge.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  button: {
-    name: "button",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/button.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/ui/button.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "button-group": {
     name: "button-group",
-    description: "",
+    description: "Groups related buttons together with shared borders.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/button-group.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/button-group.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/button-group.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  button: {
+    name: "button",
+    description: "Displays a button or a component that looks like a button.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/button.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/button.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   calendar: {
     name: "calendar",
-    description: "",
+    description: "A date field component for entering and editing dates.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/calendar.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/calendar.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/calendar.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  checkbox: {
-    name: "checkbox",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/checkbox.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/ui/checkbox.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "checkbox-group": {
     name: "checkbox-group",
-    description: "",
+    description: "A group of checkboxes with shared state and labeling.",
     type: "registry:ui",
-    registryDependencies: undefined,
+    registryDependencies: ["@zbmui/cn"],
     files: [
-      {
-        path: "src/registry/default/ui/checkbox-group.tsx",
-        type: "registry:ui",
-        target: "",
-      },
+      { path: "src/registry/default/ui/checkbox-group.tsx", type: "registry:ui", target: "" },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/checkbox-group.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  checkbox: {
+    name: "checkbox",
+    description: "A control that allows the user to toggle between checked and not checked.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/checkbox.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/checkbox.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   collapsible: {
     name: "collapsible",
-    description: "",
+    description: "An interactive component which expands and collapses a panel.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/collapsible.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/collapsible.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/collapsible.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   combobox: {
     name: "combobox",
-    description: "",
+    description: "An autocomplete input combined with a list of predefined options.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/combobox.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn", "@zbmui/scroll-area"],
+    files: [{ path: "src/registry/default/ui/combobox.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/combobox.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   command: {
     name: "command",
-    description: "",
+    description: "A fast, composable command menu for quick search and actions.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/command.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/autocomplete", "@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/command.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/command.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   dialog: {
     name: "dialog",
-    description: "",
+    description: "A window overlaid on the primary window, rendering the content underneath inert.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/dialog.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/button", "@zbmui/cn", "@zbmui/scroll-area"],
+    files: [{ path: "src/registry/default/ui/dialog.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/dialog.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   field: {
     name: "field",
-    description: "",
+    description: "A building block for form fields with label, description, and error message.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/field.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/field.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/field.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   form: {
     name: "form",
-    description: "",
+    description: "Form primitives wired for validation libraries.",
     type: "registry:ui",
     registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/form.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    files: [{ path: "src/registry/default/ui/form.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/form.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  input: {
-    name: "input",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/input.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/ui/input.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "input-group": {
     name: "input-group",
-    description: "",
+    description: "An input with addons, icons, and buttons attached.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/input-group.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/button", "@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/input-group.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/input-group.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  input: {
+    name: "input",
+    description: "Displays a form input field.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/input.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/input.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   kbd: {
     name: "kbd",
-    description: "",
+    description: "Displays a keyboard key or shortcut.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/kbd.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/kbd.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/kbd.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   label: {
     name: "label",
-    description: "",
+    description: "Renders an accessible label associated with controls.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/label.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/label.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/label.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   menu: {
     name: "menu",
-    description: "",
+    description: "A menu of actions or links, triggered by a button.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/menu.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn", "@zbmui/scroll-area"],
+    files: [{ path: "src/registry/default/ui/menu.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/menu.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   meter: {
     name: "meter",
-    description: "",
+    description: "A graphical display of a numeric value within a known range.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/meter.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/meter.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/meter.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "navigation-menu": {
     name: "navigation-menu",
-    description: "",
+    description: "A collection of links for navigating websites.",
     type: "registry:ui",
-    registryDependencies: undefined,
+    registryDependencies: ["@zbmui/cn"],
     files: [
-      {
-        path: "src/registry/default/ui/navigation-menu.tsx",
-        type: "registry:ui",
-        target: "",
-      },
+      { path: "src/registry/default/ui/navigation-menu.tsx", type: "registry:ui", target: "" },
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/navigation-menu.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "number-field": {
     name: "number-field",
-    description: "",
+    description: "A number input with increment and decrement controls.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/number-field.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/number-field.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/number-field.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "otp-field": {
     name: "otp-field",
-    description: "",
+    description: "A one-time-password input with individual character slots.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/otp-field.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn", "@zbmui/separator"],
+    files: [{ path: "src/registry/default/ui/otp-field.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/otp-field.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   popover: {
     name: "popover",
-    description: "",
+    description: "Displays rich content in a portal, triggered by a button.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/popover.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/popover.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/popover.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   "scroll-area": {
     name: "scroll-area",
-    description: "",
+    description: "Augments native scroll functionality for custom, cross-browser styling.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/scroll-area.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/scroll-area.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/scroll-area.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   select: {
     name: "select",
-    description: "",
+    description: "Displays a list of options for the user to pick from, triggered by a button.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/select.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/select.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/select.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  separator: {
+    name: "separator",
+    description: "Visually or semantically separates content.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/separator.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/separator.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   sheet: {
     name: "sheet",
-    description: "",
+    description:
+      "Extends the dialog component to display content that complements the main screen.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/sheet.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/button", "@zbmui/cn", "@zbmui/scroll-area"],
+    files: [{ path: "src/registry/default/ui/sheet.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/sheet.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   sidebar: {
     name: "sidebar",
-    description: "",
+    description: "A composable, themeable application sidebar.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/sidebar.tsx",
-        type: "registry:ui",
-        target: "",
-      },
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/cn",
+      "@zbmui/input",
+      "@zbmui/separator",
+      "@zbmui/sheet",
+      "@zbmui/skeleton",
+      "@zbmui/tooltip",
+      "@zbmui/use-mobile",
     ],
+    files: [{ path: "src/registry/default/ui/sidebar.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/sidebar.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  skeleton: {
+    name: "skeleton",
+    description: "Used to show a placeholder while content is loading.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/skeleton.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/skeleton.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   slider: {
     name: "slider",
-    description: "",
+    description: "An input where the user selects a value from within a given range.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/slider.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/slider.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/slider.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   spinner: {
     name: "spinner",
-    description: "",
+    description: "Indicates a loading state.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/spinner.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/spinner.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/spinner.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   switch: {
     name: "switch",
-    description: "",
+    description: "A control that allows the user to toggle between on and off.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/switch.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/switch.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/switch.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   tabs: {
     name: "tabs",
-    description: "",
+    description:
+      "A set of layered sections of content, known as tab panels, displayed one at a time.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/tabs.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/tabs.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/tabs.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   textarea: {
     name: "textarea",
-    description: "",
+    description: "Displays a form textarea or a component that looks like a textarea.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/textarea.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/textarea.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/textarea.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "toggle-group": {
+    name: "toggle-group",
+    description: "A set of two-state buttons that can be toggled on or off.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn", "@zbmui/separator", "@zbmui/toggle"],
+    files: [{ path: "src/registry/default/ui/toggle-group.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/toggle-group.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  toggle: {
+    name: "toggle",
+    description: "A two-state button that can be either on or off.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/toggle.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/toggle.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
   tooltip: {
     name: "tooltip",
-    description: "",
+    description: "A popup that displays information related to an element when focused or hovered.",
     type: "registry:ui",
-    registryDependencies: undefined,
-    files: [
-      {
-        path: "src/registry/default/ui/tooltip.tsx",
-        type: "registry:ui",
-        target: "",
-      },
-    ],
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/tooltip.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/tooltip.tsx");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: undefined,
     meta: undefined,
   },
-  /* Components */
   "c-accordion-1": {
     name: "c-accordion-1",
-    description: "Accordion demo",
+    description: "Accordion with three items and one expanded by default.",
     type: "registry:component",
     registryDependencies: ["@zbmui/accordion"],
     files: [
@@ -868,19 +817,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/accordion/c-accordion-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/accordion/c-accordion-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["accordion"],
     meta: undefined,
   },
   "c-accordion-2": {
     name: "c-accordion-2",
-    description: "Accordion demo with multiple",
+    description: "Accordion with multiple items expanded at once.",
     type: "registry:component",
     registryDependencies: ["@zbmui/accordion"],
     files: [
@@ -891,19 +842,178 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/accordion/c-accordion-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/accordion/c-accordion-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["accordion"],
     meta: undefined,
   },
+  "c-alert-dialog-1": {
+    name: "c-alert-dialog-1",
+    description: "Delete account confirmation dialog.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert-dialog", "@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
+  "c-alert-dialog-2": {
+    name: "c-alert-dialog-2",
+    description: "Alert dialog with a muted footer.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert-dialog"],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
+  "c-alert-dialog-3": {
+    name: "c-alert-dialog-3",
+    description: "Controlled alert dialog with open state.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert-dialog", "@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
+  "c-alert-dialog-4": {
+    name: "c-alert-dialog-4",
+    description: "Confirmation alert before closing an unsaved dialog.",
+    type: "registry:component",
+    registryDependencies: [
+      "@zbmui/alert-dialog",
+      "@zbmui/button",
+      "@zbmui/dialog",
+      "@zbmui/field",
+      "@zbmui/form",
+      "@zbmui/textarea",
+    ],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
+  "c-alert-dialog-5": {
+    name: "c-alert-dialog-5",
+    description: "Backdrop blur, opaque, and transparent variants.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert-dialog", "@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
+  "c-alert-dialog-6": {
+    name: "c-alert-dialog-6",
+    description: "Alert dialog popup position variants.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/alert-dialog", "@zbmui/button"],
+    files: [
+      {
+        path: "src/registry/default/components/alert-dialog/c-alert-dialog-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["alert-dialog"],
+    meta: undefined,
+  },
   "c-alert-1": {
     name: "c-alert-1",
-    description: "Alert demo",
+    description: "A simple alert with title and description.",
     type: "registry:component",
     registryDependencies: ["@zbmui/alert"],
     files: [
@@ -914,19 +1024,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert/c-alert-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/alert/c-alert-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["alert"],
     meta: undefined,
   },
   "c-alert-2": {
     name: "c-alert-2",
-    description: "Alert with icon",
+    description: "Alert variants with status icons.",
     type: "registry:component",
     registryDependencies: ["@zbmui/alert"],
     files: [
@@ -937,21 +1049,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert/c-alert-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/alert/c-alert-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["alert"],
     meta: undefined,
   },
   "c-alert-3": {
     name: "c-alert-3",
-    description: "Alert with icon",
+    description: "Alert with icon and action buttons.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
+    registryDependencies: ["@zbmui/alert", "@zbmui/button"],
     files: [
       {
         path: "src/registry/default/components/alert/c-alert-3.tsx",
@@ -960,21 +1074,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert/c-alert-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/alert/c-alert-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["alert"],
     meta: undefined,
   },
   "c-alert-4": {
     name: "c-alert-4",
-    description: "Alert with icon",
+    description: "Dismissible alert with a close button.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
+    registryDependencies: ["@zbmui/alert", "@zbmui/button"],
     files: [
       {
         path: "src/registry/default/components/alert/c-alert-4.tsx",
@@ -983,157 +1099,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert/c-alert-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/alert/c-alert-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["alert"],
     meta: undefined,
   },
-  "c-alert-dialog-1": {
-    name: "c-alert-dialog-1",
-    description: "Alert dialog demo",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
-    files: [
-      {
-        path: "src/registry/default/components/alert-dialog/c-alert-dialog-1.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["alert-dialog"],
-    meta: undefined,
-  },
-  "c-alert-dialog-2": {
-    name: "c-alert-dialog-2",
-    description: "Alert dialog with muted footer",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
-    files: [
-      {
-        path: "src/registry/default/components/alert-dialog/c-alert-dialog-2.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["alert-dialog"],
-    meta: undefined,
-  },
-  "c-alert-dialog-3": {
-    name: "c-alert-dialog-3",
-    description: "Alert dialog controlled",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
-    files: [
-      {
-        path: "src/registry/default/components/alert-dialog/c-alert-dialog-3.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["alert-dialog"],
-    meta: undefined,
-  },
-  "c-alert-dialog-4": {
-    name: "c-alert-dialog-4",
-    description: "Alert dialog with close confirmation",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
-    files: [
-      {
-        path: "src/registry/default/components/alert-dialog/c-alert-dialog-4.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["alert-dialog"],
-    meta: undefined,
-  },
-  "c-alert-dialog-5": {
-    name: "c-alert-dialog-5",
-    description: "Alert dialog with backdrop variants",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
-    files: [
-      {
-        path: "src/registry/default/components/alert-dialog/c-alert-dialog-5.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["alert-dialog"],
-    meta: undefined,
-  },
-  "c-alert-dialog-6": {
-    name: "c-alert-dialog-6",
-    description: "Alert dialog with popup positions",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/alert"],
-    files: [
-      {
-        path: "src/registry/default/components/alert-dialog/c-alert-dialog-6.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/alert-dialog/c-alert-dialog-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["alert-dialog"],
-    meta: undefined,
-  },
   "c-autocomplete-1": {
     name: "c-autocomplete-1",
-    description: "Autocomplete demo",
+    description: "Autocomplete with filtering and an empty state.",
     type: "registry:component",
     registryDependencies: ["@zbmui/autocomplete"],
     files: [
@@ -1144,203 +1124,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-2": {
-    name: "c-autocomplete-2",
-    description: "Autocomplete sizes",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-2.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-3": {
-    name: "c-autocomplete-3",
-    description: "Autocomplete disabled",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-3.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-4": {
-    name: "c-autocomplete-4",
-    description: "Autocomplete with label",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-4.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-5": {
-    name: "c-autocomplete-5",
-    description: "Autocomplete with inline autocomplete",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-5.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-6": {
-    name: "c-autocomplete-6",
-    description: "Autocomplete with autoHighlight item",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-6.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-7": {
-    name: "c-autocomplete-7",
-    description: "Autocomplete with clear button",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-7.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-8": {
-    name: "c-autocomplete-8",
-    description: "Autocomplete with clear and trigger buttons",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-8.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-8");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["autocomplete"],
-    meta: undefined,
-  },
-  "c-autocomplete-9": {
-    name: "c-autocomplete-9",
-    description: "Autocomplete with start addon",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
-    files: [
-      {
-        path: "src/registry/default/components/autocomplete/c-autocomplete-9.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-9");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["autocomplete"],
     meta: undefined,
   },
   "c-autocomplete-10": {
     name: "c-autocomplete-10",
-    description: "Autocomplete with grouped items",
+    description: "Autocomplete with grouped items and labels.",
     type: "registry:component",
     registryDependencies: ["@zbmui/autocomplete"],
     files: [
@@ -1351,19 +1149,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-10");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-10.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["autocomplete"],
     meta: undefined,
   },
   "c-autocomplete-11": {
     name: "c-autocomplete-11",
-    description: "Autocomplete with limit results",
+    description: "Autocomplete with limited results and a more-status count.",
     type: "registry:component",
     registryDependencies: ["@zbmui/autocomplete"],
     files: [
@@ -1374,21 +1174,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-11");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-11.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["autocomplete"],
     meta: undefined,
   },
   "c-autocomplete-12": {
     name: "c-autocomplete-12",
-    description: "Autocomplete with async search",
+    description: "Autocomplete with simulated async search, loading, and error states.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/autocomplete"],
+    registryDependencies: ["@zbmui/autocomplete", "@zbmui/spinner"],
     files: [
       {
         path: "src/registry/default/components/autocomplete/c-autocomplete-12.tsx",
@@ -1397,19 +1199,221 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-12");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-12.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-2": {
+    name: "c-autocomplete-2",
+    description: "Autocomplete in all input sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-3": {
+    name: "c-autocomplete-3",
+    description: "Disabled autocomplete.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-4": {
+    name: "c-autocomplete-4",
+    description: "Autocomplete with a form label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-5": {
+    name: "c-autocomplete-5",
+    description: "Autocomplete with inline autocompletion in both mode.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-6": {
+    name: "c-autocomplete-6",
+    description: "Autocomplete with automatic first-item highlight.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-7": {
+    name: "c-autocomplete-7",
+    description: "Autocomplete with a clear button.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-8": {
+    name: "c-autocomplete-8",
+    description: "Autocomplete with clear and trigger buttons.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-8.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-8.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["autocomplete"],
+    meta: undefined,
+  },
+  "c-autocomplete-9": {
+    name: "c-autocomplete-9",
+    description: "Autocomplete with a search icon start addon.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/autocomplete"],
+    files: [
+      {
+        path: "src/registry/default/components/autocomplete/c-autocomplete-9.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/autocomplete/c-autocomplete-9.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["autocomplete"],
     meta: undefined,
   },
   "c-avatar-1": {
     name: "c-avatar-1",
-    description: "Avatar demo",
+    description: "Avatar with image and initials fallback.",
     type: "registry:component",
     registryDependencies: ["@zbmui/avatar"],
     files: [
@@ -1420,19 +1424,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/avatar/c-avatar-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/avatar/c-avatar-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["avatar"],
     meta: undefined,
   },
   "c-avatar-2": {
     name: "c-avatar-2",
-    description: "Avatar sizes",
+    description: "Avatar in three sizes.",
     type: "registry:component",
     registryDependencies: ["@zbmui/avatar"],
     files: [
@@ -1443,19 +1449,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/avatar/c-avatar-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/avatar/c-avatar-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["avatar"],
     meta: undefined,
   },
   "c-avatar-3": {
     name: "c-avatar-3",
-    description: "Avatar with badge",
+    description: "Avatar with a status badge.",
     type: "registry:component",
     registryDependencies: ["@zbmui/avatar"],
     files: [
@@ -1466,19 +1474,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/avatar/c-avatar-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/avatar/c-avatar-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["avatar"],
     meta: undefined,
   },
   "c-avatar-4": {
     name: "c-avatar-4",
-    description: "Avatar with badge icon",
+    description: "Avatar with an icon badge.",
     type: "registry:component",
     registryDependencies: ["@zbmui/avatar"],
     files: [
@@ -1489,19 +1499,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/avatar/c-avatar-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/avatar/c-avatar-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["avatar"],
     meta: undefined,
   },
   "c-avatar-5": {
     name: "c-avatar-5",
-    description: "Avatar with group",
+    description: "Avatar group with stacked avatars.",
     type: "registry:component",
     registryDependencies: ["@zbmui/avatar"],
     files: [
@@ -1512,19 +1524,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/avatar/c-avatar-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/avatar/c-avatar-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["avatar"],
     meta: undefined,
   },
   "c-avatar-6": {
     name: "c-avatar-6",
-    description: "Avatar with group and count",
+    description: "Avatar group with a +3 count.",
     type: "registry:component",
     registryDependencies: ["@zbmui/avatar"],
     files: [
@@ -1535,19 +1549,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/avatar/c-avatar-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/avatar/c-avatar-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["avatar"],
     meta: undefined,
   },
   "c-avatar-7": {
     name: "c-avatar-7",
-    description: "Avatar with Next.js Image",
+    description: "Avatar using the Next.js Image component.",
     type: "registry:component",
     registryDependencies: ["@zbmui/avatar"],
     files: [
@@ -1558,19 +1574,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/avatar/c-avatar-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/avatar/c-avatar-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["avatar"],
     meta: undefined,
   },
   "c-badge-1": {
     name: "c-badge-1",
-    description: "Badge demo",
+    description: "Basic badge demo.",
     type: "registry:component",
     registryDependencies: ["@zbmui/badge"],
     files: [
@@ -1581,19 +1599,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/badge/c-badge-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/badge/c-badge-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["badge"],
     meta: undefined,
   },
   "c-badge-2": {
     name: "c-badge-2",
-    description: "Badge variants demo",
+    description: "Badge color and style variants.",
     type: "registry:component",
     registryDependencies: ["@zbmui/badge"],
     files: [
@@ -1604,19 +1624,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/badge/c-badge-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/badge/c-badge-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["badge"],
     meta: undefined,
   },
   "c-badge-3": {
     name: "c-badge-3",
-    description: "Badge sizes demo",
+    description: "Badge sizes small, default, and large.",
     type: "registry:component",
     registryDependencies: ["@zbmui/badge"],
     files: [
@@ -1627,19 +1649,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/badge/c-badge-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/badge/c-badge-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["badge"],
     meta: undefined,
   },
   "c-badge-4": {
     name: "c-badge-4",
-    description: "Badge with icon demo",
+    description: "Badges with leading and trailing icons.",
     type: "registry:component",
     registryDependencies: ["@zbmui/badge"],
     files: [
@@ -1650,19 +1674,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/badge/c-badge-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/badge/c-badge-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["badge"],
     meta: undefined,
   },
   "c-button-1": {
     name: "c-button-1",
-    description: "Button basic demo",
+    description: "Basic button demo.",
     type: "registry:component",
     registryDependencies: ["@zbmui/button"],
     files: [
@@ -1673,19 +1699,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/c-button-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/button/c-button-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["button"],
     meta: undefined,
   },
   "c-button-2": {
     name: "c-button-2",
-    description: "Button variants demo",
+    description: "Button variants in all styles.",
     type: "registry:component",
     registryDependencies: ["@zbmui/button"],
     files: [
@@ -1696,19 +1724,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/c-button-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/button/c-button-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["button"],
     meta: undefined,
   },
   "c-button-3": {
     name: "c-button-3",
-    description: "Button sizes demo",
+    description: "Button sizes including icon-only buttons.",
     type: "registry:component",
     registryDependencies: ["@zbmui/button"],
     files: [
@@ -1719,19 +1749,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/c-button-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/button/c-button-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["button"],
     meta: undefined,
   },
   "c-button-4": {
     name: "c-button-4",
-    description: "Button render as another tag",
+    description: "Button rendered as a div element.",
     type: "registry:component",
     registryDependencies: ["@zbmui/button"],
     files: [
@@ -1742,21 +1774,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/c-button-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/button/c-button-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["button"],
     meta: undefined,
   },
   "c-button-5": {
     name: "c-button-5",
-    description: "Button as a link",
+    description: "Link styled as a button using buttonVariants.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/button"],
+    registryDependencies: ["@zbmui/button", "@zbmui/cn"],
     files: [
       {
         path: "src/registry/default/components/button/c-button-5.tsx",
@@ -1765,21 +1799,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/c-button-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/button/c-button-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["button"],
     meta: undefined,
   },
   "c-button-6": {
     name: "c-button-6",
-    description: "Button with loading state",
+    description: "Button with loading state and spinner.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/button"],
+    registryDependencies: ["@zbmui/button", "@zbmui/spinner"],
     files: [
       {
         path: "src/registry/default/components/button/c-button-6.tsx",
@@ -1788,19 +1824,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/button/c-button-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/button/c-button-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["button"],
     meta: undefined,
   },
   "c-calendar-1": {
     name: "c-calendar-1",
-    description: "Calendar demo",
+    description: "Calendar in single-date selection mode.",
     type: "registry:component",
     registryDependencies: ["@zbmui/calendar"],
     files: [
@@ -1811,182 +1849,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/calendar/c-calendar-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/calendar/c-calendar-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["checkbox"],
-    meta: undefined,
-  },
-  "c-checkbox-1": {
-    name: "c-checkbox-1",
-    description: "Checkbox demo",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox"],
-    files: [
-      {
-        path: "src/registry/default/components/checkbox/c-checkbox-1.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox/c-checkbox-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["checkbox"],
-    meta: undefined,
-  },
-  "c-checkbox-2": {
-    name: "c-checkbox-2",
-    description: "Checkbox sizes",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox"],
-    files: [
-      {
-        path: "src/registry/default/components/checkbox/c-checkbox-2.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox/c-checkbox-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["checkbox"],
-    meta: undefined,
-  },
-  "c-checkbox-3": {
-    name: "c-checkbox-3",
-    description: "Checkbox disabled",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox"],
-    files: [
-      {
-        path: "src/registry/default/components/checkbox/c-checkbox-3.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox/c-checkbox-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["checkbox"],
-    meta: undefined,
-  },
-  "c-checkbox-4": {
-    name: "c-checkbox-4",
-    description: "Checkbox indeterminate",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox"],
-    files: [
-      {
-        path: "src/registry/default/components/checkbox/c-checkbox-4.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox/c-checkbox-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["checkbox"],
-    meta: undefined,
-  },
-  "c-checkbox-5": {
-    name: "c-checkbox-5",
-    description: "Checkbox controlled",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox"],
-    files: [
-      {
-        path: "src/registry/default/components/checkbox/c-checkbox-5.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox/c-checkbox-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["checkbox"],
-    meta: undefined,
-  },
-  "c-checkbox-6": {
-    name: "c-checkbox-6",
-    description: "Checkbox with description",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox"],
-    files: [
-      {
-        path: "src/registry/default/components/checkbox/c-checkbox-6.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox/c-checkbox-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["checkbox"],
-    meta: undefined,
-  },
-  "c-checkbox-7": {
-    name: "c-checkbox-7",
-    description: "Checkbox with card style",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox"],
-    files: [
-      {
-        path: "src/registry/default/components/checkbox/c-checkbox-7.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox/c-checkbox-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["checkbox"],
+    categories: ["calendar"],
     meta: undefined,
   },
   "c-checkbox-group-1": {
     name: "c-checkbox-group-1",
-    description: "Checkbox group demo",
+    description: "Checkbox group with a default value.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox-group"],
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/checkbox-group", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/checkbox-group/c-checkbox-group-1.tsx",
@@ -1995,21 +1874,25 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import(
+        "@/registry/default/components/checkbox-group/c-checkbox-group-1.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["checkbox"],
+    categories: ["checkbox-group"],
     meta: undefined,
   },
   "c-checkbox-group-2": {
     name: "c-checkbox-group-2",
-    description: "Checkbox group labeling",
+    description: "Group labeled via aria-labelledby and a label element.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox-group"],
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/checkbox-group", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/checkbox-group/c-checkbox-group-2.tsx",
@@ -2018,21 +1901,25 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import(
+        "@/registry/default/components/checkbox-group/c-checkbox-group-2.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["checkbox"],
+    categories: ["checkbox-group"],
     meta: undefined,
   },
   "c-checkbox-group-3": {
     name: "c-checkbox-group-3",
-    description: "Checkbox group disabled",
+    description: "Disabled checkbox group.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox-group"],
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/checkbox-group", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/checkbox-group/c-checkbox-group-3.tsx",
@@ -2041,21 +1928,25 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import(
+        "@/registry/default/components/checkbox-group/c-checkbox-group-3.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["checkbox"],
+    categories: ["checkbox-group"],
     meta: undefined,
   },
   "c-checkbox-group-4": {
     name: "c-checkbox-group-4",
-    description: "Checkbox group with disabled option",
+    description: "Group with a single disabled item.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox-group"],
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/checkbox-group", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/checkbox-group/c-checkbox-group-4.tsx",
@@ -2064,21 +1955,25 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import(
+        "@/registry/default/components/checkbox-group/c-checkbox-group-4.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["checkbox"],
+    categories: ["checkbox-group"],
     meta: undefined,
   },
   "c-checkbox-group-5": {
     name: "c-checkbox-group-5",
-    description: "Checkbox group controlled",
+    description: "Controlled checkbox group showing the value.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox-group"],
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/checkbox-group", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/checkbox-group/c-checkbox-group-5.tsx",
@@ -2087,21 +1982,25 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import(
+        "@/registry/default/components/checkbox-group/c-checkbox-group-5.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["checkbox"],
+    categories: ["checkbox-group"],
     meta: undefined,
   },
   "c-checkbox-group-6": {
     name: "c-checkbox-group-6",
-    description: "Checkbox group with parent checkbox",
+    description: "Group with a parent select-all checkbox.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox-group"],
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/checkbox-group", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/checkbox-group/c-checkbox-group-6.tsx",
@@ -2110,21 +2009,25 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import(
+        "@/registry/default/components/checkbox-group/c-checkbox-group-6.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["checkbox"],
+    categories: ["checkbox-group"],
     meta: undefined,
   },
   "c-checkbox-group-7": {
     name: "c-checkbox-group-7",
-    description: "Checkbox group with nested parent checkbox",
+    description: "Nested groups with an indeterminate parent checkbox.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/checkbox-group"],
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/checkbox-group", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/checkbox-group/c-checkbox-group-7.tsx",
@@ -2133,21 +2036,200 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/checkbox-group/c-checkbox-group-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import(
+        "@/registry/default/components/checkbox-group/c-checkbox-group-7.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["checkbox-group"],
+    meta: undefined,
+  },
+  "c-checkbox-1": {
+    name: "c-checkbox-1",
+    description: "Checkbox with a label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/label"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-2": {
+    name: "c-checkbox-2",
+    description: "Checkbox in five sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/label"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-3": {
+    name: "c-checkbox-3",
+    description: "Disabled checkbox with a label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/label"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-4": {
+    name: "c-checkbox-4",
+    description: "Indeterminate checkbox with a label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/label"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-5": {
+    name: "c-checkbox-5",
+    description: "Controlled checkbox showing its checked state.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/label"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-6": {
+    name: "c-checkbox-6",
+    description: "Checkbox with title and description.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/label"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["checkbox"],
+    meta: undefined,
+  },
+  "c-checkbox-7": {
+    name: "c-checkbox-7",
+    description: "Checkbox styled as a card.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/checkbox", "@zbmui/label"],
+    files: [
+      {
+        path: "src/registry/default/components/checkbox/c-checkbox-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/checkbox/c-checkbox-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["checkbox"],
     meta: undefined,
   },
   "c-collapsible-1": {
     name: "c-collapsible-1",
-    description: "Collapsible demo",
+    description: "Collapsible panel revealing recovery keys.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/collapsible"],
+    registryDependencies: ["@zbmui/cn", "@zbmui/collapsible"],
     files: [
       {
         path: "src/registry/default/components/collapsible/c-collapsible-1.tsx",
@@ -2156,19 +2238,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/collapsible/c-collapsible-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/collapsible/c-collapsible-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["collapsible"],
     meta: undefined,
   },
   "c-combobox-1": {
     name: "c-combobox-1",
-    description: "Combobox demo",
+    description: "Basic single-selection combobox with a label.",
     type: "registry:component",
     registryDependencies: ["@zbmui/combobox"],
     files: [
@@ -2179,203 +2263,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-2": {
-    name: "c-combobox-2",
-    description: "Combobox sizes",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-2.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-3": {
-    name: "c-combobox-3",
-    description: "Combobox disabled",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-3.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-4": {
-    name: "c-combobox-4",
-    description: "Combobox auto highlight",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-4.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-5": {
-    name: "c-combobox-5",
-    description: "Combobox with clear button",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-5.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-6": {
-    name: "c-combobox-6",
-    description: "Combobox with indicator position",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-6.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-7": {
-    name: "c-combobox-7",
-    description: "Combobox grouped",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-7.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-8": {
-    name: "c-combobox-8",
-    description: "Combobox multiple",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-8.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-8");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["combobox"],
-    meta: undefined,
-  },
-  "c-combobox-9": {
-    name: "c-combobox-9",
-    description: "Combobox with start addon",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
-    files: [
-      {
-        path: "src/registry/default/components/combobox/c-combobox-9.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-9");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/combobox/c-combobox-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["combobox"],
     meta: undefined,
   },
   "c-combobox-10": {
     name: "c-combobox-10",
-    description: "Combobox with multiple start addon",
+    description: "Multiple selection combobox with a start addon.",
     type: "registry:component",
     registryDependencies: ["@zbmui/combobox"],
     files: [
@@ -2386,19 +2288,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-10");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/combobox/c-combobox-10.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["combobox"],
     meta: undefined,
   },
   "c-combobox-11": {
     name: "c-combobox-11",
-    description: "Combobox with multiple limiting visible chips",
+    description: "Multiple selection combobox limiting visible chips.",
     type: "registry:component",
     registryDependencies: ["@zbmui/combobox"],
     files: [
@@ -2409,21 +2313,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-11");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/combobox/c-combobox-11.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["combobox"],
     meta: undefined,
   },
   "c-combobox-12": {
     name: "c-combobox-12",
-    description: "Combobox with input inside popup",
+    description: "Combobox with its input rendered inside the popup.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/combobox"],
+    registryDependencies: ["@zbmui/button", "@zbmui/cn", "@zbmui/combobox"],
     files: [
       {
         path: "src/registry/default/components/combobox/c-combobox-12.tsx",
@@ -2432,19 +2338,221 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/combobox/c-combobox-12");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/combobox/c-combobox-12.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-2": {
+    name: "c-combobox-2",
+    description: "Combobox sizes from xs to xl.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-3": {
+    name: "c-combobox-3",
+    description: "Combobox in a disabled state.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-4": {
+    name: "c-combobox-4",
+    description: "Combobox with auto highlight enabled.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-5": {
+    name: "c-combobox-5",
+    description: "Combobox with a clear button.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-6": {
+    name: "c-combobox-6",
+    description: "Combobox with the item indicator at the start.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-7": {
+    name: "c-combobox-7",
+    description: "Combobox with grouped framework items.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-8": {
+    name: "c-combobox-8",
+    description: "Multiple selection combobox with removable chips.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-8.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-8.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["combobox"],
+    meta: undefined,
+  },
+  "c-combobox-9": {
+    name: "c-combobox-9",
+    description: "Combobox with a search icon start addon.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/combobox"],
+    files: [
+      {
+        path: "src/registry/default/components/combobox/c-combobox-9.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/combobox/c-combobox-9.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["combobox"],
     meta: undefined,
   },
   "c-command-1": {
     name: "c-command-1",
-    description: "Command demo",
+    description: "Command list with keyboard shortcuts.",
     type: "registry:component",
     registryDependencies: ["@zbmui/command"],
     files: [
@@ -2455,19 +2563,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/command/c-command-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/command/c-command-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["command"],
     meta: undefined,
   },
   "c-command-2": {
     name: "c-command-2",
-    description: "Command with group",
+    description: "Command list grouped with labels and separators.",
     type: "registry:component",
     registryDependencies: ["@zbmui/command"],
     files: [
@@ -2478,21 +2588,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/command/c-command-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/command/c-command-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["command"],
     meta: undefined,
   },
   "c-command-3": {
     name: "c-command-3",
-    description: "Command with dialog",
+    description: "Command palette in a dialog with grouped items.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/command"],
+    registryDependencies: ["@zbmui/button", "@zbmui/command", "@zbmui/kbd"],
     files: [
       {
         path: "src/registry/default/components/command/c-command-3.tsx",
@@ -2501,21 +2613,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/command/c-command-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/command/c-command-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["command"],
     meta: undefined,
   },
   "c-command-4": {
     name: "c-command-4",
-    description: "Command with popover",
+    description: "Command list inside a popover.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/command"],
+    registryDependencies: ["@zbmui/button", "@zbmui/command", "@zbmui/popover"],
     files: [
       {
         path: "src/registry/default/components/command/c-command-4.tsx",
@@ -2524,21 +2638,29 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/command/c-command-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/command/c-command-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
     categories: ["command"],
     meta: undefined,
   },
   "c-dialog-1": {
     name: "c-dialog-1",
-    description: "Dialog demo",
+    description: "Dialog with an edit profile form.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/dialog",
+      "@zbmui/field",
+      "@zbmui/form",
+      "@zbmui/input",
+    ],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-1.tsx",
@@ -2547,21 +2669,29 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-dialog-2": {
     name: "c-dialog-2",
-    description: "Dialog with muted footer",
+    description: "Dialog with a muted footer.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/dialog",
+      "@zbmui/field",
+      "@zbmui/form",
+      "@zbmui/input",
+    ],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-2.tsx",
@@ -2570,21 +2700,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-dialog-3": {
     name: "c-dialog-3",
-    description: "Dialog with popup position",
+    description: "Dialog popup position variants.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: ["@zbmui/button", "@zbmui/dialog"],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-3.tsx",
@@ -2593,21 +2725,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-dialog-4": {
     name: "c-dialog-4",
-    description: "Dialog with no close button",
+    description: "Dialog without a close button.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: ["@zbmui/button", "@zbmui/dialog"],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-4.tsx",
@@ -2616,21 +2750,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-dialog-5": {
     name: "c-dialog-5",
-    description: "Dialog with scrollable content",
+    description: "Dialog with scrollable body content variants.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: ["@zbmui/button", "@zbmui/dialog"],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-5.tsx",
@@ -2639,21 +2775,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-dialog-6": {
     name: "c-dialog-6",
-    description: "Dialog with nested dialogs",
+    description: "Dialog nested inside another dialog.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: ["@zbmui/button", "@zbmui/dialog", "@zbmui/field", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-6.tsx",
@@ -2662,21 +2800,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-dialog-7": {
     name: "c-dialog-7",
-    description: "Dialog with showing parent dialog of nested dialog",
+    description: "Nested dialog with the parent kept visible.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: ["@zbmui/button", "@zbmui/dialog", "@zbmui/field", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-7.tsx",
@@ -2685,21 +2825,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-dialog-8": {
     name: "c-dialog-8",
-    description: "Dialog with different backdrop variants",
+    description: "Backdrop blur, opaque, and transparent variants.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/dialog"],
+    registryDependencies: ["@zbmui/button", "@zbmui/dialog"],
     files: [
       {
         path: "src/registry/default/components/dialog/c-dialog-8.tsx",
@@ -2708,1330 +2850,1466 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/dialog/c-dialog-8");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/dialog/c-dialog-8.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["dialog"],
     meta: undefined,
   },
   "c-field-1": {
     name: "c-field-1",
-    description: "Field Basic",
-    type: "registry:demo",
-    registryDependencies: ["field"],
+    description: "Field with label, input, and description.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/field/c-field-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/field/c-field-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/field/c-field-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["field"],
     meta: undefined,
   },
   "c-field-2": {
     name: "c-field-2",
-    description: "Field required",
-    type: "registry:demo",
-    registryDependencies: ["field"],
+    description: "Required field with an indicator.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/field/c-field-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/field/c-field-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/field/c-field-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["field"],
     meta: undefined,
   },
   "c-field-3": {
     name: "c-field-3",
-    description: "Field optional",
-    type: "registry:demo",
-    registryDependencies: ["field"],
+    description: "Optional field with an indicator.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/field/c-field-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/field/c-field-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/field/c-field-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["field"],
     meta: undefined,
   },
   "c-field-4": {
     name: "c-field-4",
-    description: "Field optional",
-    type: "registry:demo",
-    registryDependencies: ["field"],
+    description: "Disabled field.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/field/c-field-4.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/field/c-field-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/field/c-field-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["field"],
     meta: undefined,
   },
   "c-field-5": {
     name: "c-field-5",
-    description: "Field with error",
-    type: "registry:demo",
-    registryDependencies: ["field"],
+    description: "Field with an error message.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/field/c-field-5.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/field/c-field-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/field/c-field-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["field"],
     meta: undefined,
   },
   "c-form-1": {
     name: "c-form-1",
-    description: "Form Basic",
-    type: "registry:demo",
-    registryDependencies: ["form"],
+    description: "Email form with a submit loading state.",
+    type: "registry:component",
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/field",
+      "@zbmui/form",
+      "@zbmui/input",
+      "@zbmui/spinner",
+    ],
     files: [
       {
         path: "src/registry/default/components/form/c-form-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/form/c-form-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/form/c-form-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["form"],
     meta: undefined,
   },
   "c-form-2": {
     name: "c-form-2",
-    description: "Form with submitting server function",
-    type: "registry:demo",
-    registryDependencies: ["form"],
+    description: "Form submitting to a server function with errors.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/field", "@zbmui/form", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/form/c-form-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/form/c-form-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/form/c-form-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["form"],
     meta: undefined,
   },
   "c-form-3": {
     name: "c-form-3",
-    description: "Form with zod validation",
-    type: "registry:demo",
-    registryDependencies: ["form"],
+    description: "Form validated with Zod.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/field", "@zbmui/form", "@zbmui/input"],
     files: [
       {
         path: "src/registry/default/components/form/c-form-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/form/c-form-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/form/c-form-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-input-1": {
-    name: "c-input-1",
-    description: "Input Basic",
-    type: "registry:demo",
-    registryDependencies: ["input"],
-    files: [
-      {
-        path: "src/registry/default/components/input/c-input-1.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input/c-input-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-input-2": {
-    name: "c-input-2",
-    description: "Input sizes",
-    type: "registry:demo",
-    registryDependencies: ["input"],
-    files: [
-      {
-        path: "src/registry/default/components/input/c-input-2.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input/c-input-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-input-3": {
-    name: "c-input-3",
-    description: "Input file type",
-    type: "registry:demo",
-    registryDependencies: ["input"],
-    files: [
-      {
-        path: "src/registry/default/components/input/c-input-3.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input/c-input-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-input-4": {
-    name: "c-input-4",
-    description: "Input disabled",
-    type: "registry:demo",
-    registryDependencies: ["input"],
-    files: [
-      {
-        path: "src/registry/default/components/input/c-input-4.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input/c-input-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
+    categories: ["form"],
     meta: undefined,
   },
   "c-input-group-1": {
     name: "c-input-group-1",
-    description: "Input Group Basic",
-    type: "registry:demo",
-    registryDependencies: ["input-group"],
+    description: "Search input group with icon and result count.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input-group"],
     files: [
       {
         path: "src/registry/default/components/input-group/c-input-group-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input-group/c-input-group-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/input-group/c-input-group-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["input-group"],
     meta: undefined,
   },
   "c-input-group-2": {
     name: "c-input-group-2",
-    description: "Input Group with inline-start align",
-    type: "registry:demo",
-    registryDependencies: ["input-group"],
+    description: "Input group with icon at the start.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input-group"],
     files: [
       {
         path: "src/registry/default/components/input-group/c-input-group-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input-group/c-input-group-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/input-group/c-input-group-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["input-group"],
     meta: undefined,
   },
   "c-input-group-3": {
     name: "c-input-group-3",
-    description: "Input Group with inline-end align",
-    type: "registry:demo",
-    registryDependencies: ["input-group"],
+    description: "Input group with icon at the end.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input-group"],
     files: [
       {
         path: "src/registry/default/components/input-group/c-input-group-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input-group/c-input-group-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/input-group/c-input-group-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["input-group"],
     meta: undefined,
   },
   "c-input-group-4": {
     name: "c-input-group-4",
-    description: "Input Group with block-start align",
-    type: "registry:demo",
-    registryDependencies: ["input-group"],
+    description: "Header addons above input and textarea.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input-group"],
     files: [
       {
         path: "src/registry/default/components/input-group/c-input-group-4.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input-group/c-input-group-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/input-group/c-input-group-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["input-group"],
     meta: undefined,
   },
   "c-input-group-5": {
     name: "c-input-group-5",
-    description: "Input Group with block-end align",
-    type: "registry:demo",
-    registryDependencies: ["input-group"],
+    description: "Footer addons below input and textarea.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/input-group"],
     files: [
       {
         path: "src/registry/default/components/input-group/c-input-group-5.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input-group/c-input-group-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/input-group/c-input-group-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["input-group"],
     meta: undefined,
   },
   "c-input-group-6": {
     name: "c-input-group-6",
-    description: "Input Group with block-end align",
-    type: "registry:demo",
-    registryDependencies: ["input-group"],
+    description: "Input group in five sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input-group"],
     files: [
       {
         path: "src/registry/default/components/input-group/c-input-group-6.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/input-group/c-input-group-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/input-group/c-input-group-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["input-group"],
+    meta: undefined,
+  },
+  "c-input-1": {
+    name: "c-input-1",
+    description: "Simple email input with placeholder.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input"],
+    files: [
+      {
+        path: "src/registry/default/components/input/c-input-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input/c-input-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["input"],
+    meta: undefined,
+  },
+  "c-input-2": {
+    name: "c-input-2",
+    description: "Input in five sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input"],
+    files: [
+      {
+        path: "src/registry/default/components/input/c-input-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input/c-input-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["input"],
+    meta: undefined,
+  },
+  "c-input-3": {
+    name: "c-input-3",
+    description: "File input with label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input"],
+    files: [
+      {
+        path: "src/registry/default/components/input/c-input-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input/c-input-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["input"],
+    meta: undefined,
+  },
+  "c-input-4": {
+    name: "c-input-4",
+    description: "Input in disabled state.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input"],
+    files: [
+      {
+        path: "src/registry/default/components/input/c-input-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/input/c-input-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["input"],
     meta: undefined,
   },
   "c-kbd-1": {
     name: "c-kbd-1",
-    description: "Kbd Basic",
-    type: "registry:demo",
-    registryDependencies: ["kbd"],
+    description: "Groups of keyboard keys and shortcuts.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/kbd"],
     files: [
       {
         path: "src/registry/default/components/kbd/c-kbd-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/kbd/c-kbd-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/kbd/c-kbd-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["kbd"],
     meta: undefined,
   },
   "c-kbd-2": {
     name: "c-kbd-2",
-    description: "Kbd Group",
-    type: "registry:demo",
-    registryDependencies: ["kbd"],
+    description: "Shortcut keys inline in a sentence.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/kbd"],
     files: [
       {
         path: "src/registry/default/components/kbd/c-kbd-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/kbd/c-kbd-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/kbd/c-kbd-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["kbd"],
     meta: undefined,
   },
   "c-kbd-3": {
     name: "c-kbd-3",
-    description: "Kbd with button",
-    type: "registry:demo",
-    registryDependencies: ["kbd"],
+    description: "Keyboard key inside a button.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/kbd"],
     files: [
       {
         path: "src/registry/default/components/kbd/c-kbd-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/kbd/c-kbd-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/kbd/c-kbd-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["kbd"],
     meta: undefined,
   },
   "c-kbd-4": {
     name: "c-kbd-4",
-    description: "Kbd with tooltip",
-    type: "registry:demo",
-    registryDependencies: ["kbd"],
+    description: "Keyboard shortcuts inside tooltips.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/button-group", "@zbmui/kbd", "@zbmui/tooltip"],
     files: [
       {
         path: "src/registry/default/components/kbd/c-kbd-4.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/kbd/c-kbd-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/kbd/c-kbd-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["kbd"],
     meta: undefined,
   },
   "c-kbd-5": {
     name: "c-kbd-5",
-    description: "Kbd with input group",
-    type: "registry:demo",
-    registryDependencies: ["kbd"],
+    description: "Keyboard shortcut inside an input group.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input-group", "@zbmui/kbd"],
     files: [
       {
         path: "src/registry/default/components/kbd/c-kbd-5.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/kbd/c-kbd-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/kbd/c-kbd-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["kbd"],
     meta: undefined,
   },
   "c-label-1": {
     name: "c-label-1",
-    description: "Label Basic",
-    type: "registry:demo",
-    registryDependencies: ["label"],
+    description: "Label associated with an email input.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/input", "@zbmui/label"],
     files: [
       {
         path: "src/registry/default/components/label/c-label-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/label/c-label-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/label/c-label-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-navigation-menu-1": {
-    name: "c-navigation-menu-1",
-    description: "Navigation Menu Basic",
-    type: "registry:demo",
-    registryDependencies: ["navigation-menu"],
-    files: [
-      {
-        path: "src/registry/default/components/navigation-menu/c-navigation-menu-1.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-navigation-menu-2": {
-    name: "c-navigation-menu-2",
-    description: "Navigation Menu with submenus",
-    type: "registry:demo",
-    registryDependencies: ["navigation-menu"],
-    files: [
-      {
-        path: "src/registry/default/components/navigation-menu/c-navigation-menu-2.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-navigation-menu-3": {
-    name: "c-navigation-menu-3",
-    description: "Navigation Menu with nested inline submenus",
-    type: "registry:demo",
-    registryDependencies: ["navigation-menu"],
-    files: [
-      {
-        path: "src/registry/default/components/navigation-menu/c-navigation-menu-3.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "c-navigation-menu-4": {
-    name: "c-navigation-menu-4",
-    description: "Navigation Menu with large menus",
-    type: "registry:demo",
-    registryDependencies: ["navigation-menu"],
-    files: [
-      {
-        path: "src/registry/default/components/navigation-menu/c-navigation-menu-4.tsx",
-        type: "registry:demo",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/navigation-menu/c-navigation-menu-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: undefined,
+    categories: ["label"],
     meta: undefined,
   },
   "c-menu-1": {
     name: "c-menu-1",
-    description: "Menu Basic",
-    type: "registry:demo",
-    registryDependencies: ["menu"],
+    description: "Menu with icons, submenus, shortcuts, and checkboxes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-menu-2": {
     name: "c-menu-2",
-    description: "Menu open on hover",
-    type: "registry:demo",
-    registryDependencies: ["menu"],
+    description: "Menu that opens on hover.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-menu-3": {
     name: "c-menu-3",
-    description: "Menu with checkbox items",
-    type: "registry:demo",
-    registryDependencies: ["menu"],
+    description: "Menu with checkbox items.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-menu-4": {
     name: "c-menu-4",
-    description: "Menu with radio items",
-    type: "registry:demo",
-    registryDependencies: ["menu"],
+    description: "Menu with radio group items.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-4.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-menu-5": {
     name: "c-menu-5",
-    description: "Menu with variants and indicator positioned",
-    type: "registry:demo",
-    registryDependencies: ["menu"],
+    description: "Checkbox and radio items with switch variant and start indicators.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-5.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-menu-6": {
     name: "c-menu-6",
-    description: "Menu popup side and alignment",
-    type: "registry:demo",
-    registryDependencies: ["menu"],
+    description: "Menus with different popup sides and alignments.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-6.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-menu-7": {
     name: "c-menu-7",
-    description: "Menu checkbox and radio closeOnClick behavior",
-    type: "registry:demo",
-    registryDependencies: ["menu"],
+    description: "Menu items that close the menu on click.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-7.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-menu-8": {
     name: "c-menu-8",
-    description: "Menu with dialog",
-    type: "registry:demo",
-    registryDependencies: ["menu", "dialog"],
+    description: "Dialog opened from a menu.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/dialog", "@zbmui/menu"],
     files: [
       {
         path: "src/registry/default/components/menu/c-menu-8.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/menu/c-menu-8");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/menu/c-menu-8.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["menu"],
     meta: undefined,
   },
   "c-meter-1": {
-    name: "c-menu-1",
-    description: "Meter basic",
-    type: "registry:demo",
-    registryDependencies: [],
+    name: "c-meter-1",
+    description: "Meter with label and value.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/meter"],
     files: [
       {
         path: "src/registry/default/components/meter/c-meter-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/meter/c-meter-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/meter/c-meter-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["meter"],
     meta: undefined,
   },
   "c-meter-2": {
     name: "c-meter-2",
-    description: "Meter without label",
-    type: "registry:demo",
-    registryDependencies: [],
+    description: "Meter without a label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/meter"],
     files: [
       {
         path: "src/registry/default/components/meter/c-meter-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/meter/c-meter-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/meter/c-meter-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["meter"],
     meta: undefined,
   },
   "c-meter-3": {
     name: "c-meter-3",
-    description: "Meter with formatted value",
-    type: "registry:demo",
-    registryDependencies: [],
+    description: "Meter with a formatted value.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/meter"],
     files: [
       {
         path: "src/registry/default/components/meter/c-meter-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/meter/c-meter-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/meter/c-meter-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["meter"],
+    meta: undefined,
+  },
+  "c-navigation-menu-1": {
+    name: "c-navigation-menu-1",
+    description: "Navigation menu with link dropdowns.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/default/components/navigation-menu/c-navigation-menu-1.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["navigation-menu"],
+    meta: undefined,
+  },
+  "c-navigation-menu-2": {
+    name: "c-navigation-menu-2",
+    description: "Navigation menu with nested submenus.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/default/components/navigation-menu/c-navigation-menu-2.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["navigation-menu"],
+    meta: undefined,
+  },
+  "c-navigation-menu-3": {
+    name: "c-navigation-menu-3",
+    description: "Navigation menu with nested inline submenus.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/default/components/navigation-menu/c-navigation-menu-3.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["navigation-menu"],
+    meta: undefined,
+  },
+  "c-navigation-menu-4": {
+    name: "c-navigation-menu-4",
+    description: "Navigation menu with a large scrollable menu.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/navigation-menu"],
+    files: [
+      {
+        path: "src/registry/default/components/navigation-menu/c-navigation-menu-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/default/components/navigation-menu/c-navigation-menu-4.tsx"
+      );
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["navigation-menu"],
     meta: undefined,
   },
   "c-number-field-1": {
     name: "c-number-field-1",
-    description: "Number Field Basic",
-    type: "registry:demo",
-    registryDependencies: ["number-field"],
+    description: "Number field with label and placeholder.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/number-field"],
     files: [
       {
         path: "src/registry/default/components/number-field/c-number-field-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/number-field/c-number-field-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/number-field/c-number-field-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["number-field"],
     meta: undefined,
   },
   "c-number-field-2": {
     name: "c-number-field-2",
-    description: "Number Field sizes",
-    type: "registry:demo",
-    registryDependencies: ["number-field"],
+    description: "Number field sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/number-field"],
     files: [
       {
         path: "src/registry/default/components/number-field/c-number-field-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/number-field/c-number-field-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/number-field/c-number-field-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["number-field"],
     meta: undefined,
   },
   "c-number-field-3": {
     name: "c-number-field-3",
-    description: "Number Field controlled",
-    type: "registry:demo",
-    registryDependencies: ["number-field"],
+    description: "Controlled number field with min and max.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/number-field"],
     files: [
       {
         path: "src/registry/default/components/number-field/c-number-field-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/number-field/c-number-field-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/number-field/c-number-field-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["number-field"],
     meta: undefined,
   },
   "c-otp-field-1": {
     name: "c-otp-field-1",
-    description: "OTP Field basic",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "Basic six-digit OTP field.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-otp-field-2": {
     name: "c-otp-field-2",
-    description: "OTP Field with different sizes",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "Large OTP field size.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-otp-field-3": {
     name: "c-otp-field-3",
-    description: "OTP Field with label",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "OTP field with a label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-otp-field-4": {
     name: "c-otp-field-4",
-    description: "OTP Field with group separator",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "OTP field with grouped separator.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-4.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-otp-field-5": {
     name: "c-otp-field-5",
-    description: "OTP Field with alphanumeric values",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "Alphanumeric OTP field for recovery codes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-5.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-otp-field-6": {
     name: "c-otp-field-6",
-    description: "OTP Field with custom normalization",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "OTP field with custom normalization and validation.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-6.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-otp-field-7": {
     name: "c-otp-field-7",
-    description: "OTP Field with placeholder",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "OTP field with placeholder characters.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-7.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-otp-field-8": {
     name: "c-otp-field-8",
-    description: "OTP Field with mask entry",
-    type: "registry:demo",
-    registryDependencies: ["otp-field"],
+    description: "Masked OTP field obscuring typed characters.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/field", "@zbmui/otp-field"],
     files: [
       {
         path: "src/registry/default/components/otp-field/c-otp-field-8.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/otp-field/c-otp-field-8");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/otp-field/c-otp-field-8.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["otp-field"],
     meta: undefined,
   },
   "c-popover-1": {
     name: "c-popover-1",
-    description: "Popover basic",
-    type: "registry:demo",
-    registryDependencies: ["popover"],
+    description: "Popover with a feedback form.",
+    type: "registry:component",
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/field",
+      "@zbmui/form",
+      "@zbmui/popover",
+      "@zbmui/textarea",
+    ],
     files: [
       {
         path: "src/registry/default/components/popover/c-popover-1.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/popover/c-popover-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/popover/c-popover-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["popover"],
     meta: undefined,
   },
   "c-popover-2": {
     name: "c-popover-2",
-    description: "Popover with different aligns",
-    type: "registry:demo",
-    registryDependencies: ["popover"],
+    description: "Popovers with different alignments.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/popover"],
     files: [
       {
         path: "src/registry/default/components/popover/c-popover-2.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/popover/c-popover-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/popover/c-popover-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["popover"],
     meta: undefined,
   },
   "c-popover-3": {
     name: "c-popover-3",
-    description: "Popover with different sides",
-    type: "registry:demo",
-    registryDependencies: ["popover"],
+    description: "Popovers opening on different sides.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/popover"],
     files: [
       {
         path: "src/registry/default/components/popover/c-popover-3.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/popover/c-popover-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/popover/c-popover-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["popover"],
     meta: undefined,
   },
   "c-popover-4": {
     name: "c-popover-4",
-    description: "Popover with close button",
-    type: "registry:demo",
-    registryDependencies: ["popover"],
+    description: "Popover with close buttons.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/popover"],
     files: [
       {
         path: "src/registry/default/components/popover/c-popover-4.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/popover/c-popover-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/popover/c-popover-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["popover"],
     meta: undefined,
   },
   "c-popover-5": {
     name: "c-popover-5",
-    description: "Popover with arrow",
-    type: "registry:demo",
-    registryDependencies: ["popover"],
+    description: "Popover with an arrow pointing to the trigger.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/popover"],
     files: [
       {
         path: "src/registry/default/components/popover/c-popover-5.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/popover/c-popover-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/popover/c-popover-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["popover"],
     meta: undefined,
   },
   "c-popover-6": {
     name: "c-popover-6",
-    description: "Popover with tooltip style",
-    type: "registry:demo",
-    registryDependencies: ["popover"],
+    description: "Tooltip-style popover opened on hover.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/button", "@zbmui/input-group", "@zbmui/popover"],
     files: [
       {
         path: "src/registry/default/components/popover/c-popover-6.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/popover/c-popover-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/popover/c-popover-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["popover"],
     meta: undefined,
   },
   "c-popover-7": {
     name: "c-popover-7",
-    description: "Popover with animation",
-    type: "registry:demo",
-    registryDependencies: ["popover"],
+    description: "Animated popover shared between multiple triggers.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/avatar", "@zbmui/button", "@zbmui/cn", "@zbmui/popover"],
     files: [
       {
         path: "src/registry/default/components/popover/c-popover-7.tsx",
-        type: "registry:demo",
+        type: "registry:component",
         target: "",
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/popover/c-popover-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/popover/c-popover-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: undefined,
+    categories: ["popover"],
     meta: undefined,
   },
   "c-scroll-area-1": {
     name: "c-scroll-area-1",
-    description: "Scroll Area basic",
+    description: "Scroll area with vertical scrolling.",
     type: "registry:component",
     registryDependencies: ["@zbmui/scroll-area"],
     files: [
@@ -4042,19 +4320,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["scroll-area"],
     meta: undefined,
   },
   "c-scroll-area-2": {
     name: "c-scroll-area-2",
-    description: "Scroll Area horizontal",
+    description: "Scroll area with horizontal scrolling.",
     type: "registry:component",
     registryDependencies: ["@zbmui/scroll-area"],
     files: [
@@ -4065,19 +4345,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["scroll-area"],
     meta: undefined,
   },
   "c-scroll-area-3": {
     name: "c-scroll-area-3",
-    description: "Scroll Area horizontal",
+    description: "Scroll area scrolling both horizontally and vertically.",
     type: "registry:component",
     registryDependencies: ["@zbmui/scroll-area"],
     files: [
@@ -4088,19 +4370,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["scroll-area"],
     meta: undefined,
   },
   "c-scroll-area-4": {
     name: "c-scroll-area-4",
-    description: "Scroll Area with fade effect",
+    description: "Scroll area with edge fade effect.",
     type: "registry:component",
     registryDependencies: ["@zbmui/scroll-area"],
     files: [
@@ -4111,19 +4395,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["scroll-area"],
     meta: undefined,
   },
   "c-scroll-area-5": {
     name: "c-scroll-area-5",
-    description: "Scroll Area with gutter",
+    description: "Scroll area with scrollbar gutter.",
     type: "registry:component",
     registryDependencies: ["@zbmui/scroll-area"],
     files: [
@@ -4134,19 +4420,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["scroll-area"],
     meta: undefined,
   },
   "c-scroll-area-6": {
     name: "c-scroll-area-6",
-    description: "Scroll Area with custom scrollbar size and margin",
+    description: "Scroll area with custom scrollbar size and margin.",
     type: "registry:component",
     registryDependencies: ["@zbmui/scroll-area"],
     files: [
@@ -4157,19 +4445,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/scroll-area/c-scroll-area-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["scroll-area"],
     meta: undefined,
   },
   "c-select-1": {
     name: "c-select-1",
-    description: "Select basic",
+    description: "Simple select with a disabled option.",
     type: "registry:component",
     registryDependencies: ["@zbmui/select"],
     files: [
@@ -4180,203 +4470,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/select/c-select-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-2": {
-    name: "c-select-2",
-    description: "Select sizes",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-2.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-3": {
-    name: "c-select-3",
-    description: "Select disabled",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-3.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-4": {
-    name: "c-select-4",
-    description: "Select align item with trigger",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-4.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-5": {
-    name: "c-select-5",
-    description: "Select with groups",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-5.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-6": {
-    name: "c-select-6",
-    description: "Select multiple options",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-6.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-7": {
-    name: "c-select-7",
-    description: "Select with icon",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-7.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-8": {
-    name: "c-select-8",
-    description: "Select with options icon",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-8.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-8");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
-    meta: undefined,
-  },
-  "c-select-9": {
-    name: "c-select-9",
-    description: "Select with object values",
-    type: "registry:component",
-    registryDependencies: ["@zbmui/select"],
-    files: [
-      {
-        path: "src/registry/default/components/select/c-select-9.tsx",
-        type: "registry:component",
-        target: "",
-      },
-    ],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-9");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
-    }),
-    categories: ["button"],
+    categories: ["select"],
     meta: undefined,
   },
   "c-select-10": {
     name: "c-select-10",
-    description: "Select with scrolling",
+    description: "Built-in and native popup scrolling.",
     type: "registry:component",
     registryDependencies: ["@zbmui/select"],
     files: [
@@ -4387,19 +4495,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-10");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/select/c-select-10.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["select"],
     meta: undefined,
   },
   "c-select-11": {
     name: "c-select-11",
-    description: "Select controlled",
+    description: "Select controlled with React state.",
     type: "registry:component",
     registryDependencies: ["@zbmui/select"],
     files: [
@@ -4410,21 +4520,229 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/select/c-select-11");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/select/c-select-11.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-2": {
+    name: "c-select-2",
+    description: "Select trigger sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-3": {
+    name: "c-select-3",
+    description: "A disabled select.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-4": {
+    name: "c-select-4",
+    description: "Select popup aligned with the trigger item.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-5": {
+    name: "c-select-5",
+    description: "Select with grouped options.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-6": {
+    name: "c-select-6",
+    description: "Select with multiple selection.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-7": {
+    name: "c-select-7",
+    description: "Select with an icon in the trigger.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-8": {
+    name: "c-select-8",
+    description: "Select with icons in the options.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-8.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-8.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
+    meta: undefined,
+  },
+  "c-select-9": {
+    name: "c-select-9",
+    description: "Select with object values and descriptions.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/select"],
+    files: [
+      {
+        path: "src/registry/default/components/select/c-select-9.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/select/c-select-9.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["select"],
     meta: undefined,
   },
   "c-sheet-1": {
     name: "c-sheet-1",
-    description: "Sheet basic",
+    description: "Sheet with an edit profile form.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/sheet"],
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/field",
+      "@zbmui/form",
+      "@zbmui/input",
+      "@zbmui/sheet",
+    ],
     files: [
       {
         path: "src/registry/default/components/sheet/c-sheet-1.tsx",
@@ -4433,19 +4751,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/sheet/c-sheet-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/sheet/c-sheet-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["sheet"],
     meta: undefined,
   },
   "c-slider-1": {
     name: "c-slider-1",
-    description: "Slider basic",
+    description: "Default slider.",
     type: "registry:component",
     registryDependencies: ["@zbmui/slider"],
     files: [
@@ -4456,21 +4776,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/slider/c-slider-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/slider/c-slider-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["slider"],
     meta: undefined,
   },
   "c-slider-2": {
     name: "c-slider-2",
-    description: "Slider with label",
+    description: "Slider with label and current value.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/slider"],
+    registryDependencies: ["@zbmui/field", "@zbmui/slider"],
     files: [
       {
         path: "src/registry/default/components/slider/c-slider-2.tsx",
@@ -4479,21 +4801,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/slider/c-slider-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/slider/c-slider-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["slider"],
     meta: undefined,
   },
   "c-slider-3": {
     name: "c-slider-3",
-    description: "Slider with range",
+    description: "Range slider with label and values.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/slider"],
+    registryDependencies: ["@zbmui/field", "@zbmui/slider"],
     files: [
       {
         path: "src/registry/default/components/slider/c-slider-3.tsx",
@@ -4502,19 +4826,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/slider/c-slider-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/slider/c-slider-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["slider"],
     meta: undefined,
   },
   "c-slider-4": {
     name: "c-slider-4",
-    description: "Slider with vertical orientation",
+    description: "Vertical slider.",
     type: "registry:component",
     registryDependencies: ["@zbmui/slider"],
     files: [
@@ -4525,19 +4851,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/slider/c-slider-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/slider/c-slider-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["slider"],
     meta: undefined,
   },
   "c-spinner-1": {
     name: "c-spinner-1",
-    description: "Spinner basic",
+    description: "Default spinner.",
     type: "registry:component",
     registryDependencies: ["@zbmui/spinner"],
     files: [
@@ -4548,21 +4876,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/spinner/c-spinner-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/spinner/c-spinner-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["spinner"],
     meta: undefined,
   },
   "c-switch-1": {
     name: "c-switch-1",
-    description: "Switch basic",
+    description: "Switch with a descriptive label.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/label", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-1.tsx",
@@ -4571,21 +4901,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-switch-2": {
     name: "c-switch-2",
-    description: "Switch sizes",
+    description: "Switch sizes, including a custom thumb size.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/label", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-2.tsx",
@@ -4594,21 +4926,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-switch-3": {
     name: "c-switch-3",
-    description: "Switch disabled",
+    description: "Disabled switch.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/label", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-3.tsx",
@@ -4617,21 +4951,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-switch-4": {
     name: "c-switch-4",
-    description: "Switch aria invalid",
+    description: "Switch in an invalid state.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/label", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-4.tsx",
@@ -4640,21 +4976,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-switch-5": {
     name: "c-switch-5",
-    description: "Switch with description",
+    description: "Switch with a label and description.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/label", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-5.tsx",
@@ -4663,21 +5001,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-switch-6": {
     name: "c-switch-6",
-    description: "Switch with card style",
+    description: "Switch styled as a selectable card.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/label", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-6.tsx",
@@ -4686,21 +5026,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-switch-7": {
     name: "c-switch-7",
-    description: "Switch controlled",
+    description: "Controlled switch showing its checked state.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/label", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-7.tsx",
@@ -4709,21 +5051,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-7");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-switch-8": {
     name: "c-switch-8",
-    description: "Switch with form integration",
+    description: "Switch integrated with a react-hook-form form.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/switch"],
+    registryDependencies: ["@zbmui/button", "@zbmui/field", "@zbmui/switch"],
     files: [
       {
         path: "src/registry/default/components/switch/c-switch-8.tsx",
@@ -4732,19 +5076,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/switch/c-switch-8");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/switch/c-switch-8.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["switch"],
     meta: undefined,
   },
   "c-tabs-1": {
     name: "c-tabs-1",
-    description: "tabs basic",
+    description: "Tabs with three panels.",
     type: "registry:component",
     registryDependencies: ["@zbmui/tabs"],
     files: [
@@ -4755,19 +5101,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tabs/c-tabs-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/tabs/c-tabs-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["tabs"],
     meta: undefined,
   },
   "c-tabs-2": {
     name: "c-tabs-2",
-    description: "tabs underline",
+    description: "Tabs with an underline list variant.",
     type: "registry:component",
     registryDependencies: ["@zbmui/tabs"],
     files: [
@@ -4778,19 +5126,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tabs/c-tabs-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/tabs/c-tabs-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["tabs"],
     meta: undefined,
   },
   "c-textarea-1": {
     name: "c-textarea-1",
-    description: "textarea basic",
+    description: "Simple textarea with placeholder.",
     type: "registry:component",
     registryDependencies: ["@zbmui/textarea"],
     files: [
@@ -4801,19 +5151,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/textarea/c-textarea-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/textarea/c-textarea-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: [""],
+    categories: ["textarea"],
     meta: undefined,
   },
   "c-textarea-2": {
     name: "c-textarea-2",
-    description: "textarea sizes",
+    description: "Textarea in five sizes.",
     type: "registry:component",
     registryDependencies: ["@zbmui/textarea"],
     files: [
@@ -4824,19 +5176,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/textarea/c-textarea-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/textarea/c-textarea-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: [""],
+    categories: ["textarea"],
     meta: undefined,
   },
   "c-textarea-3": {
     name: "c-textarea-3",
-    description: "textarea disabled",
+    description: "Textarea in disabled state.",
     type: "registry:component",
     registryDependencies: ["@zbmui/textarea"],
     files: [
@@ -4847,19 +5201,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/textarea/c-textarea-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/textarea/c-textarea-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: [""],
+    categories: ["textarea"],
     meta: undefined,
   },
   "c-textarea-4": {
     name: "c-textarea-4",
-    description: "textarea invalid",
+    description: "Textarea in invalid state.",
     type: "registry:component",
     registryDependencies: ["@zbmui/textarea"],
     files: [
@@ -4870,19 +5226,21 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/textarea/c-textarea-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/textarea/c-textarea-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: [""],
+    categories: ["textarea"],
     meta: undefined,
   },
   "c-textarea-5": {
     name: "c-textarea-5",
-    description: "textarea resize",
+    description: "Textareas with different resize options.",
     type: "registry:component",
     registryDependencies: ["@zbmui/textarea"],
     files: [
@@ -4893,21 +5251,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/textarea/c-textarea-5");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/textarea/c-textarea-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: [""],
+    categories: ["textarea"],
     meta: undefined,
   },
   "c-textarea-6": {
     name: "c-textarea-6",
-    description: "textarea with field",
+    description: "Textarea integrated with Field components.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/textarea"],
+    registryDependencies: ["@zbmui/field", "@zbmui/textarea"],
     files: [
       {
         path: "src/registry/default/components/textarea/c-textarea-6.tsx",
@@ -4916,21 +5276,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/textarea/c-textarea-6");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/textarea/c-textarea-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: [""],
+    categories: ["textarea"],
     meta: undefined,
   },
   "c-tooltip-1": {
     name: "c-tooltip-1",
-    description: "Tooltip Basic",
+    description: "Tooltip on a button hover.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/tooltip"],
+    registryDependencies: ["@zbmui/button", "@zbmui/tooltip"],
     files: [
       {
         path: "src/registry/default/components/tooltip/c-tooltip-1.tsx",
@@ -4939,21 +5301,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tooltip/c-tooltip-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["tooltip"],
     meta: undefined,
   },
   "c-tooltip-2": {
     name: "c-tooltip-2",
-    description: "Tooltip with hidden arrow",
+    description: "Tooltip with a hidden arrow.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/tooltip", "@zbmui/toggle-group"],
+    registryDependencies: ["@zbmui/button", "@zbmui/tooltip"],
     files: [
       {
         path: "src/registry/default/components/tooltip/c-tooltip-2.tsx",
@@ -4962,21 +5326,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tooltip/c-tooltip-2");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["tooltip"],
     meta: undefined,
   },
   "c-tooltip-3": {
     name: "c-tooltip-3",
-    description: "Tooltip with grouped trigger",
+    description: "Grouped tooltips on a toggle group.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/tooltip"],
+    registryDependencies: ["@zbmui/toggle-group", "@zbmui/tooltip"],
     files: [
       {
         path: "src/registry/default/components/tooltip/c-tooltip-3.tsx",
@@ -4985,21 +5351,23 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tooltip/c-tooltip-3");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["tooltip"],
     meta: undefined,
   },
   "c-tooltip-4": {
     name: "c-tooltip-4",
-    description: "Tooltip with animation",
+    description: "Tooltip with content switching across button triggers.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/tooltip"],
+    registryDependencies: ["@zbmui/button", "@zbmui/button-group", "@zbmui/tooltip"],
     files: [
       {
         path: "src/registry/default/components/tooltip/c-tooltip-4.tsx",
@@ -5008,21 +5376,29 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/components/tooltip/c-tooltip-4");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/components/tooltip/c-tooltip-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: ["button"],
+    categories: ["tooltip"],
     meta: undefined,
   },
   "c-react-hook-form-1": {
     name: "c-react-hook-form-1",
-    description: "React Hook Form example",
+    description: "Bug report form using React Hook Form and Zod.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/react-hook-form"],
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/field",
+      "@zbmui/input",
+      "@zbmui/spinner",
+      "@zbmui/textarea",
+    ],
     files: [
       {
         path: "src/registry/default/forms/react-hook-form/c-react-hook-form-1.tsx",
@@ -5031,14 +5407,46 @@ export const Index: Record<string, any> = {
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/default/forms/react-hook-form/c-react-hook-form-1");
-      const exportName =
-        Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object"
-        ) || item.name;
-      return { default: mod.default || mod[exportName] };
+      const mod = await import("@/registry/default/forms/react-hook-form/c-react-hook-form-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
     }),
-    categories: [""],
+    categories: ["react-hook-form"],
+    meta: undefined,
+  },
+  "c-sidebar-1": {
+    name: "c-sidebar-1",
+    description: "Application shell with a sidebar provider, groups, and trigger.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/sidebar"],
+    files: [
+      {
+        path: "src/registry/default/components/sidebar/c-sidebar-1/app-sidebar.tsx",
+        type: "registry:component",
+        target: "",
+      },
+      {
+        path: "src/registry/default/components/sidebar/c-sidebar-1/layout.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/sidebar/c-sidebar-1/app-sidebar");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["sidebar"],
     meta: undefined,
   },
 };
