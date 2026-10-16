@@ -1,0 +1,54 @@
+@theme {
+  --animate-marquee: marquee 40s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  --animate-word-rotate: word-rotate 12s ease-in-out infinite;
+  @keyframes word-rotate {
+    0%,
+    18% {
+      transform: translateY(0);
+    }
+    25%,
+    43% {
+      transform: translateY(-1.15em);
+    }
+    50%,
+    68% {
+      transform: translateY(-2.3em);
+    }
+    75%,
+    93% {
+      transform: translateY(-3.45em);
+    }
+    100% {
+      transform: translateY(-4.6em);
+    }
+  }
+}
+
+/* Subtle radial dot grid that fades out toward the edges (hero background). */
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--foreground) 14%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse 60% 55% at 50% 40%, black 30%, transparent 75%);
+}
+
+/* Feather the left/right edges of marquee rows. */
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-word-rotate {
+    animation: none;
+  }
+}

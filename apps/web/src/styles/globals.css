@@ -4,6 +4,7 @@
 @import "./styles.css";
 @import "./colors.css";
 @import "./docs.css";
+@import "./landing.css";
 
 :root {
   --header-height: 4rem;

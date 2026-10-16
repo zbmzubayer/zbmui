@@ -1,15 +1,43 @@
-// import "@/registry/default/ui/button/button.css";
+import type { Metadata } from "next";
+
+import { siteConfig } from "@/config/site-config";
+import { SiteFooter } from "@/layouts/site-footer";
+
+import { CliSteps } from "@/components/landing/cli-steps";
+import { ComponentMarquee } from "@/components/landing/component-marquee";
+import { Cta } from "@/components/landing/cta";
+import { FeatureBento } from "@/components/landing/feature-bento";
+import { Hero } from "@/components/landing/hero";
+import { StatsBand } from "@/components/landing/stats-band";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+};
 
 export default function Home() {
   return (
-    <main className="container mx-auto">
-      <div className="flex flex-col items-center gap-2 py-8 text-center">
-        <h1 className="text-balance text-4xl xl:text-5xl">Solid foundation for a design system</h1>
-        <p>
-          ZBMUI is a comprehensive component library and design system built with Base UI and
-          Tailwind CSS focusing on accessibility, customization, DX and pixel perfection.
-        </p>
-        <p className="text-muted-foreground">Open Code for everyone.</p>
+    <main>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD is a static build-time constant
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Hero />
+      <ComponentMarquee />
+      <FeatureBento />
+      <CliSteps />
+      <StatsBand />
+      <Cta />
+      <div className="container mx-auto border-t px-4 py-10 sm:px-6">
+        <SiteFooter />
       </div>
     </main>
   );
