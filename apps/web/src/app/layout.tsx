@@ -3,17 +3,17 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { NextThemeProvider } from "@zbmui/ui/providers/next-theme-provider";
 
-import "@/styles/globals.css";
-
 import { SiteHeader } from "@/layouts/site-header";
 
+import "@/styles/globals.css";
+
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <NextThemeProvider>
           <div className="isolate">
             <SiteHeader />

@@ -35,16 +35,8 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  /* Font */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
-  --radius-sm: calc(var(--radius) - 2px);
-  --radius-md: var(--radius);
-  --radius-lg: calc(var(--radius) + 2px);
-  --radius-xl: calc(var(--radius) + 6px);
   /* Opacity */
-  --opacity-hover: var(--opacity-hover);
   --opacity-disabled: 0.5;
 
   /* Info */
@@ -62,6 +54,16 @@
   /* Danger */
   --color-danger: var(--danger);
   --color-danger-foreground: var(--danger-foreground);
+
+  /* Font */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
 
   --animate-skeleton: skeleton 2s -1s infinite linear;
   @keyframes skeleton {
@@ -116,11 +118,6 @@
   /* Danger */
   --danger: var(--danger-500);
   --danger-foreground: oklch(1 0 0);
-  /* Font */
-  --font-geist-sans: "Geist", sans-serif;
-  --font-geist-mono: "Geist Mono", monospace;
-  /* Opacity */
-  --opacity-hover: 0.8;
   /* Radius */
   --radius: 0.5rem;
 }
@@ -170,8 +167,6 @@
   /* Danger */
   --danger: var(--danger-500);
   --danger-foreground: oklch(1 0 0);
-  /* Opacity */
-  --opacity-hover: 0.9;
 }
 
 @layer base {
