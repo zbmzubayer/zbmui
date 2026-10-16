@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-@import "@zbmui/ui/styles/globals.css";
+/* @import "@zbmui/ui/styles/globals.css"; */
+@import "./styles.css";
+@import "./colors.css";
+@import "./docs.css";
 
 :root {
   --header-height: 4rem;
