@@ -2,7 +2,7 @@ import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox
 
 import { cn } from "@/lib/cn";
 
-function CheckboxGroup({
+export function CheckboxGroup({
   className,
   ...props
 }: React.ComponentProps<typeof CheckboxGroupPrimitive>) {
@@ -14,4 +14,4 @@ function CheckboxGroup({
   );
 }
 
-export { CheckboxGroup };
+export { CheckboxGroupPrimitive };

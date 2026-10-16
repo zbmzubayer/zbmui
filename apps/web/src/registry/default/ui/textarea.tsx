@@ -1,6 +1,6 @@
 import { cn } from "@/lib/cn";
 
-function Textarea({
+export function Textarea({
   className,
   size = "default",
   ...props
@@ -22,5 +22,3 @@ function Textarea({
     />
   );
 }
-
-export { Textarea };

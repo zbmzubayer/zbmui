@@ -21,11 +21,11 @@ const inputSizeVariants = cva("", {
 
 type InputSize = VariantProps<typeof inputSizeVariants>["size"] | number;
 
-type InputProps = Omit<React.ComponentProps<typeof InputPrimitive>, "size"> & {
+export type InputProps = Omit<React.ComponentProps<typeof InputPrimitive>, "size"> & {
   size?: InputSize;
 };
 
-function Input({ className, size, ...props }: InputProps) {
+export function Input({ className, size, ...props }: InputProps) {
   return (
     <InputPrimitive
       data-slot="input"
@@ -46,4 +46,4 @@ function Input({ className, size, ...props }: InputProps) {
   );
 }
 
-export { Input, type InputProps };
+export { InputPrimitive };

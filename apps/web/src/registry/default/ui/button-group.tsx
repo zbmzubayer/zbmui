@@ -4,7 +4,7 @@ import { mergeProps, useRender } from "@base-ui/react";
 
 import { cn } from "@/lib/cn";
 
-const buttonGroupVariants = cva(
+export const buttonGroupVariants = cva(
   "inline-flex items-stretch *:focus-visible:relative *:focus-visible:z-10 has-[>[data-slot=button-group]]:gap-2 has-[select[aria-hidden=true]:last-child]:[&>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&>input]:flex-1",
   {
     variants: {
@@ -21,7 +21,7 @@ const buttonGroupVariants = cva(
   }
 );
 
-function ButtonGroup({
+export function ButtonGroup({
   className,
   orientation,
   render,
@@ -38,5 +38,3 @@ function ButtonGroup({
     props: mergeProps<"div">(defaultProps, props),
   });
 }
-
-export { ButtonGroup, buttonGroupVariants };

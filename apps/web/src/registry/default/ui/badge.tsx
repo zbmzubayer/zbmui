@@ -5,7 +5,7 @@ import { useRender } from "@base-ui/react/use-render";
 
 import { cn } from "@/lib/cn";
 
-const badgeVariants = cva(
+export const badgeVariants = cva(
   "inline-flex shrink-0 items-center justify-center gap-1 whitespace-nowrap rounded-full border border-transparent font-medium outline-none transition-[color,box-shadow] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-64 [&_svg:not([class*='opacity-'])]:opacity-80 [&_svg:not([class*='size-'])]:size-3.5 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     defaultVariants: {
@@ -38,7 +38,7 @@ interface BadgeProps extends useRender.ComponentProps<"span"> {
   size?: VariantProps<typeof badgeVariants>["size"];
 }
 
-function Badge({ className, variant, size, render, ...props }: BadgeProps) {
+export function Badge({ className, variant, size, render, ...props }: BadgeProps) {
   const defaultProps = {
     "data-slot": "badge",
     className: cn(badgeVariants({ className, size, variant })),
@@ -50,5 +50,3 @@ function Badge({ className, variant, size, render, ...props }: BadgeProps) {
     render,
   });
 }
-
-export { Badge, badgeVariants };

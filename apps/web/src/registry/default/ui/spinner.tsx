@@ -2,7 +2,7 @@ import { IconLoader2 } from "@tabler/icons-react";
 
 import { cn } from "@/lib/cn";
 
-function Spinner({ className, ...props }: React.ComponentProps<typeof IconLoader2>) {
+export function Spinner({ className, ...props }: React.ComponentProps<typeof IconLoader2>) {
   return (
     <IconLoader2
       aria-label="Loading"
@@ -12,5 +12,3 @@ function Spinner({ className, ...props }: React.ComponentProps<typeof IconLoader
     />
   );
 }
-
-export { Spinner };

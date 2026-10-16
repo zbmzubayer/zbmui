@@ -3,7 +3,7 @@ import { IconCaretDownFilled, IconCaretRightFilled } from "@tabler/icons-react";
 
 import { cn } from "@/lib/cn";
 
-function NavigationMenu({
+export function NavigationMenu({
   children,
   className,
   showArrow = true,
@@ -41,7 +41,7 @@ function NavigationMenu({
   );
 }
 
-function NavigationMenuList({
+export function NavigationMenuList({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
@@ -54,7 +54,7 @@ function NavigationMenuList({
   );
 }
 
-function NavigationMenuItem({
+export function NavigationMenuItem({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Item>) {
@@ -67,7 +67,7 @@ function NavigationMenuItem({
   );
 }
 
-function NavigationMenuTrigger({
+export function NavigationMenuTrigger({
   children,
   className,
   ...props
@@ -89,7 +89,7 @@ function NavigationMenuTrigger({
   );
 }
 
-function NavigationMenuIcon({
+export function NavigationMenuIcon({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Icon>) {
@@ -102,7 +102,7 @@ function NavigationMenuIcon({
   );
 }
 
-function NavigationMenuContent({
+export function NavigationMenuContent({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Content>) {
@@ -118,11 +118,13 @@ function NavigationMenuContent({
   );
 }
 
-function NavigationMenuPortal(props: React.ComponentProps<typeof NavigationMenuPrimitive.Portal>) {
+export function NavigationMenuPortal(
+  props: React.ComponentProps<typeof NavigationMenuPrimitive.Portal>
+) {
   return <NavigationMenuPrimitive.Portal data-slot="navigation-menu-portal" {...props} />;
 }
 
-function NavigationMenuPositioner({
+export function NavigationMenuPositioner({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Positioner>) {
@@ -139,7 +141,7 @@ function NavigationMenuPositioner({
   );
 }
 
-function NavigationMenuViewport({
+export function NavigationMenuViewport({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
@@ -152,7 +154,7 @@ function NavigationMenuViewport({
   );
 }
 
-function NavigationMenuPopup({
+export function NavigationMenuPopup({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Popup>) {
@@ -168,7 +170,7 @@ function NavigationMenuPopup({
   );
 }
 
-function NavigationMenuArrow({
+export function NavigationMenuArrow({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Arrow>) {
@@ -184,7 +186,7 @@ function NavigationMenuArrow({
   );
 }
 
-function NavigationMenuLink({
+export function NavigationMenuLink({
   className,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
@@ -200,7 +202,7 @@ function NavigationMenuLink({
   );
 }
 
-function NavigationSubMenu({
+export function NavigationSubMenu({
   children,
   positionerProps = {
     align: "end",
@@ -232,7 +234,7 @@ function NavigationSubMenu({
   );
 }
 
-function NavigationSubMenuTrigger({
+export function NavigationSubMenuTrigger({
   children,
   className,
   ...props
@@ -254,24 +256,10 @@ function NavigationSubMenuTrigger({
   );
 }
 
-function NavigationInlineSubMenu(props: React.ComponentProps<typeof NavigationMenuPrimitive.Root>) {
+export function NavigationInlineSubMenu(
+  props: React.ComponentProps<typeof NavigationMenuPrimitive.Root>
+) {
   return <NavigationMenuPrimitive.Root data-slot="navigation-inline-sub-menu" {...props} />;
 }
 
-export {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuIcon,
-  NavigationMenuContent,
-  NavigationMenuPortal,
-  NavigationMenuPositioner,
-  NavigationMenuViewport,
-  NavigationMenuPopup,
-  NavigationMenuArrow,
-  NavigationMenuLink,
-  NavigationSubMenu,
-  NavigationSubMenuTrigger,
-  NavigationInlineSubMenu,
-};
+export { NavigationMenuPrimitive };

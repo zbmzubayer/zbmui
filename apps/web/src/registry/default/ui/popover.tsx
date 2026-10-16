@@ -2,19 +2,19 @@ import { Popover as PopoverPrimitive } from "@base-ui/react/popover";
 
 import { cn } from "@/lib/cn";
 
-const popoverCreateHandle = PopoverPrimitive.createHandle;
+export const popoverCreateHandle = PopoverPrimitive.createHandle;
 
-const Popover = PopoverPrimitive.Root;
+export const Popover = PopoverPrimitive.Root;
 
-function PopoverTrigger(props: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {
+export function PopoverTrigger(props: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {
   return <PopoverPrimitive.Trigger data-slot="popover-trigger" {...props} />;
 }
 
-function PopoverPortal(props: React.ComponentProps<typeof PopoverPrimitive.Portal>) {
+export function PopoverPortal(props: React.ComponentProps<typeof PopoverPrimitive.Portal>) {
   return <PopoverPrimitive.Portal data-slot="popover-portal" {...props} />;
 }
 
-function PopoverPositioner({
+export function PopoverPositioner({
   className,
   sideOffset = 4,
   ...props
@@ -32,7 +32,7 @@ function PopoverPositioner({
   );
 }
 
-function PopoverViewport({
+export function PopoverViewport({
   className,
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Viewport>) {
@@ -57,7 +57,7 @@ function PopoverViewport({
   );
 }
 
-function PopoverPopup({
+export function PopoverPopup({
   children,
   className,
   showArrow = false,
@@ -92,11 +92,11 @@ function PopoverPopup({
   );
 }
 
-function PopoverClose(props: React.ComponentProps<typeof PopoverPrimitive.Close>) {
+export function PopoverClose(props: React.ComponentProps<typeof PopoverPrimitive.Close>) {
   return <PopoverPrimitive.Close data-slot="popover-close" {...props} />;
 }
 
-function PopoverTitle({
+export function PopoverTitle({
   className,
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Title>) {
@@ -109,7 +109,7 @@ function PopoverTitle({
   );
 }
 
-function PopoverDescription({
+export function PopoverDescription({
   className,
   ...props
 }: React.ComponentProps<typeof PopoverPrimitive.Description>) {
@@ -122,7 +122,10 @@ function PopoverDescription({
   );
 }
 
-function PopoverArrow({ children, ...props }: React.ComponentProps<typeof PopoverPrimitive.Arrow>) {
+export function PopoverArrow({
+  children,
+  ...props
+}: React.ComponentProps<typeof PopoverPrimitive.Arrow>) {
   return (
     <PopoverPrimitive.Arrow
       data-slot="popover-arrow"
@@ -151,17 +154,4 @@ function ArrowSvg(props: React.ComponentProps<"svg">) {
   );
 }
 
-export {
-  PopoverPrimitive,
-  Popover,
-  PopoverTrigger,
-  PopoverPortal,
-  PopoverPositioner,
-  PopoverViewport,
-  PopoverPopup,
-  PopoverClose,
-  PopoverTitle,
-  PopoverDescription,
-  PopoverArrow,
-  popoverCreateHandle,
-};
+export { PopoverPrimitive };

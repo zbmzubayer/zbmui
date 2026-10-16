@@ -22,7 +22,7 @@ const alertVariants = cva(
   }
 );
 
-function Alert({
+export function Alert({
   className,
   variant,
   ...props
@@ -37,7 +37,7 @@ function Alert({
   );
 }
 
-function AlertIndicator({ className, ...props }: React.ComponentProps<"div">) {
+export function AlertIndicator({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="alert-indicator"
@@ -50,7 +50,7 @@ function AlertIndicator({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function AlertContent({ className, ...props }: React.ComponentProps<"div">) {
+export function AlertContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="alert-content"
@@ -60,11 +60,11 @@ function AlertContent({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
+export function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
   return <div data-slot="alert-title" className={cn("font-medium", className)} {...props} />;
 }
 
-function AlertDescription({ className, ...props }: React.ComponentProps<"div">) {
+export function AlertDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="alert-description"
@@ -74,7 +74,7 @@ function AlertDescription({ className, ...props }: React.ComponentProps<"div">) 
   );
 }
 
-function AlertAction({ className, ...props }: React.ComponentProps<"div">) {
+export function AlertAction({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="alert-action"
@@ -87,7 +87,7 @@ function AlertAction({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function AlertClose({ className, ...props }: React.ComponentProps<"button">) {
+export function AlertClose({ className, ...props }: React.ComponentProps<"button">) {
   return (
     <button
       data-slot="alert-close"
@@ -99,13 +99,3 @@ function AlertClose({ className, ...props }: React.ComponentProps<"button">) {
     />
   );
 }
-
-export {
-  Alert,
-  AlertIndicator,
-  AlertContent,
-  AlertTitle,
-  AlertDescription,
-  AlertAction,
-  AlertClose,
-};

@@ -3,13 +3,13 @@ import { IconChevronDown } from "@tabler/icons-react";
 
 import { cn } from "@/lib/cn";
 
-function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
+export function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
   return (
     <AccordionPrimitive.Root data-slot="accordion" className={cn("w-full", className)} {...props} />
   );
 }
 
-function AccordionItem({ className, ...props }: AccordionPrimitive.Item.Props) {
+export function AccordionItem({ className, ...props }: AccordionPrimitive.Item.Props) {
   return (
     <AccordionPrimitive.Item
       data-slot="accordion-item"
@@ -19,7 +19,11 @@ function AccordionItem({ className, ...props }: AccordionPrimitive.Item.Props) {
   );
 }
 
-function AccordionTrigger({ className, children, ...props }: AccordionPrimitive.Trigger.Props) {
+export function AccordionTrigger({
+  className,
+  children,
+  ...props
+}: AccordionPrimitive.Trigger.Props) {
   return (
     <AccordionPrimitive.Header data-slot="accordion-header" className="flex">
       <AccordionPrimitive.Trigger
@@ -40,7 +44,7 @@ function AccordionTrigger({ className, children, ...props }: AccordionPrimitive.
   );
 }
 
-function AccordionPanel({ className, children, ...props }: AccordionPrimitive.Panel.Props) {
+export function AccordionPanel({ className, children, ...props }: AccordionPrimitive.Panel.Props) {
   return (
     <AccordionPrimitive.Panel
       data-slot="accordion-panel"
@@ -54,10 +58,4 @@ function AccordionPanel({ className, children, ...props }: AccordionPrimitive.Pa
   );
 }
 
-export {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionPanel,
-  AccordionPanel as AccordionContent,
-};
+export { AccordionPrimitive };

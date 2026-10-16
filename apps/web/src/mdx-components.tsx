@@ -18,9 +18,10 @@ import { Accordion, AccordionPanel, AccordionTrigger } from "@/registry/default/
 import { Button } from "@/registry/default/ui/button";
 import { Kbd } from "@/registry/default/ui/kbd";
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@/registry/default/ui/tabs";
 import {
   Tooltip,
-  TooltipContent,
+  TooltipPopup,
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/default/ui/tooltip";
@@ -28,6 +29,7 @@ import {
 import { ApiReferenceAccordion } from "@/components/api-reference-accordion";
 import { CodeBlockCommand } from "@/components/code-block-command";
 import { CodeCollapsible } from "@/components/code-collapsible";
+import { CodeTabs } from "@/components/code-tabs";
 import { ComponentPreview } from "@/components/component-preview";
 import { ComponentSource } from "@/components/component-source";
 import { getIconForLanguageExtension } from "@/components/icons";
@@ -138,9 +140,13 @@ export const mdxComponents = {
   Button,
   Kbd,
   NumberInput,
+  Tabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
   Tooltip,
   TooltipTrigger,
-  TooltipContent,
+  TooltipPopup,
   TooltipProvider,
   Card,
   CardHeader,
@@ -153,6 +159,7 @@ export const mdxComponents = {
   // CodeTabs,
   ComponentPreview,
   ComponentSource,
+  CodeTabs,
   code: ({
     className,
     __raw__,

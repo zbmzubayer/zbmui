@@ -8,7 +8,12 @@ interface NumberFieldProps extends React.ComponentProps<typeof NumberFieldPrimit
   size?: "xs" | "sm" | "default" | "lg" | "xl";
 }
 
-function NumberField({ className, placeholder, size = "default", ...props }: NumberFieldProps) {
+export function NumberField({
+  className,
+  placeholder,
+  size = "default",
+  ...props
+}: NumberFieldProps) {
   return (
     <NumberFieldPrimitive.Root
       className={cn("flex w-full items-center gap-3", className)}
@@ -47,4 +52,4 @@ function NumberField({ className, placeholder, size = "default", ...props }: Num
   );
 }
 
-export { NumberField };
+export { NumberFieldPrimitive };

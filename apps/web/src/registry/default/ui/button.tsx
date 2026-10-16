@@ -4,7 +4,7 @@ import { Button as ButtonPrimitive } from "@base-ui/react/button";
 
 import { cn } from "@/lib/cn";
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
   [
     "inline-flex shrink-0 cursor-pointer select-none items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium text-sm outline-none transition-all duration-200",
     "focus-visible:ring-3 focus-visible:ring-ring",
@@ -53,10 +53,10 @@ const buttonVariants = cva(
   }
 );
 
-type ButtonVariantProps = VariantProps<typeof buttonVariants>;
-type ButtonProps = React.ComponentProps<typeof ButtonPrimitive> & ButtonVariantProps;
+export type ButtonVariantProps = VariantProps<typeof buttonVariants>;
+export type ButtonProps = React.ComponentProps<typeof ButtonPrimitive> & ButtonVariantProps;
 
-function Button({ className, variant, size, ...props }: ButtonProps) {
+export function Button({ className, variant, size, ...props }: ButtonProps) {
   return (
     <ButtonPrimitive
       data-slot="button"
@@ -66,6 +66,4 @@ function Button({ className, variant, size, ...props }: ButtonProps) {
   );
 }
 
-export { Button, buttonVariants };
-
-export type { ButtonProps, ButtonVariantProps };
+export { ButtonPrimitive };

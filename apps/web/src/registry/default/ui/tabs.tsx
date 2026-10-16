@@ -4,7 +4,7 @@ import { cn } from "@/lib/cn";
 
 type TabsVariant = "default" | "underline";
 
-function Tabs({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Root>) {
+export function Tabs({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Root>) {
   return (
     <TabsPrimitive.Root
       data-slot="tabs"
@@ -14,7 +14,7 @@ function Tabs({ className, ...props }: React.ComponentProps<typeof TabsPrimitive
   );
 }
 
-function TabsList({
+export function TabsList({
   variant = "default",
   className,
   children,
@@ -37,19 +37,19 @@ function TabsList({
     >
       {children}
       <TabsPrimitive.Indicator
+        data-slot="tab-indicator"
         className={cn(
           "absolute bottom-0 left-0 h-(--active-tab-height) w-(--active-tab-width) translate-x-(--active-tab-left) -translate-y-(--active-tab-bottom) transition-[width,translate] duration-200 ease-in-out",
           variant === "underline"
             ? "z-10 bg-primary data-[orientation=horizontal]:h-0.5 data-[orientation=vertical]:w-0.5 data-[orientation=vertical]:-translate-x-px data-[orientation=horizontal]:translate-y-px"
             : "-z-1 rounded-md bg-background shadow-sm/5 dark:bg-input"
         )}
-        data-slot="tab-indicator"
       />
     </TabsPrimitive.List>
   );
 }
 
-function TabsTab({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Tab>) {
+export function TabsTab({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Tab>) {
   return (
     <TabsPrimitive.Tab
       data-slot="tabs-tab"
@@ -62,7 +62,10 @@ function TabsTab({ className, ...props }: React.ComponentProps<typeof TabsPrimit
   );
 }
 
-function TabsPanel({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Panel>) {
+export function TabsPanel({
+  className,
+  ...props
+}: React.ComponentProps<typeof TabsPrimitive.Panel>) {
   return (
     <TabsPrimitive.Panel
       data-slot="tabs-panel"
@@ -72,4 +75,4 @@ function TabsPanel({ className, ...props }: React.ComponentProps<typeof TabsPrim
   );
 }
 
-export { Tabs, TabsList, TabsTab, TabsTab as TabsTrigger, TabsPanel, TabsPanel as TabsContent };
+export { TabsPrimitive };

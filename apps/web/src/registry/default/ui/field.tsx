@@ -2,7 +2,7 @@ import { Field as FieldPrimitive } from "@base-ui/react/field";
 
 import { cn } from "@/lib/cn";
 
-function Field({ className, ...props }: React.ComponentProps<typeof FieldPrimitive.Root>) {
+export function Field({ className, ...props }: React.ComponentProps<typeof FieldPrimitive.Root>) {
   return (
     <FieldPrimitive.Root
       data-slot="field"
@@ -12,7 +12,7 @@ function Field({ className, ...props }: React.ComponentProps<typeof FieldPrimiti
   );
 }
 
-function FieldLabel({
+export function FieldLabel({
   children,
   className,
   showRequiredIndicator,
@@ -37,7 +37,7 @@ function FieldLabel({
   );
 }
 
-function FieldDescription({
+export function FieldDescription({
   className,
   ...props
 }: React.ComponentProps<typeof FieldPrimitive.Description>) {
@@ -50,7 +50,10 @@ function FieldDescription({
   );
 }
 
-function FieldError({ className, ...props }: React.ComponentProps<typeof FieldPrimitive.Error>) {
+export function FieldError({
+  className,
+  ...props
+}: React.ComponentProps<typeof FieldPrimitive.Error>) {
   return (
     <FieldPrimitive.Error
       data-slot="field-error"
@@ -60,11 +63,11 @@ function FieldError({ className, ...props }: React.ComponentProps<typeof FieldPr
   );
 }
 
-function FieldControl(props: React.ComponentProps<typeof FieldPrimitive.Control>) {
+export function FieldControl(props: React.ComponentProps<typeof FieldPrimitive.Control>) {
   return <FieldPrimitive.Control data-slot="field-control" {...props} />;
 }
-function FieldValidity(props: React.ComponentProps<typeof FieldPrimitive.Validity>) {
+export function FieldValidity(props: React.ComponentProps<typeof FieldPrimitive.Validity>) {
   return <FieldPrimitive.Validity data-slot="field-validity" {...props} />;
 }
 
-export { Field, FieldLabel, FieldDescription, FieldError, FieldControl, FieldValidity };
+export { FieldPrimitive };

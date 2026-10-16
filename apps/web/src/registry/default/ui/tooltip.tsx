@@ -77,4 +77,4 @@ export function TooltipPopup({
   );
 }
 
-export { TooltipPopup as TooltipContent, TooltipPrimitive };
+export { TooltipPrimitive };

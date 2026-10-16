@@ -7,7 +7,7 @@ import { Input as InputPrimitive } from "@base-ui/react/input";
 import { cn } from "@/lib/cn";
 import { Button } from "@/registry/default/ui/button";
 
-function InputGroup({
+export function InputGroup({
   className,
   size = "default",
   ...props
@@ -56,7 +56,7 @@ const inputGroupAddonVariants = cva(
   }
 );
 
-function InputGroupAddon({
+export function InputGroupAddon({
   className,
   align = "inline-start",
   ...props
@@ -86,7 +86,7 @@ function InputGroupAddon({
   );
 }
 
-function InputGroupButton({
+export function InputGroupButton({
   className,
   type = "button",
   variant = "ghost",
@@ -110,7 +110,7 @@ function InputGroupButton({
   );
 }
 
-function InputGroupText({ className, ...props }: React.ComponentProps<"span">) {
+export function InputGroupText({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
@@ -122,7 +122,10 @@ function InputGroupText({ className, ...props }: React.ComponentProps<"span">) {
   );
 }
 
-function InputGroupInput({ className, ...props }: React.ComponentProps<typeof InputPrimitive>) {
+export function InputGroupInput({
+  className,
+  ...props
+}: React.ComponentProps<typeof InputPrimitive>) {
   return (
     <InputPrimitive
       data-slot="input-group-input"
@@ -135,7 +138,7 @@ function InputGroupInput({ className, ...props }: React.ComponentProps<typeof In
   );
 }
 
-function InputGroupTextarea({ className, ...props }: React.ComponentProps<"textarea">) {
+export function InputGroupTextarea({ className, ...props }: React.ComponentProps<"textarea">) {
   return (
     <textarea
       data-slot="input-group-textarea"
@@ -149,11 +152,4 @@ function InputGroupTextarea({ className, ...props }: React.ComponentProps<"texta
   );
 }
 
-export {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupButton,
-  InputGroupText,
-  InputGroupInput,
-  InputGroupTextarea,
-};
+export { InputPrimitive };

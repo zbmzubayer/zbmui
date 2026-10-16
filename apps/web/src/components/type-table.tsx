@@ -9,7 +9,7 @@ import { cn } from "@/lib/cn";
 import { highlightAPIRef } from "@/lib/highlight-code";
 import {
   Collapsible,
-  CollapsibleContent,
+  CollapsiblePanel,
   CollapsibleTrigger,
 } from "@/registry/default/ui/collapsible";
 
@@ -138,7 +138,7 @@ async function Item({
         )}
         <IconChevronDown className="absolute end-2 size-4 text-muted-foreground transition-transform group-data-panel-open:rotate-180" />
       </CollapsibleTrigger>
-      <CollapsibleContent>
+      <CollapsiblePanel>
         <div className="fd-scroll-container grid grid-cols-[1fr_3fr] gap-y-4 overflow-auto border-t p-3">
           <div className="col-span-full empty:hidden">{description}</div>
           <p className={cn(fieldVariants())}>Type</p>
@@ -178,7 +178,7 @@ async function Item({
             </>
           )}
         </div>
-      </CollapsibleContent>
+      </CollapsiblePanel>
     </Collapsible>
   );
 }

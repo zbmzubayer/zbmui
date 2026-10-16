@@ -2,7 +2,7 @@ import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar";
 
 import { cn } from "@/lib/cn";
 
-function Avatar({
+export function Avatar({
   className,
   size = "default",
   ...props
@@ -22,7 +22,7 @@ function Avatar({
   );
 }
 
-function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
+export function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
   return (
     <AvatarPrimitive.Image
       data-slot="avatar-image"
@@ -32,7 +32,7 @@ function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
   );
 }
 
-function AvatarFallback({ className, ...props }: AvatarPrimitive.Fallback.Props) {
+export function AvatarFallback({ className, ...props }: AvatarPrimitive.Fallback.Props) {
   return (
     <AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
@@ -45,7 +45,7 @@ function AvatarFallback({ className, ...props }: AvatarPrimitive.Fallback.Props)
   );
 }
 
-function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
+export function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       data-slot="avatar-badge"
@@ -61,7 +61,7 @@ function AvatarBadge({ className, ...props }: React.ComponentProps<"span">) {
   );
 }
 
-function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
+export function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="avatar-group"
@@ -74,7 +74,7 @@ function AvatarGroup({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function AvatarGroupCount({ className, ...props }: React.ComponentProps<"div">) {
+export function AvatarGroupCount({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="avatar-group-count"
@@ -87,4 +87,4 @@ function AvatarGroupCount({ className, ...props }: React.ComponentProps<"div">) 
   );
 }
 
-export { Avatar, AvatarImage, AvatarFallback, AvatarGroup, AvatarGroupCount, AvatarBadge };
+export { AvatarPrimitive };

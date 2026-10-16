@@ -2,23 +2,27 @@ import { AlertDialog as AlertDialogPrimitive } from "@base-ui/react/alert-dialog
 
 import { cn } from "@/lib/cn";
 
-const alertDialogCreateHandle = AlertDialogPrimitive.createHandle;
+export const alertDialogCreateHandle = AlertDialogPrimitive.createHandle;
 
-function AlertDialog({ ...props }: React.ComponentProps<typeof AlertDialogPrimitive.Root>) {
+export function AlertDialog({ ...props }: React.ComponentProps<typeof AlertDialogPrimitive.Root>) {
   return <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />;
 }
 
-function AlertDialogPortal({ ...props }: React.ComponentProps<typeof AlertDialogPrimitive.Portal>) {
+export function AlertDialogPortal({
+  ...props
+}: React.ComponentProps<typeof AlertDialogPrimitive.Portal>) {
   return <AlertDialogPrimitive.Portal data-slot="alert-dialog-portal" {...props} />;
 }
 
-function AlertDialogTrigger(props: React.ComponentProps<typeof AlertDialogPrimitive.Trigger>) {
+export function AlertDialogTrigger(
+  props: React.ComponentProps<typeof AlertDialogPrimitive.Trigger>
+) {
   return <AlertDialogPrimitive.Trigger data-slot="alert-dialog-trigger" {...props} />;
 }
 
 type AlertDialogBackdropVariant = "opaque" | "blur" | "transparent";
 
-function AlertDialogBackdrop({
+export function AlertDialogBackdrop({
   className,
   variant = "blur",
   ...props
@@ -51,7 +55,7 @@ type AlertDialogPopupPosition =
   | "top-center"
   | "bottom-center";
 
-function AlertDialogViewport({
+export function AlertDialogViewport({
   className,
   position = "center",
   ...props
@@ -81,7 +85,7 @@ function AlertDialogViewport({
   );
 }
 
-function AlertDialogPopup({
+export function AlertDialogPopup({
   className,
   bottomStickyOnMobile = false,
   showNestedParent = false,
@@ -121,7 +125,7 @@ function AlertDialogPopup({
   );
 }
 
-function AlertDialogHeader({ className, ...props }: React.ComponentProps<"div">) {
+export function AlertDialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="alert-dialog-header"
@@ -131,7 +135,7 @@ function AlertDialogHeader({ className, ...props }: React.ComponentProps<"div">)
   );
 }
 
-function AlertDialogTitle({
+export function AlertDialogTitle({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {
@@ -144,7 +148,7 @@ function AlertDialogTitle({
   );
 }
 
-function AlertDialogDescription({
+export function AlertDialogDescription({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Description>) {
@@ -157,7 +161,7 @@ function AlertDialogDescription({
   );
 }
 
-function AlertDialogFooter({
+export function AlertDialogFooter({
   className,
   variant = "default",
   ...props
@@ -176,23 +180,8 @@ function AlertDialogFooter({
   );
 }
 
-function AlertDialogClose(props: React.ComponentProps<typeof AlertDialogPrimitive.Close>) {
+export function AlertDialogClose(props: React.ComponentProps<typeof AlertDialogPrimitive.Close>) {
   return <AlertDialogPrimitive.Close data-slot="alert-dialog-close" {...props} />;
 }
 
-export {
-  alertDialogCreateHandle,
-  AlertDialog,
-  AlertDialogPortal,
-  AlertDialogBackdrop,
-  AlertDialogBackdrop as AlertDialogOverlay,
-  AlertDialogTrigger,
-  AlertDialogPopup,
-  AlertDialogPopup as AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogFooter,
-  AlertDialogTitle,
-  AlertDialogDescription,
-  AlertDialogClose,
-  AlertDialogViewport,
-};
+export { AlertDialogPrimitive };

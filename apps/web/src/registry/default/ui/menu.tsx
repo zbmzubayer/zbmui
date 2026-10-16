@@ -4,21 +4,21 @@ import { IconChevronRight } from "@tabler/icons-react";
 import { cn } from "@/lib/cn";
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
 
-const menuCreateHandle = MenuPrimitive.createHandle;
+export const menuCreateHandle = MenuPrimitive.createHandle;
 
-function Menu({ ...props }: React.ComponentProps<typeof MenuPrimitive.Root>) {
+export function Menu({ ...props }: React.ComponentProps<typeof MenuPrimitive.Root>) {
   return <MenuPrimitive.Root data-slot="menu" {...props} />;
 }
 
-function MenuPortal(props: React.ComponentProps<typeof MenuPrimitive.Portal>) {
+export function MenuPortal(props: React.ComponentProps<typeof MenuPrimitive.Portal>) {
   return <MenuPrimitive.Portal data-slot="menu-portal" {...props} />;
 }
 
-function MenuTrigger(props: React.ComponentProps<typeof MenuPrimitive.Trigger>) {
+export function MenuTrigger(props: React.ComponentProps<typeof MenuPrimitive.Trigger>) {
   return <MenuPrimitive.Trigger data-slot="menu-trigger" {...props} />;
 }
 
-function MenuPositioner({
+export function MenuPositioner({
   className,
   align = "center",
   side = "bottom",
@@ -37,7 +37,7 @@ function MenuPositioner({
   );
 }
 
-function MenuPopup({
+export function MenuPopup({
   children,
   className,
   scrollArea = false,
@@ -73,7 +73,7 @@ function MenuPopup({
   );
 }
 
-function MenuItem({
+export function MenuItem({
   className,
   inset,
   variant = "default",
@@ -96,7 +96,7 @@ function MenuItem({
   );
 }
 
-function MenuCheckboxItem({
+export function MenuCheckboxItem({
   className,
   children,
   checked,
@@ -174,11 +174,11 @@ function MenuCheckboxItem({
   );
 }
 
-function MenuRadioGroup(props: React.ComponentProps<typeof MenuPrimitive.RadioGroup>) {
+export function MenuRadioGroup(props: React.ComponentProps<typeof MenuPrimitive.RadioGroup>) {
   return <MenuPrimitive.RadioGroup data-slot="menu-radio-group" {...props} />;
 }
 
-function MenuRadioItem({
+export function MenuRadioItem({
   className,
   children,
   indicatorPosition = "end",
@@ -222,11 +222,11 @@ function MenuRadioItem({
     </MenuPrimitive.RadioItem>
   );
 }
-function MenuGroup(props: React.ComponentProps<typeof MenuPrimitive.Group>) {
+export function MenuGroup(props: React.ComponentProps<typeof MenuPrimitive.Group>) {
   return <MenuPrimitive.Group data-slot="menu-group" {...props} />;
 }
 
-function MenuGroupLabel({
+export function MenuGroupLabel({
   className,
   inset,
   ...props
@@ -246,7 +246,7 @@ function MenuGroupLabel({
   );
 }
 
-function MenuSeparator({
+export function MenuSeparator({
   className,
   ...props
 }: React.ComponentProps<typeof MenuPrimitive.Separator>) {
@@ -259,7 +259,7 @@ function MenuSeparator({
   );
 }
 
-function MenuShortcut({ className, ...props }: React.ComponentProps<"kbd">) {
+export function MenuShortcut({ className, ...props }: React.ComponentProps<"kbd">) {
   return (
     <kbd
       data-slot="menu-shortcut"
@@ -272,11 +272,11 @@ function MenuShortcut({ className, ...props }: React.ComponentProps<"kbd">) {
   );
 }
 
-function MenuSub(props: React.ComponentProps<typeof MenuPrimitive.SubmenuRoot>) {
+export function MenuSub(props: React.ComponentProps<typeof MenuPrimitive.SubmenuRoot>) {
   return <MenuPrimitive.SubmenuRoot data-slot="menu-sub" {...props} />;
 }
 
-function MenuSubTrigger({
+export function MenuSubTrigger({
   className,
   inset,
   children,
@@ -300,7 +300,7 @@ function MenuSubTrigger({
   );
 }
 
-function MenuSubPopup({
+export function MenuSubPopup({
   className,
   positionerProps: {
     align = "start",
@@ -326,39 +326,4 @@ function MenuSubPopup({
   );
 }
 
-export {
-  menuCreateHandle,
-  menuCreateHandle as DropdownMenuCreateHandle,
-  Menu,
-  Menu as DropdownMenu,
-  MenuPortal,
-  MenuPortal as DropdownMenuPortal,
-  MenuTrigger,
-  MenuTrigger as DropdownMenuTrigger,
-  MenuPositioner,
-  MenuPositioner as DropdownMenuPositioner,
-  MenuPopup,
-  MenuPopup as DropdownMenuContent,
-  MenuGroup,
-  MenuGroup as DropdownMenuGroup,
-  MenuItem,
-  MenuItem as DropdownMenuItem,
-  MenuCheckboxItem,
-  MenuCheckboxItem as DropdownMenuCheckboxItem,
-  MenuRadioGroup,
-  MenuRadioGroup as DropdownMenuRadioGroup,
-  MenuRadioItem,
-  MenuRadioItem as DropdownMenuRadioItem,
-  MenuGroupLabel,
-  MenuGroupLabel as DropdownMenuLabel,
-  MenuSeparator,
-  MenuSeparator as DropdownMenuSeparator,
-  MenuShortcut,
-  MenuShortcut as DropdownMenuShortcut,
-  MenuSub,
-  MenuSub as DropdownMenuSub,
-  MenuSubTrigger,
-  MenuSubTrigger as DropdownMenuSubTrigger,
-  MenuSubPopup,
-  MenuSubPopup as DropdownMenuSubContent,
-};
+export { MenuPrimitive };
