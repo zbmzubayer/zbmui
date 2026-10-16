@@ -65,6 +65,7 @@ export async function highlightCode(
       dark: "github-dark",
       light: "github-light",
     },
+    defaultColor: false,
     transformers: [
       {
         code(node) {
