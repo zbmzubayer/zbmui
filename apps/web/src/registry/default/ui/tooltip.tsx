@@ -22,8 +22,7 @@ export function TooltipPositioner({
       data-slot="tooltip-positioner"
       sideOffset={sideOffset}
       className={cn(
-        (className =
-          "z-50 h-(--positioner-height) w-(--positioner-width) max-w-(--available-width) transition-[top,left,right,bottom,transform] duration-[0.35s] ease-[cubic-bezier(0.22,1,0.36,1)] data-instant:transition-none"),
+        "z-50 h-(--positioner-height) w-(--positioner-width) max-w-(--available-width) transition-[top,left,right,bottom,transform] duration-[0.35s] ease-[cubic-bezier(0.22,1,0.36,1)] data-instant:transition-none",
         className
       )}
       {...props}
