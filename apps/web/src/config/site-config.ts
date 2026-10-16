@@ -1,6 +1,8 @@
 export const siteConfig = {
   name: "ZBM UI",
-  description: "A UI component library built with React, Next.js and Tailwind CSS.",
+  url: "https://ui.zubayer.dev",
+  description:
+    "A comprehensive, accessible component library and design system built with Base UI and Tailwind CSS. Copy the code, own the components.",
   navItems: [
     { label: "Docs", href: "/docs" },
     { label: "Blocks", href: "/blocks" },

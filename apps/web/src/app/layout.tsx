@@ -17,9 +17,43 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { siteConfig } from "@/config/site-config";
+
 export const metadata: Metadata = {
-  title: "ZBM UI - A UI component library",
-  description: "A UI component library built with React, Next.js and Tailwind CSS.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} — Solid foundation for a design system`,
+    template: `%s — ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  keywords: [
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Base UI",
+    "component library",
+    "design system",
+    "UI components",
+    "accessible components",
+    "copy-paste components",
+    "ZBM UI",
+  ],
+  authors: [{ name: "ZBM", url: "https://zubayer.dev" }],
+  creator: "ZBM",
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — Solid foundation for a design system`,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — Solid foundation for a design system`,
+    description: siteConfig.description,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
