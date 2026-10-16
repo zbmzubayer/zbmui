@@ -1,0 +1,54 @@
+{
+  "name": "zbmui",
+  "version": "0.1.0",
+  "description": "CLI for installing and managing ZBM UI components",
+  "homepage": "https://ui.zubayer.dev",
+  "author": {
+    "name": "ZBM",
+    "url": "https://zubayer.dev"
+  },
+  "keywords": [
+    "zbmui",
+    "tailwindcss",
+    "base-ui",
+    "ui",
+    "components"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "zbmui": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "check-types": "tsc --noEmit",
+    "lint": "biome check src --fix",
+    "test": "node --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.3",
+    "commander": "^15.0.0",
+    "execa": "^10.1.0",
+    "get-tsconfig": "^4.14.3",
+    "ora": "^9.4.1",
+    "picocolors": "^1.1.1",
+    "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@zbmui/registry": "workspace:*",
+    "@zbmui/typescript-config": "workspace:*",
+    "tsdown": "^0.23.1",
+    "typescript": "^7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
