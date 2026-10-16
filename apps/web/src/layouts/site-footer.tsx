@@ -10,9 +10,9 @@ export function SiteFooter() {
         <p className="text-muted-foreground text-sm">
           Built by the{" "}
           <Link
-            href="https://zbmui.com"
+            href="https://zubayer.dev"
             target="_blank"
-            rel="noreferrer"
+            rel="me noopener noreferrer"
             className="underline underline-offset-4 hover:text-primary"
           >
             ZBM
