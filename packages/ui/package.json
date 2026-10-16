@@ -30,6 +30,6 @@
     "@types/react-dom": "^19",
     "@zbmui/typescript-config": "workspace:*",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^7.0.2"
   }
 }

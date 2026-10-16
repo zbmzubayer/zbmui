@@ -6,10 +6,10 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "outDir": "dist",
-    "baseUrl": ".",
     "paths": {
       "@zbmui/ui/*": ["./src/*"]
-    }
+    },
+    "types": ["node"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
