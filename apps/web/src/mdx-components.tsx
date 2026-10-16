@@ -10,21 +10,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@zbmui/ui/components/card";
-import { NumberInput } from "@zbmui/ui/components/number-input";
 import { CopyButton } from "@zbmui/ui/shared/copy-button";
 
 import { cn } from "@/lib/cn";
-import { Accordion, AccordionPanel, AccordionTrigger } from "@/registry/default/ui/accordion";
-import { Button } from "@/registry/default/ui/button";
 import { Kbd } from "@/registry/default/ui/kbd";
 import { ScrollArea } from "@/registry/default/ui/scroll-area";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@/registry/default/ui/tabs";
-import {
-  Tooltip,
-  TooltipPopup,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/registry/default/ui/tooltip";
 
 import { ApiReferenceAccordion } from "@/components/api-reference-accordion";
 import { CodeBlockCommand } from "@/components/code-block-command";
@@ -35,9 +26,6 @@ import { ComponentSource } from "@/components/component-source";
 import { getIconForLanguageExtension } from "@/components/icons";
 
 export const mdxComponents = {
-  Accordion,
-  AccordionTrigger,
-  AccordionPanel,
   ApiReferenceAccordion,
   h1: ({ className, ...props }: React.ComponentProps<"h1">) => (
     <h1
@@ -137,17 +125,17 @@ export const mdxComponents = {
     <ul className={cn("my-6 ms-6 list-disc text-muted-foreground", className)} {...props} />
   ),
   hr: ({ ...props }: React.ComponentProps<"hr">) => <hr className="my-4 md:my-8" {...props} />,
-  Button,
+  Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
+    <h3 className={cn("step mt-2 scroll-m-32 font-medium tracking-tight", className)} {...props} />
+  ),
+  Steps: ({ ...props }) => (
+    <div className="steps [counter-reset:step] md:border-s md:pl-8" {...props} />
+  ),
   Kbd,
-  NumberInput,
   Tabs,
   TabsList,
   TabsTab,
   TabsPanel,
-  Tooltip,
-  TooltipTrigger,
-  TooltipPopup,
-  TooltipProvider,
   Card,
   CardHeader,
   CardFooter,

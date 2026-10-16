@@ -58,11 +58,19 @@ pre {
     }
 
     > h3 {
-      @apply mt-16!;
+      @apply mt-8!;
     }
 
     > h3 + p {
       @apply mt-2!;
+    }
+    .step {
+      counter-increment: step;
+
+      &:before {
+        @apply mr-2 inline-flex size-6 items-center justify-center rounded-full border-background bg-muted text-center -indent-px font-mono text-sm font-medium md:absolute md:-mt-0.5 md:-translate-x-1/2 md:left-0 md:size-7;
+        content: counter(step);
+      }
     }
   }
 

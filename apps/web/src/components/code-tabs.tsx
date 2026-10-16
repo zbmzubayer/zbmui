@@ -1,24 +1,20 @@
-// "use client";
+"use client";
 
-// import { useConfig } from "@/hooks/use-config";
-// import { Tabs } from "@/components/ui/tabs";
+import { useCliConfigStore } from "@/hooks/use-cli-config";
+import { Tabs } from "@/registry/default/ui/tabs";
 
-// export function CodeTabs({ children }: React.ComponentProps<typeof Tabs>) {
-//   const [config, setConfig] = useConfig();
+export function CodeTabs({ children }: React.ComponentProps<typeof Tabs>) {
+  const { installationType, setInstallationType } = useCliConfigStore();
 
-//   const installationType = React.useMemo(() => {
-//     return config.installationType || "cli";
-//   }, [config]);
-
-//   return (
-//     <Tabs
-//       className="relative mt-6 w-full"
-//       onValueChange={(value) =>
-//         setConfig({ ...config, installationType: value as "cli" | "manual" })
-//       }
-//       value={installationType}
-//     >
-//       {children}
-//     </Tabs>
-//   );
-// }
+  return (
+    <Tabs
+      className="relative mt-6 w-full"
+      value={installationType}
+      onValueChange={(value: Parameters<typeof setInstallationType>[0]) =>
+        setInstallationType(value)
+      }
+    >
+      {children}
+    </Tabs>
+  );
+}
