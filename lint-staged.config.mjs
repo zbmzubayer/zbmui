@@ -1,3 +1,6 @@
 export default {
-  "**/*.{js,ts,jsx,tsx,md,mdx,json}": () => ["pnpm biome check --write --no-errors-on-unmatched"],
+  "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,css}": [
+    "biome check --write --unsafe --no-errors-on-unmatched",
+  ],
+  "*.{md,mdx}": ["prettier --write --ignore-unknown"],
 };

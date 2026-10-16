@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
   "vcs": {
     "enabled": true,
     "defaultBranch": "main",
@@ -37,7 +37,7 @@
         "noStaticElementInteractions": "off",
         "useKeyWithClickEvents": "off"
       },
-      "recommended": true,
+      "preset": "recommended",
       "nursery": {
         "useSortedClasses": {
           "fix": "safe",
@@ -78,27 +78,32 @@
         "organizeImports": {
           "level": "on",
           "options": {
+            "sortBareImports": true,
             "groups": [
               [
                 ":URL:",
                 ":NODE:",
+                ":BUN:",
                 ":PACKAGE:",
                 ":PACKAGE_WITH_PROTOCOL:",
-                "!@*/**",
-                "!../**",
-                "!./**"
+                "!:STYLE:",
+                "!@*/**"
               ],
               ":BLANK_LINE:",
               [":PACKAGE:", "!@zbmui/**"],
               ":BLANK_LINE:",
               "@zbmui/**",
               ":BLANK_LINE:",
-              ["@/**", "@/*/**", "!@/components/**", "!@/styles/**"],
+              [":ALIAS:", "!@/components/**", "!@/styles/**"],
               ":BLANK_LINE:",
               "@/components/**",
+              ":BLANK_LINE:",
+              ":PATH:",
               "@/styles/**",
-              "./**",
-              "../**"
+              ":STYLE:",
+              {
+                "kind": "bare"
+              }
             ]
           }
         }
