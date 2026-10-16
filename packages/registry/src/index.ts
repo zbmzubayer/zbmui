@@ -47,10 +47,13 @@ export const registryItemSchema = z
     name: z
       .string()
       .describe(
-        "Unique identifier, used as `zbmui add <name>` and in the registry URL /<name>.json."
+        "Unique identifier, used as `@zbmui/cli add <name>` and in the registry URL /<name>.json."
       ),
     type: registryItemTypeSchema,
-    description: z.string().optional().describe("Human-readable summary shown by `zbmui list`."),
+    description: z
+      .string()
+      .optional()
+      .describe("Human-readable summary shown by `@zbmui/cli list`."),
     /** npm packages to install, name → version range. */
     dependencies: z
       .record(z.string(), z.string())
@@ -82,7 +85,7 @@ export const registryIndexSchema = z
   })
   .describe("Catalog of all published items, served as <registry>/index.json.");
 
-/** A single CSS file shipped by `zbmui init` and written next to the consumer's global CSS file. */
+/** A single CSS file shipped by `@zbmui/cli init` and written next to the consumer's global CSS file. */
 export const initFileSchema = z
   .object({
     /** File name, written next to the consumer's global CSS file (e.g. "styles.css"). */
@@ -92,9 +95,9 @@ export const initFileSchema = z
       .string()
       .describe("File contents — Tailwind v4 CSS (@theme tokens, variants, keyframes)."),
   })
-  .describe("A CSS file shipped by `zbmui init`.");
+  .describe("A CSS file shipped by `@zbmui/cli init`.");
 
-/** Payload consumed by `zbmui init`: theme CSS files + base dependencies. */
+/** Payload consumed by `@zbmui/cli init`: theme CSS files + base dependencies. */
 export const initPayloadSchema = z
   .object({
     name: z.literal("init"),
@@ -104,9 +107,9 @@ export const initPayloadSchema = z
       .describe("Theme CSS files written next to the consumer's global CSS file, in import order."),
     dependencies: z
       .record(z.string(), z.string())
-      .describe("Base npm dependencies installed once by `zbmui init`."),
+      .describe("Base npm dependencies installed once by `@zbmui/cli init`."),
   })
-  .describe("Payload consumed by `zbmui init` — served as <registry>/init.json.");
+  .describe("Payload consumed by `@zbmui/cli init` — served as <registry>/init.json.");
 
 /** `components.json` written into consumer projects. */
 export const componentsConfigSchema = z
@@ -150,7 +153,9 @@ export const componentsConfigSchema = z
           "Overridden by the --registry flag, then the ZBMUI_REGISTRY_URL environment variable."
       ),
   })
-  .describe("Configuration for the ZBM UI CLI, written by `zbmui init` into the consumer project.");
+  .describe(
+    "Configuration for the ZBM UI CLI, written by `@zbmui/cli init` into the consumer project."
+  );
 
 export type RegistryItemType = z.infer<typeof registryItemTypeSchema>;
 export type RegistryFile = z.infer<typeof registryFileSchema>;
@@ -173,7 +178,7 @@ export const registrySourceSchema = z
         description: z
           .string()
           .optional()
-          .describe("Shown by `zbmui list`; recorded in emitted JSON."),
+          .describe("Shown by `@zbmui/cli list`; recorded in emitted JSON."),
         categories: z
           .array(z.string())
           .optional()
@@ -183,7 +188,7 @@ export const registrySourceSchema = z
           .boolean()
           .optional()
           .describe(
-            "Also emit a public/r/<name>.json payload so the item is installable via `zbmui add`. " +
+            "Also emit a public/r/<name>.json payload so the item is installable via `@zbmui/cli add`. " +
               "Defaults to false — registry:component items are docs-only previews unless published."
           ),
       })

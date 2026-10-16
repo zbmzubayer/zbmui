@@ -2,13 +2,13 @@ const STEPS = [
   {
     step: "01",
     title: "Initialize",
-    command: "npx zbmui@latest init",
+    command: "npx @zbmui/cli@latest init",
     description: "Sets up the registry aliases and installs the base dependencies once.",
   },
   {
     step: "02",
     title: "Add components",
-    command: "npx zbmui@latest add button",
+    command: "npx @zbmui/cli@latest add button",
     description: "Pulls the source into your components folder — dependencies included.",
   },
   {

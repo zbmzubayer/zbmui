@@ -19,7 +19,7 @@ export async function readConfig(root: string): Promise<ComponentsConfig> {
   try {
     raw = await readFile(path.join(root, CONFIG_FILE), "utf8");
   } catch {
-    throw new Error(`No ${CONFIG_FILE} found. Run \`zbmui init\` first.`);
+    throw new Error(`No ${CONFIG_FILE} found. Run \`npx @zbmui/cli init\` first.`);
   }
 
   try {

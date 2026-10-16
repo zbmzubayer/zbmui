@@ -4,7 +4,7 @@
   "scripts": {
     "web": "pnpm --filter=web",
     "ui": "pnpm --filter=@zbmui/ui",
-    "cli": "pnpm --filter=zbmui",
+    "cli": "pnpm --filter=@zbmui/cli",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",

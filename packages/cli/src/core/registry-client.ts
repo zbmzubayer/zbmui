@@ -41,7 +41,7 @@ export class HttpRegistryClient implements RegistryClient {
 
     if (response.status === 404) {
       throw new Error(
-        `"${resource}" was not found in the registry. Run \`zbmui list\` to see available items.`
+        `"${resource}" was not found in the registry. Run \`npx @zbmui/cli list\` to see available items.`
       );
     }
     if (!response.ok) {

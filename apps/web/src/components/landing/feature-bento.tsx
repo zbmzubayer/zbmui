@@ -65,7 +65,7 @@ export function FeatureBento() {
           description="Components live in your codebase, not in node_modules. Pull in what you need, own every line."
         >
           <div className="mt-4 flex flex-1 items-center rounded-lg border border-dashed p-6 font-mono text-muted-foreground text-sm">
-            npx zbmui@latest add
+            npx @zbmui/cli@latest add
           </div>
         </BentoCell>
 

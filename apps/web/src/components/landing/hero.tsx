@@ -5,7 +5,7 @@ import { Button } from "@/registry/default/ui/button";
 
 import { CopyCommand } from "@/components/landing/copy-command";
 
-const INSTALL_COMMAND = "npx zbmui@latest init";
+const INSTALL_COMMAND = "npx @zbmui/cli@latest init";
 const ROTATING_WORDS = [
   "for a design system.",
   "for your product.",

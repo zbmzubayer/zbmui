@@ -151,5 +151,5 @@ export const initCommand = new Command("init")
     }
     console.log(`  theme: ${themeResult} ${css}`);
     console.log(`  config: components.json`);
-    console.log(pc.dim("\nNext: npx zbmui add button"));
+    console.log(pc.dim("\nNext: npx @zbmui/cli add button"));
   });

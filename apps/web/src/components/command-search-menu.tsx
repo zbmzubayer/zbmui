@@ -111,16 +111,16 @@ export function CommandSearchMenu({
         let cmd: string;
         switch (packageManager) {
           case "pnpm":
-            cmd = `pnpm dlx zbmui@latest add ${componentName}`;
+            cmd = `pnpm dlx @zbmui/cli@latest add ${componentName}`;
             break;
           case "bun":
-            cmd = `bunx --bun zbmui@latest add ${componentName}`;
+            cmd = `bunx --bun @zbmui/cli@latest add ${componentName}`;
             break;
           case "yarn":
-            cmd = `yarn dlx zbmui@latest add ${componentName}`;
+            cmd = `yarn dlx @zbmui/cli@latest add ${componentName}`;
             break;
           default:
-            cmd = `npx zbmui@latest add ${componentName}`;
+            cmd = `npx @zbmui/cli@latest add ${componentName}`;
         }
 
         setCopyPayload(cmd);

@@ -1,4 +1,4 @@
-# zbmui CLI
+# @zbmui/cli
 
 The command-line tool for [ZBM UI](https://ui.zubayer.dev) — a copy-paste component library built with [Base UI](https://base-ui.com) and [Tailwind CSS](https://tailwindcss.com) v4.
 
@@ -15,18 +15,18 @@ The CLI pulls component source code into your project (not into `node_modules`),
 
 ```bash
 # Initialize ZBM UI in your project
-npx zbmui@latest init
+npx @zbmui/cli@latest init
 
 # Add a component
-npx zbmui@latest add button
+npx @zbmui/cli@latest add button
 
 # See everything available
-npx zbmui@latest list
+npx @zbmui/cli@latest list
 ```
 
 ## Commands
 
-### `zbmui init`
+### `@zbmui/cli init`
 
 Initialize ZBM UI in an existing project. It will:
 
@@ -42,12 +42,12 @@ Initialize ZBM UI in an existing project. It will:
 | `--cwd <path>`     | Project directory (default: current directory) |
 | `--registry <url>` | Registry URL or local directory to pull from   |
 
-### `zbmui add [components...]`
+### `@zbmui/cli add [components...]`
 
 Add one or more components to your project. Registry dependencies of each component are resolved and installed automatically, imports are rewritten to your configured aliases, and missing npm dependencies are installed with your package manager. Existing files are never overwritten unless you pass `--overwrite`.
 
 ```bash
-npx zbmui@latest add button dialog tooltip
+npx @zbmui/cli@latest add button dialog tooltip
 ```
 
 | Option             | Description                                    |
@@ -59,7 +59,7 @@ npx zbmui@latest add button dialog tooltip
 | `--cwd <path>`     | Project directory (default: current directory) |
 | `--registry <url>` | Registry URL or local directory to pull from   |
 
-### `zbmui list`
+### `@zbmui/cli list`
 
 List all available registry items, grouped by type.
 

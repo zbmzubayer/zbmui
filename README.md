@@ -5,7 +5,7 @@
 ZBM UI is a copy-paste component library and design system built with [Base UI](https://base-ui.com), [Tailwind CSS](https://tailwindcss.com) v4 and TypeScript. Components live in your codebase — not in `node_modules` — so you own every line.
 
 - **Documentation:** [ui.zubayer.dev](https://ui.zubayer.dev)
-- **CLI:** `npx zbmui@latest init`
+- **CLI:** `npx @zbmui/cli@latest init`
 
 ## Features
 
@@ -19,10 +19,10 @@ ZBM UI is a copy-paste component library and design system built with [Base UI](
 
 ```bash
 # Initialize ZBM UI in your project (Next.js or Vite + Tailwind v4)
-npx zbmui@latest init
+npx @zbmui/cli@latest init
 
 # Add components
-npx zbmui@latest add button dialog tooltip
+npx @zbmui/cli@latest add button dialog tooltip
 ```
 
 See the [installation guide](https://ui.zubayer.dev/docs/installation) for prerequisites and framework setup.
@@ -34,7 +34,7 @@ This is a pnpm + Turborepo monorepo:
 | Path                         | Description                                                      |
 | ---------------------------- | ---------------------------------------------------------------- |
 | `apps/web`                   | Documentation site (Next.js, fumadocs) — ui.zubayer.dev          |
-| `packages/cli`               | `zbmui` — the CLI for installing and managing components         |
+| `packages/cli`               | `@zbmui/cli` — the CLI for installing and managing components    |
 | `packages/ui`                | `@zbmui/ui` — the component library itself (Base UI + Tailwind)  |
 | `packages/registry`          | `@zbmui/registry` — registry item schemas and config types (zod) |
 | `packages/typescript-config` | Shared `tsconfig` presets                                        |
