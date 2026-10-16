@@ -5,6 +5,31 @@ description: A composable, themeable and customizable sidebar component.
 
 ## Installation
 
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+
+```bash
+npx zbmui@latest add sidebar
+```
+
+</TabsPanel>
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react class-variance-authority
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
 ```ts title="hooks/use-mobile.ts"
 import { useEffect, useState } from "react";
 
@@ -28,6 +53,13 @@ export function useIsMobile() {
 ```
 
 <ComponentSource name="sidebar" title="components/ui/sidebar.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+</TabsPanel>
+
+</CodeTabs>
 
 ## Usage
 
