@@ -2,6 +2,7 @@ import { Command } from "commander";
 import pc from "picocolors";
 
 import { readConfig } from "../core/config.ts";
+import { groupIndexItems } from "../core/group-items.ts";
 import { findProjectRoot } from "../core/project.ts";
 import { createRegistryClient } from "../core/registry-client.ts";
 
@@ -28,15 +29,10 @@ export const listCommand = new Command("list")
       return;
     }
 
-    const groups = new Map<string, typeof index.items>();
-    for (const item of index.items) {
-      const group = groups.get(item.type) ?? [];
-      group.push(item);
-      groups.set(item.type, group);
-    }
+    const groups = groupIndexItems(index.items);
 
     console.log();
-    for (const [type, items] of [...groups.entries()].sort()) {
+    for (const [type, items] of groups) {
       console.log(pc.bold(type.replace("registry:", "")));
       for (const item of items) {
         const description = item.description ? pc.dim(` — ${item.description}`) : "";

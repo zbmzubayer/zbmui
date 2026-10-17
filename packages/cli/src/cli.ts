@@ -21,6 +21,11 @@ program.addCommand(addCommand);
 program.addCommand(listCommand);
 
 program.parseAsync().catch((error: unknown) => {
+  // Ctrl+C while an interactive prompt is open: exit quietly.
+  if (error instanceof Error && error.name === "ExitPromptError") {
+    console.log("\nCancelled.");
+    process.exit(130);
+  }
   console.error(error instanceof Error ? error.message : String(error));
   process.exit(1);
 });

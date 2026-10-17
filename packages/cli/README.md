@@ -20,6 +20,9 @@ npx @zbmui/cli@latest init
 # Add a component
 npx @zbmui/cli@latest add button
 
+# Or pick components from an interactive list
+npx @zbmui/cli@latest add
+
 # See everything available
 npx @zbmui/cli@latest list
 ```
@@ -49,6 +52,8 @@ Add one or more components to your project. Registry dependencies of each compon
 ```bash
 npx @zbmui/cli@latest add button dialog tooltip
 ```
+
+Run `add` without component names in a terminal to pick from an interactive multi-select of every component. Space toggles the focused item, `a` selects all, `i` inverts the selection, and Enter installs the selected items. Hooks and utilities that a component needs are installed automatically as dependencies. In non-interactive environments (CI, piped input) the list is skipped and component names are required.
 
 | Option             | Description                                    |
 | ------------------ | ---------------------------------------------- |

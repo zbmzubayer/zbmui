@@ -3,11 +3,13 @@ import { createPathsMatcher, getTsconfig } from "get-tsconfig";
 import ora from "ora";
 import pc from "picocolors";
 
+import { checkbox } from "@inquirer/prompts";
+
 import { readConfig } from "../core/config.ts";
 import { installItem } from "../core/installer.ts";
 import { detectPackageManager, installDependencies } from "../core/package-manager.ts";
 import { allDependencies, findProjectRoot, readPackageJson } from "../core/project.ts";
-import { createRegistryClient } from "../core/registry-client.ts";
+import { createRegistryClient, type RegistryClient } from "../core/registry-client.ts";
 import { resolveRegistryDependencies } from "../core/resolver.ts";
 
 export const addCommand = new Command("add")
@@ -27,9 +29,14 @@ export const addCommand = new Command("add")
     if (options.all) {
       const index = await client.listItems();
       names = index.items.map((item) => item.name);
-    }
-    if (names.length === 0) {
-      throw new Error("No components specified. Pass component names or use --all.");
+      if (names.length === 0) {
+        throw new Error("The registry has no components to install.");
+      }
+    } else if (names.length === 0) {
+      names = await promptForComponents(client);
+      if (names.length === 0) {
+        return;
+      }
     }
 
     const spinner = ora("Resolving components...").start();
@@ -84,3 +91,39 @@ export const addCommand = new Command("add")
 
     console.log(pc.green(`\nDone. ${written.length} file(s) written.`));
   });
+
+/**
+ * Interactive picker shown by `add` when no component names and no `--all`
+ * flag are given: lists the registry components (`registry:ui` items — hooks
+ * and libs are pulled in as dependencies when needed) and returns the selected
+ * names. Non-interactive shells (CI, piped input) get the regular "no
+ * components specified" error instead of a prompt that could hang.
+ */
+async function promptForComponents(client: RegistryClient): Promise<string[]> {
+  if (!process.stdin.isTTY) {
+    throw new Error("No components specified. Pass component names or use --all.");
+  }
+
+  const index = await client.listItems();
+  const components = index.items
+    .filter((item) => item.type === "registry:ui")
+    .sort((a, b) => a.name.localeCompare(b.name));
+  if (components.length === 0) {
+    throw new Error("The registry has no components to install.");
+  }
+
+  const selected = await checkbox<string>({
+    message: "Which components would you like to add?",
+    choices: components.map((item) => ({
+      name: item.name,
+      value: item.name,
+      description: item.description,
+    })),
+    pageSize: 15,
+  });
+
+  if (selected.length === 0) {
+    console.log(pc.yellow("No components selected. Nothing to install."));
+  }
+  return selected;
+}
