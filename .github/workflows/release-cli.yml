@@ -1,0 +1,80 @@
+name: Release CLI
+
+# Publishing is driven by tags: pushing a `v*` tag releases @zbmui/cli.
+# The manual dispatch input lets you run the whole pipeline without touching
+# npm (e.g. to test the workflow or preview the tarball).
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run only (verifies, but does not publish)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-cli
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Build, test & publish @zbmui/cli
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: pnpm
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # A tag must match the version being published, otherwise the release
+      # and the npm "latest" tag would disagree.
+      - name: Verify tag matches package version
+        if: ${{ github.ref_type == 'tag' }}
+        run: |
+          version="$(node -p "require('./packages/cli/package.json').version")"
+          tag="${GITHUB_REF_NAME}"
+          if [ "$tag" != "v$version" ]; then
+            echo "::error::Tag '$tag' does not match @zbmui/cli version 'v$version'. Bump the version (npm version) and tag again."
+            exit 1
+          fi
+
+      - name: Check types
+        run: pnpm --filter @zbmui/cli check-types
+
+      - name: Build
+        run: pnpm --filter @zbmui/cli build
+
+      - name: Test
+        run: pnpm --filter @zbmui/cli test
+
+      - name: Publish
+        # For tag pushes dry_run is unset, so this always runs there.
+        if: ${{ !inputs.dry_run }}
+        working-directory: packages/cli
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Dry-run (no publish)
+        if: ${{ inputs.dry_run }}
+        working-directory: packages/cli
+        run: |
+          echo "::notice::Dry-run — nothing was published to npm."
+          npm publish --dry-run

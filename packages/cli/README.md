@@ -120,6 +120,22 @@ pnpm check-types   # tsc --noEmit
 pnpm test          # node --test
 ```
 
+## Release
+
+Publishing is automated with GitHub Actions (`.github/workflows/release-cli.yml`): pushing a `v*` tag releases `@zbmui/cli` from source.
+
+```bash
+# bump the version — this commits and tags for you
+pnpm --filter @zbmui/cli exec npm version minor   # or patch / major
+
+# push the release commit and tag; Actions builds, tests and publishes
+git push --follow-tags
+```
+
+CI verifies that the tag matches the CLI's `package.json` version, type-checks, builds and tests before running `npm publish`. It needs an `NPM_TOKEN` repository secret — an npm [automation token](https://docs.npmjs.com/creating-and-viewing-access-tokens) with publish rights to `@zbmui/cli`.
+
+To test the pipeline without publishing (or to preview the tarball), run the **Release CLI** workflow from the Actions tab with the _Dry-run only_ input checked.
+
 ## License
 
 MIT
