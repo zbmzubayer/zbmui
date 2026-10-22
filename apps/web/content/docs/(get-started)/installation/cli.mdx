@@ -1,0 +1,125 @@
+---
+title: CLI
+description: Initialize your project and install components with the ZBM UI CLI.
+---
+
+The ZBM UI CLI (`@zbmui/cli`) is the easiest way to set up ZBM UI. It copies components into your project as source files you own and maintain — nothing is hidden behind an npm package. Components can then be updated independently, without waiting for a new library release.
+
+## Prerequisites
+
+The CLI validates your project before doing anything. Make sure you have:
+
+- **Node.js 24** or later
+- A **Next.js** or **Vite** project
+- **Tailwind CSS v4** (CSS-first configuration)
+- A `tsconfig.json` with path aliases, such as `"@/*": ["./src/*"]`
+
+## init
+
+Run the following command at the root of your project:
+
+```bash
+npx @zbmui/cli@latest init
+```
+
+`init` sets up everything ZBM UI needs:
+
+1. Detects your framework and checks that Tailwind CSS v4 and your tsconfig path aliases are in place.
+1. Asks where your global CSS file lives and which import aliases to use (skipped with `-y`).
+1. Writes a `components.json` config file to your project root.
+1. Installs the `cn()` utility into your lib directory.
+1. Writes the theme CSS files to `src/styles/` (or `styles/` if your project has no `src` directory) and injects the `@import` lines into your global CSS, right after `@import "tailwindcss";`.
+1. Installs any missing base dependencies using your detected package manager (pnpm, npm, yarn, or bun).
+
+If a `components.json` already exists, the CLI asks before overwriting it.
+
+### init options
+
+| Option             | Description                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| `-y, --yes`        | Use the default configuration without prompting. Fails if `components.json` already exists. |
+| `--cwd <path>`     | Run against a project directory other than the current working directory.                   |
+| `--registry <url>` | Use a custom registry — an HTTP URL or a local directory containing registry JSON.          |
+
+## add
+
+Add components to your project by name:
+
+```bash
+npx @zbmui/cli@latest add button
+```
+
+You can install multiple components in one command:
+
+```bash
+npx @zbmui/cli@latest add button dialog tabs
+```
+
+Running `add` with no arguments opens an interactive picker listing every available component. Registry dependencies (hooks and utilities such as `cn()`) are resolved and installed automatically, along with any npm packages the components rely on.
+
+### add options
+
+| Option             | Description                                                                                               |
+| ------------------ | --------------------------------------------------------------------------------------------------------- |
+| `-a, --all`        | Install all available components.                                                                         |
+| `-o, --overwrite`  | Overwrite existing files. Without this flag, the CLI keeps existing files and asks before replacing them. |
+| `-y, --yes`        | Skip confirmation prompts. Never overwrites existing files — combine with `--overwrite` for that.         |
+| `--cwd <path>`     | Project directory. Defaults to the current working directory.                                             |
+| `--registry <url>` | Registry URL or local directory. Overrides the registry from `components.json`.                           |
+
+In non-interactive environments (CI, piped input), pass component names or `--all` — without a terminal, `add` can't show the picker and exits with an error instead.
+
+## list
+
+See everything the registry offers, grouped by type (`ui`, `hook`, `lib`, ...):
+
+```bash
+npx @zbmui/cli@latest list
+```
+
+Pass `--json` to print the raw registry index instead.
+
+## Configuration
+
+`init` writes a `components.json` file into your project root. The CLI reads it on every `add` to know where to place files:
+
+```json showLineNumbers title="components.json"
+{
+  "$schema": "https://ui.zubayer.dev/schema.json",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "css": "src/app/globals.css"
+  },
+  "aliases": {
+    "components": "@/components",
+    "ui": "@/components/ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
+```
+
+| Field                | Description                                                                         |
+| -------------------- | ----------------------------------------------------------------------------------- |
+| `rsc`                | Whether the project uses React Server Components (set automatically for Next.js).   |
+| `tsx`                | Whether the project uses TSX syntax.                                                |
+| `tailwind.css`       | Path to the global CSS file where the ZBM UI theme imports are injected.            |
+| `aliases.components` | Import alias for example components. Must resolve via the `paths` in your tsconfig. |
+| `aliases.ui`         | Import alias for UI components.                                                     |
+| `aliases.hooks`      | Import alias for hooks.                                                             |
+| `aliases.lib`        | Import alias for lib utilities such as `cn()`.                                      |
+
+Every alias must resolve through your tsconfig `paths` — that is how the CLI decides where to write files. Change them here (or re-run `init`) if your project uses a different layout.
+
+## Custom registry
+
+By default, the CLI fetches components from `https://ui.zubayer.dev/r`. You can point it at a different registry — an HTTP URL or a local directory containing registry JSON — in three ways, in order of precedence:
+
+1. The `--registry` flag on any command.
+1. The `ZBMUI_REGISTRY_URL` environment variable.
+1. The `registry` field in `components.json`.
+
+```bash
+npx @zbmui/cli@latest add button --registry ./my-registry
+```
