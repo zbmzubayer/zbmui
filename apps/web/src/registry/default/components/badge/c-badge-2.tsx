@@ -9,7 +9,7 @@ export function BadgeDemo() {
       <Badge variant="info">Info</Badge>
       <Badge variant="success">Success</Badge>
       <Badge variant="warning">Warning</Badge>
-      <Badge variant="danger">Destructive</Badge>
+      <Badge variant="danger">Danger</Badge>
       <Badge variant="error">Error</Badge>
     </div>
   );
