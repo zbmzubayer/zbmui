@@ -1,5 +1,5 @@
 {
-  "name": "zbm-ui",
+  "name": "zbmui",
   "private": true,
   "scripts": {
     "web": "pnpm --filter=web",
