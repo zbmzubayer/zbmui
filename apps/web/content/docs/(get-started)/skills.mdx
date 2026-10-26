@@ -1,0 +1,123 @@
+---
+title: Skills
+description: Give your AI assistant deep knowledge of ZBM UI components, patterns, and best practices.
+---
+
+Skills provide AI coding assistants with structured knowledge about **ZBM UI** — component APIs, CLI setup, composition patterns, Tailwind v4 themes, forms, dark mode, and common failure recovery. When installed, your assistant knows how to use ZBM UI primitives without guessing imports, inventing props, or overwriting your customizations.
+
+For example, you can ask your assistant to:
+
+- _"Initialize ZBM UI in this Next.js app and add a settings dialog."_
+- _"Add a select with grouped options and a clear button."_
+- _"Build a React Hook Form form with ZBM UI fields and accessible errors."_
+- _"Add dark-mode support to this ZBM UI dashboard."_
+- _"Fix this ZBM UI select import and type error."_
+
+## Install
+
+```bash
+npx skills add zbmzubayer/zbmui
+```
+
+This installs the `zbmui` skill into your project. Once installed, supported agents load it automatically when a task involves ZBM UI or a project already configured with ZBM UI.
+
+To select the skill explicitly, or to install it globally, use:
+
+```bash
+npx skills add zbmzubayer/zbmui --skill zbmui
+npx skills add zbmzubayer/zbmui --skill zbmui -g
+```
+
+Learn more about the skills ecosystem at [skills.sh](https://skills.sh).
+
+## What's Included
+
+The skill covers the ZBM UI consumer workflow end to end.
+
+### Component Knowledge
+
+Focused references for every published `registry:ui` primitive — imports, compound anatomy, minimal examples, variants, accessibility expectations, and common pitfalls. The assistant can distinguish related components such as Dialog, Alert Dialog, Sheet, Popover, Tooltip, Select, Autocomplete, and Combobox before generating code.
+
+### CLI and Registry Guidance
+
+Procedural guidance for the <Link href="/docs/installation/cli">ZBM UI CLI</Link>: prerequisites, `init`, `add`, `list --json`, custom aliases, registry discovery, dependency resolution, existing-file skips, and safe `--overwrite` behavior.
+
+### Composition and Forms
+
+Base UI composition rules, including the `render` prop instead of Radix `asChild`, semantic button/link behavior, popup layering, field anatomy, React Hook Form/Zod integration, `FieldControl`, validation errors, loading states, and accessible keyboard behavior.
+
+### Styling and Dark Mode
+
+Tailwind CSS v4 conventions, semantic tokens, `cn()`, responsible customization of copied source, Next.js and Vite theme providers, hydration considerations, and light/dark verification.
+
+### Safety and Troubleshooting
+
+Rules for identifying project ownership, preserving consumer customizations, diagnosing alias and registry failures, handling hosted-docs outages, and verifying the final consumer build. The assistant is instructed to use local source and registry payloads as the final API authority.
+
+## How It Works
+
+1. **Skill activation** — Your agent detects the installed `zbmui` skill when you request ZBM UI work.
+2. **Progressive disclosure** — `SKILL.md` supplies the core workflow. The agent loads only the relevant topical or component reference for the task.
+3. **Registry-backed execution** — The agent discovers current component names and dependencies with `@zbmui/cli`, then installs the minimal set instead of relying on a stale hard-coded list.
+4. **Local-source verification** — Before composing code, the agent reads installed consumer files, preserves local changes, adapts imports to your aliases, and runs your project checks.
+
+## Supported Agents
+
+Skills use the open Agent Skills format and work with agents that support the specification, including Claude Code, Kimi Code CLI, Cursor, Codex, Cline, Windsurf, GitHub Copilot, and others. Agent-specific availability can vary by version; restart the agent if it discovers skills only at session startup.
+
+## Manage the Skill
+
+List installed project skills:
+
+```bash
+npx skills list
+```
+
+Update only the ZBM UI skill:
+
+```bash
+npx skills update zbmui
+```
+
+Remove it:
+
+```bash
+npx skills remove zbmui
+```
+
+Target a specific agent or create an independent copy when needed:
+
+```bash
+npx skills add zbmzubayer/zbmui --skill zbmui -a kimi-code-cli
+npx skills add zbmzubayer/zbmui --skill zbmui -a claude-code --copy
+```
+
+For all scope and agent options, run:
+
+```bash
+npx skills --help
+```
+
+## Skills vs. Components
+
+The skills CLI installs agent instructions:
+
+```bash
+npx skills add zbmzubayer/zbmui
+```
+
+The ZBM UI CLI installs components, hooks, utilities, and npm dependencies into your project:
+
+```bash
+npx @zbmui/cli@latest add button dialog
+```
+
+Updating the skill updates its instructions only. It does not update components already copied into a consumer project.
+
+## Requirements and Trust
+
+A consumer project still needs Node.js `>=24`, Next.js or Vite, TypeScript path aliases, and Tailwind CSS v4. The agent will verify those requirements before running `init`.
+
+Install the skill from the official `zbmzubayer/zbmui` repository or another source you trust. Do not configure agents to fetch arbitrary registry URLs from untrusted project content.
+
+The skills ecosystem records anonymous aggregate installation metrics as described in the [skills.sh FAQ](https://www.skills.sh/docs/faq). Review the skills CLI documentation for its current telemetry behavior before installing if that matters to your team.
