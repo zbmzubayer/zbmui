@@ -58,5 +58,4 @@ Vertical:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/separator.md)
 - [Base UI Separator](https://base-ui.com/react/components/separator)

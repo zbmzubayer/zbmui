@@ -57,5 +57,5 @@ import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/tabs.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/tabs)
 - [Base UI Tabs](https://base-ui.com/react/components/tabs)

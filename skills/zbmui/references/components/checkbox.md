@@ -35,6 +35,10 @@ import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 Controlled:
 
 ```tsx
+"use client";
+
+import { useState } from "react";
+
 const [checked, setChecked] = useState(false);
 
 <Checkbox aria-label="Enable notifications" checked={checked} onCheckedChange={setChecked} />;
@@ -60,5 +64,5 @@ The installed component supports Base UI checked-state props, including indeterm
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/checkbox.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/checkbox)
 - [Base UI Checkbox](https://base-ui.com/react/components/checkbox)

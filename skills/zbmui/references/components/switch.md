@@ -35,6 +35,10 @@ import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 Controlled:
 
 ```tsx
+"use client";
+
+import { useState } from "react";
+
 const [enabled, setEnabled] = useState(true);
 
 <Switch aria-label="Airplane mode" checked={enabled} onCheckedChange={setEnabled} />;
@@ -60,5 +64,5 @@ Use `aria-invalid` and field error integration when a switch has validation stat
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/switch.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/switch)
 - [Base UI Switch](https://base-ui.com/react/components/switch)

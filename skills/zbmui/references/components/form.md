@@ -1,6 +1,6 @@
 # Form
 
-A thin styled wrapper around Base UI form primitives.
+A thin wrapper around the Base UI form primitive.
 
 ## Install
 
@@ -16,8 +16,8 @@ import { Form, FormPrimitive } from "@/components/ui/form";
 
 ## Anatomy
 
-- `Form` — styled Base UI form wrapper
-- `FormPrimitive` — underlying Base UI exports for advanced usage
+- `Form` — Base UI form wrapper
+- `FormPrimitive` — underlying Base UI form for advanced usage
 
 ## Example
 
@@ -59,5 +59,5 @@ Resolve validation, reset, and submission props from installed local source and 
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/form.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/form)
 - [Base UI Form](https://base-ui.com/react/components/form)

@@ -11,6 +11,7 @@ npx @zbmui/cli@latest add spinner --yes --cwd "<app-root>"
 ## Import
 
 ```tsx
+import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
 ```
 
@@ -46,4 +47,4 @@ Use a more specific label when multiple loading regions exist:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/spinner.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/spinner)

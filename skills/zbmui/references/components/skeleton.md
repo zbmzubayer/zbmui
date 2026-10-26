@@ -43,5 +43,3 @@ import { Skeleton } from "@/components/ui/skeleton";
 - Do not use skeleton styling for static disabled content.
 
 ## References
-
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/skeleton.md)

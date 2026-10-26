@@ -96,7 +96,7 @@ export function BugReportForm() {
           fieldState: { invalid, isTouched, isDirty, error },
         }) => (
           <Field name={name} invalid={invalid} touched={isTouched} dirty={isDirty}>
-            <FieldDescription>Bug description</FieldDescription>
+            <FieldLabel>Description</FieldLabel>
             <FieldControl render={<Textarea {...fieldProps} placeholder="Describe the bug" />} />
             <FieldError match={!!error}>{error?.message}</FieldError>
           </Field>
@@ -121,7 +121,7 @@ Use `FieldControl` with `render` for controls that need explicit Base UI field i
 
 ## Native Base UI forms
 
-ZBM UI's `Form` re-exports a styled Base UI form wrapper and exposes `FormPrimitive`. For native Base UI validation behavior, use local source and the underlying Base UI form documentation.
+ZBM UI's `Form` is a thin Base UI wrapper that exposes `FormPrimitive`. For native Base UI validation behavior, use local source and the underlying Base UI form documentation.
 
 Do not guess `onSubmit`, reset, or validity props. Resolve them from installed local source before writing code.
 

@@ -60,5 +60,5 @@ Read the installed local source and the consumer's `@daypicker/react` version be
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/calendar.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/calendar)
 - Underlying package: `@daypicker/react`

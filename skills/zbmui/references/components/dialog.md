@@ -80,5 +80,5 @@ import { Button } from "@/components/ui/button";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/dialog.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/dialog)
 - [Base UI Dialog](https://base-ui.com/react/components/dialog)

@@ -26,7 +26,7 @@ import { Meter, MeterIndicator, MeterLabel, MeterTrack, MeterValue } from "@/com
 ## Example
 
 ```tsx
-<Meter value={72} minValue={0} maxValue={100} className="w-full">
+<Meter value={72} min={0} max={100} className="w-full">
   <div className="flex items-center justify-between">
     <MeterLabel>Storage</MeterLabel>
     <MeterValue />
@@ -56,5 +56,5 @@ import { Meter, MeterIndicator, MeterLabel, MeterTrack, MeterValue } from "@/com
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/meter.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/meter)
 - [Base UI Meter](https://base-ui.com/react/components/meter)

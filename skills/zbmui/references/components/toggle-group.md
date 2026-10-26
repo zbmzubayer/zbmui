@@ -62,5 +62,4 @@ import { ToggleGroup, ToggleGroupItem, ToggleGroupSeparator } from "@/components
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/toggle-group.md)
 - [Base UI Toggle Group](https://base-ui.com/react/components/toggle-group)

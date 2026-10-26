@@ -42,4 +42,4 @@ import { Input } from "@/components/ui/input";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/label.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/label)

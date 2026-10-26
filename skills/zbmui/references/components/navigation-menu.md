@@ -70,5 +70,5 @@ import {
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/navigation-menu.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/navigation-menu)
 - [Base UI Navigation Menu](https://base-ui.com/react/components/navigation-menu)

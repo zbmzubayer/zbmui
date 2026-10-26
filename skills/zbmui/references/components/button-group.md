@@ -66,4 +66,4 @@ Vertical:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/button-group.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/button-group)

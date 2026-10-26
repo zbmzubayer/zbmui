@@ -70,4 +70,4 @@ Use the installed variant classes through the `variant` prop:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/alert.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/alert)

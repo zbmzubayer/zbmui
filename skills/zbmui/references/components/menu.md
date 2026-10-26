@@ -83,5 +83,5 @@ import {
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/menu.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/menu)
 - [Base UI Menu](https://base-ui.com/react/components/menu)

@@ -74,4 +74,4 @@ Header and footer addons:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/input-group.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/input-group)

@@ -77,5 +77,5 @@ import { Button } from "@/components/ui/button";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/alert-dialog.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/alert-dialog)
 - [Base UI Alert Dialog](https://base-ui.com/react/components/alert-dialog)

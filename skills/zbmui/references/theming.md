@@ -17,19 +17,19 @@ Do not copy theme CSS from this skill or docs without reconciling it with the in
 
 ## Semantic tokens
 
-Prefer installed semantic tokens and component variants over hard-coded colors. Use Tailwind utilities and existing variants such as `outline`, `secondary`, `ghost`, `destructive`, or size variants when they fit.
+Prefer installed semantic tokens and component variants over hard-coded colors. Use Tailwind utilities and existing variants such as `outline`, `secondary`, `ghost`, `danger`, `danger-soft`, or size variants when they fit.
 
 Avoid one-off palette values when an existing token communicates intent. If the consumer has a design system, map its tokens into the installed theme rather than replacing every component class.
 
 Use `cn()` for conditional classes:
 
 ```tsx
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 cn("rounded-md border", isActive && "bg-primary text-primary-foreground");
 ```
 
-Resolve the `cn()` path from `components.json`; it is not always `@/lib/utils`.
+Resolve the `cn()` path from `components.json`; the default is `@/lib/cn`, but custom aliases may differ.
 
 ## Customizing copied source
 

@@ -50,5 +50,5 @@ Use Base UI root state props for controlled or uncontrolled open behavior. Read 
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/collapsible.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/collapsible)
 - [Base UI Collapsible](https://base-ui.com/react/components/collapsible)

@@ -11,6 +11,7 @@ npx @zbmui/cli@latest add input --yes --cwd "<app-root>"
 ## Import
 
 ```tsx
+import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 ```
 
@@ -55,5 +56,5 @@ The component handles search-control appearance and file input styling through i
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/input.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/input)
 - [Base UI Input](https://base-ui.com/react/components/input)

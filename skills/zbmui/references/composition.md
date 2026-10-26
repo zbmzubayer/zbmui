@@ -27,7 +27,9 @@ Never import from the private workspace package or registry-internal source alia
 ZBM UI components wrap Base UI. Use Base UI's `render` prop to compose behavior with a semantic element or another component:
 
 ```tsx
-<Button render={<a href="/settings" />}>Settings</Button>
+<Button nativeButton={false} render={<a href="/settings" />}>
+  Settings
+</Button>
 ```
 
 Do not use Radix's `asChild`. If local source exposes `ButtonPrimitive`, use it only when the installed component does not expose the needed primitive part.

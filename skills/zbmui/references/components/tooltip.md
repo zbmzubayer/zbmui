@@ -60,5 +60,5 @@ import { Tooltip, TooltipPopup, TooltipProvider, TooltipTrigger } from "@/compon
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/tooltip.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/tooltip)
 - [Base UI Tooltip](https://base-ui.com/react/components/tooltip)

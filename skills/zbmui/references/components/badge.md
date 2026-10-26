@@ -67,4 +67,4 @@ Variants:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/badge.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/badge)

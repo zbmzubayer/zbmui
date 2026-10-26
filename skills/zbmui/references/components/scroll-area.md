@@ -48,5 +48,5 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/scroll-area.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/scroll-area)
 - [Base UI Scroll Area](https://base-ui.com/react/components/scroll-area)

@@ -77,8 +77,8 @@ After installation:
 
 - Resolve aliases from `components.json` and `tsconfig.json`.
 - Read the actual local source for exports, prop types, controlled-state behavior, and consumer customizations.
-- Import from consumer aliases, for example `@/components/ui/button`.
-- Never import from `@zbmui/ui` or `@/registry/default/*`.
+- Import only through the consumer's configured aliases, for example `@/components/ui/button`.
+- Do not treat private workspace packages or registry-source paths as available consumer dependencies.
 - Use only the exact component reference for each confirmed registry item:
 
 ```text
@@ -105,7 +105,7 @@ Before finishing:
 
 1. Inspect `git diff`, written-file output, and dependency/config changes.
 2. Detect files that were skipped because they already existed.
-3. Search consumer changes for `@zbmui/ui`, `@/registry/default/*`, Radix `asChild`, or a newly introduced icon library that conflicts with the project.
+3. Search consumer changes for imports that bypass the configured aliases, Radix `asChild`, or a newly introduced icon library that conflicts with the project.
 4. Re-read edited imports against local exports and aliases.
 5. Run the nearest consumer type-check, lint, tests, and production build.
 6. Where tooling exists, exercise forms, dialogs, sheets, menus, popups, keyboard interaction, and light/dark rendering.
@@ -116,7 +116,7 @@ Never report a skipped install, unrun check, or unverified build as success.
 ## Safety invariants
 
 - Do not initialize a project without user intent.
-- Do not overwrite a `components.json` that is missing, unrecognized, or owned by another component system.
+- Do not treat a missing or unrecognized `components.json` as proof of ZBM UI initialization. Never overwrite a `components.json` owned by another component system.
 - Do not use `--overwrite` as a generic retry.
 - Do not install docs-only `c-*` demos as registry components.
 - Do not invent component names, exports, props, or examples.

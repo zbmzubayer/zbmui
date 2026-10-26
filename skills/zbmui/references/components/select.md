@@ -55,7 +55,7 @@ import {
 - Trigger sizes are `xs`, `sm`, `default`, `lg`, and `xl`.
 - Popup supports `nativeScroll`, `portalProps`, and `positionerProps`.
 - `SelectPositioner` supports `side`, `align`, `sideOffset`, and `alignItemWithTrigger`.
-- For object values or multiple selection, use `Combobox`; confirm this Select's value support in installed source before extending it.
+- Select supports `multiple` and object values. Use `itemToStringValue` and a `SelectValue` render function for objects. Choose `Combobox` when the user needs text filtering or free-text input.
 
 ## Accessibility
 
@@ -71,5 +71,5 @@ import {
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/select.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/select)
 - [Base UI Select](https://base-ui.com/react/components/select)

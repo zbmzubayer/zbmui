@@ -11,6 +11,7 @@ npx @zbmui/cli@latest add slider --yes --cwd "<app-root>"
 ## Import
 
 ```tsx
+import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 import { Slider, SliderValue } from "@/components/ui/slider";
 ```
 
@@ -24,8 +25,12 @@ import { Slider, SliderValue } from "@/components/ui/slider";
 
 ```tsx
 <Field>
-  <FieldLabel htmlFor="volume">Volume</FieldLabel>
-  <Slider id="volume" name="volume" defaultValue={40} min={0} max={100} />
+  <Slider name="volume" defaultValue={40} min={0} max={100}>
+    <div className="mb-2 flex items-center justify-between">
+      <FieldLabel>Volume</FieldLabel>
+      <SliderValue />
+    </div>
+  </Slider>
   <FieldDescription>Adjust the playback volume.</FieldDescription>
 </Field>
 ```
@@ -56,5 +61,5 @@ Range:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/slider.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/slider)
 - [Base UI Slider](https://base-ui.com/react/components/slider)

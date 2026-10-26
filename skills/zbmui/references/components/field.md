@@ -75,5 +75,5 @@ Use state to reveal the error after validation:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/field.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/field)
 - [Base UI Field](https://base-ui.com/react/components/field)

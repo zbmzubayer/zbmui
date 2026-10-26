@@ -25,6 +25,10 @@ import { Toggle } from "@/components/ui/toggle";
 ## Example
 
 ```tsx
+"use client";
+
+import { useState } from "react";
+
 const [italic, setItalic] = useState(false);
 
 <Toggle aria-label="Toggle italic" pressed={italic} onPressedChange={setItalic}>
@@ -59,5 +63,4 @@ Variants:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/toggle.md)
 - [Base UI Toggle](https://base-ui.com/react/components/toggle)

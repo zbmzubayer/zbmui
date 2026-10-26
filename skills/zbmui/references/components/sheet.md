@@ -80,5 +80,5 @@ import {
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/sheet.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/sheet)
 - [Base UI Dialog](https://base-ui.com/react/components/dialog)

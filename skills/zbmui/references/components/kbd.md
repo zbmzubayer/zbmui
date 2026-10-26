@@ -46,4 +46,4 @@ import { Kbd, KbdGroup } from "@/components/ui/kbd";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/kbd.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/kbd)

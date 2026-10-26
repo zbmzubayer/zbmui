@@ -11,8 +11,12 @@ npx @zbmui/cli@latest add command --yes --cwd "<app-root>"
 ## Import
 
 ```tsx
+import { Button } from "@/components/ui/button";
 import {
   Command,
+  CommandDialog,
+  CommandDialogPopup,
+  CommandDialogTrigger,
   CommandEmpty,
   CommandFooter,
   CommandGroup,
@@ -44,11 +48,11 @@ import {
 const actions = ["Create file", "Search docs", "Open settings"];
 
 <Command items={actions} itemToStringValue={(action) => action}>
-  <CommandInput placeholder="Type a command" />
+  <CommandInput aria-label="Search commands" placeholder="Type a command" />
   <CommandPanel>
     <CommandList>
       {(action: string) => (
-        <CommandItem key={action} value={action} onSelect={() => console.log(action)}>
+        <CommandItem key={action} value={action} onClick={() => console.log(action)}>
           {action}
         </CommandItem>
       )}
@@ -85,8 +89,8 @@ Command palette:
 
 - Do not use command as a generic navigation menu; use `Menu` or `NavigationMenu`.
 - Do not nest interactive controls inside command items.
-- Confirm `onSelect` or selection callback props in installed local source.
+- Confirm `onClick` or selection callback props in installed local source.
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/command.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/command)

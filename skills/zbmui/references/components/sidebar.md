@@ -120,4 +120,4 @@ Content areas:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/sidebar.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/sidebar)

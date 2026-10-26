@@ -11,6 +11,7 @@ npx @zbmui/cli@latest add number-field --yes --cwd "<app-root>"
 ## Import
 
 ```tsx
+import { Field, FieldLabel } from "@/components/ui/field";
 import { NumberField } from "@/components/ui/number-field";
 ```
 
@@ -55,5 +56,5 @@ import { NumberField } from "@/components/ui/number-field";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/number-field.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/number-field)
 - [Base UI Number Field](https://base-ui.com/react/components/number-field)

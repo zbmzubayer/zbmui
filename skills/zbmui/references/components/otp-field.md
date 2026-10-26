@@ -25,7 +25,12 @@ import { OTPField, OTPFieldInput, OTPFieldSeparator } from "@/components/ui/otp-
 
 ```tsx
 <OTPField aria-label="One-time password" length={6}>
-  <OTPFieldInput />
+  {Array.from({ length: 6 }, (_, index) => (
+    <OTPFieldInput
+      key={index}
+      aria-label={index === 0 ? undefined : `Character ${index + 1} of 6`}
+    />
+  ))}
 </OTPField>
 ```
 
@@ -36,10 +41,12 @@ Grouped code:
   <OTPFieldInput index={0} />
   <OTPFieldInput index={1} />
   <OTPFieldInput index={2} />
-  <OTPFieldSeparator />
   <OTPFieldInput index={3} />
+  <OTPFieldSeparator />
   <OTPFieldInput index={4} />
   <OTPFieldInput index={5} />
+  <OTPFieldInput index={6} />
+  <OTPFieldInput index={7} />
 </OTPField>
 ```
 
@@ -63,5 +70,5 @@ Grouped code:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/otp-field.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/otp-field)
 - [Base UI OTP Field](https://base-ui.com/react/components/otp-field)

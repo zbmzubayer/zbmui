@@ -29,7 +29,7 @@ import {
 ## Example
 
 ```tsx
-<Accordion defaultValue="account" className="w-full">
+<Accordion defaultValue={["account"]} className="w-full">
   <AccordionItem value="account">
     <AccordionTrigger>Account</AccordionTrigger>
     <AccordionPanel>Manage your account and security settings.</AccordionPanel>
@@ -61,5 +61,5 @@ import {
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/accordion.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/accordion)
 - [Base UI Accordion](https://base-ui.com/react/components/accordion)

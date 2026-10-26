@@ -38,7 +38,7 @@ import {
 const frameworks = ["Astro", "Next.js", "Nuxt", "React", "Svelte", "Vue"];
 
 <Autocomplete items={frameworks}>
-  <AutocompleteInput placeholder="Search frameworks" showClear />
+  <AutocompleteInput aria-label="Search frameworks" placeholder="Search frameworks" showClear />
   <AutocompletePopup>
     <AutocompleteList>
       {(item: string) => (
@@ -72,5 +72,5 @@ const frameworks = ["Astro", "Next.js", "Nuxt", "React", "Svelte", "Vue"];
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/autocomplete.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/autocomplete)
 - [Base UI Autocomplete](https://base-ui.com/react/components/autocomplete)

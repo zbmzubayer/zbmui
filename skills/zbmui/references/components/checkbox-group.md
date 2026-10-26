@@ -60,5 +60,5 @@ import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/checkbox-group.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/checkbox-group)
 - [Base UI Checkbox Group](https://base-ui.com/react/components/checkbox-group)

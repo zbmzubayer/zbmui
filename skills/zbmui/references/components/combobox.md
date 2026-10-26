@@ -39,7 +39,7 @@ import {
 const frameworks = ["Astro", "Next.js", "Nuxt", "React", "Svelte", "Vue"];
 
 <Combobox items={frameworks} itemToStringValue={(item) => item}>
-  <ComboboxInput placeholder="Select a framework" showClear />
+  <ComboboxInput aria-label="Select a framework" placeholder="Select a framework" showClear />
   <ComboboxPopup>
     <ComboboxList>
       {(item: string) => (
@@ -74,5 +74,5 @@ const frameworks = ["Astro", "Next.js", "Nuxt", "React", "Svelte", "Vue"];
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/combobox.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/combobox)
 - [Base UI Combobox](https://base-ui.com/react/components/combobox)

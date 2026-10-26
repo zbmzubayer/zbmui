@@ -39,7 +39,9 @@ Link styled as a button:
 Composed render target:
 
 ```tsx
-<Button render={<a href="/settings" />}>Settings</Button>
+<Button nativeButton={false} render={<a href="/settings" />}>
+  Settings
+</Button>
 ```
 
 ## Variants
@@ -77,5 +79,5 @@ Variants:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/button.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/button)
 - [Base UI Button](https://base-ui.com/react/components/button)

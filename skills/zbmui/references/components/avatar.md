@@ -70,5 +70,5 @@ Grouped:
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/avatar.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/avatar)
 - [Base UI Avatar](https://base-ui.com/react/components/avatar)

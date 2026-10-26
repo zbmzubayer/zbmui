@@ -69,5 +69,5 @@ import {
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/popover.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/popover)
 - [Base UI Popover](https://base-ui.com/react/components/popover)

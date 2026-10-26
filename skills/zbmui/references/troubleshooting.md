@@ -81,7 +81,7 @@ For unresolved alias paths:
 The canonical hosted component page is:
 
 ```text
-https://ui.zubayer.dev/docs/components/<name>.md
+https://ui.zubayer.dev/docs/components/<name>
 ```
 
 If it returns an error:

@@ -11,6 +11,7 @@ npx @zbmui/cli@latest add textarea --yes --cwd "<app-root>"
 ## Import
 
 ```tsx
+import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 import { Textarea } from "@/components/ui/textarea";
 ```
 
@@ -48,4 +49,4 @@ The component uses CSS field sizing and disables the scrollbar by default. Verif
 
 ## References
 
-- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/textarea.md)
+- [ZBM UI documentation](https://ui.zubayer.dev/docs/components/textarea)
