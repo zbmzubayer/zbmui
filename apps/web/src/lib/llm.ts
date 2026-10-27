@@ -21,9 +21,7 @@ export function processMdxForLLMs(content: string) {
         return match;
       }
 
-      // Registry sources are read at runtime and must not be traced into the
-      // deployment bundle; failures fall back to the raw MDX via the catch below.
-      let source = fs.readFileSync(/* turbopackIgnore: true */ src, "utf8").trim();
+      let source = fs.readFileSync(src, "utf8").trim();
 
       // Replace all registry specific paths
       source = source.replaceAll(`@/registry/default/`, "@/components/");
