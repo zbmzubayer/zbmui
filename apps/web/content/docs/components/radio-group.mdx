@@ -1,0 +1,99 @@
+---
+title: Radio Group
+description: Provides shared state to a series of radio buttons.
+links:
+  doc: https://base-ui.com/react/components/radio-group
+  anatomy: https://base-ui.com/react/components/radio-group#anatomy
+  api: https://base-ui.com/react/components/radio-group#api-reference
+---
+
+<ComponentPreview name="c-radio-group-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+
+```bash
+npx @zbmui/cli@latest add radio-group
+```
+
+</TabsPanel>
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="radio-group" title="components/ui/radio-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Label } from "@/components/ui/label";
+import { Radio, RadioGroup } from "@/components/ui/radio-group";
+```
+
+```tsx
+<RadioGroup defaultValue="next">
+  <Label>
+    <Radio value="next" /> Next.js
+  </Label>
+  <Label>
+    <Radio value="vite" /> Vite
+  </Label>
+  <Label>
+    <Radio value="astro" /> Astro
+  </Label>
+</RadioGroup>
+```
+
+## Examples
+
+### Labeling a radio group
+
+Label the group with `aria-labelledby` and a sibling label element:
+
+```tsx
+<div id="storage-type-label">Storage type</div>
+<RadioGroup aria-labelledby="storage-type-label">{/* ... */}</RadioGroup>
+```
+
+An enclosing `<label>` is the simplest labeling pattern for each radio:
+
+```tsx
+<label>
+  <Radio value="ssd" />
+  SSD
+</label>
+```
+
+### Disabled
+
+<ComponentPreview name="c-radio-group-2" />
+
+### Description
+
+<ComponentPreview name="c-radio-group-3" />
+
+### Card style
+
+<ComponentPreview name="c-radio-group-4" />
