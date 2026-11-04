@@ -8,6 +8,7 @@ export function CheckboxGroup({
 }: React.ComponentProps<typeof CheckboxGroupPrimitive>) {
   return (
     <CheckboxGroupPrimitive
+      data-slot="checkbox-group"
       className={cn("flex flex-col items-start gap-3", className)}
       {...props}
     />
