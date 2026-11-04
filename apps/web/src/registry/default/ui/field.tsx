@@ -66,8 +66,13 @@ export function FieldError({
 export function FieldControl(props: React.ComponentProps<typeof FieldPrimitive.Control>) {
   return <FieldPrimitive.Control data-slot="field-control" {...props} />;
 }
+
 export function FieldValidity(props: React.ComponentProps<typeof FieldPrimitive.Validity>) {
   return <FieldPrimitive.Validity data-slot="field-validity" {...props} />;
+}
+
+export function FieldItem(props: React.ComponentProps<typeof FieldPrimitive.Item>) {
+  return <FieldPrimitive.Item data-slot="field-item" {...props} />;
 }
 
 export { FieldPrimitive };
