@@ -316,6 +316,25 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  fieldset: {
+    name: "fieldset",
+    description: "A native fieldset element with an easily stylable legend.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/fieldset.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/fieldset.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   form: {
     name: "form",
     description: "Form primitives wired for validation libraries.",
@@ -516,6 +535,25 @@ export const Index: Record<string, any> = {
     files: [{ path: "src/registry/default/ui/popover.tsx", type: "registry:ui", target: "" }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/popover.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "radio-group": {
+    name: "radio-group",
+    description: "Provides shared state to a series of radio buttons.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/radio-group.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/radio-group.tsx");
       const exportName = Object.keys(mod).find(
         (key) =>
           key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
@@ -4307,6 +4345,106 @@ export const Index: Record<string, any> = {
     categories: ["popover"],
     meta: undefined,
   },
+  "c-radio-group-1": {
+    name: "c-radio-group-1",
+    description: "Radio group with a default value and group label.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/label", "@zbmui/radio-group"],
+    files: [
+      {
+        path: "src/registry/default/components/radio-group/c-radio-group-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/radio-group/c-radio-group-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["radio-group"],
+    meta: undefined,
+  },
+  "c-radio-group-2": {
+    name: "c-radio-group-2",
+    description: "Radio group with a single disabled item.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/label", "@zbmui/radio-group"],
+    files: [
+      {
+        path: "src/registry/default/components/radio-group/c-radio-group-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/radio-group/c-radio-group-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["radio-group"],
+    meta: undefined,
+  },
+  "c-radio-group-3": {
+    name: "c-radio-group-3",
+    description: "Radio options with labels and descriptions.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/label", "@zbmui/radio-group"],
+    files: [
+      {
+        path: "src/registry/default/components/radio-group/c-radio-group-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/radio-group/c-radio-group-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["radio-group"],
+    meta: undefined,
+  },
+  "c-radio-group-4": {
+    name: "c-radio-group-4",
+    description: "Radio group styled as selectable cards.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/label", "@zbmui/radio-group"],
+    files: [
+      {
+        path: "src/registry/default/components/radio-group/c-radio-group-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/radio-group/c-radio-group-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["radio-group"],
+    meta: undefined,
+  },
   "c-scroll-area-1": {
     name: "c-scroll-area-1",
     description: "Scroll area with vertical scrolling.",
@@ -5408,6 +5546,40 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/forms/react-hook-form/c-react-hook-form-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["react-hook-form"],
+    meta: undefined,
+  },
+  "c-react-hook-form-2": {
+    name: "c-react-hook-form-2",
+    description: "Complete bug report form with text, radio, and checkbox fields.",
+    type: "registry:component",
+    registryDependencies: [
+      "@zbmui/button",
+      "@zbmui/checkbox",
+      "@zbmui/checkbox-group",
+      "@zbmui/field",
+      "@zbmui/input",
+      "@zbmui/radio-group",
+      "@zbmui/spinner",
+      "@zbmui/textarea",
+    ],
+    files: [
+      {
+        path: "src/registry/default/forms/react-hook-form/c-react-hook-form-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/forms/react-hook-form/c-react-hook-form-2.tsx");
       const exportName = Object.keys(mod).find(
         (key) =>
           key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")

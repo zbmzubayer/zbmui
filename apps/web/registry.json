@@ -82,6 +82,11 @@
       "description": "A building block for form fields with label, description, and error message."
     },
     {
+      "name": "fieldset",
+      "type": "registry:ui",
+      "description": "A native fieldset element with an easily stylable legend."
+    },
+    {
       "name": "form",
       "type": "registry:ui",
       "description": "Form primitives wired for validation libraries."
@@ -135,6 +140,11 @@
       "name": "popover",
       "type": "registry:ui",
       "description": "Displays rich content in a portal, triggered by a button."
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "description": "Provides shared state to a series of radio buttons."
     },
     {
       "name": "scroll-area",
@@ -907,9 +917,34 @@
       "description": "Animated popover shared between multiple triggers."
     },
     {
+      "name": "c-radio-group-1",
+      "type": "registry:component",
+      "description": "Radio group with a default value and group label."
+    },
+    {
+      "name": "c-radio-group-2",
+      "type": "registry:component",
+      "description": "Radio group with a single disabled item."
+    },
+    {
+      "name": "c-radio-group-3",
+      "type": "registry:component",
+      "description": "Radio options with labels and descriptions."
+    },
+    {
+      "name": "c-radio-group-4",
+      "type": "registry:component",
+      "description": "Radio group styled as selectable cards."
+    },
+    {
       "name": "c-react-hook-form-1",
       "type": "registry:component",
       "description": "Bug report form using React Hook Form and Zod."
+    },
+    {
+      "name": "c-react-hook-form-2",
+      "type": "registry:component",
+      "description": "Complete bug report form with text, radio, and checkbox fields."
     },
     {
       "name": "c-scroll-area-1",
