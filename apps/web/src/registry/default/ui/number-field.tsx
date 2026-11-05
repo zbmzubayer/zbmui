@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 
 interface NumberFieldProps extends React.ComponentProps<typeof NumberFieldPrimitive.Root> {
   placeholder?: NumberFieldPrimitive.Input.Props["placeholder"];
+  inputProps?: React.ComponentProps<typeof NumberFieldPrimitive.Input>;
   size?: "xs" | "sm" | "default" | "lg" | "xl";
 }
 
@@ -12,14 +13,17 @@ export function NumberField({
   className,
   placeholder,
   size = "default",
+  inputProps,
   ...props
 }: NumberFieldProps) {
   return (
     <NumberFieldPrimitive.Root
-      className={cn("flex w-full items-center gap-3", className)}
+      data-slot="number-field"
+      className={cn("w-full", className)}
       {...props}
     >
       <NumberFieldPrimitive.Group
+        data-slot="number-field-group"
         className={cn(
           "grid h-8 w-full grid-cols-[1fr_auto] overflow-hidden rounded-lg border border-input text-sm focus-within:border-ring focus-within:ring-3 focus-within:ring-ring/50 [&_svg:not([class*='size-'])]:size-3.5",
           size === "xs" &&
@@ -31,20 +35,28 @@ export function NumberField({
         )}
       >
         <NumberFieldPrimitive.Input
+          data-slot="number-field-input"
           placeholder={placeholder}
           className={cn(
-            "row-span-2 selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus:outline-none",
+            "row-span-2 min-w-0 selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus:outline-none",
             size === "xs" && "px-2",
             size === "sm" && "px-2.5",
             size === "default" && "px-3",
             size === "lg" && "px-3",
             size === "xl" && "px-3"
           )}
+          {...inputProps}
         />
-        <NumberFieldPrimitive.Increment className="inline-flex items-center justify-center border-s px-1 hover:bg-accent hover:text-accent-foreground active:*:-translate-y-px">
+        <NumberFieldPrimitive.Increment
+          data-slot="number-field-increment"
+          className="inline-flex items-center justify-center border-s px-1 hover:bg-accent hover:text-accent-foreground active:*:-translate-y-px"
+        >
           <IconChevronUp />
         </NumberFieldPrimitive.Increment>
-        <NumberFieldPrimitive.Decrement className="inline-flex items-center justify-center border-s border-t px-1 hover:bg-accent hover:text-accent-foreground active:*:translate-y-px">
+        <NumberFieldPrimitive.Decrement
+          data-slot="number-field-decrement"
+          className="inline-flex items-center justify-center border-s border-t px-1 hover:bg-accent hover:text-accent-foreground active:*:translate-y-px"
+        >
           <IconChevronDown />
         </NumberFieldPrimitive.Decrement>
       </NumberFieldPrimitive.Group>
