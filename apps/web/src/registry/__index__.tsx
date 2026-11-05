@@ -4930,7 +4930,7 @@ export const Index: Record<string, any> = {
     name: "c-slider-2",
     description: "Slider with label and current value.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/field", "@zbmui/slider"],
+    registryDependencies: ["@zbmui/slider"],
     files: [
       {
         path: "src/registry/default/components/slider/c-slider-2.tsx",
@@ -4955,7 +4955,7 @@ export const Index: Record<string, any> = {
     name: "c-slider-3",
     description: "Range slider with label and values.",
     type: "registry:component",
-    registryDependencies: ["@zbmui/field", "@zbmui/slider"],
+    registryDependencies: ["@zbmui/slider"],
     files: [
       {
         path: "src/registry/default/components/slider/c-slider-3.tsx",
@@ -4990,6 +4990,31 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/components/slider/c-slider-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["slider"],
+    meta: undefined,
+  },
+  "c-slider-5": {
+    name: "c-slider-5",
+    description: "Slider with tick marks and value labels for each step.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/slider"],
+    files: [
+      {
+        path: "src/registry/default/components/slider/c-slider-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/slider/c-slider-5.tsx");
       const exportName = Object.keys(mod).find(
         (key) =>
           key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
@@ -5567,8 +5592,11 @@ export const Index: Record<string, any> = {
       "@zbmui/checkbox-group",
       "@zbmui/field",
       "@zbmui/input",
+      "@zbmui/number-field",
       "@zbmui/radio-group",
+      "@zbmui/slider",
       "@zbmui/spinner",
+      "@zbmui/switch",
       "@zbmui/textarea",
     ],
     files: [

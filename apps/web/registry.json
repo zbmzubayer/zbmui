@@ -1062,6 +1062,11 @@
       "description": "Vertical slider."
     },
     {
+      "name": "c-slider-5",
+      "type": "registry:component",
+      "description": "Slider with tick marks and value labels for each step."
+    },
+    {
       "name": "c-spinner-1",
       "type": "registry:component",
       "description": "Default spinner."

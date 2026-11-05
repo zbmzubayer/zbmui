@@ -61,6 +61,33 @@ import { Slider } from "@/components/ui/slider";
 
 <ComponentPreview name="c-slider-2" />
 
+A single-thumb slider without a visible label (such as a volume control) can be labeled using `aria-label` on `<SliderThumb>` by passing `thumbProps` to `<Slider>`.:
+
+```tsx
+<Slider defaultValue={50}  thumbProps={[{ "aria-label": "Minimum price" }]}>
+  <SliderValue />
+</SliderValue>
+```
+
+A visible label can be created using `<SliderLabel>`:
+
+```tsx
+<Slider defaultValue={50}>
+  <SliderLabel>Price range</SliderLabel>
+  <SliderValue />
+</Slider>
+```
+
+For a multi-thumb range slider with a visible label, add `aria-label` on each `<SliderThumb>` by passing `thumbProps` to `<Slider>` to distinguish them:
+
+```tsx
+<Slider
+  defaultValue={[20, 80]}
+  thumbProps={[{ "aria-label": "Minimum price" }, { "aria-label": "Maximum price" }]}>
+  <SliderValue />
+</Slider>
+```
+
 ### Range slider
 
 <ComponentPreview name="c-slider-3" />
@@ -68,3 +95,7 @@ import { Slider } from "@/components/ui/slider";
 ### Vertical
 
 <ComponentPreview name="c-slider-4" />
+
+### Marks
+
+<ComponentPreview name="c-slider-5" />

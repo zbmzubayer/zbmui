@@ -1,7 +1,3 @@
-"use client";
-
-import * as React from "react";
-
 import { Slider as SliderPrimitive } from "@base-ui/react/slider";
 
 import { cn } from "@/lib/cn";
@@ -13,21 +9,17 @@ export function Slider({
   value,
   min = 0,
   max = 100,
+  thumbProps,
   ...props
-}: React.ComponentProps<typeof SliderPrimitive.Root>) {
-  const _values = React.useMemo(() => {
-    if (value !== undefined) {
-      return Array.isArray(value) ? value : [value];
-    }
-    if (defaultValue !== undefined) {
-      return Array.isArray(defaultValue) ? defaultValue : [defaultValue];
-    }
-    return [min];
-  }, [value, defaultValue, min]);
+}: React.ComponentProps<typeof SliderPrimitive.Root> & {
+  thumbProps?: Array<React.ComponentProps<typeof SliderPrimitive.Thumb>>;
+}) {
+  const values = value ?? defaultValue;
+  const thumbCount = Array.isArray(values) ? values.length : 1;
 
   return (
     <SliderPrimitive.Root
-      slot="slider"
+      data-slot="slider"
       defaultValue={defaultValue}
       value={value}
       max={max}
@@ -49,17 +41,31 @@ export function Slider({
             data-slot="slider-indicator"
             className="select-none rounded-full bg-primary"
           />
-          {Array.from({ length: _values.length }, (_, index) => (
+          {Array.from({ length: thumbCount }, (_, index) => (
             <SliderPrimitive.Thumb
               data-slot="slider-thumb"
-              className="block size-4 shrink-0 select-none rounded-full border border-ring bg-white shadow-xs/5 outline-none transition-[box-shadow,scale] has-focus-visible:ring-3 has-focus-visible:ring-ring/50 data-dragging:scale-120 dark:border-background [:has(*:focus-visible),[data-dragging]]:shadow-none"
-              index={index}
               key={String(index)}
+              index={index}
+              {...(thumbProps?.[index] || {})}
+              className="block size-4 shrink-0 select-none rounded-full border border-ring bg-white shadow-xs/5 outline-none ring-ring/50 transition-[box-shadow,scale] active:ring-3 has-focus-visible:ring-3 dark:border-background [:has(*:focus-visible),[data-dragging]]:shadow-none"
             />
           ))}
         </SliderPrimitive.Track>
       </SliderPrimitive.Control>
     </SliderPrimitive.Root>
+  );
+}
+
+export function SliderLabel({
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<typeof SliderPrimitive.Label>) {
+  return (
+    <SliderPrimitive.Label
+      data-slot="slider-label"
+      className={cn("inline-flex cursor-default items-center gap-2 font-medium text-sm", className)}
+      {...props}
+    />
   );
 }
 
