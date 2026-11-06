@@ -25,7 +25,7 @@ export function NumberField({
       <NumberFieldPrimitive.Group
         data-slot="number-field-group"
         className={cn(
-          "grid h-8 w-full grid-cols-[1fr_auto] overflow-hidden rounded-lg border border-input text-sm focus-within:border-ring focus-within:ring-3 focus-within:ring-ring/50 [&_svg:not([class*='size-'])]:size-3.5",
+          "grid h-8 w-full grid-cols-[1fr_auto] overflow-hidden rounded-lg border border-input text-sm focus-within:border-ring focus-within:ring-3 focus-within:ring-ring/50 dark:bg-input/30 [&_svg:not([class*='size-'])]:size-3.5",
           size === "xs" &&
             "h-6 rounded-sm text-xs focus-within:ring-2 [&_svg:not([class*='size-'])]:size-2.75",
           size === "sm" &&
