@@ -5,6 +5,19 @@ import { cn } from "@/lib/cn";
 
 export const Select = SelectPrimitive.Root;
 
+export function SelectLabel({
+  className,
+  ...props
+}: React.ComponentProps<typeof SelectPrimitive.Label>) {
+  return (
+    <SelectPrimitive.Label
+      data-slot="select-label"
+      className={cn("inline-flex cursor-default items-center gap-2 font-medium text-sm", className)}
+      {...props}
+    />
+  );
+}
+
 export function SelectTrigger({
   className,
   size = "default",
@@ -17,7 +30,7 @@ export function SelectTrigger({
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "inline-flex h-8 w-full select-none items-center justify-between gap-2 rounded-lg border border-input px-2.5 text-left text-sm shadow-xs outline-none transition-[color,shadow] hover:bg-input/30 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 data-disabled:pointer-events-none data-disabled:opacity-60 [&_svg]:pointer-events-none [&_svg]:shrink-0 [[data-disabled],:focus-visible,[aria-invalid],[data-pressed]]:shadow-none",
+        "inline-flex h-8 w-full select-none items-center justify-between gap-2 rounded-lg border border-input px-2.5 text-left text-sm shadow-xs outline-none transition-[color,shadow] focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 data-disabled:pointer-events-none data-disabled:opacity-60 dark:bg-input/30 [&_svg]:pointer-events-none [&_svg]:shrink-0 [[data-disabled],:focus-visible,[aria-invalid],[data-pressed]]:shadow-none",
         "aria-invalid:border-danger aria-invalid:ring-danger/30 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
         size === "xs" &&
           "h-6 gap-1.5 rounded px-2 text-xs focus-visible:ring-2 [&_svg:not([class*='size-'])]:size-3.5",
