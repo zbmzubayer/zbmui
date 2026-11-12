@@ -5,15 +5,22 @@ import { useState } from "react";
 import { NumberField } from "@/registry/default/ui/number-field";
 
 export function NumberFieldDemo() {
-  const [age, setAge] = useState<number | null>(null);
+  const [quantity, setQuantity] = useState<number | null>(null);
 
   return (
     <div>
-      <label htmlFor="age" className="mb-2 inline-block font-medium">
-        Enter your age
+      <label htmlFor="quantity" className="mb-2 inline-block font-medium">
+        Quantity
       </label>
-      <NumberField id="age" min={0} max={200} value={age} onValueChange={setAge} />
-      <p className="mt-2 text-muted-foreground text-sm">Your age is: {age ?? "null"}</p>
+      <NumberField
+        id="quantity"
+        inputProps={{ className: "w-[calc(4ch+20px)]" }}
+        min={1}
+        max={100}
+        value={quantity}
+        onValueChange={setQuantity}
+      />
+      <p className="mt-2 text-muted-foreground text-sm">Your quantity: {quantity ?? "null"}</p>
     </div>
   );
 }
