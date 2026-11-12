@@ -8,7 +8,7 @@ export const siteConfig = {
     { label: "Blocks", href: "/blocks" },
   ],
   docs: {
-    pages_new: ["/docs/components/number-field"],
+    pages_new: ["/docs/components/number-input"],
   },
 } as const;
 
