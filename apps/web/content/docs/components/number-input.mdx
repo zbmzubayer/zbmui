@@ -1,0 +1,102 @@
+---
+title: Number Input
+description: A compact numeric input with stacked increment and decrement buttons.
+links:
+  doc: https://base-ui.com/react/components/number-field
+  anatomy: https://base-ui.com/react/components/number-field#anatomy
+  api: https://base-ui.com/react/components/number-field#api-reference
+---
+
+<ComponentPreview name="c-number-input-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+
+```bash
+npx @zbmui/cli@latest add number-input
+```
+
+</TabsPanel>
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react @tabler/icons-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="number-input" title="components/ui/number-input.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { NumberInput } from "@/components/ui/number-input";
+```
+
+```tsx
+<NumberInput />
+```
+
+## Example
+
+### Sizes
+
+Pass the `size` prop to set the size of the NumberInput. Available sizes are `xs`, `sm`, `default`, `lg`, and `xl`.
+
+<ComponentPreview name="c-number-input-2" />
+
+### Controlled
+
+Use `value` and `onValueChange` to control the input from state. The value is `null` when the input is empty.
+
+<ComponentPreview name="c-number-input-3" />
+
+### Minimum and maximum value
+
+Pass the `min` prop or `max` prop to set an upper and lower limit for the input. By default, the input will restrict the value to stay within the specified range.
+
+```tsx
+function NumberInputDemo() {
+  return <NumberInput min={0} max={10} />;
+}
+```
+
+## API Reference
+
+### NumberInput Props
+
+<ApiReferenceAccordion
+  type={{
+    size: {
+      description: "The size of the input component.",
+      type: `'xs' | 'sm' | 'default' | 'lg' | 'xl'`,
+      default: `'default'`,
+    },
+    placeholder: {
+      description: "The placeholder text to display when the input is empty.",
+      type: "string",
+    },
+    inputProps: {
+      description: "Props forwarded to the underlying input element, including its className.",
+      type: "React.ComponentProps<typeof NumberField.Input>",
+    },
+  }}
+/>

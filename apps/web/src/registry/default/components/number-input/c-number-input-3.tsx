@@ -1,0 +1,19 @@
+"use client";
+
+import { useState } from "react";
+
+import { NumberInput } from "@/registry/default/ui/number-input";
+
+export function NumberInputDemo() {
+  const [age, setAge] = useState<number | null>(null);
+
+  return (
+    <div>
+      <label htmlFor="age" className="mb-2 inline-block font-medium">
+        Enter your age
+      </label>
+      <NumberInput id="age" min={0} max={200} value={age} onValueChange={setAge} />
+      <p className="mt-2 text-muted-foreground text-sm">Your age is: {age ?? "null"}</p>
+    </div>
+  );
+}

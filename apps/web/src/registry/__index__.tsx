@@ -508,6 +508,26 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "number-input": {
+    name: "number-input",
+    description:
+      "A compact number input with stacked increment and decrement buttons on its trailing edge.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/number-input.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/number-input.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "otp-field": {
     name: "otp-field",
     description: "A one-time-password input with individual character slots.",
@@ -3964,6 +3984,81 @@ export const Index: Record<string, any> = {
     categories: ["number-field"],
     meta: undefined,
   },
+  "c-number-input-1": {
+    name: "c-number-input-1",
+    description: "Number input with a label and placeholder.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/number-input"],
+    files: [
+      {
+        path: "src/registry/default/components/number-input/c-number-input-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/number-input/c-number-input-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["number-input"],
+    meta: undefined,
+  },
+  "c-number-input-2": {
+    name: "c-number-input-2",
+    description: "Number input in five sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/number-input"],
+    files: [
+      {
+        path: "src/registry/default/components/number-input/c-number-input-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/number-input/c-number-input-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["number-input"],
+    meta: undefined,
+  },
+  "c-number-input-3": {
+    name: "c-number-input-3",
+    description: "Controlled number input with min and max bounds and a live value readout.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/number-input"],
+    files: [
+      {
+        path: "src/registry/default/components/number-input/c-number-input-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/number-input/c-number-input-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["number-input"],
+    meta: undefined,
+  },
   "c-otp-field-1": {
     name: "c-otp-field-1",
     description: "Basic six-digit OTP field.",
@@ -5587,13 +5682,16 @@ export const Index: Record<string, any> = {
     description: "Complete bug report form with text, radio, and checkbox fields.",
     type: "registry:component",
     registryDependencies: [
+      "@zbmui/autocomplete",
       "@zbmui/button",
       "@zbmui/checkbox",
       "@zbmui/checkbox-group",
+      "@zbmui/combobox",
       "@zbmui/field",
       "@zbmui/input",
       "@zbmui/number-field",
       "@zbmui/radio-group",
+      "@zbmui/select",
       "@zbmui/slider",
       "@zbmui/spinner",
       "@zbmui/switch",

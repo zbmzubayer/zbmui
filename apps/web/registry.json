@@ -132,6 +132,11 @@
       "description": "A number input with increment and decrement controls."
     },
     {
+      "name": "number-input",
+      "type": "registry:ui",
+      "description": "A compact number input with stacked increment and decrement buttons on its trailing edge."
+    },
+    {
       "name": "otp-field",
       "type": "registry:ui",
       "description": "A one-time-password input with individual character slots."
@@ -840,6 +845,21 @@
       "name": "c-number-field-3",
       "type": "registry:component",
       "description": "Controlled number field with min and max."
+    },
+    {
+      "name": "c-number-input-1",
+      "type": "registry:component",
+      "description": "Number input with a label and placeholder."
+    },
+    {
+      "name": "c-number-input-2",
+      "type": "registry:component",
+      "description": "Number input in five sizes."
+    },
+    {
+      "name": "c-number-input-3",
+      "type": "registry:component",
+      "description": "Controlled number input with min and max bounds and a live value readout."
     },
     {
       "name": "c-otp-field-1",
