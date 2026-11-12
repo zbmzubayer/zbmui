@@ -34,6 +34,7 @@ import {
 } from "@/registry/default/ui/field";
 import { Input } from "@/registry/default/ui/input";
 import { NumberField } from "@/registry/default/ui/number-field";
+import { NumberInput } from "@/registry/default/ui/number-input";
 import { Radio, RadioGroup } from "@/registry/default/ui/radio-group";
 import {
   Select,
@@ -126,6 +127,11 @@ const formSchema = z.object({
   allowedNetworkProtocols: z
     .array(z.enum(ALLOWED_NETWORK_PROTOCOLS))
     .min(1, "Please select at least one network protocol"),
+  quantity: z
+    .number("Quantity is required")
+    .max(10, "Quantity must be at most 10")
+    .nullable()
+    .refine((qty): qty is number => qty !== null, "Quantity is required"),
 });
 
 type FormInput = z.input<typeof formSchema>;
@@ -136,6 +142,7 @@ export function FullFormDemo() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      email: "",
       bio: "",
       age: null,
       gender: "Male",
@@ -145,6 +152,7 @@ export function FullFormDemo() {
       region: null,
       containerImage: null,
       allowedNetworkProtocols: [],
+      quantity: 1,
     },
   });
 
@@ -207,7 +215,7 @@ export function FullFormDemo() {
         }) => (
           <Field name={name} invalid={invalid} touched={isTouched} dirty={isDirty}>
             <FieldLabel>Age</FieldLabel>
-            <NumberField
+            <NumberInput
               placeholder="Enter your age"
               min={18}
               max={120}
@@ -431,6 +439,27 @@ export function FullFormDemo() {
                 </FieldItem>
               ))}
             </CheckboxGroup>
+            <FieldError match={!!error}>{error?.message}</FieldError>
+          </Field>
+        )}
+      />
+      <Controller
+        name="quantity"
+        control={form.control}
+        render={({
+          field: { ref, name, value, onBlur, onChange },
+          fieldState: { invalid, isTouched, isDirty, error },
+        }) => (
+          <Field name={name} invalid={invalid} touched={isTouched} dirty={isDirty}>
+            <FieldLabel>Quantity</FieldLabel>
+            <NumberField
+              min={1}
+              max={10}
+              inputProps={{ ref, onBlur }}
+              value={value}
+              onValueChange={onChange}
+              className="max-w-36"
+            />
             <FieldError match={!!error}>{error?.message}</FieldError>
           </Field>
         )}
