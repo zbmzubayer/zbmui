@@ -766,6 +766,26 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  table: {
+    name: "table",
+    description:
+      "Displays structured data in rows and columns with header, body, and footer sections.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/table.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/table.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   tabs: {
     name: "tabs",
     description:
@@ -5346,6 +5366,82 @@ export const Index: Record<string, any> = {
     categories: ["switch"],
     meta: undefined,
   },
+  "c-table-1": {
+    name: "c-table-1",
+    description: "Table with a caption, header, footer totals, and status badges.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/badge", "@zbmui/table"],
+    files: [
+      {
+        path: "src/registry/default/components/table/c-table-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/table/c-table-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["table"],
+    meta: undefined,
+  },
+  "c-table-2": {
+    name: "c-table-2",
+    description: "Table in the card variant with rounded borders.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/badge", "@zbmui/table"],
+    files: [
+      {
+        path: "src/registry/default/components/table/c-table-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/table/c-table-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["table"],
+    meta: undefined,
+  },
+  "c-table-3": {
+    name: "c-table-3",
+    description:
+      "Card table built with TanStack Table, featuring row selection with a select-all checkbox and a footer total.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/badge", "@zbmui/checkbox", "@zbmui/table"],
+    files: [
+      {
+        path: "src/registry/default/components/table/c-table-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/table/c-table-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["table"],
+    meta: undefined,
+  },
   "c-tabs-1": {
     name: "c-tabs-1",
     description: "Tabs with three panels.",
@@ -5690,6 +5786,7 @@ export const Index: Record<string, any> = {
       "@zbmui/field",
       "@zbmui/input",
       "@zbmui/number-field",
+      "@zbmui/number-input",
       "@zbmui/radio-group",
       "@zbmui/select",
       "@zbmui/slider",

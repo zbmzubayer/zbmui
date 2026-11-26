@@ -197,6 +197,11 @@
       "description": "A control that allows the user to toggle between on and off."
     },
     {
+      "name": "table",
+      "type": "registry:ui",
+      "description": "Displays structured data in rows and columns with header, body, and footer sections."
+    },
+    {
       "name": "tabs",
       "type": "registry:ui",
       "description": "A set of layered sections of content, known as tab panels, displayed one at a time."
@@ -1130,6 +1135,21 @@
       "name": "c-switch-8",
       "type": "registry:component",
       "description": "Switch integrated with a react-hook-form form."
+    },
+    {
+      "name": "c-table-1",
+      "type": "registry:component",
+      "description": "Table with a caption, header, footer totals, and status badges."
+    },
+    {
+      "name": "c-table-2",
+      "type": "registry:component",
+      "description": "Table in the card variant with rounded borders."
+    },
+    {
+      "name": "c-table-3",
+      "type": "registry:component",
+      "description": "Card table built with TanStack Table, featuring row selection with a select-all checkbox and a footer total."
     },
     {
       "name": "c-tabs-1",

@@ -1,0 +1,115 @@
+---
+title: Table
+description: A responsive table for displaying structured data in rows and columns.
+---
+
+<ComponentPreview name="c-table-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+
+```bash
+npx @zbmui/cli@latest add table
+```
+
+</TabsPanel>
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="table" title="components/ui/table.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+```
+
+```tsx
+<Table>
+  <TableCaption>A list of recent invoices.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Invoice</TableHead>
+      <TableHead>Status</TableHead>
+      <TableHead className="text-right">Amount</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className="font-medium">INV001</TableCell>
+      <TableCell>Paid</TableCell>
+      <TableCell className="text-right">$250.00</TableCell>
+    </TableRow>
+  </TableBody>
+  <TableFooter>
+    <TableRow>
+      <TableCell colSpan={2}>Total</TableCell>
+      <TableCell className="text-right">$250.00</TableCell>
+    </TableRow>
+  </TableFooter>
+</Table>
+```
+
+## Examples
+
+### Card variant
+
+Pass `variant="card"` to `Table` to render the table inside a rounded, bordered card. The row styles and cell padding adjust automatically.
+
+<ComponentPreview name="c-table-2" />
+
+### Tanstack table
+
+<ComponentPreview name="c-table-3" />
+
+## API Reference
+
+### Table Props
+
+<ApiReferenceAccordion
+  type={{
+    variant: {
+      description:
+        "The visual style of the table. The card variant renders rounded borders around the table.",
+      type: `'default' | 'card'`,
+      default: `'default'`,
+    },
+    render: {
+      description:
+        "Replaces the default wrapping element. The table is rendered inside the element passed here.",
+      type: "useRender.ComponentProps<'div'>['render']",
+    },
+  }}
+/>
+
+The remaining props are forwarded to the underlying `<table>` element.
+
+### Subcomponents
+
+`TableHeader`, `TableBody`, `TableFooter`, `TableRow`, `TableHead`, `TableCell`, and `TableCaption` each render their matching HTML element and accept the same props as it, including `className`.
