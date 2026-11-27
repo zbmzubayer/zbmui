@@ -547,6 +547,25 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  pagination: {
+    name: "pagination",
+    description: "Navigation controls for moving between pages of content.",
+    type: "registry:ui",
+    registryDependencies: ["@zbmui/button", "@zbmui/cn"],
+    files: [{ path: "src/registry/default/ui/pagination.tsx", type: "registry:ui", target: "" }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/pagination.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   popover: {
     name: "popover",
     description: "Displays rich content in a portal, triggered by a button.",
@@ -4277,6 +4296,181 @@ export const Index: Record<string, any> = {
       };
     }),
     categories: ["otp-field"],
+    meta: undefined,
+  },
+  "c-pagination-1": {
+    name: "c-pagination-1",
+    description: "Pagination with previous and next links, page numbers, and an ellipsis.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/pagination"],
+    files: [
+      {
+        path: "src/registry/default/components/pagination/c-pagination-1.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/pagination/c-pagination-1.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["pagination"],
+    meta: undefined,
+  },
+  "c-pagination-2": {
+    name: "c-pagination-2",
+    description: "Pagination in extra small, small, default, and large sizes.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/pagination"],
+    files: [
+      {
+        path: "src/registry/default/components/pagination/c-pagination-2.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/pagination/c-pagination-2.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["pagination"],
+    meta: undefined,
+  },
+  "c-pagination-3": {
+    name: "c-pagination-3",
+    description: "Pagination with text labels and custom icons on previous and next.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/pagination"],
+    files: [
+      {
+        path: "src/registry/default/components/pagination/c-pagination-3.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/pagination/c-pagination-3.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["pagination"],
+    meta: undefined,
+  },
+  "c-pagination-4": {
+    name: "c-pagination-4",
+    description: "Icon-only pagination with first, previous, next, and last buttons.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/pagination"],
+    files: [
+      {
+        path: "src/registry/default/components/pagination/c-pagination-4.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/pagination/c-pagination-4.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["pagination"],
+    meta: undefined,
+  },
+  "c-pagination-5": {
+    name: "c-pagination-5",
+    description: "Pagination with custom variant and activeVariant combinations.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/pagination"],
+    files: [
+      {
+        path: "src/registry/default/components/pagination/c-pagination-5.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/pagination/c-pagination-5.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["pagination"],
+    meta: undefined,
+  },
+  "c-pagination-6": {
+    name: "c-pagination-6",
+    description: "Controlled pagination using state with links rendered as buttons.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/pagination"],
+    files: [
+      {
+        path: "src/registry/default/components/pagination/c-pagination-6.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/pagination/c-pagination-6.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["pagination"],
+    meta: undefined,
+  },
+  "c-pagination-7": {
+    name: "c-pagination-7",
+    description: "Pagination links rendered as Next.js Link components.",
+    type: "registry:component",
+    registryDependencies: ["@zbmui/pagination"],
+    files: [
+      {
+        path: "src/registry/default/components/pagination/c-pagination-7.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/components/pagination/c-pagination-7.tsx");
+      const exportName = Object.keys(mod).find(
+        (key) =>
+          key !== "default" && (typeof mod[key] === "function" || typeof mod[key] === "object")
+      );
+      return {
+        default: (mod.default ?? (exportName ? mod[exportName] : undefined)) as React.ComponentType,
+      };
+    }),
+    categories: ["pagination"],
     meta: undefined,
   },
   "c-popover-1": {

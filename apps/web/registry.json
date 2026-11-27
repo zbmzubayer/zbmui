@@ -142,6 +142,11 @@
       "description": "A one-time-password input with individual character slots."
     },
     {
+      "name": "pagination",
+      "type": "registry:ui",
+      "description": "Navigation controls for moving between pages of content."
+    },
+    {
       "name": "popover",
       "type": "registry:ui",
       "description": "Displays rich content in a portal, triggered by a button."
@@ -905,6 +910,41 @@
       "name": "c-otp-field-8",
       "type": "registry:component",
       "description": "Masked OTP field obscuring typed characters."
+    },
+    {
+      "name": "c-pagination-1",
+      "type": "registry:component",
+      "description": "Pagination with previous and next links, page numbers, and an ellipsis."
+    },
+    {
+      "name": "c-pagination-2",
+      "type": "registry:component",
+      "description": "Pagination in extra small, small, default, and large sizes."
+    },
+    {
+      "name": "c-pagination-3",
+      "type": "registry:component",
+      "description": "Pagination with text labels and custom icons on previous and next."
+    },
+    {
+      "name": "c-pagination-4",
+      "type": "registry:component",
+      "description": "Icon-only pagination with first, previous, next, and last buttons."
+    },
+    {
+      "name": "c-pagination-5",
+      "type": "registry:component",
+      "description": "Pagination with custom variant and activeVariant combinations."
+    },
+    {
+      "name": "c-pagination-6",
+      "type": "registry:component",
+      "description": "Controlled pagination using state with links rendered as buttons."
+    },
+    {
+      "name": "c-pagination-7",
+      "type": "registry:component",
+      "description": "Pagination links rendered as Next.js Link components."
     },
     {
       "name": "c-popover-1",

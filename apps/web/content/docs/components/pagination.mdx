@@ -1,0 +1,216 @@
+---
+title: Pagination
+description: Navigation controls for moving between pages of content.
+---
+
+<ComponentPreview name="c-pagination-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+
+```bash
+npx @zbmui/cli@latest add pagination
+```
+
+</TabsPanel>
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies.</Step>
+
+```bash
+npm install @base-ui/react @tabler/icons-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pagination" title="components/ui/pagination.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationFirst,
+  PaginationItem,
+  PaginationLast,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+```
+
+```tsx
+<Pagination>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationFirst href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationPrevious href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">1</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#" isActive>
+        2
+      </PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationEllipsis />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationNext href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLast href="#" />
+    </PaginationItem>
+  </PaginationContent>
+</Pagination>
+```
+
+## Examples
+
+### Sizes
+
+Pass `size` to `PaginationLink`, `PaginationPrevious`, `PaginationNext`, `PaginationFirst`, or `PaginationLast` to change the button size. Use the icon sizes (`icon-xs`, `icon-sm`, `icon`, `icon-lg`) to keep page numbers and icon-only buttons square.
+
+<ComponentPreview name="c-pagination-2" />
+
+### Label and custom icon
+
+Pass `label` to `PaginationPrevious` or `PaginationNext` to show text next to the icon. The label is hidden on small screens, where the button collapses to an icon-only square. Pass `icon` to replace the default chevron. The two can be combined.
+
+<ComponentPreview name="c-pagination-3" />
+
+### Icon-only navigation
+
+Omit the page links to render a compact set of first, previous, next, and last buttons.
+
+<ComponentPreview name="c-pagination-4" />
+
+### Variants
+
+Use `variant` to style inactive links and `activeVariant` to style the current page. They default to `ghost` and `outline`. `PaginationPrevious`, `PaginationNext`, `PaginationFirst`, and `PaginationLast` accept `variant` too, but not `activeVariant`, since they are never the current page.
+
+<ComponentPreview name="c-pagination-5" />
+
+### Controlled with state
+
+Pass `render={<button />}` to render the links as buttons and track the current page with `useState`. This is useful when pagination updates client state instead of navigating to a URL.
+
+<ComponentPreview name="c-pagination-6" />
+
+### Next.js Link
+
+Pass `render={<Link href="..." />}` to render the links with the Next.js `Link` component for client-side navigation.
+
+<ComponentPreview name="c-pagination-7" />
+
+## API Reference
+
+### PaginationLink
+
+A link (or button, via `render`) for a single page. It is styled with `buttonVariants`.
+
+<ApiReferenceAccordion
+  type={{
+    isActive: {
+      description:
+        "Marks the link as the current page. Sets `aria-current='page'` and `data-active`, and applies `activeVariant`.",
+      type: "boolean",
+    },
+    variant: {
+      description: "The button variant used when the link is not active.",
+      type: "'primary' | 'outline' | 'ghost' | 'secondary' | 'link' | 'info' | 'success' | 'warning' | 'danger' | 'danger-soft'",
+      default: `'ghost'`,
+    },
+    activeVariant: {
+      description: "The button variant used when `isActive` is true.",
+      type: "'primary' | 'outline' | 'ghost' | 'secondary' | 'link' | 'info' | 'success' | 'warning' | 'danger' | 'danger-soft'",
+      default: `'outline'`,
+    },
+    size: {
+      description: "The size of the link.",
+      type: "'xs' | 'sm' | 'default' | 'lg' | 'xl' | 'icon-xs' | 'icon-sm' | 'icon' | 'icon-lg' | 'icon-xl'",
+      default: `'icon'`,
+    },
+    render: {
+      description:
+        "Replaces the default `<a>` element, for example with a Next.js `Link` or a `<button>`.",
+      type: "useRender.ComponentProps<'a'>['render']",
+    },
+  }}
+/>
+
+The remaining props are forwarded to the rendered element.
+
+### PaginationPrevious and PaginationNext
+
+Navigation links with a chevron icon and an optional text label. They accept the `PaginationLink` props except `isActive` and `activeVariant`, since they are never the current page.
+
+<ApiReferenceAccordion
+  type={{
+    label: {
+      description:
+        "Text shown next to the icon. It is hidden on small screens, where the link collapses to an icon-only square.",
+      type: "React.ReactNode",
+    },
+    icon: {
+      description:
+        "Replaces the default chevron icon. The icon is offset automatically when a label is shown, as long as it renders an `svg` as its root element.",
+      type: "React.ReactNode",
+    },
+    size: {
+      description: "The size of the link.",
+      type: "'xs' | 'sm' | 'default' | 'lg' | 'xl' | 'icon-xs' | 'icon-sm' | 'icon' | 'icon-lg' | 'icon-xl'",
+      default: "`default` with a label, otherwise `icon`",
+    },
+  }}
+/>
+
+### PaginationFirst and PaginationLast
+
+Icon-only links for jumping to the first or last page. They accept the `PaginationLink` props except `isActive`, `activeVariant`, and `label`.
+
+<ApiReferenceAccordion
+  type={{
+    icon: {
+      description: "Replaces the default double-chevron icon.",
+      type: "React.ReactNode",
+    },
+    size: {
+      description: "The size of the link.",
+      type: "'xs' | 'sm' | 'default' | 'lg' | 'xl' | 'icon-xs' | 'icon-sm' | 'icon' | 'icon-lg' | 'icon-xl'",
+      default: `'icon'`,
+    },
+  }}
+/>
+
+### Subcomponents
+
+- `Pagination` renders a `<nav>` with `aria-label="pagination"` and centers its content.
+- `PaginationContent` renders the `<ul>` that lays out the items.
+- `PaginationItem` renders an `<li>`.
+- `PaginationEllipsis` renders a non-interactive "more pages" marker.
+- `PaginationSummary` renders a `<div>` with muted text, for content such as "Page 1 of 20".
+
+Each accepts the props of the element it renders, including `className`.
