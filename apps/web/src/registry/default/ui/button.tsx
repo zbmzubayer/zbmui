@@ -24,12 +24,12 @@ export const buttonVariants = cva(
         lg: "h-9 px-3",
         xl: "h-10 px-3.5 text-base [&_svg:not([class*='size-'])]:size-4.5",
         "icon-xs":
-          "size-6 rounded-md not-in-data-[slot=input-group]:[&_svg:not([class*='size-'])]:size-3",
+          "size-6 rounded-md text-xs not-in-data-[slot=input-group]:[&_svg:not([class*='size-'])]:size-3",
         "icon-sm":
-          "size-7 rounded-md not-in-data-[slot=input-group]:[&_svg:not([class*='size-'])]:size-3.5",
+          "size-7 rounded-md text-[0.8125rem] not-in-data-[slot=input-group]:[&_svg:not([class*='size-'])]:size-3.5",
         icon: "size-8",
         "icon-lg": "size-9",
-        "icon-xl": "size-10 [&_svg:not([class*='size-'])]:size-4.5",
+        "icon-xl": "size-10 text-base [&_svg:not([class*='size-'])]:size-4.5",
       },
       variant: {
         primary:
